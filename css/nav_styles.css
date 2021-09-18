@@ -81,15 +81,15 @@ nav {
         top: 35px;
         background-color: rgba(255, 255, 255, 0.671); }
         nav .container_idiomas .select_lang li:first-child a {
-          background: url(/images/flags/usa.png) no-repeat center center;
+          background: url(./images/flags/usa.png) no-repeat center center;
           background-size: cover;
           color: transparent; }
         nav .container_idiomas .select_lang li:nth-child(2) a {
-          background: url(/images/flags/spain.png) no-repeat center center;
+          background: url(./images/flags/spain.png) no-repeat center center;
           background-size: cover;
           color: transparent; }
         nav .container_idiomas .select_lang li:nth-child(3) a {
-          background: url(/images/flags/brazil.png) no-repeat center center;
+          background: url(./images/flags/brazil.png) no-repeat center center;
           background-size: cover;
           color: transparent; }
         nav .container_idiomas .select_lang li a {
