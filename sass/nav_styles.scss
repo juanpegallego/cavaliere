@@ -96,17 +96,17 @@ nav
           top: 35px;          
           background-color: rgba(255, 255, 255, 0.671);
           &:first-child a{
-            background: url(./images/flags/usa.png) no-repeat center center;
+            background: url(../images/flags/usa.png) no-repeat center center;
             background-size: cover; 
             color: transparent;
           }
           &:nth-child(2) a{
-            background: url(./images/flags/spain.png) no-repeat center center;
+            background: url(../images/flags/spain.png) no-repeat center center;
             background-size: cover;
             color: transparent;
           }
           &:nth-child(3) a{
-           background: url(./images/flags/brazil.png) no-repeat center center;
+           background: url(../images/flags/brazil.png) no-repeat center center;
            background-size: cover;
            color: transparent;
           }
