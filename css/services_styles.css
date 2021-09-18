@@ -1,0 +1,443 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 10px; }
+
+:root {
+  --principal: black;
+  --secundario: red;
+  --opcional:white;
+  --ventanas:rgba(255, 255, 255, 0.782);
+  --fuentePrincipal:'Poppins', 'Sans Serif';
+  --fuenteSecundaria:'Montserrat', 'Sans Serif'; }
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: var(--fuentePrincipal);
+  overflow-x: hidden;
+  /* overflow: hidden; */
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+  scroll-snap-align: start; }
+
+header {
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  top: -20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  transition: all 3s; }
+  @media screen and (max-width: 600px) {
+    header {
+      top: -50px;
+      height: 200vh; } }
+  header #lamp {
+    font-size: 15rem;
+    color: white;
+    transform: translateY(200px) rotate(0deg);
+    cursor: pointer; }
+    @media screen and (max-width: 600px) {
+      header #lamp {
+        transform: translateY(200px); } }
+  header h1 {
+    color: black;
+    font-size: 5rem;
+    transition: all 5s; }
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 3rem; } }
+  header img {
+    visibility: hidden; }
+  header .first_text,
+  header .second_text {
+    font-size: 2rem;
+    background-color: black;
+    width: 50%;
+    border-radius: 1rem;
+    text-align: center;
+    padding: 5px;
+    transition: all 5s; }
+    @media screen and (max-width: 600px) {
+      header .first_text,
+      header .second_text {
+        width: 70%; } }
+    header .first_text strong,
+    header .second_text strong {
+      font-size: 1.8rem; }
+
+.lights_on {
+  background-color: rebeccapurple; }
+  .lights_on #lamp {
+    transition: all 2s;
+    font-size: 10rem;
+    width: 200px;
+    transform: translateY(0px) rotate(180deg);
+    color: #ffff47; }
+    @media screen and (max-width: 600px) {
+      .lights_on #lamp {
+        transform: translateY(100px) rotate(180deg); } }
+  .lights_on h1 {
+    transition: all 5s;
+    color: white; }
+  .lights_on .first_text {
+    background-color: rgba(0, 0, 0, 0.692);
+    color: white; }
+  .lights_on img {
+    width: 100px;
+    height: 100px; }
+  .lights_on .second_text {
+    transition: all 5s;
+    color: black;
+    box-shadow: 0px 0px 20px 3px #270944;
+    background-color: white; }
+
+.content {
+  scroll-snap-align: start;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh; }
+  .content .title_container {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    @media screen and (max-width: 600px) {
+      .content .title_container {
+        width: 100%; } }
+    .content .title_container .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .content .title_container .title h1 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: 4rem; }
+        @media screen and (max-width: 600px) {
+          .content .title_container .title h1 {
+            font-size: 3rem; } }
+        .content .title_container .title h1 .wand_icon {
+          font-size: 6rem;
+          position: relative;
+          right: 20px; }
+  .content:hover .title h1 .wand_icon {
+    transform: rotate(-45deg);
+    color: red; }
+  .content .cards_container {
+    display: grid;
+    width: 60%;
+    transition: all 1s;
+    top: 50px;
+    grid-gap: 0px;
+    position: relative;
+    grid-template-columns: 50% 50%; }
+    @media screen and (max-width: 600px) {
+      .content .cards_container {
+        width: 95%; } }
+    .content .cards_container .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 100%;
+      transition: all 1s;
+      min-height: 500px;
+      background-color: #4545ce;
+      padding: 10px;
+      color: white; }
+      .content .cards_container .card:first-child {
+        border-top-left-radius: 40%;
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%; }
+      .content .cards_container .card:nth-child(2) {
+        border-top-right-radius: 40%;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%; }
+      .content .cards_container .card .service_icon {
+        width: 50px;
+        height: 50px; }
+      .content .cards_container .card h2 {
+        font-size: 2.5rem;
+        height: 50px;
+        display: block;
+        width: 100%;
+        text-align: center; }
+        @media screen and (max-width: 600px) {
+          .content .cards_container .card h2 {
+            font-size: 2rem; } }
+      .content .cards_container .card p {
+        font-size: 1.3rem;
+        text-align: center;
+        width: 90%;
+        background-color: white;
+        color: black;
+        padding: 5px;
+        border-radius: 5px; }
+      .content .cards_container .card span {
+        font-size: 1.3rem;
+        text-decoration: underline red; }
+      .content .cards_container .card ul {
+        width: 70%; }
+        .content .cards_container .card ul li {
+          font-size: 1.3rem; }
+  .content a {
+    width: 20%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 100px;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid red; }
+    @media screen and (max-width: 600px) {
+      .content a {
+        width: 50%; } }
+    .content a:hover {
+      background-color: black;
+      color: white; }
+  .content:hover .card:first-child {
+    transition: all 1s;
+    transform: translateX(-40px);
+    border-top-left-radius: 10px; }
+    @media screen and (max-width: 600px) {
+      .content:hover .card:first-child {
+        transform: translateX(-10px); } }
+  .content:hover .card:nth-child(2) {
+    transition: all 1s;
+    transform: translateX(40px);
+    border-top-right-radius: 10px; }
+    @media screen and (max-width: 600px) {
+      .content:hover .card:nth-child(2) {
+        transform: translateX(10px); } }
+
+.container_logistica {
+  background: url(/images/Material_Cavaliere/camon/_MG_1973.jpg) no-repeat center center;
+  scroll-snap-align: start;
+  background-size: 100%;
+  background-color: #9c8ca7;
+  width: 100%;
+  position: relative;
+  top: 250px;
+  min-height: 150vh; }
+  .container_logistica .title_container {
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 100vh;
+    color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    min-height: 50vh; }
+    .container_logistica .title_container h1 {
+      font-size: 7rem; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .title_container h1 {
+          color: white; } }
+    .container_logistica .title_container h3 {
+      width: 70%;
+      font-size: 1.6rem;
+      text-align: center; }
+    .container_logistica .title_container p {
+      text-align: center;
+      width: 70%;
+      background-color: #645af5;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      font-weight: bold; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .title_container p {
+          width: 80%; } }
+    .container_logistica .title_container h4 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 3rem; }
+      .container_logistica .title_container h4 ion-icon {
+        font-size: 7rem; }
+    .container_logistica .title_container ul {
+      width: 50%;
+      display: grid;
+      grid-template-columns: 50% 50%; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .title_container ul {
+          width: 90%; } }
+      .container_logistica .title_container ul li {
+        font-size: 1.6rem;
+        margin: 10px;
+        background-color: rgba(149, 149, 153, 0.768);
+        cursor: pointer;
+        height: 45px;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        border-radius: 5px;
+        color: white; }
+        .container_logistica .title_container ul li:hover {
+          color: rgba(0, 0, 255, 0.768);
+          background-color: white;
+          font-weight: bold; }
+        .container_logistica .title_container ul li ion-icon {
+          font-size: 1.6rem; }
+  .container_logistica .container_flota {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    transition: all 1s; }
+    .container_logistica .container_flota .fleet_card {
+      backdrop-filter: blur(10px);
+      width: 70%;
+      min-height: 80vh;
+      overflow: hidden;
+      transition: all 1s;
+      margin-bottom: 20px;
+      display: none; }
+      .container_logistica .container_flota .fleet_card .card_title {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        background-color: rgba(60, 103, 241, 0.568);
+        justify-content: center;
+        align-items: center; }
+        .container_logistica .container_flota .fleet_card .card_title h3 {
+          font-size: 2.5rem;
+          font-family: var(--fuenteSecundaria); }
+      .container_logistica .container_flota .fleet_card .grid_info_container {
+        height: 50vh;
+        display: grid;
+        grid-template-columns: 50% 50%; }
+        .container_logistica .container_flota .fleet_card .grid_info_container .left_container {
+          display: flex;
+          justify-content: space-evenly;
+          align-items: center;
+          flex-direction: column;
+          padding: 10px;
+          background-color: black;
+          color: white; }
+          .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
+            font-size: 1.7rem;
+            text-align: justify; }
+          .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul {
+            padding: 5px;
+            width: 90%; }
+            .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
+              font-size: 1.5rem; }
+        .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
+          display: grid;
+          padding: 5px;
+          overflow: hidden;
+          background-color: rgba(0, 0, 0, 0.658);
+          grid-template-rows: 60% 40%; }
+          .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
+            margin: auto;
+            width: 90%; }
+          .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs {
+            display: flex;
+            justify-content: center;
+            align-items: center; }
+            .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul {
+              list-style: none; }
+              .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
+                font-size: 1.5rem;
+                color: white; }
+                .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
+                  font-weight: bold;
+                  font-size: 1.5rem;
+                  color: white; }
+    .container_logistica .container_flota button {
+      font-size: 1.7rem;
+      background-color: rgba(0, 0, 255, 0.768);
+      cursor: pointer;
+      height: 45px;
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 5px;
+      color: white;
+      width: 200px;
+      margin: auto;
+      position: relative;
+      border: none;
+      top: 10px; }
+    .container_logistica .container_flota .active {
+      display: block;
+      transition: all 1s; }
+
+.container_invitacion {
+  scroll-snap-align: start;
+  background-color: #6453b1;
+  position: relative;
+  top: 300px;
+  min-height: 100vh;
+  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+  color: white; }
+  .container_invitacion h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .container_invitacion p {
+    font-size: 1.8rem; }
+    @media screen and (max-width: 600px) {
+      .container_invitacion p {
+        width: 80%; } }
+  .container_invitacion a {
+    font-size: 1.7rem;
+    color: red;
+    width: 15%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 35px;
+    font-weight: bold;
+    border-radius: 1rem;
+    background-color: white;
+    text-decoration: none; }
+    @media screen and (max-width: 600px) {
+      .container_invitacion a {
+        width: 50%; } }
+    .container_invitacion a .phone_icon {
+      font-size: 2.5rem; }
+    .container_invitacion a:hover {
+      color: #03a103;
+      background-color: rgba(202, 198, 198, 0.616); }
+      .container_invitacion a:hover .phone_icon {
+        transform: rotate(40deg);
+        transition: all .7s; }
+
+/*# sourceMappingURL=services_styles.css.map */

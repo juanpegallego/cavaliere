@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavaliere Group - Services</title>
+    <link rel="stylesheet" href="/css/footer_styles.css">
+    <link rel="stylesheet" href="/css/nav_styles.css">
+    <link rel="stylesheet" href="/css/services_styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <div class="wsp_container" id="wspContainer">
+        <a href="https://wa.me/1166132111" target="_blank">
+            <ion-icon name="logo-whatsapp" class="wsp_icon"></ion-icon>
+
+        </a>
+    </div>
+
+    <nav class="nav">
+        <div class="nav_logo_container">
+            <img src="/images/Home/logotipo.png" alt="">
+        </div>
+        <ul>
+            <li class="nav_item">
+                <a href="/pages/en/index/index.html">
+                    <ion-icon name="home-outline" class="icon"></ion-icon>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/en/about/about.html">
+                    <ion-icon name="people-outline" class="icon"></ion-icon>
+                    <span>About</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/en/products/products.html">
+                    <ion-icon name="nutrition-outline" class="icon"></ion-icon>
+                    <span>Products</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/en/services/services.html">
+                    <ion-icon name="color-wand-outline" class="icon"></ion-icon>
+                    <span>Services</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/en/contact/contact.html">
+                    <ion-icon name="mail-outline" class="icon"></ion-icon>
+                    <span>Contact</span>
+                </a>
+            </li>
+        </ul>
+        <div class="container_idiomas">
+            <h3>
+                <ion-icon name="chatbubbles-outline" class="lang_icon"></ion-icon>
+                En
+            </h3>
+            <ul class="select_lang">
+                <li>
+                    <a href="/pages/en/services/services.html">En</a>
+                </li>
+                <li>
+                    <a href="/pages/es/services/services.html">Es</a>
+                </li>
+                <li>
+                    <a href="/pages/por/services/services.html">Por</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header id="header" class="header">
+        <ion-icon name="bulb-outline" onclick="turnOn()" id="lamp"></ion-icon>
+
+        <h1>
+
+            ¿ How we will help you ?
+        </h1>
+
+        <p class="first_text">
+            We know that buying and selling abroad are processes that can be complicated if you do not have
+            with the knowledge of how to do it.
+        </p>
+
+
+        <p class="second_text">
+            That is why we offer <strong> our experience </strong> to
+            pave your way, implementing the work methodology that we develop to carry out projects of
+            different areas and sectors.
+        </p>
+    </header>
+
+    <div class="content">
+        <div class="title_container">
+            <div class="title">
+
+                <h1>
+                    <ion-icon name="color-wand-outline" class="wand_icon">
+                    </ion-icon>
+                    Our services
+                </h1>
+            </div>
+        </div>
+
+        <div class="cards_container">
+            <div class="card " id="leftCard">
+                <ion-icon name="globe-outline" class="service_icon"></ion-icon>
+                <h2>
+                    Comex
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <span>
+                    We will help u with:
+                </span>
+                <ul>
+                    <li>The import / export process (forms, deadlines, process, etc.)</li>
+                    <li>Exchange and customs regulations</li>
+                    <li>Logistics efficiency</li>
+                    <li>Insurance and guarantees</li>
+                    <li>Quality control of merchandise</li>
+                </ul>
+            </div>
+
+            <div class="card" id="rightCard">
+                <ion-icon name="bar-chart-outline" class="service_icon"></ion-icon>
+                <h2>
+                    Small companies management
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <span>
+                    We will help u with:
+                </span>
+                <ul>
+                    <li>Document management according to the regulations of the country of origin / destination</li>
+                    <li>Management of import / export permits</li>
+                    <li>Investment ideas</li>
+                    <li>Track delivery times at origin and destination</li>
+                    <li>Coordination with customs brokers</li>
+                </ul>
+            </div>
+        </div>
+        <a href="/pages/en/contact/contact.html"> Request advice</a>
+    </div>
+
+
+
+
+
+    <div class="container_logistica" id="logistica">
+        <div class="title_container">
+            <h1>
+                Logistics
+            </h1>
+            <h3>
+                THE BEST SERVICES REQUIRE THE MOST ADVANCED TECHNOLOGY
+            </h3>
+            <p>
+                In transportation management, the best strategy is always the one that goes straight to the point. <br>
+                For this reason, Cavaliere Cargo constantly invests in sustainable innovation, translating every step
+                of the processes in economy, security and objectivity.
+            </p>
+            <h4>
+                Meet our own fleet <br>
+                <ion-icon name="caret-down-outline"></ion-icon>
+            </h4>
+            <ul>
+                <li onclick="mostrar('refri30')">Refrigerator Truck 30 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                <li onclick="mostrar('refri28')">Refrigerator Truck 28 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                <li onclick="mostrar('carga30')">General cargo truck 30 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                <li onclick="mostrar('carga28')">General cargo truck 28 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+            </ul>
+        </div>
+        <div class="container_flota">
+            <div class="fleet_card" id="refri30">
+                <div class="card_title">
+                    <h3>SEMI-TRAILER REFRIGERATOR 30 PALLETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            The Cavaliere Cargo 30 Pallets Refrigerated Semi-trailer has the highest load capacity
+                            From the market. <br> Information monitored via telemetry allows to know in real time
+                            the loading conditions and vehicle speed.
+                        </p>
+                        <ul>
+                            <li>Controlled temperature (up to 3 different temperatures).</li>
+                            <li>Capacity for 30 pallets.</li>
+                            <li>Body volume: 96.4 m³.</li>
+                            <li>Largest cold room in Brazil - Argentina.</li>
+
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Type of load: <span>Chilled</span>
+                                </li>
+                                <li>
+                                <li>Body dimensions: <span>15,2 m x 2,6 m</span>
+
+                                </li>
+                                <li>
+                                    Capacity: <span>30 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Hide</button>
+            </div>
+
+            <div class="fleet_card" id="refri28">
+                <div class="card_title">
+                    <h3>SEMI-TRAILER REFRIGERATOR 28 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            Set fully prepared for the transport of cargo with controlled temperature, such as food and
+                            other perishables. <br> The exchange of information via telemetry allows real-time
+                            monitoring of vehicle speed and load conditions.
+                        </p>
+                        <ul>
+                            <li>Controlled temperature (up to 3 different temperatures).</li>
+                            <li>Capacity for 28 pallets..</li>
+                            <li>Body volume: 84m³ / 87.6m³</li>
+
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Type of load: <span>Chilled</span>
+                                </li>
+                                <li>
+                                <li>Body dimensions: <span>14,3 m x 2,6 m</span>
+
+                                </li>
+                                <li>
+                                    Capacity: <span>28 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Hide</button>
+            </div>
+
+            <div class="fleet_card" id="carga30">
+                <div class="card_title">
+                    <h3> GENERAL CARGO TRUCK 30 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            The same excellence that we apply to cargo handling with controlled temperatures endorses
+                            our performance in dry cargo. Our sets are prepared to satisfy the logistical demand of the
+                            most varied consumer goods.
+                        </p>
+                        <ul>
+                            <li>Dry/general cargo goods</li>
+                            <li>Capacity for 30 pallets</li>
+                            <li>Body volume: 108m³</li>
+
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Type of load: <span>General - Dry</span>
+                                </li>
+                                <li>
+                                <li>Body dimensions: <span>15,3 m x 2,8 m</span>
+
+                                </li>
+                                <li>
+                                    Capacity: <span>30 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Hide</button>
+            </div>
+
+            <div class="fleet_card  " id="carga28">
+                <div class="card_title">
+                    <h3> GENERAL CARGO TRUCK 28 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+
+                            The same excellence that we apply to cargo handling with controlled temperatures endorses
+                            our performance in dry cargo. Our bodies are prepared to satisfy the logistical demand of
+                            the most varied consumer goods.
+                        </p>
+                        <ul>
+                            <li>Dry/general cargo goods</li>
+                            <li>Capacity for 28 pallets</li>
+                            <li>Body volume: 101m³</li>
+
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Type of load: <span>General - Dry</span>
+                                </li>
+                                <li>
+                                <li>Body dimensions: <span>14,3 m x 2,7 m</span>
+
+                                </li>
+                                <li>
+                                    Capacity: <span>28 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Hide</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container_invitacion">
+        <h1>
+            Do you want to know more?
+        </h1>
+        <p>
+            We invite you to coordinate a meeting to learn about your idea or project and work on a tailor-made plan.
+        </p>
+        <a href="/pages/en/contact/contact.html">
+            <ion-icon name="call-outline" class="phone_icon"></ion-icon>
+            Coordinate meeting
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer_content">
+            <div class="logo_container">
+                <a href="/pages/en/index/index.html">
+                    <img src="/images/Home/logo.png" alt="">
+                </a>
+            </div>
+
+            <div class="redes_container">
+                <ul>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    Be Tech - Web Design
+                </p>
+            </div>
+    </footer>
+
+    <script src="/scripts/pages/services/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cavaliere Group - Services</title>
+    <link rel="stylesheet" href="/css/footer_styles.css">
+    <link rel="stylesheet" href="/css/nav_styles.css">
+    <link rel="stylesheet" href="/css/services_styles.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body>
+
+    <div class="wsp_container" id="wspContainer">
+        <a href="https://wa.me/1166132111" target="_blank">
+            <ion-icon name="logo-whatsapp" class="wsp_icon"></ion-icon>
+
+        </a>
+    </div>
+
+    <nav class="nav">
+        <div class="nav_logo_container">
+            <img src="/images/Home/logotipo.png" alt="">
+        </div>
+        <ul>
+            <li class="nav_item">
+                <a href="/pages/es/index/index.html">
+                    <ion-icon name="home-outline" class="icon"></ion-icon>
+                    <span>Inicio</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/es/about/about.html">
+                    <ion-icon name="people-outline" class="icon"></ion-icon>
+                    <span>Nosotros</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/es/products/products.html">
+                    <ion-icon name="nutrition-outline" class="icon"></ion-icon>
+                    <span>Productos</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/es/services/services.html">
+                    <ion-icon name="color-wand-outline" class="icon"></ion-icon>
+                    <span>Servicios</span>
+                </a>
+            </li>
+            <li class="nav_item">
+                <a href="/pages/es/contact/contact.html">
+                    <ion-icon name="mail-outline" class="icon"></ion-icon>
+                    <span>Contacto</span>
+                </a>
+            </li>
+        </ul>
+        <div class="container_idiomas">
+            <h3>
+                <ion-icon name="chatbubbles-outline" class="lang_icon"></ion-icon>
+                Es
+            </h3>
+            <ul class="select_lang">
+                <li>
+                    <a href="/pages/en/services/services.html">En</a>
+                </li>
+                <li>
+                    <a href="/pages/es/services/services.html">Es</a>
+                </li>
+                <li>
+                    <a href="/pages/por/services/services.html">Por</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <header id="header" class="header">
+        <ion-icon name="bulb-outline" onclick="turnOn()" id="lamp"></ion-icon>
+
+        <h1>
+            ¿ Como te vamos a ayudar ?
+        </h1>
+
+        <p class="first_text">
+            Sabemos que comprar y/o vender en el exterior son procesos que pueden resultar complicados si no se cuenta
+            con el conocimiento de cómo hacerlo.
+        </p>
+        <p class="second_text">
+            Por eso ofrecemos <strong>nuestra experiencia </strong> para
+            allanar tu camino, implementando la metodología de trabajo que desarrollamos para concretar proyectos de
+            distintos rubros y sectores.
+        </p>
+    </header>
+
+    <div class="content">
+        <div class="title_container">
+            <div class="title">
+                <h1>
+                    <ion-icon name="color-wand-outline" class="wand_icon">
+                    </ion-icon>
+                    Nuestros servicios
+                </h1>
+            </div>
+        </div>
+
+        <div class="cards_container">
+            <div class="card " id="leftCard">
+                <ion-icon name="globe-outline" class="service_icon"></ion-icon>
+                <h2>
+                    Comex
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <span>
+                    Te ayudaremos con:
+                </span>
+                <ul>
+                    <li>El proceso de importación/exportación (formas, plazos, proceso, etc.)</li>
+                    <li>Normativa cambiaria y aduanera</li>
+                    <li>Eficiencia logística</li>
+                    <li>Seguros y garantías</li>
+                    <li>Control de calidad de la mercadería</li>
+                </ul>
+            </div>
+
+            <div class="card" id="rightCard">
+                <ion-icon name="bar-chart-outline" class="service_icon"></ion-icon>
+                <h2>
+                    Gestion de pymes
+                </h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <span>
+                    Te ayudaremos con:
+                </span>
+                <ul>
+                    <li>Gestión documental de acuerdo a la normativa del país de origen/destino</li>
+                    <li>Gestión de permisos de importación/exportación</li>
+                    <li>Seguimiento de los tiempos de entrega en origen y destino</li>
+                    <li>Coordinación con despachantes de aduana</li>
+                </ul>
+            </div>
+        </div>
+        <a href="/pages/es/contact/contact.html">Solicitar asesoramiento</a>
+    </div>
+
+
+
+
+
+    <div class="container_logistica" id="logistica">
+        <div class="title_container">
+            <h1>
+                Logistica
+            </h1>
+            <h3>
+                LOS MEJORES SERVICIOS REQUIEREN LA TECNOLOGÍA MÁS AVANZADA
+            </h3>
+            <p>
+                En la gestión del transporte, la mejor estrategia es siempre la que va directo al grano. <br>
+                Por este motivo, Cavaliere Cargo invierte constantemente en innovación sostenible, traduciendo cada paso
+                de los procesos en economía, seguridad y objetividad.
+            </p>
+            <h4>
+                Conoce nuestra flota <br>
+                <ion-icon name="caret-down-outline"></ion-icon>
+            </h4>
+            <ul>
+                <li onclick="mostrar('refri30')">Refrigerador 30 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                <li onclick="mostrar('refri28')">Refrigerador 28 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                <li onclick="mostrar('carga30')">Carga gral 30 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                <li onclick="mostrar('carga28')">Carga gral 28 pallets
+                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+                </li>
+                
+            </ul>
+            
+        </div>
+        <div class="container_flota" >
+            <div class="fleet_card" id="refri30">
+                <div class="card_title">
+                    <h3>REFRIGERADOR SEMI-REMOLQUE 30 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            El Semirremolque Frigorífico 30 Palets de Cavaliere Cargo tiene la mayor capacidad de carga
+                            del mercado. <br> Información monitorizada vía telemetría permite conocer en tiempo real las
+                            condiciones de carga y velocidad del vehículo.
+                        </p>
+                        <ul>
+                            <li>Temperatura controlada (hasta 3 diferentes temperaturas).</li>
+                            <li>Capacidad para 30 palets.</li>
+                            <li>Volumen del cuerpo: 96,4 m³.</li>
+                            <li>Camara frigorífica más grande de Brasil - Argentina.</li>
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Tipo de carga: <span>Refrigerada</span>
+                                </li>
+
+                                
+                                <li>Dimensiones del cuerpo: <span>15,2 m x 2,6 m</span>
+                                </li>
+                                <li>
+                                    Capacidad: <span>30 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Ocultar</button>
+            </div>
+
+            <div class="fleet_card" id="refri28">
+                <div class="card_title">
+                    <h3>REFRIGERADOR SEMI-REMOLQUE 28 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            Conjunto totalmente preparado para el transporte de cargas con temperatura controlada, como
+                            alimentos y otros perecederos. <br> El intercambio de información vía telemetría permite
+                            monitorear en tiempo real las condiciones de carga y velocidad del vehículo.
+                        </p>
+                        <ul>
+                            <li>Temperatura controlada (hasta 3 diferentes temperaturas).</li>
+                            <li>Capacidad para 28 palets.</li>
+                            <li>Volumen del cuerpo: 84m³ / 87,6m³</li>
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Tipo de carga: <span>Refrigerada</span>
+                                </li>
+                                <li>
+                                <li>Dimensiones del cuerpo: <span>14,3 m x 2,6 m</span>
+                                </li>
+                                <li>
+                                    Capacidad: <span>28 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Ocultar</button>
+            </div>
+
+            <div class="fleet_card" id="carga30">
+                <div class="card_title">
+                    <h3> SEMI-REMOLQUE CARGA GENERAL 30 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            El Semirremolque Frigorífico 30 Palets de Cavaliere Cargo tiene la mayor capacidad de carga
+                            del mercado. <br> Información monitorizada vía telemetría permite conocer en tiempo real las
+                            condiciones de carga y velocidad del vehículo.
+                        </p>
+                        <ul>
+                            <li>Capacidad para 30 palets.</li>
+                            <li>Volumen del cuerpo: 96,4 m³.</li>
+
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Tipo de carga: <span>General - Seca</span>
+                                </li>
+                                <li>
+                                <li>Dimensiones del cuerpo: <span>15,3 m x 2,8 m </span>
+
+                                </li>
+                                <li>
+                                    Capacidad: <span>30 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Ocultar</button>
+            </div>
+
+            <div class="fleet_card  " id="carga28">
+                <div class="card_title">
+                    <h3> SEMI-REMOLQUE CARGA GENERAL 28 PALETS</h3>
+                </div>
+                <div class="grid_info_container">
+                    <div class="left_container">
+                        <p>
+                            El Semirremolque Frigorífico 30 Palets de Cavaliere Cargo tiene la mayor capacidad de carga
+                            del mercado. <br> Información monitorizada vía telemetría permite conocer en tiempo real las
+                            condiciones de carga y velocidad del vehículo.
+                        </p>
+                        <ul>
+                            <li>Temperatura controlada (hasta 3 diferentes temperaturas).</li>
+                            <li>Capacidad para 30 palets.</li>
+                            <li>Volumen del cuerpo: 96,4 m³.</li>
+                            <li>Camara frigorífica más grande de Brasil - Argentina.</li>
+
+                        </ul>
+                    </div>
+                    <div class="img_container">
+                        <img src="/images/Logistic/truck.png" alt="">
+                        <div class="specs">
+                            <ul>
+                                <li>
+                                    Tipo de carga: <span>General - Seca</span>
+                                </li>
+                                <li>
+                                <li>Dimensiones del cuerpo: <span>14,3 m x 2,7 m</span>
+
+                                </li>
+                                <li>
+                                    Capacidad: <span>28 pallets</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="ocultarTarjetas()">Ocultar</button>
+            </div>
+
+        </div> 
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container_invitacion">
+        <h1>
+            Queres saber mas?
+        </h1>
+        <p>
+            Te invitamos a coordinar una reunión para conocer sobre tu idea o proyecto y trabajar en un plan a medida.
+        </p>
+        <a href="/pages/es/contact/contact.html">
+            <ion-icon name="call-outline" class="phone_icon"></ion-icon>
+            Coordinar reunion
+        </a>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <footer>
+        <div class="footer_content">
+            <div class="logo_container">
+                <a href="/pages/es/index/index.html">
+                    <img src="/images/Home/logo.png" alt="">
+                </a>
+
+            </div>
+
+            <div class="redes_container">
+                <ul>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-facebook"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="logo-whatsapp"></ion-icon>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </a>
+                    </li>
+                </ul>
+                <p>
+                    Be Tech - Web Design
+                </p>
+            </div>
+    </footer>
+
+    <script src="/scripts/pages/services/main.js"></script>
+</body>
+
+</html>
