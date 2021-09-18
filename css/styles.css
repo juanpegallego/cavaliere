@@ -330,7 +330,7 @@ body {
   overflow: hidden;
   position: relative;
   width: 100%;
-  background: url(/images/Material_Cavaliere/WhatsApp\ Image\ 2021-08-26\ at\ 20.15.18.jpeg) no-repeat center center;
+  background: url(./images/Material_Cavaliere/WhatsApp\ Image\ 2021-08-26\ at\ 20.15.18.jpeg) no-repeat center center;
   background-size: 100%;
   background-blend-mode: overlay; }
   @media (max-width: 600px) {
@@ -528,7 +528,7 @@ body {
           transition: .2s;
           border-radius: 0px; }
     .banner_container .grid_banner .grid_img {
-      background: url(/images/Material_Cavaliere/camon/_MG_1973.jpg) no-repeat 400px center fixed;
+      background: url(./images/Material_Cavaliere/camon/_MG_1973.jpg) no-repeat 400px center fixed;
       background-size: 60%;
       width: 100%;
       border-radius: 3px; }
@@ -548,7 +548,7 @@ body {
       top: 80vh; } }
   .container_3::after {
     content: " ";
-    background: url(/images/Home/logotipo.png) no-repeat 280px 350px;
+    background: url(./images/Home/logotipo.png) no-repeat 280px 350px;
     background-size: 60%;
     opacity: 1;
     top: 0;
