@@ -43,7 +43,7 @@ body
     scroll-snap-align: start;
     position: relative;
     width: 100%;
-    background: url(/images/Products/persiana.jpg) no-repeat center center;
+    background: url(../images/Products/persiana.jpg) no-repeat center center;
     background-size: cover;
     top: 0px;
     min-height: 100vh;
@@ -63,7 +63,7 @@ body
         right: 0;
         top: 0;
         z-index: 2;
-        background: url(/images/Home/logotipo.png) no-repeat center 250px;
+        background: url(../images/Home/logotipo.png) no-repeat center 250px;
         background-size: 18%;
     }
 

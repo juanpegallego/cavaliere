@@ -234,7 +234,7 @@ header {
         transform: translateX(10px); } }
 
 .container_logistica {
-  background: url(/images/Material_Cavaliere/camon/_MG_1973.jpg) no-repeat center center;
+  background: url(../images/Material_Cavaliere/camon/_MG_1973.jpg) no-repeat center center;
   scroll-snap-align: start;
   background-size: 100%;
   background-color: #9c8ca7;
