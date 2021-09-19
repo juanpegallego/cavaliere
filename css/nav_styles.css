@@ -16,12 +16,14 @@ nav {
   z-index: 1000; }
   @media screen and (max-width: 600px) {
     nav {
-      width: 50%;
-      height: 230px;
+      width: 40vw;
+      height: 175px;
       margin: auto;
-      left: 25%;
+      left: 30vw;
       position: absolute;
-      top: 0px; } }
+      top: 0px;
+      border-bottom-left-radius: 3rem;
+      border-bottom-right-radius: 3rem; } }
   nav .nav_logo_container {
     height: 45px;
     width: 100%;
@@ -108,7 +110,7 @@ nav {
     flex-direction: row; }
     @media screen and (max-width: 600px) {
       nav ul {
-        width: 70%;
+        width: 80%;
         flex-direction: column;
         justify-content: center;
         align-items: center; } }
@@ -120,7 +122,9 @@ nav {
     justify-content: center; }
     @media screen and (max-width: 600px) {
       nav .nav_item {
-        width: 100%; } }
+        width: 100%;
+        border-radius: 1.5rem;
+        height: 30px; } }
     nav .nav_item:hover {
       background-color: var(--opcional);
       background-color: #cecece;

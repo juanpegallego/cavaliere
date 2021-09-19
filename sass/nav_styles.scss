@@ -24,12 +24,14 @@ nav
     border-bottom-right-radius: .5rem;
     z-index: 1000;
     @media screen and (max-width: $small) {
-        width:50%;
-        height: 230px;
+        width:40vw;
+        height: 175px;
         margin: auto;
-        left: 25%;
+        left: 30vw;
         position: absolute;
         top: 0px;
+        border-bottom-left-radius: 3rem;
+        border-bottom-right-radius: 3rem;
       }
     .nav_logo_container{
       height: 45px;
@@ -132,10 +134,11 @@ nav
         left: 0px;
         flex-direction: row;   
         @media screen and (max-width: $small) {
-            width: 70%;   
+            width: 80%;   
             flex-direction: column;     
             justify-content: center; 
             align-items: center;   
+            
           }  
     }
 
@@ -147,7 +150,9 @@ nav
         align-items: center;
         justify-content: center;
         @media screen and (max-width: $small) {
-            width: 100%;    
+            width: 100%;  
+            border-radius: 1.5rem;
+            height: 30px;  
           }
         &:hover
         {           
