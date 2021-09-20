@@ -14,7 +14,7 @@ nav
     height: 45px;
     margin: auto;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     top: 0px;
     left: 20%;
     background: rgb(6,13,13);
@@ -35,7 +35,8 @@ nav
       }
     .nav_logo_container{
       height: 45px;
-      width: 100%;
+      width: 10%;
+      left: 0px;
       position: relative;
       overflow: hidden;
       display: flex;
@@ -46,7 +47,7 @@ nav
         left: -200px;
       }
       img{
-        width: 60px;
+        width: 70%;
       }
     }  
     .container_idiomas
@@ -56,6 +57,7 @@ nav
       background-color: rgba(255, 255, 255, 0.671);
       color: black;
       top: 0px;
+      left: 340px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -80,7 +82,7 @@ nav
         cursor: pointer;
         width: 100%;
         height: 45px;
-        top: 40px;     
+        top: 40px;   
         font: poppins bold 1.5rem;
         display: flex;
         flex-direction: column;
@@ -95,7 +97,7 @@ nav
           justify-content: center;
           align-items: center;
           position: relative;
-          top: 35px;          
+          top:77px;                   
           background-color: rgba(255, 255, 255, 0.671);
           &:first-child a{
             background: url(../images/flags/usa.png) no-repeat center center;
@@ -124,14 +126,14 @@ nav
     }
 
 
-    ul
+    .navigation
     {        
         display: flex;
         justify-content: space-evenly;
         width: 85%;
         position: relative;
         top: 0px;
-        left: 0px;
+        left:0px;
         flex-direction: row;   
         @media screen and (max-width: $small) {
             width: 80%;   
@@ -142,46 +144,33 @@ nav
           }  
     }
 
-    .nav_item
+    .nav_wrapper
     {
-        list-style: none;
         width: 200px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        @media screen and (max-width: $small) {
-            width: 100%;  
-            border-radius: 1.5rem;
-            height: 30px;  
-          }
-        &:hover
-        {           
-            background-color: var(--opcional);
-            background-color: rgb(206, 206, 206);
-            transition: all .2s;
-            
-        }
 
-        &:hover a span,
-        &:hover a .icon
-        {
-            color: black;
-            font-weight: bold;
+        &:hover{
+          background-color: rgba(92, 90, 90, 0.575);
         }
-
+        &:hover .hide_lista{
+          display: block;
+        }
+        
+       .nav_item{
+        width: 100%;
+        list-style: none;
+        
         a
         {
-            text-decoration: none;
-            color: white;            
+            text-decoration: none;       
             letter-spacing: -.5px;
             display: flex;
             align-items: center;
-            width: 75%;
+            width: 100%;
             height: 45px;
-            justify-content: space-between;
+            justify-content: space-evenly;            
+            color: white;
             .icon
             {
-                color: white;
                 font-size: 1.8rem;
 
                 @media screen and (max-width: $small) {
@@ -191,14 +180,44 @@ nav
 
             span
             {
-                color: white;
                 font-size: 1.8rem;
 
                 @media screen and (max-width: $small) {
                     font-size: 1.5rem;
                   }
             }
+        } 
+       }
+       .hide_lista{ 
+        display: none;        
+        list-style: none;
+        background: rgb(6,13,13);
+        background: linear-gradient(to right, rgba(6,13,13,1) 27%, rgb(54, 52, 52) 85%);
+        .hide_item{
+          height: 45px;
+          a{
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+            width: 100%;
+            height: 45px;
+            &:hover{                
+              background-color: rgba(92, 90, 90, 0.575);
+            }
+          }
         }
+      } 
+        
+
+        @media screen and (max-width: $small) {
+            width: 100%;  
+            border-radius: 1.5rem;
+            height: 30px;  
+          }    
     }
 }
 

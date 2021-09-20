@@ -147,7 +147,7 @@ body {
     top: 0px;
     position: relative;
     height: 250px;
-    background: url(/images/Products/Fruits/apple.jpg) no-repeat center center;
+    background: url(../../../images/Products/Fruits/apple.jpg) no-repeat center center;
     background-size: cover;
     display: flex; }
     .products_container .products h3 {

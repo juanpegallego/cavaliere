@@ -22,44 +22,110 @@
         </a>
     </div>
 
+
+
+
+
+
+
+
+
+
     <nav class="nav">
         <div class="nav_logo_container">
-            <img src="../../../images/Home/logotipo.png" alt="">
+            <img src="../../../images/Home/logotipo.png" alt="logotipo_Cavaliere">
         </div>
-        <ul>
-            <li class="nav_item">
-                <a href="../../../pages/es/index/index.html">
-                    <ion-icon name="home-outline" class="icon"></ion-icon>
-                    <span>Inicio</span>
-                </a>
-            </li>
-            <li class="nav_item">
-                <a href="../../../pages/es/about/about.html">
-                    <ion-icon name="people-outline" class="icon"></ion-icon>
-                    <span>Nosotros</span>
-                </a>
-            </li>
-            <li class="nav_item">
-                <a href="../../../pages/es/products/products.html">
-                    <ion-icon name="nutrition-outline" class="icon"></ion-icon>
-                    <span>Productos</span>
-                </a>
-            </li>
-            <li class="nav_item">
-                <a href="../../../pages/es/services/services.html">
-                    <ion-icon name="color-wand-outline" class="icon"></ion-icon>
-                    <span>Servicios</span>
-                </a>
-            </li>
-            <li class="nav_item">
-                <a href="../../../pages/es/contact/contact.html">
-                    <ion-icon name="mail-outline" class="icon"></ion-icon>
-                    <span>Contacto</span>
-                </a>
-            </li>
+        <ul class="navigation">
+            <div class="nav_wrapper">
+                <li class="nav_item">
+                    <a href="../../../pages/es/index/index.html">
+                        <ion-icon name="home-outline" class="icon"></ion-icon>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+            </div>
+
+            <div class="nav_wrapper">
+                <li class="nav_item">
+                    <a href="../../../pages/es/about/about.html">
+                        <ion-icon name="people-outline" class="icon"></ion-icon>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <ul class="hide_lista">
+                    <li class="hide_item">
+                        <a href="../../../pages/es/about/about.html">
+                            Nosotros
+                        </a>
+                    </li>
+
+                    <li class="hide_item">
+                        <a href="../../../pages/es/about/about.html#branches">
+                            Donde estamos
+                        </a>
+                    </li>
+
+                    <li class="hide_item">
+                        <a href="../../../pages/es/about/about.html#sustentability">
+                            Sustentabilidad
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="nav_wrapper">
+                <li class="nav_item">
+                    <a href="../../../pages/es/products/products.html">
+                        <ion-icon name="nutrition-outline" class="icon"></ion-icon>
+                        <span>Productos</span>
+                    </a>
+                </li>
+                <ul class="hide_lista">
+                    <li class="hide_item">
+                        <a href="../../../pages/es/products/products.html#fields">
+                            Nuestros Campos
+                        </a>
+                    </li>
+                    <li class="hide_item">
+                        <a href="../../../pages/es/products/products.html#products">
+                            Productos
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_wrapper">
+                <li class="nav_item">
+                    <a href="../../../pages/es/services/services.html">
+                        <ion-icon name="color-wand-outline" class="icon"></ion-icon>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+                <ul class="hide_lista">
+                    <li class="hide_item">
+                        <a href="../../../pages/es/services/services.html#services">
+                            Servicios
+                        </a>
+                    </li>
+                    <li class="hide_item">
+                        <a href="../../../pages/es/services/services.html#logistica">
+                            Logistica
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="nav_wrapper">
+                <li class="nav_item">
+                    <a href="../../../pages/es/contact/contact.html">
+                        <ion-icon name="mail-outline" class="icon"></ion-icon>
+                        <span>Contacto</span>
+                    </a>
+                </li>
+            </div>
+
         </ul>
         <div class="container_idiomas">
-
             <h3>
                 <ion-icon name="chatbubbles-outline" class="lang_icon"></ion-icon>
                 Es
@@ -77,6 +143,15 @@
             </ul>
         </div>
     </nav>
+
+
+
+
+
+
+
+
+
     <header id="header" class="header">
         <ion-icon name="bulb-outline" onclick="turnOn()" id="lamp"></ion-icon>
 
@@ -95,7 +170,10 @@
         </p>
     </header>
 
-    <div class="content">
+    <div class="content" id="services">
+        <div class="content_background_img">
+            <img src="/images/Logistic/services_laptop.png" alt="">
+        </div>
         <div class="title_container">
             <div class="title">
                 <h1>
@@ -112,6 +190,7 @@
                 <h2>
                     Comex
                 </h2>
+
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
@@ -183,11 +262,11 @@
                 <li onclick="mostrar('carga28')">Carga gral 28 pallets
                     <ion-icon name="ellipsis-vertical-outline"></ion-icon>
                 </li>
-                
+
             </ul>
-            
+
         </div>
-        <div class="container_flota" >
+        <div class="container_flota">
             <div class="fleet_card" id="refri30">
                 <div class="card_title">
                     <h3>REFRIGERADOR SEMI-REMOLQUE 30 PALETS</h3>
@@ -214,7 +293,7 @@
                                     Tipo de carga: <span>Refrigerada</span>
                                 </li>
 
-                                
+
                                 <li>Dimensiones del cuerpo: <span>15,2 m x 2,6 m</span>
                                 </li>
                                 <li>
@@ -342,7 +421,7 @@
                 <button onclick="ocultarTarjetas()">Ocultar</button>
             </div>
 
-        </div> 
+        </div>
     </div>
 
 

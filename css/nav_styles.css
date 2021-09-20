@@ -5,7 +5,7 @@ nav {
   height: 45px;
   margin: auto;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   top: 0px;
   left: 20%;
   background: #060d0d;
@@ -26,7 +26,8 @@ nav {
       border-bottom-right-radius: 3rem; } }
   nav .nav_logo_container {
     height: 45px;
-    width: 100%;
+    width: 10%;
+    left: 0px;
     position: relative;
     overflow: hidden;
     display: flex;
@@ -37,13 +38,14 @@ nav {
         position: absolute;
         left: -200px; } }
     nav .nav_logo_container img {
-      width: 60px; }
+      width: 70%; }
   nav .container_idiomas {
     position: absolute;
     transform: translateX(490px);
     background-color: rgba(255, 255, 255, 0.671);
     color: black;
     top: 0px;
+    left: 340px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -80,7 +82,7 @@ nav {
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 35px;
+        top: 77px;
         background-color: rgba(255, 255, 255, 0.671); }
         nav .container_idiomas .select_lang li:first-child a {
           background: url(../images/flags/usa.png) no-repeat center center;
@@ -100,7 +102,7 @@ nav {
           width: 70%;
           margin-top: 5px;
           height: 40px; }
-  nav ul {
+  nav .navigation {
     display: flex;
     justify-content: space-evenly;
     width: 85%;
@@ -109,49 +111,62 @@ nav {
     left: 0px;
     flex-direction: row; }
     @media screen and (max-width: 600px) {
-      nav ul {
+      nav .navigation {
         width: 80%;
         flex-direction: column;
         justify-content: center;
         align-items: center; } }
-  nav .nav_item {
-    list-style: none;
-    width: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
+  nav .nav_wrapper {
+    width: 200px; }
+    nav .nav_wrapper:hover {
+      background-color: rgba(92, 90, 90, 0.575); }
+    nav .nav_wrapper:hover .hide_lista {
+      display: block; }
+    nav .nav_wrapper .nav_item {
+      width: 100%;
+      list-style: none; }
+      nav .nav_wrapper .nav_item a {
+        text-decoration: none;
+        letter-spacing: -.5px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 45px;
+        justify-content: space-evenly;
+        color: white; }
+        nav .nav_wrapper .nav_item a .icon {
+          font-size: 1.8rem; }
+          @media screen and (max-width: 600px) {
+            nav .nav_wrapper .nav_item a .icon {
+              font-size: 1.5rem; } }
+        nav .nav_wrapper .nav_item a span {
+          font-size: 1.8rem; }
+          @media screen and (max-width: 600px) {
+            nav .nav_wrapper .nav_item a span {
+              font-size: 1.5rem; } }
+    nav .nav_wrapper .hide_lista {
+      display: none;
+      list-style: none;
+      background: #060d0d;
+      background: linear-gradient(to right, #060d0d 27%, #363434 85%); }
+      nav .nav_wrapper .hide_lista .hide_item {
+        height: 45px; }
+        nav .nav_wrapper .hide_lista .hide_item a {
+          text-decoration: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.5rem;
+          text-align: center;
+          color: white;
+          width: 100%;
+          height: 45px; }
+          nav .nav_wrapper .hide_lista .hide_item a:hover {
+            background-color: rgba(92, 90, 90, 0.575); }
     @media screen and (max-width: 600px) {
-      nav .nav_item {
+      nav .nav_wrapper {
         width: 100%;
         border-radius: 1.5rem;
         height: 30px; } }
-    nav .nav_item:hover {
-      background-color: var(--opcional);
-      background-color: #cecece;
-      transition: all .2s; }
-    nav .nav_item:hover a span, nav .nav_item:hover a .icon {
-      color: black;
-      font-weight: bold; }
-    nav .nav_item a {
-      text-decoration: none;
-      color: white;
-      letter-spacing: -.5px;
-      display: flex;
-      align-items: center;
-      width: 75%;
-      height: 45px;
-      justify-content: space-between; }
-      nav .nav_item a .icon {
-        color: white;
-        font-size: 1.8rem; }
-        @media screen and (max-width: 600px) {
-          nav .nav_item a .icon {
-            font-size: 1.5rem; } }
-      nav .nav_item a span {
-        color: white;
-        font-size: 1.8rem; }
-        @media screen and (max-width: 600px) {
-          nav .nav_item a span {
-            font-size: 1.5rem; } }
 
 /*# sourceMappingURL=nav_styles.css.map */

@@ -28,7 +28,7 @@ function mostrar(a) {
   
 
     window.scroll({
-        top: 2100,
+        top: 2200,
         left: 0,
         behavior: 'smooth'
       });
