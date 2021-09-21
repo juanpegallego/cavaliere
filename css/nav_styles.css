@@ -7,7 +7,7 @@ nav {
   display: flex;
   justify-content: center;
   top: 0px;
-  left: 20%;
+  left: 20vw;
   background: #060d0d;
   background: radial-gradient(circle, #060d0d 27%, #666565 85%);
   position: fixed;
@@ -145,7 +145,7 @@ nav {
           font-size: 1.8rem; }
           @media screen and (max-width: 600px) {
             nav .nav_wrapper .nav_item a .icon {
-              font-size: 1.5rem; } }
+              font-size: 2rem; } }
         nav .nav_wrapper .nav_item a span {
           font-size: 1.8rem; }
           @media screen and (max-width: 600px) {
@@ -159,7 +159,8 @@ nav {
       @media screen and (max-width: 600px) {
         nav .nav_wrapper .hide_lista {
           position: absolute;
-          left: 180px; } }
+          left: 180px;
+          border-radius: 1rem; } }
       nav .nav_wrapper .hide_lista .hide_item {
         height: 45px; }
         @media screen and (max-width: 600px) {
@@ -175,6 +176,9 @@ nav {
           color: white;
           width: 100%;
           height: 45px; }
+          @media screen and (max-width: 600px) {
+            nav .nav_wrapper .hide_lista .hide_item a {
+              border-radius: 1rem; } }
           nav .nav_wrapper .hide_lista .hide_item a:hover {
             background-color: rgba(92, 90, 90, 0.575); }
     @media screen and (max-width: 600px) {
