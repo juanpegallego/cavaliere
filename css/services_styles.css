@@ -107,7 +107,6 @@ header {
 .content {
   scroll-snap-align: start;
   width: 100%;
-  background-color: #551414;
   position: relative;
   top: 100px;
   display: flex;
@@ -123,6 +122,12 @@ header {
       right: 15vh;
       width: 30%;
       transform: rotate(55deg); }
+      @media screen and (max-width: 600px) {
+        .content .content_background_img img {
+          width: 40%;
+          top: 50px;
+          z-index: -2;
+          left: 170px; } }
   .content .title_container {
     width: 70%;
     display: flex;
@@ -143,7 +148,9 @@ header {
         font-size: 4rem; }
         @media screen and (max-width: 600px) {
           .content .title_container .title h1 {
-            font-size: 3rem; } }
+            font-size: 4rem;
+            letter-spacing: -1px;
+            transform: translateY(-50px); } }
         .content .title_container .title h1 .wand_icon {
           font-size: 6rem;
           position: relative;
@@ -161,7 +168,8 @@ header {
     grid-template-columns: 50% 50%; }
     @media screen and (max-width: 600px) {
       .content .cards_container {
-        width: 95%; } }
+        width: 95%;
+        top: 200px; } }
     .content .cards_container .card {
       display: flex;
       flex-direction: column;
@@ -177,10 +185,16 @@ header {
         border-top-left-radius: 40%;
         border-top-right-radius: 0%;
         border-bottom-right-radius: 0%; }
+        @media screen and (max-width: 600px) {
+          .content .cards_container .card:first-child {
+            border-top-left-radius: 10%; } }
       .content .cards_container .card:nth-child(2) {
         border-top-right-radius: 40%;
         border-top-left-radius: 0%;
         border-bottom-left-radius: 0%; }
+        @media screen and (max-width: 600px) {
+          .content .cards_container .card:nth-child(2) {
+            border-top-right-radius: 10%; } }
       .content .cards_container .card .service_icon {
         width: 50px;
         height: 50px; }
@@ -204,14 +218,23 @@ header {
         color: white;
         padding: 5px;
         border-radius: 5px; }
+        @media screen and (max-width: 600px) {
+          .content .cards_container .card p {
+            font-size: 1.5rem; } }
       .content .cards_container .card span {
         font-size: 1.7rem;
         text-decoration: underline red; }
       .content .cards_container .card ul {
         width: 70%; }
+        @media screen and (max-width: 600px) {
+          .content .cards_container .card ul {
+            width: 90%; } }
         .content .cards_container .card ul li {
           font-size: 1.7rem;
           text-align: left; }
+          @media screen and (max-width: 600px) {
+            .content .cards_container .card ul li {
+              font-size: 1.5rem; } }
   .content a {
     width: 20%;
     height: 40px;
@@ -226,7 +249,9 @@ header {
     border-bottom: 2px solid red; }
     @media screen and (max-width: 600px) {
       .content a {
-        width: 50%; } }
+        width: 50%;
+        top: 250px;
+        position: relative; } }
     .content a:hover {
       background-color: black;
       color: white; }
@@ -253,6 +278,9 @@ header {
   position: relative;
   top: 300px;
   min-height: 150vh; }
+  @media screen and (max-width: 600px) {
+    .container_logistica {
+      top: 500px; } }
   .container_logistica .title_container {
     backdrop-filter: blur(20px);
     width: 100%;
@@ -270,6 +298,11 @@ header {
       width: 70%;
       font-size: 1.6rem;
       text-align: center; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .title_container h3 {
+          width: 80%;
+          position: relative;
+          transform: translateY(50px); } }
     .container_logistica .title_container p {
       text-align: center;
       width: 80%;
@@ -280,7 +313,9 @@ header {
       font-size: 1.7rem; }
       @media screen and (max-width: 600px) {
         .container_logistica .title_container p {
-          width: 80%; } }
+          width: 80%;
+          position: relative;
+          transform: translateY(100px); } }
     .container_logistica .title_container h4 {
       display: flex;
       flex-direction: column;
@@ -288,6 +323,12 @@ header {
       font-size: 3.5rem;
       transform: translateY(50px);
       font-weight: bolder; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .title_container h4 {
+          width: 80%;
+          position: relative;
+          color: red;
+          transform: translateY(150px); } }
       .container_logistica .title_container h4 ion-icon {
         font-size: 7rem; }
     .container_logistica .title_container ul {
@@ -298,7 +339,8 @@ header {
       top: 50px; }
       @media screen and (max-width: 600px) {
         .container_logistica .title_container ul {
-          width: 90%; } }
+          width: 90%;
+          top: 150px; } }
       .container_logistica .title_container ul li {
         font-size: 1.6rem;
         margin: 10px;
@@ -326,6 +368,9 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     transition: all 1s; }
+    @media screen and (max-width: 600px) {
+      .container_logistica .container_flota {
+        min-height: 100vh; } }
     .container_logistica .container_flota .fleet_card {
       width: 70%;
       min-height: 70vh;
@@ -337,20 +382,34 @@ header {
       top: 25px;
       padding: 10px;
       border-radius: 3rem; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .container_flota .fleet_card {
+          top: 150px;
+          min-height: 100vh;
+          width: 95%; } }
       .container_logistica .container_flota .fleet_card .card_title {
         width: 100%;
         height: 100px;
         display: flex;
-        background-color: rgba(60, 103, 241, 0.668);
+        background-color: red;
         justify-content: center;
-        align-items: center; }
+        align-items: center;
+        padding: 10px; }
         .container_logistica .container_flota .fleet_card .card_title h3 {
           font-size: 2.5rem;
           font-family: var(--fuenteSecundaria); }
+          @media screen and (max-width: 600px) {
+            .container_logistica .container_flota .fleet_card .card_title h3 {
+              font-size: 2rem;
+              text-align: center; } }
       .container_logistica .container_flota .fleet_card .grid_info_container {
         height: 50vh;
         display: grid;
         grid-template-columns: 50% 50%; }
+        @media screen and (max-width: 600px) {
+          .container_logistica .container_flota .fleet_card .grid_info_container {
+            display: flex;
+            justify-content: space-evenly; } }
         .container_logistica .container_flota .fleet_card .grid_info_container .left_container {
           display: flex;
           justify-content: space-evenly;
@@ -364,11 +423,19 @@ header {
           .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
             font-size: 1.7rem;
             text-align: justify; }
+            @media screen and (max-width: 600px) {
+              .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
+                font-size: 1.5rem;
+                text-align: left;
+                padding: 5px; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul {
             padding: 5px;
             width: 90%; }
             .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
               font-size: 1.5rem; }
+              @media screen and (max-width: 600px) {
+                .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
+                  font-size: 1.3rem; } }
         .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
           display: grid;
           padding: 5px;
@@ -376,9 +443,15 @@ header {
           background-color: rgba(0, 0, 0, 0.658);
           grid-template-rows: 60% 40%;
           border-bottom-right-radius: 3rem; }
+          @media screen and (max-width: 600px) {
+            .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
+              grid-template-rows: 50% 50%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
             margin: auto;
             width: 90%; }
+            @media screen and (max-width: 600px) {
+              .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
+                width: 100%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs {
             display: flex;
             justify-content: center;
@@ -388,10 +461,16 @@ header {
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
                 font-size: 1.5rem;
                 color: white; }
+                @media screen and (max-width: 600px) {
+                  .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
+                    font-size: 1.3rem; } }
                 .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
                   font-weight: bold;
                   font-size: 1.5rem;
                   color: white; }
+                  @media screen and (max-width: 600px) {
+                    .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
+                      font-size: 1.3rem; } }
     .container_logistica .container_flota button {
       font-size: 1.7rem;
       background-color: rgba(0, 0, 255, 0.768);
@@ -408,6 +487,9 @@ header {
       position: relative;
       border: none;
       top: 5px; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .container_flota button {
+          margin-top: 10px; } }
     .container_logistica .container_flota .active {
       display: block;
       transition: all 1s; }
@@ -424,7 +506,11 @@ header {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  color: white; }
+  color: white;
+  font-size: 1.8rem; }
+  @media screen and (max-width: 600px) {
+    .container_invitacion {
+      top: 75vh; } }
   .container_invitacion h1 {
     font-size: 3rem;
     text-transform: uppercase;
