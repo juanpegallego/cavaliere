@@ -76,7 +76,8 @@ body {
   transition: all 1s; }
 
 .container_1 {
-  background-color: #ebe5e5; }
+  background-color: #ebe5e5;
+  background-color: red; }
 
 .container_2 {
   height: 100vh; }
@@ -91,10 +92,11 @@ body {
   @media screen and (max-width: 600px) {
     .container_1 {
       position: relative;
-      top: 40px;
+      top: -50px;
       min-height: 150vh; } }
   .container_1 .bgc_video {
-    position: absolute; }
+    position: absolute;
+    min-height: 100%; }
 
 .logo_container {
   width: 35vw;
@@ -112,7 +114,8 @@ body {
   border-bottom-right-radius: .5rem; }
   @media (max-width: 768px) {
     .logo_container {
-      top: 180px;
+      top: 0px;
+      left: 0px;
       width: 100%; } }
   .logo_container img {
     display: flex;
@@ -124,17 +127,17 @@ body {
     position: relative; }
     @media (max-width: 600px) {
       .logo_container img {
-        top: 70px;
-        width: 50%;
+        top: 50px;
+        width: 45%;
         margin: auto;
-        left: -10px; } }
+        left: 100px; } }
 
 .grid_section {
   width: 100vw;
   padding: 100px;
   position: relative;
   display: grid;
-  top: 250px;
+  top: 100px;
   grid-template-columns: 50% 50%; }
   @media (max-width: 600px) {
     .grid_section {
@@ -144,7 +147,7 @@ body {
       flex-direction: column;
       align-items: center;
       padding: 0px;
-      top: 250px; } }
+      top: 70px; } }
   .grid_section .left_container {
     display: flex;
     justify-content: space-between;
