@@ -111,7 +111,7 @@ body {
   flex-direction: column;
   border-bottom-left-radius: .5rem;
   border-bottom-right-radius: .5rem; }
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
     .logo_container {
       top: 0px;
       left: 0px;
@@ -176,13 +176,13 @@ body {
         overflow: hidden;
         left: 0px;
         position: relative;
-        top: -100px;
-        height: 400px;
+        top: 100px;
+        height: 500px;
         justify-content: space-evenly; } }
     @media (max-width: 900px) {
       .grid_section .left_container {
         min-height: 35vh;
-        top: -100px;
+        top: 0px;
         position: relative; } }
     .grid_section .left_container h1 {
       color: white;
@@ -228,17 +228,9 @@ body {
         background-color: black;
         color: white;
         transition: .2s; }
-      @media (max-width: 600px) {
-        .grid_section .left_container a {
-          font-size: 1.8rem;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 50%; } }
       @media (max-width: 900px) {
         .grid_section .left_container a {
-          width: 25%;
+          width: 50%;
           height: 50px;
           display: flex;
           justify-content: center;
@@ -262,20 +254,19 @@ body {
   box-shadow: 0px 0px 10px 5px rgba(53, 53, 54, 0.445); }
   @media (max-width: 600px) {
     .section_container {
-      width: 80%;
+      width: 100%;
       height: 40vh;
       left: 0px;
       position: relative;
-      border-radius: 3rem;
-      transform: translateY(-200px); } }
+      border-radius: 3rem; } }
   @media (max-width: 900px) {
     .section_container {
-      width: 65%;
+      width: 80%;
       margin: auto;
       position: relative;
       left: 0px;
-      top: -100px;
-      height: 400px; } }
+      top: -50px;
+      height: 300px; } }
   .section_container:hover {
     background-color: rgba(255, 255, 255, 0.881);
     transition: all .9s; }
@@ -361,11 +352,11 @@ body {
     transition: all 1s; }
   .banner h1 {
     font-size: 4rem; }
-    @media (max-width: 600px) {
+    @media screen and (max-width: 600px) {
       .banner h1 {
         font-size: 2rem;
         letter-spacing: -1px; } }
-    @media (max-width: 900px) {
+    @media screen and (max-width: 900px) {
       .banner h1 {
         font-size: 3rem; } }
   .banner p {
@@ -642,8 +633,8 @@ body {
       top: 80vh; } }
   @media (max-width: 900px) {
     .container_3 {
-      min-height: 30vh;
-      top: 30vh; } }
+      min-height: 100vh;
+      top: 100vh; } }
   .container_3::after {
     content: " ";
     background: url(../images/Home/logotipo.png) no-repeat 280px 350px;
@@ -686,7 +677,8 @@ body {
       font-family: var(--fuenteSecundaria); }
       @media (max-width: 600px) {
         .container_3 .contact_title h1 {
-          font-size: 3.5rem; } }
+          font-size: 3.5rem;
+          top: -200px; } }
       @media (max-width: 900px) {
         .container_3 .contact_title h1 {
           font-size: 4rem; } }
