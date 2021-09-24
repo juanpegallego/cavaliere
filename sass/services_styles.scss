@@ -36,7 +36,7 @@ body
 //*------------------MEDIA --------------------------*//
   
     
-$small: 600px;
+$small: 667px;
 $medium: 900px;
 
 
@@ -123,6 +123,7 @@ header{
     {
         background-color: rgba(0, 0, 0, 0.692);
         color: white;
+       
     }
     
     img{
@@ -186,12 +187,17 @@ header{
                 @media screen and (max-width: $small) {
                     font-size: 4rem;
                     letter-spacing: -1px;
+                    text-align: center;
+                    margin: auto;
                     transform: translateY(-50px);
                   }
                 .wand_icon{
                     font-size: 6rem;
                     position: relative;
                     right: 20px;
+                    @media screen and (max-width: $small) {
+                        left:50px;
+                      }
                 }
             }
         }

@@ -135,7 +135,8 @@ header {
       box-shadow: 0px 0px 20px 5px #494848; }
       @media (max-width: 600px) {
         .content .flex_container .card {
-          top: 20px; } }
+          top: 20px;
+          min-height: 350px; } }
       .content .flex_container .card:hover {
         transform: translateY(-75px);
         transition: all 1s; }
@@ -185,7 +186,7 @@ header {
       @media (max-width: 600px) {
         .content .content_subtitle .final_card {
           width: 80%;
-          height: 200px;
+          height: 300px;
           justify-content: center;
           position: relative;
           margin: auto;
@@ -207,7 +208,7 @@ header {
         @media (max-width: 600px) {
           .content .content_subtitle .final_card h2 {
             text-align: center;
-            font-size: 2.2rem; } }
+            font-size: 1.7rem; } }
       .content .content_subtitle .final_card p {
         width: 90%;
         color: black;
@@ -221,6 +222,9 @@ header {
       .content .content_subtitle .final_card strong {
         color: black;
         font-size: 1.5rem; }
+        @media (max-width: 600px) {
+          .content .content_subtitle .final_card strong {
+            font-size: 1.4rem; } }
 
 .container_branches {
   scroll-snap-align: start;
@@ -288,7 +292,7 @@ header {
   color: white; }
   @media (max-width: 600px) {
     .section {
-      top: 400px;
+      top: 300px;
       height: 150vh; } }
   .section h1 {
     font-size: 4rem; }
@@ -306,7 +310,8 @@ header {
     font-size: 2rem; }
     @media (max-width: 600px) {
       .section h3 {
-        width: 90%; } }
+        width: 90%;
+        text-align: center; } }
     .section h3 span {
       font-size: 2rem;
       text-decoration: underline 2px red; }
