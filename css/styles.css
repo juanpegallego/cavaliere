@@ -96,6 +96,9 @@ body {
   .container_1 .bgc_video {
     position: absolute;
     min-height: 100%; }
+    @media screen and (max-width: 600px) {
+      .container_1 .bgc_video {
+        filter: brightness(110%) blur(1.5px); } }
 
 .logo_container {
   width: 35vw;
@@ -113,9 +116,11 @@ body {
   border-bottom-right-radius: .5rem; }
   @media (max-width: 600px) {
     .logo_container {
-      top: 0px;
-      left: 0px;
-      width: 100%; } }
+      top: 5vh;
+      width: 100%;
+      height: 20vh;
+      position: relative;
+      top: 50vh; } }
   @media screen and (min-width: 600px) {
     .logo_container {
       width: 60%; } }
@@ -129,10 +134,10 @@ body {
     position: relative; }
     @media (max-width: 600px) {
       .logo_container img {
-        top: 50px;
-        width: 45%;
-        margin: auto;
-        left: 100px; } }
+        top: 0vh;
+        position: relative;
+        width: 70%;
+        left: 0%; } }
     @media screen and (min-width: 600px) {
       .logo_container img {
         width: 60%; } }
@@ -148,6 +153,7 @@ body {
     .grid_section {
       display: flex;
       height: 150vh;
+      transform: translateY(-200px);
       justify-content: center;
       flex-direction: column;
       align-items: center;
@@ -168,7 +174,8 @@ body {
     height: 95%;
     margin: auto;
     flex-direction: column;
-    padding: 10px; }
+    padding: 10px;
+    color: white; }
     @media (max-width: 600px) {
       .grid_section .left_container {
         width: 100%;
@@ -177,14 +184,14 @@ body {
         position: relative;
         top: 100px;
         height: 500px;
-        justify-content: space-evenly; } }
+        justify-content: space-evenly;
+        display: none; } }
     @media (min-width: 600px) {
       .grid_section .left_container {
         min-height: 35vh;
         top: 0px;
         position: relative; } }
     .grid_section .left_container h1 {
-      color: white;
       font-size: 4.5rem;
       letter-spacing: -2px;
       text-align: center;
@@ -192,20 +199,27 @@ body {
       text-shadow: 0px 0px 20px black; }
       @media (max-width: 600px) {
         .grid_section .left_container h1 {
-          font-size: 2.5rem; } }
+          font-size: 4rem;
+          background: rgba(55, 56, 56, 0.897);
+          background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%);
+          border-radius: 10px;
+          padding: 10px;
+          letter-spacing: -1px;
+          width: 85%; } }
     .grid_section .left_container p {
-      color: white;
       width: 70%;
       padding: 10px;
       text-align: center;
       font-size: 1.5rem;
-      background-color: rgba(133, 127, 127, 0.753);
+      /* background-color: rgba(133, 127, 127, 0.753); */
       border-radius: 10px;
       background: rgba(55, 56, 56, 0.897);
       background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%); }
       @media (max-width: 600px) {
         .grid_section .left_container p {
-          font-size: 1.5rem; } }
+          font-size: 2rem;
+          width: 85%;
+          text-align: justify; } }
       @media (min-width: 600px) {
         .grid_section .left_container p {
           width: 80%;
@@ -253,11 +267,12 @@ body {
   box-shadow: 0px 0px 10px 5px rgba(53, 53, 54, 0.445); }
   @media (max-width: 600px) {
     .section_container {
-      width: 100%;
+      width: 80%;
       height: 40vh;
-      left: 0px;
+      left: 0%;
       position: relative;
-      border-radius: 3rem; } }
+      border-radius: 3rem;
+      top: 300px; } }
   @media (min-width: 600px) {
     .section_container {
       width: 80%;
@@ -510,7 +525,7 @@ body {
   position: relative;
   top: 300px;
   left: 0px;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center; }
   @media (max-width: 600px) {
     .banner_container {
@@ -548,14 +563,12 @@ body {
     display: grid;
     grid-template-columns: 40% 60%;
     position: relative;
-    height: 400px; }
+    min-height: 400px; }
     @media (max-width: 600px) {
       .banner_container .grid_banner {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        height: 400px; } }
+        display: block;
+        height: auto;
+        min-height: 100vh; } }
     @media (max-width: 1200px) {
       .banner_container .grid_banner {
         display: flex;
@@ -568,11 +581,12 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      color: white; }
+      color: white;
+      overflow: hidden; }
       @media (max-width: 600px), (max-width: 1200px) {
         .banner_container .grid_banner .grid_message {
           justify-content: space-evenly;
-          height: 100%; } }
+          height: 100vh; } }
       .banner_container .grid_banner .grid_message h1 {
         font-size: 3rem; }
         @media (max-width: 600px), (max-width: 1200px) {
@@ -629,7 +643,8 @@ body {
   grid-template-rows: 20% 80%; }
   @media (max-width: 600px) {
     .container_3 {
-      top: 80vh; } }
+      top: 200vh;
+      position: relative; } }
   @media (max-width: 1200px) {
     .container_3 {
       min-height: 100vh;
@@ -656,11 +671,36 @@ body {
     justify-content: space-around;
     flex-direction: column;
     position: relative;
-    top: 100px; }
+    top: 100px;
+    /*  h2
+     {
+         font-size: 3.5rem;
+         position: relative;
+         top: 40px;
+         color: rgb(80, 78, 78);
+         font-family: var(--fuenteSecundaria);
+         font-weight: lighter;
+         @media (max-width: $small) {
+             text-align:center;
+             font-size: 2rem;
+             transform: translateY(0px);
+             text-align: justify;
+             width: 100%;
+         }
+         @media (min-width: $big) {
+             top: 150px;
+             width: 60%;
+             line-height: 4rem;
+             font-size: 3rem;
+             text-align: center;
+         }
+         
+     } */ }
     @media (max-width: 600px) {
       .container_3 .contact_title {
-        width: 80%;
-        margin: auto; } }
+        width: 100%;
+        margin: auto;
+        top: 0px; } }
     @media (max-width: 1200px) {
       .container_3 .contact_title {
         position: relative;
@@ -675,30 +715,13 @@ body {
       font-family: var(--fuenteSecundaria); }
       @media (max-width: 600px) {
         .container_3 .contact_title h1 {
-          font-size: 3.5rem;
-          top: -50px; } }
+          font-size: 4rem;
+          top: 0px;
+          width: 100%; } }
       @media (min-width: 1200px) {
         .container_3 .contact_title h1 {
           font-size: 4rem;
           top: -100px; } }
-    .container_3 .contact_title h2 {
-      font-size: 3.5rem;
-      position: relative;
-      top: 40px;
-      color: #504e4e;
-      font-family: var(--fuenteSecundaria);
-      font-weight: lighter; }
-      @media (max-width: 600px) {
-        .container_3 .contact_title h2 {
-          text-align: center;
-          font-size: 1.8rem; } }
-      @media (max-width: 1200px) {
-        .container_3 .contact_title h2 {
-          top: 150px;
-          width: 60%;
-          line-height: 4rem;
-          font-size: 3rem;
-          text-align: center; } }
   .container_3 .form_container {
     width: 100%;
     position: relative;
@@ -709,10 +732,11 @@ body {
     justify-content: center; }
     @media (max-width: 600px) {
       .container_3 .form_container {
-        width: 80%;
+        width: 100%;
         height: 80%;
-        margin: auto; } }
-    @media (max-width: 1200px) {
+        margin: auto;
+        transform: translateY(-200px); } }
+    @media (min-width: 1200px) {
       .container_3 .form_container {
         width: 70%;
         min-height: 80%;
@@ -806,8 +830,10 @@ body {
           .container_3 .form_container form button {
             top: 10px;
             width: 100%;
+            height: 50px;
+            letter-spacing: 2px;
             font-size: 2rem; } }
-        @media (max-width: 1200px) {
+        @media (min-width: 1200px) {
           .container_3 .form_container form button {
             font-size: 3rem;
             width: 50%;
@@ -830,8 +856,8 @@ footer {
   align-items: center; }
   @media (max-width: 600px) {
     footer {
-      top: 70vh; } }
-  @media (max-width: 1200px) {
+      top: 0vh; } }
+  @media (min-width: 1200px) {
     footer {
       top: 20vh; } }
   footer .footer_content {

@@ -16,11 +16,16 @@
     --fuentePrincipal:'Poppins', 'Sans Serif';
     --fuenteSecundaria:'Montserrat', 'Sans Serif';
 
-
     $fondoBoton: rgb(15, 172, 15);
   }
+  // fondo color cajas 
+
+//background: rgba(55, 56, 56, 0.897);
+//background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%); 
+
+
 //*------------------MEDIA --------------------------*//
-  
+
     
 $small: 600px;
 $medium: 900px;
@@ -141,6 +146,10 @@ body
     {
         position: absolute;
         min-height: 100%;
+        @media screen and (max-width: $small) {
+            filter:brightness(110%) blur(1.5px);
+            
+        }
     }
 }
 
@@ -160,9 +169,11 @@ body
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     @media (max-width: $small) {
-        top: 0px;
-        left: 0px;
+        top: 5vh;
         width: 100%;
+        height: 20vh;
+        position: relative;
+        top: 50vh;
     }
     @media screen and (min-width: $small) {
         width: 60%;
@@ -181,10 +192,10 @@ body
         
 
         @media (max-width: $small) {
-            top:50px;
-            width: 45%;
-            margin: auto;
-            left: 100px;
+            top:0vh;
+            position: relative;
+            width: 70%;
+            left: 0%;   
         }
         @media screen and (min-width: $small) {
         width: 60%;
@@ -203,6 +214,7 @@ body
         @media (max-width: $small) {
             display: flex;
             height: 150vh;
+            transform: translateY(-200px);
             justify-content:center;
             flex-direction: column;
             align-items: center;
@@ -226,6 +238,7 @@ body
         margin: auto;
         flex-direction: column;
         padding: 10px;
+        color: white;
         
             @media (max-width: $small) {
                 width: 100%;   
@@ -235,6 +248,7 @@ body
                 top: 100px; 
                 height: 500px;
                 justify-content:space-evenly;
+                display: none;
             }
             @media (min-width: $small) {
                 min-height: 35vh;
@@ -244,7 +258,6 @@ body
             
         h1
         {
-            color: white;
             font-size: 4.5rem;
             letter-spacing: -2px;
             text-align: center;
@@ -252,24 +265,31 @@ body
             text-shadow: 0px 0px 20px black;
 
             @media (max-width: $small) {
-                font-size: 2.5rem; 
+                font-size: 4rem; 
+                background: rgba(55, 56, 56, 0.897);
+                background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%);
+                border-radius: 10px;
+                padding: 10px;
+                letter-spacing: -1px;
+                width: 85%;
             }
         }
 
         p
         {
-            color: white;
             width: 70%;
             padding: 10px; 
             text-align: center;
             font-size: 1.5rem;
-            background-color: rgba(133, 127, 127, 0.753);
+            /* background-color: rgba(133, 127, 127, 0.753); */
             border-radius: 10px;            
             background: rgba(55, 56, 56, 0.897);
-            background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%);
+            background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%); 
+            
                 @media (max-width: $small) {
-                    font-size: 1.5rem; 
-                   
+                    font-size:2rem; 
+                    width: 85%;
+                    text-align: justify;
                 }
                 @media (min-width: $small) {
                     width: 80%;
@@ -327,11 +347,12 @@ body
     background-color: var(--ventanas);
     box-shadow: 0px 0px 10px 5px rgba(53, 53, 54, 0.445);
     @media (max-width: $small) {
-        width: 100%;
+        width: 80%;
         height: 40vh;
-        left: 0px;
+        left: 0%;
         position: relative;
-        border-radius: 3rem;;
+        border-radius: 3rem;
+        top: 300px;
     }
     @media (min-width: $small) {
         width:80%;
@@ -672,7 +693,7 @@ body
     position: relative;
     top: 300px;
     left: 0px;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     @media (max-width: $small) {
         top: 80vh;
@@ -714,13 +735,11 @@ body
         display: grid;
         grid-template-columns: 40% 60%;
         position: relative;
-        height: 400px;
+        min-height: 400px;
         @media (max-width: $small) {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            align-items: center;
-            height: 400px;
+            display: block;
+            height: auto;
+            min-height: 100vh;
         }
         @media (max-width: $big) {
             display: flex;
@@ -735,11 +754,12 @@ body
             justify-content: space-evenly;
             align-items: center;
             color: white;
+            overflow: hidden;
             @media (max-width: $small),
-            (max-width: $big)
+                    (max-width: $big)
                  {
                     justify-content: space-evenly;
-                    height: 100%;
+                    height: 100vh;
             }
             h1{
                 font-size: 3rem;
@@ -819,7 +839,8 @@ body
     background-color: rgba(255, 255, 255, 0.375);
     grid-template-rows: 20% 80%;
     @media (max-width: $small) {
-        top: 80vh;
+        top: 200vh;
+        position: relative;
     }
     @media (max-width: $big) {
         min-height: 100vh;
@@ -851,8 +872,9 @@ body
         position: relative;
         top: 100px;
         @media (max-width: $small) {
-            width: 80%;
+            width: 100%;
             margin: auto;
+            top: 0px;
         }
         @media (max-width: $big) {
             position: relative;
@@ -870,9 +892,9 @@ body
             color: red;
             font-family: var(--fuenteSecundaria);
             @media (max-width: $small) {
-                font-size: 3.5rem;
-                top: -50px;
-                
+                font-size: 4rem;
+                top: 0px;
+                width: 100%;
             }
             @media (min-width: $big) {
                 font-size:4rem;
@@ -881,7 +903,7 @@ body
            
         }
 
-        h2
+       /*  h2
         {
             font-size: 3.5rem;
             position: relative;
@@ -891,9 +913,12 @@ body
             font-weight: lighter;
             @media (max-width: $small) {
                 text-align:center;
-                font-size: 1.8rem;
+                font-size: 2rem;
+                transform: translateY(0px);
+                text-align: justify;
+                width: 100%;
             }
-            @media (max-width: $big) {
+            @media (min-width: $big) {
                 top: 150px;
                 width: 60%;
                 line-height: 4rem;
@@ -901,7 +926,7 @@ body
                 text-align: center;
             }
             
-        }
+        } */
 
         
     }
@@ -916,12 +941,13 @@ body
         flex-direction: column;
         justify-content: center;
         @media (max-width: $small) {
-            width: 80%;
+            width: 100%;
             height: 80%;
             margin: auto;
+            transform: translateY(-200px);
             
         }
-        @media (max-width: $big) {
+        @media (min-width: $big) {
             width: 70%;
             min-height: 80%;
             margin: auto;
@@ -1036,9 +1062,11 @@ body
                 @media (max-width: $small) {
                    top: 10px;
                    width: 100%;
+                   height: 50px;
+                   letter-spacing: 2px;
                    font-size: 2rem;
                 }
-                @media (max-width: $big) {
+                @media (min-width: $big) {
                    font-size: 3rem;
                    width: 50%;
                    height: 45px;
@@ -1068,9 +1096,9 @@ footer
     justify-content: center;
     align-items: center;
     @media (max-width: $small) {
-        top: 70vh;
+        top: 0vh;
     }
-    @media (max-width: $big) {
+    @media (min-width: $big) {
         top: 20vh;
     }
     .footer_content{
