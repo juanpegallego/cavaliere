@@ -182,10 +182,9 @@ body {
         overflow: hidden;
         left: 0px;
         position: relative;
-        top: 100px;
-        height: 500px;
-        justify-content: space-evenly;
-        display: none; } }
+        top: 40vh;
+        height: 50px;
+        justify-content: space-evenly; } }
     @media (min-width: 600px) {
       .grid_section .left_container {
         min-height: 35vh;
@@ -199,13 +198,13 @@ body {
       text-shadow: 0px 0px 20px black; }
       @media (max-width: 600px) {
         .grid_section .left_container h1 {
-          font-size: 4rem;
-          background: rgba(55, 56, 56, 0.897);
-          background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%);
-          border-radius: 10px;
-          padding: 10px;
-          letter-spacing: -1px;
-          width: 85%; } }
+          font-size: 2.5rem;
+          animation: desvanecerSubtitulo 7s infinite ease-in-out; }
+        @keyframes desvanecerSubtitulo {
+          0% {
+            color: transparent; }
+          100% {
+            color: white; } } }
     .grid_section .left_container p {
       width: 70%;
       padding: 10px;
@@ -217,9 +216,7 @@ body {
       background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%); }
       @media (max-width: 600px) {
         .grid_section .left_container p {
-          font-size: 2rem;
-          width: 85%;
-          text-align: justify; } }
+          display: none; } }
       @media (min-width: 600px) {
         .grid_section .left_container p {
           width: 80%;
@@ -236,20 +233,15 @@ body {
       border-radius: 10px;
       position: relative;
       top: 10px;
+      transition: all 1s;
       box-shadow: 0px 0px 20px 1px black; }
       .grid_section .left_container a:hover {
         background-color: black;
         color: white;
         transition: .2s; }
-      @media (min-width: 600px) {
+      @media (max-width: 600px) {
         .grid_section .left_container a {
-          width: 50%;
-          height: 50px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 2rem;
-          overflow: hidden; } }
+          display: none; } }
 
 .section_container {
   width: 35vw;
@@ -272,7 +264,7 @@ body {
       left: 0%;
       position: relative;
       border-radius: 3rem;
-      top: 300px; } }
+      top: 200px; } }
   @media (min-width: 600px) {
     .section_container {
       width: 80%;
@@ -353,7 +345,7 @@ body {
   background-color: white; }
   @media (max-width: 600px) {
     .banner {
-      height: 20vh;
+      height: 5vh;
       top: 250px; } }
   @media (min-width: 600px) {
     .banner {
@@ -397,7 +389,7 @@ body {
   top: 200px; }
   @media (max-width: 600px) {
     .container_2 {
-      top: 500px;
+      top: 400px;
       height: 60vh; } }
 
 .slider {
@@ -443,6 +435,9 @@ body {
         border-radius: 15px;
         background-color: rgba(255, 255, 255, 0.789);
         top: 0px; }
+        @media (max-width: 600px) {
+          .slider .slides .slide .slide_text {
+            width: 90%; } }
         .slider .slides .slide .slide_text h1 {
           font-weight: bold;
           text-align: center;
@@ -463,8 +458,9 @@ body {
           font-weight: bold; }
           @media (max-width: 600px) {
             .slider .slides .slide .slide_text p {
-              width: 50%;
-              font-size: 1.5rem; } }
+              width: 70%;
+              font-size: 1.5rem;
+              text-align: justify; } }
         .slider .slides .slide .slide_text a {
           text-decoration: underline var(--secundario) 2px;
           padding: 2px;
@@ -482,7 +478,9 @@ body {
           top: 0px; }
           @media (max-width: 600px) {
             .slider .slides .slide .slide_text a {
-              font-size: 1.5rem; } }
+              font-size: 1.5rem;
+              width: 40%;
+              height: 30px; } }
           .slider .slides .slide .slide_text a:hover {
             background-color: black;
             color: white;
@@ -715,9 +713,10 @@ body {
       font-family: var(--fuenteSecundaria); }
       @media (max-width: 600px) {
         .container_3 .contact_title h1 {
-          font-size: 4rem;
-          top: 0px;
-          width: 100%; } }
+          font-size: 3.5rem;
+          top: 50px;
+          letter-spacing: -1px;
+          width: 90%; } }
       @media (min-width: 1200px) {
         .container_3 .contact_title h1 {
           font-size: 4rem;
