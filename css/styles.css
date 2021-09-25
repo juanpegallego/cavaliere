@@ -669,31 +669,7 @@ body {
     justify-content: space-around;
     flex-direction: column;
     position: relative;
-    top: 100px;
-    /*  h2
-     {
-         font-size: 3.5rem;
-         position: relative;
-         top: 40px;
-         color: rgb(80, 78, 78);
-         font-family: var(--fuenteSecundaria);
-         font-weight: lighter;
-         @media (max-width: $small) {
-             text-align:center;
-             font-size: 2rem;
-             transform: translateY(0px);
-             text-align: justify;
-             width: 100%;
-         }
-         @media (min-width: $big) {
-             top: 150px;
-             width: 60%;
-             line-height: 4rem;
-             font-size: 3rem;
-             text-align: center;
-         }
-         
-     } */ }
+    top: 100px; }
     @media (max-width: 600px) {
       .container_3 .contact_title {
         width: 100%;
