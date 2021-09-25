@@ -654,7 +654,7 @@ body {
       width: 100%; } }
   .container_3::after {
     content: " ";
-    background: url(../images/Home/logotipo.png) no-repeat 280px 350px;
+    background: url(../images/Home/logotipo.png) no-repeat center 200px;
     background-size: 60%;
     opacity: 1;
     top: 0;
@@ -663,11 +663,12 @@ body {
     right: 0;
     position: absolute;
     z-index: -1; }
-    @media (min-width: 600px) {
+    @media (max-width: 600px) {
       .container_3::after {
-        top: 200px;
-        left: -200px;
-        background-size: 65%; } }
+        margin: auto;
+        left: 0px;
+        background-size: 100%;
+        top: 50px; } }
   .container_3 .contact_title {
     display: flex;
     align-items: center;
