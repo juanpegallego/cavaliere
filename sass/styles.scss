@@ -1097,8 +1097,15 @@ footer
     align-items: center;
     @media (max-width: $small) {
         top: 0vh;
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #060d0d;
+        background: linear-gradient(to top, #060d0d 27%, #666565 85%);
     }
-    @media (min-width: $big) {
+        @media (min-width: $big) {
         top: 20vh;
     }
     .footer_content{
@@ -1109,7 +1116,11 @@ footer
         justify-content: space-around;
         @media (max-width: $small) {
             width: 100%;
-            
+            height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
         .logo_container{
             background-color: rgb(255, 254, 254);
@@ -1119,13 +1130,28 @@ footer
             top: 0px;
             position: absolute;
             background-color: transparent;
+            @media (max-width: $small) {
+                margin: auto;
+                width: 100%;
+                height: 50vh;
+                left: 0px;
+                top: 0px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
             img{
                 width: 90px;
                 position: absolute;
                 top: 30px;
                 left: 0px;
                 @media (max-width: $small) {
-                    left: -30px;
+                    margin: auto;
+                    width: 50%;
+                    top: -50px;
+                    position: relative;
                 }
             }
         }
@@ -1138,12 +1164,16 @@ footer
             align-items: center;
             flex-direction: column;
             @media (max-width: $small) {
-                width: 50%;
+                width: 70%;
             }
             p{
                 color: white;
                 font-size: 1.3rem;
                 letter-spacing: -1px;
+                @media (max-width: $small) {
+                   transform: translateY(40px);
+                   font-size: 1.5rem;
+                }
             }
             ul
             {
@@ -1163,6 +1193,9 @@ footer
                         
                         ion-icon{
                             font-size: 3rem;
+                            @media (max-width: $small) {
+                                font-size: 3.5rem;
+                            }
                         }
                     }
                 }
