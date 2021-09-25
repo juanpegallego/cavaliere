@@ -927,8 +927,7 @@ footer {
         @media (max-width: 600px) {
           footer .footer_content .logo_container img {
             margin: auto;
-            width: 50%;
-            top: 10px;
+            width: 200px;
             position: relative; } }
     footer .footer_content .redes_container {
       width: 20%;
