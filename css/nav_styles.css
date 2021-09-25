@@ -16,13 +16,15 @@ nav {
   z-index: 1000; }
   @media screen and (max-width: 600px) {
     nav {
-      width: 45vw;
+      width: 100vw;
+      background: rgba(6, 13, 13, 0.555);
+      background: radial-gradient(circle, rgba(6, 13, 13, 0.679) 27%, rgba(102, 101, 101, 0.721) 85%);
+      position: fixed;
       height: 225px;
       margin: auto;
       left: 0px;
       position: absolute;
-      top: 0px;
-      border-bottom-right-radius: 3rem; } }
+      top: 0px; } }
   nav .nav_logo_container {
     height: 45px;
     width: 10%;
@@ -34,8 +36,7 @@ nav {
     align-items: center; }
     @media screen and (max-width: 600px) {
       nav .nav_logo_container {
-        position: absolute;
-        left: -200px; } }
+        display: none; } }
     nav .nav_logo_container img {
       width: 70%; }
   nav .container_idiomas {
@@ -53,6 +54,20 @@ nav {
     height: 45px;
     border-radius: 5px;
     transition: all .9s; }
+    @media screen and (max-width: 600px) {
+      nav .container_idiomas {
+        position: absolute;
+        right: 0px;
+        display: flex;
+        transform: translateX(0px);
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: 10px;
+        height: 30px;
+        z-index: 99;
+        color: white; } }
     nav .container_idiomas h3 {
       font-size: 1.5rem;
       top: 20px;
@@ -141,16 +156,25 @@ nav {
         height: 45px;
         justify-content: space-evenly;
         color: white; }
+        @media screen and (max-width: 600px) {
+          nav .nav_wrapper .nav_item a {
+            width: 50%;
+            margin: auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center; } }
         nav .nav_wrapper .nav_item a .icon {
           font-size: 1.8rem; }
           @media screen and (max-width: 600px) {
             nav .nav_wrapper .nav_item a .icon {
-              font-size: 2rem; } }
+              font-size: 2.5rem; } }
         nav .nav_wrapper .nav_item a span {
           font-size: 1.8rem; }
           @media screen and (max-width: 600px) {
             nav .nav_wrapper .nav_item a span {
-              font-size: 1.5rem; } }
+              font-size: 2rem;
+              position: relative; } }
     nav .nav_wrapper .hide_lista {
       display: none;
       list-style: none;
