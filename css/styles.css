@@ -735,7 +735,7 @@ body {
       flex-direction: column; }
       @media (max-width: 600px) {
         .container_3 .form_container form {
-          width: 100%; } }
+          width: 70vw; } }
       @media (min-width: 1200px) {
         .container_3 .form_container form {
           width: 90%; } }

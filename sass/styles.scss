@@ -951,7 +951,7 @@ body
             align-items: center;
             flex-direction: column;
             @media (max-width: $small) {
-                width: 100%;
+                width: 70vw;
             }
             @media (min-width: $big) {
                 width: 90%;
@@ -973,6 +973,7 @@ body
                 @media (max-width: $small),
                 (max-width: $big)  {
                     background-color: rgba(182, 179, 179, 0.727);
+                    
                 }
                 
                 &:focus
