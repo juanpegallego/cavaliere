@@ -2,9 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");    
 
 
+//*------------------MEDIA --------------------------*//
 
+    
 $small: 600px;
 $medium: 900px;
+$big:1200px;
+$desktop:1824px;
 
 
 
@@ -23,7 +27,7 @@ nav
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     z-index: 1000;
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $big) {
         width:100vw;
         background: rgba(6, 13, 13, 0.555);
         background: radial-gradient(circle, rgba(6, 13, 13, 0.679) 27%, rgba(102, 101, 101, 0.721) 85%);
@@ -34,6 +38,8 @@ nav
         position: absolute;
         top: 0px;
       }
+     
+      
     .nav_logo_container{
       height: 45px;
       width: 10%;
@@ -43,9 +49,11 @@ nav
       display: flex;
       justify-content: center;
       align-items: center;
-       @media screen and (max-width: $small) {
+      @media screen and (max-width: $big) {
         display: none;
       }
+      
+      
       img{
         width: 70%;
       }
@@ -66,20 +74,21 @@ nav
       height: 45px;   
       border-radius: 5px;
       transition: all .9s;
-      @media screen and (max-width: $small) {
+      @media screen and (max-width: $big) {
         position:absolute;
-        right: 0px;
-        transform: translateX(80px);
+        transform: translateX(-10px);
         display: flex;  
         background-color: transparent;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        left: 10px;
         top: 13px; 
         height: 30px;
         z-index: 99; 
         color: white;
       }
+     
       h3{
         font-size: 1.5rem;
         top: 20px;
@@ -152,13 +161,14 @@ nav
         top: 0px;
         left:0px;
         flex-direction: row;   
-        @media screen and (max-width: $small) {
+        @media screen and (max-width: $big) {
             width: 90%;   
             flex-direction: column;     
             justify-content: center; 
             align-items: center;   
             top: 0px;
           }  
+          
     }
 
     .nav_wrapper
@@ -168,17 +178,18 @@ nav
         &:hover{
           background-color: rgba(92, 90, 90, 0.575);          
         }
+        
         &:hover .hide_lista{
           display: block;
         }
        
-        @media screen and (max-width: $small) {
+        @media screen and (max-width: $big) {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: column;
           min-height: 45px;
-
+          
           &:hover .nav_item a span
           {
             transform: translateX(-95px);
@@ -210,12 +221,16 @@ nav
             justify-content:space-evenly;        
             color: white;
             @media screen and (max-width: $small) {
-              width: 50%;
+              width: 70%;
               margin: auto;
               display: flex;
               flex-direction: row;
               justify-content: space-between;
               align-items: center;
+            }
+            @media screen and (min-width: $small) and
+            (max-width: $big) {
+              width: 100%;
             }
             .icon
             {
@@ -224,6 +239,7 @@ nav
                 @media screen and (max-width: $small) {
                     font-size: 2.5rem;
                   }
+                 
             }
 
             span
@@ -243,15 +259,15 @@ nav
         list-style: none;
         background: rgb(6,13,13);
         background: linear-gradient(to right, rgba(6,13,13,1) 27%, rgb(54, 52, 52) 85%);
-        @media screen and (max-width: $small) {
-          position: absolute;
-          left: 180px;
+        @media screen and (max-width: $big) {
+          position: relative;
+          left: 180px; 
           border-radius: 1rem;
         }  
         
         .hide_item{
           height: 45px;
-          @media screen and (max-width: $small) {
+          @media screen and (max-width: $big) {
             width: 200px;
           }  
           a{

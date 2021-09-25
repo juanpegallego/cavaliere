@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
   padding: 0px;
@@ -108,44 +109,48 @@ header {
   scroll-snap-align: start;
   width: 100%;
   position: relative;
-  top: 100px;
+  top: 150px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 100vh; }
-  .content .content_background_img {
-    width: 100%; }
-    .content .content_background_img img {
-      position: absolute;
-      top: -25vh;
-      right: 15vh;
-      width: 30%;
-      transform: rotate(55deg); }
-      @media screen and (max-width: 667px) {
-        .content .content_background_img img {
-          width: 40%;
-          top: 50px;
-          z-index: -2;
-          left: 170px; } }
   .content .title_container {
-    width: 70%;
+    width: 50%;
     display: flex;
-    justify-content: center;
-    align-items: center; }
+    grid-template-rows: 50% 50%;
+    position: relative;
+    top: 0px;
+    min-height: 50vh; }
     @media screen and (max-width: 667px) {
       .content .title_container {
         width: 100%; } }
+    .content .title_container .content_background_img {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .content .title_container .content_background_img img {
+        width: 100%;
+        z-index: -1;
+        transform: rotate(55deg); }
+        @media screen and (max-width: 667px) {
+          .content .title_container .content_background_img img {
+            width: 40%;
+            top: 50px;
+            z-index: -2;
+            left: 170px; } }
     .content .title_container .title {
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column; }
+      flex-direction: column;
+      position: relative; }
       .content .title_container .title h1 {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 4rem; }
+        font-size: 6rem; }
         @media screen and (max-width: 667px) {
           .content .title_container .title h1 {
             font-size: 4rem;
@@ -154,7 +159,7 @@ header {
             margin: auto;
             transform: translateY(-50px); } }
         .content .title_container .title h1 .wand_icon {
-          font-size: 6rem;
+          font-size: 10rem;
           position: relative;
           right: 20px; }
           @media screen and (max-width: 667px) {
@@ -214,23 +219,12 @@ header {
         @media screen and (max-width: 667px) {
           .content .cards_container .card h2 {
             font-size: 2rem; } }
-      .content .cards_container .card p {
-        font-size: 1.7rem;
-        text-align: center;
-        width: 90%;
-        background-color: #777474;
-        box-shadow: inset 0px 0px 20px 5px #39393b;
-        color: white;
-        padding: 5px;
-        border-radius: 5px; }
-        @media screen and (max-width: 667px) {
-          .content .cards_container .card p {
-            font-size: 1.5rem; } }
       .content .cards_container .card span {
         font-size: 1.7rem;
+        margin-top: 50px;
         text-decoration: underline red; }
       .content .cards_container .card ul {
-        width: 70%; }
+        width: 80%; }
         @media screen and (max-width: 667px) {
           .content .cards_container .card ul {
             width: 90%; } }
@@ -275,42 +269,57 @@ header {
       .content:hover .card:nth-child(2) {
         transform: translateX(10px); } }
 
+.white_space {
+  min-height: 80vh;
+  top: 80vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw; }
+  .white_space h3 {
+    color: black;
+    font-size: 3rem;
+    animation: letterSpacing 10s infinite ease-in-out; }
+@keyframes letterSpacing {
+  0% {
+    letter-spacing: -3px;
+    font-weight: lighter; }
+  50% {
+    letter-spacing: 1px;
+    color: red; }
+  100% {
+    font-weight: lighter;
+    color: black;
+    letter-spacing: -2px; } }
 .container_logistica {
   background: url(../images/camion_cavaliere2.jpg) no-repeat center 50px;
   scroll-snap-align: start;
   background-size: 100%;
   width: 100%;
   position: relative;
-  top: 300px;
-  min-height: 150vh; }
+  top: 80vh;
+  min-height: 150vh;
+  transition: all 1s; }
   @media screen and (max-width: 667px) {
     .container_logistica {
       top: 500px; } }
   .container_logistica .title_container {
     backdrop-filter: blur(20px);
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
     position: relative; }
     .container_logistica .title_container h1 {
-      font-size: 7rem; }
-    .container_logistica .title_container h3 {
-      width: 70%;
-      font-size: 1.6rem;
-      text-align: center; }
-      @media screen and (max-width: 667px) {
-        .container_logistica .title_container h3 {
-          width: 80%;
-          position: relative;
-          transform: translateY(50px); } }
+      font-size: 7rem;
+      font-weight: 500; }
     .container_logistica .title_container p {
       text-align: center;
-      width: 80%;
+      width: 70%;
       background-color: rgba(0, 0, 0, 0.437);
       color: white;
       padding: 10px;
@@ -325,9 +334,9 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-size: 3.5rem;
+      font-size: 3rem;
       transform: translateY(50px);
-      font-weight: bolder; }
+      font-weight: 500; }
       @media screen and (max-width: 667px) {
         .container_logistica .title_container h4 {
           width: 80%;
@@ -335,13 +344,21 @@ header {
           color: red;
           transform: translateY(150px); } }
       .container_logistica .title_container h4 ion-icon {
-        font-size: 7rem; }
+        font-size: 7rem;
+        animation: translateIcon 2s infinite ease-in-out; }
+@keyframes translateIcon {
+  0% {
+    transform: translateY(0px); }
+  95% {
+    transform: translateY(30px); }
+  100% {
+    transform: translateY(0px) rotate(360deg); } }
     .container_logistica .title_container ul {
       width: 50%;
       display: grid;
       grid-template-columns: 50% 50%;
       position: relative;
-      top: 50px; }
+      top: 40px; }
       @media screen and (max-width: 667px) {
         .container_logistica .title_container ul {
           width: 90%;
@@ -359,7 +376,7 @@ header {
         border-radius: 5px;
         color: white; }
         .container_logistica .title_container ul li:hover {
-          color: rgba(0, 0, 255, 0.768);
+          color: var(--secundario);
           background-color: white;
           font-weight: bold; }
         .container_logistica .title_container ul li ion-icon {
@@ -396,12 +413,13 @@ header {
         width: 100%;
         height: 100px;
         display: flex;
-        background-color: red;
+        background-color: rgba(255, 0, 0, 0.678);
         justify-content: center;
         align-items: center;
         padding: 10px; }
         .container_logistica .container_flota .fleet_card .card_title h3 {
           font-size: 2.5rem;
+          color: white;
           font-family: var(--fuenteSecundaria); }
           @media screen and (max-width: 667px) {
             .container_logistica .container_flota .fleet_card .card_title h3 {
@@ -443,7 +461,7 @@ header {
                   font-size: 1.3rem; } }
         .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
           display: grid;
-          padding: 5px;
+          padding: 10px;
           overflow: hidden;
           background-color: rgba(0, 0, 0, 0.658);
           grid-template-rows: 60% 40%;
@@ -453,7 +471,7 @@ header {
               grid-template-rows: 50% 50%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
             margin: auto;
-            width: 90%; }
+            width: 70%; }
             @media screen and (max-width: 667px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
                 width: 100%; } }
@@ -477,7 +495,7 @@ header {
                     .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
                       font-size: 1.3rem; } }
     .container_logistica .container_flota button {
-      font-size: 1.7rem;
+      font-size: 2rem;
       background-color: rgba(0, 0, 255, 0.768);
       cursor: pointer;
       height: 45px;
@@ -491,7 +509,10 @@ header {
       margin: auto;
       position: relative;
       border: none;
-      top: 5px; }
+      top: 5px;
+      font-weight: lighter; }
+      .container_logistica .container_flota button ion-icon {
+        font-size: 3rem; }
       @media screen and (max-width: 667px) {
         .container_logistica .container_flota button {
           margin-top: 10px; } }
@@ -501,11 +522,11 @@ header {
 
 .container_invitacion {
   scroll-snap-align: start;
-  background-color: #6453b1;
+  background-color: rgba(94, 81, 153, 0.623);
   position: relative;
-  top: 320px;
+  margin-top: 85vh;
   min-height: 100vh;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -548,5 +569,64 @@ header {
       .container_invitacion a:hover .phone_icon {
         transform: rotate(40deg);
         transition: all .7s; }
+
+footer {
+  width: 100vw;
+  height: 100px;
+  position: relative;
+  bottom: 0px;
+  background: #060d0d;
+  background: radial-gradient(circle, #060d0d 27%, #666565 85%);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  footer .footer_content {
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around; }
+    footer .footer_content .logo_container {
+      background-color: #fffefe;
+      width: 100px;
+      height: 100px;
+      left: 50px;
+      top: 0px;
+      position: absolute;
+      background-color: transparent; }
+      footer .footer_content .logo_container img {
+        width: 90px;
+        position: absolute;
+        top: 30px;
+        left: 0px; }
+        @media (max-width: 667px) {
+          footer .footer_content .logo_container img {
+            left: -30px; } }
+    footer .footer_content .redes_container {
+      width: 20%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column; }
+      @media (max-width: 667px) {
+        footer .footer_content .redes_container {
+          width: 50%; } }
+      footer .footer_content .redes_container p {
+        color: white;
+        font-size: 1.3rem;
+        letter-spacing: -1px; }
+      footer .footer_content .redes_container ul {
+        width: 100%;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row; }
+        footer .footer_content .redes_container ul li {
+          position: relative; }
+          footer .footer_content .redes_container ul li a {
+            color: white; }
+            footer .footer_content .redes_container ul li a ion-icon {
+              font-size: 3rem; }
 
 /*# sourceMappingURL=services_styles.css.map */

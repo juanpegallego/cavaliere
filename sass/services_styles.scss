@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 *
 {
@@ -142,48 +143,53 @@ header{
     scroll-snap-align: start;
     width: 100%;
     position: relative;
-    top: 100px;
+    top: 150px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     height: 100vh;
     
-   .content_background_img{
-       width: 100%;
-       img{
-           position: absolute;
-           top: -25vh;
-           right: 15vh;
-           width: 30%;
-           transform: rotate(55deg);
-           @media screen and (max-width: $small) {
-            width: 40%;
-            top: 50px;
-            z-index: -2;
-            left: 170px;
-          }
-       }
-   }
+   
     .title_container{
-        width: 70%;
+        width: 50%;
         display: flex;
-        justify-content: center;
-        align-items: center;
+        grid-template-rows: 50% 50%;
+        position: relative;
+        top: 0px;
+        min-height: 50vh;
         @media screen and (max-width: $small) {
             width: 100%;
           }
+        .content_background_img{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                
+                width: 100%;
+                z-index: -1;
+                transform: rotate(55deg);
+                @media screen and (max-width: $small) {
+                 width: 40%;
+                 top: 50px;
+                 z-index: -2;
+                 left: 170px;
+               }
+            }
+        }
         .title{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            
+            position: relative; 
             h1{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                font-size: 4rem;
+                font-size: 6rem;
                 @media screen and (max-width: $small) {
                     font-size: 4rem;
                     letter-spacing: -1px;
@@ -192,7 +198,7 @@ header{
                     transform: translateY(-50px);
                   }
                 .wand_icon{
-                    font-size: 6rem;
+                    font-size: 10rem;
                     position: relative;
                     right: 20px;
                     @media screen and (max-width: $small) {
@@ -268,27 +274,15 @@ header{
                  }
                 
             }
-            p{
-                font-size: 1.7rem;
-                text-align: center;
-                width: 90%;
-                background-color: rgb(119, 116, 116);
-                box-shadow: inset 0px 0px 20px 5px rgb(57, 57, 59);
-                color: white;
-                padding: 5px;
-                border-radius: 5px;
-                @media screen and (max-width: $small) {
-                    font-size: 1.5rem;
-                 }
-            }
+            
             span{
                 font-size: 1.7rem;
+                margin-top: 50px;
                 text-decoration: underline red;
             }
             ul{
-                width: 70%;
-                @media screen and (max-width: $small) {
-                    
+                width: 80%;
+                @media screen and (max-width: $small) {                    
                     width: 90%;
                  }
                 li{
@@ -342,45 +336,71 @@ header{
     }
 }
 
+//------------------------------------- WHITE SPACE ----------------------------------------------------//
+
+.white_space{
+    min-height: 80vh;
+    top: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    h3{
+        color: black;
+        font-size: 3rem;
+        animation: letterSpacing 10s infinite ease-in-out;
+    }
+    @keyframes letterSpacing {
+        0%{
+            letter-spacing: -3px;
+            font-weight: lighter;
+        }
+        50%{
+            letter-spacing: 1px;
+            color: red;
+        }
+        
+        100%{
+            font-weight: lighter;
+            color: black;
+            letter-spacing: -2px;
+        }
+    }
+
+}
+
+//------------------------------------- L O G I S T I C A ----------------------------------------------------//
 .container_logistica{
     background: url(../images/camion_cavaliere2.jpg) no-repeat center 50px;
     scroll-snap-align: start;
     background-size: 100%;
     width: 100%;
     position: relative;
-    top: 300px;
+    top:80vh;
     min-height: 150vh;
+    transition: all 1s;
     @media screen and (max-width: $small) {
         top: 500px;
     }
     .title_container{
         backdrop-filter: blur(20px);
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         color: white;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
-        min-height: 100vh;
         position: relative;
         h1{
-            font-size: 7rem;           
-            
+            font-size: 7rem;  
+            font-weight: 500;
         }
-        h3{
-            width: 70%;
-            font-size: 1.6rem;
-            text-align: center;
-            @media screen and (max-width: $small) {
-                width: 80%;
-                position: relative;
-                transform: translateY(50px);
-            }
-        }   
+        
         p{
             text-align: center;
-            width: 80%;
+            width: 70%;
             background-color: rgba(0, 0, 0, 0.437);
             color: white;
             padding: 10px;
@@ -396,9 +416,9 @@ header{
             display: flex;
             flex-direction: column;
             align-items: center;
-            font-size: 3.5rem;
+            font-size: 3rem;
             transform: translateY(50px);
-            font-weight: bolder;
+            font-weight: 500;
             @media screen and (max-width: $small) {
                 width: 80%;
                 position: relative;
@@ -407,6 +427,19 @@ header{
             }
             ion-icon{
                 font-size: 7rem;
+                animation: translateIcon 2s infinite ease-in-out;
+                
+            }
+            @keyframes  translateIcon {
+                0%{
+                    transform: translateY(0px);
+                }               
+                95%{
+                    transform: translateY(30px);
+                }
+                100%{
+                    transform: translateY(0px)rotate(360deg);
+                }
             }
         }
         ul{
@@ -414,7 +447,7 @@ header{
             display: grid;
             grid-template-columns: 50% 50%;
             position: relative;
-            top: 50px;
+            top: 40px;
             @media screen and (max-width: $small) {
                 width: 90%;
                 top: 150px;
@@ -432,7 +465,7 @@ header{
                 border-radius: 5px;
                 color: white;
                 &:hover{
-                    color: rgba(0, 0, 255, 0.768);
+                    color: var(--secundario);
                     background-color: white;
                     font-weight: bold;
                 }
@@ -477,12 +510,13 @@ header{
                 width: 100%;
                 height: 100px;
                 display: flex;
-                background-color: red;
+                background-color: rgba(255, 0, 0, 0.678);
                 justify-content: center;
                 align-items: center;
                 padding: 10px;
                 h3{
                     font-size: 2.5rem;
+                    color: white;
                     font-family: var(--fuenteSecundaria);
                     @media screen and (max-width: $small) {
                         font-size: 2rem;
@@ -530,7 +564,7 @@ header{
                 }
                 .img_container{
                     display: grid;
-                    padding: 5px;
+                    padding: 10px;
                     overflow: hidden;                    
                     background-color: rgba(0, 0, 0, 0.658);
                     grid-template-rows: 60% 40%;                    
@@ -540,7 +574,7 @@ header{
                     }
                     img{
                         margin: auto;
-                        width: 90%;
+                        width: 70%;
                         @media screen and (max-width: $small) {
                             width: 100%; 
                         }
@@ -572,7 +606,7 @@ header{
             }
         }
         button{
-                font-size: 1.7rem;              
+                font-size: 2rem;              
                 background-color: rgba(0, 0, 255, 0.768);
                 cursor: pointer;
                 height: 45px;
@@ -587,6 +621,11 @@ header{
                 position: relative;
                 border: none;
                 top: 5px;
+                font-weight: lighter;
+                ion-icon{
+                    font-size: 3rem;
+                }
+
                 @media screen and (max-width: $small) {
                     margin-top: 10px;
                 }
@@ -610,18 +649,18 @@ header{
 
 
 
-
+//------------------------------------- I N V I T A C I O N ----------------------------------------------------//
 
 
 
 
 .container_invitacion{
     scroll-snap-align: start;
-    background-color: rgb(100, 83, 177);
+    background-color: rgba(94, 81, 153, 0.623);
     position: relative;
-    top: 320px;
+    margin-top: 85vh;
     min-height: 100vh;
-    margin-bottom: 100px;
+    margin-bottom: 0px;
     width: 100%;
     display: flex;
     justify-content: space-evenly;
@@ -670,4 +709,84 @@ header{
             }
         }
     }
+}
+
+//-------------------------- F O O T E R -----------------------------//@at-root
+footer
+{
+    width: 100vw;
+    height: 100px;
+    position: relative;
+    bottom: 0px;    
+    background: rgb(6,13,13);
+    background: radial-gradient(circle, rgba(6,13,13,1) 27%, rgba(102,101,101,1) 85%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .footer_content{
+        width:70%;
+        height: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-around;
+
+        .logo_container{
+            background-color: rgb(255, 254, 254);
+            width: 100px;
+            height: 100px;
+            left: 50px;
+            top: 0px;
+            position: absolute;
+            background-color: transparent;
+            img{
+                width: 90px;
+                position: absolute;
+                top: 30px;
+                left: 0px;
+                @media (max-width: $small) {
+                    left: -30px;
+                }
+            }
+        }
+        .redes_container
+        {
+            width: 20%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            @media (max-width: $small) {
+                width: 50%;
+            }
+            p{
+                color: white;
+                font-size: 1.3rem;
+                letter-spacing: -1px;
+            }
+            ul
+            {
+                width: 100%;
+                list-style: none;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: row;
+    
+                li
+                {
+                    position: relative;
+    
+                    a
+                    {
+                        color: white;
+                        
+                        ion-icon{
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

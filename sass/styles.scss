@@ -26,10 +26,24 @@
 
 //*------------------MEDIA --------------------------*//
 
+
+
+/*
+@media (max-width: $small) {
+    
+@media screen and (min-width: $small) and (max-width: $medium) {
+         
+}
+@media screen and (min-width: $medium) and (max-width: $big) {
+    
+}
+ 
+*/
     
 $small: 600px;
 $medium: 900px;
 $big:1200px;
+$desktop:1824px;
 
 //*------------------MEDIA --------------------------*//
 body
@@ -166,11 +180,11 @@ body
 .logo_container
 {
     width: 35vw;
-    height: 30vh;
+    min-height: 30vh;
     position: relative;
     margin: auto;
     left: 0px;
-    top:80px;
+    top:50px;
     z-index: 99;
     display: flex;
     justify-content: center;
@@ -183,34 +197,33 @@ body
         margin: auto ;
         height: 20vh;
         position: relative;
-        top: 0vh;
-        
+        top: -200px;
     }
-    @media screen and (min-width: $big) {
+    @media screen and (min-width: $small) and (max-width: $medium) {
         width: 60%;
+        top: 80px;        
+    }
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        width: 60%;
+        top: 90px;
     }
     img
     {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 90%;
-        left: 0px;        
-        top: 0px;
-        position: relative;       
-        
-
-        
+        position: absolute;   
+        width: 100%;
 
         @media (max-width: $small) {
-            top:0vh;
-            position: relative;
-            width: 70%;
-            left: 0%;   
+            width: 80%;
         }
-        @media screen and (min-width: $big) {
-        width: 60%;
-    }
+        @media screen and (min-width: $small) and (max-width: $medium) {
+                
+            width: 100%; 
+        }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: 90%;
+        }
+           
+        
     }       
 }
 
@@ -225,14 +238,28 @@ body
     grid-template-columns: 50% 50%;
         @media (max-width: $small) {
             display: flex;
-            margin-top: 20px;
-            top: -10px;
+            top: -300px;
             position: relative;
             justify-content:center;
             flex-direction: column;
             align-items: center;
             padding: 0px;   
-            
+              
+        }
+    
+        @media screen and (min-width: $small) and (max-width: $medium) {
+             
+            display: flex;
+            top: -20px;
+            position: relative;
+            justify-content:center;
+            flex-direction: column;
+            align-items: center;
+            padding: 0px;   
+        }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            top: -50px;
+            position: relative;
         }
        
     .left_container
@@ -245,17 +272,24 @@ body
         padding: 10px;
         height: 100%;
         color: white;
+            
             @media (max-width: $small) {
-                width: 100%;   
-                left: 0px;                
+                width: 100%;               
                 position: relative;
-                top: -200px;
+                top: -300px;
                 justify-content:space-evenly;
+                 
+            }
+        
+            @media screen and (min-width: $small) and (max-width: $medium) {
+                
+                justify-content: center;
+                min-height: 30vh; 
                 
             }
-            @media (min-width: $big) {
-                height: 100%;
-                top: 0px;
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                  
+                justify-content: space-around;
             }
             
         h1
@@ -326,7 +360,7 @@ body
             }
             
             
-            @media (max-width: $small) {
+            @media (max-width: $big) {
                 display: none;
             }
         }
@@ -339,6 +373,18 @@ body
     align-items: center;
     flex-direction: column;
     width: 100%;
+    @media (max-width: $small) {     
+        top: -200px;        
+        position: relative;
+    }
+
+    @media screen and (min-width: $small) and (max-width: $medium) {
+         
+        top: 10px;
+        width: 80%;
+        position: relative;
+        
+    }
    
     .section_container
     { 
@@ -356,19 +402,17 @@ body
        
         @media (max-width: $small) {
             width: 90%;
-            min-height: 40vh;
+            height: 30vh;
             left: 0%;
             position: relative;
-            border-radius: 3rem;
-            top: -150px;
             border-radius: 1rem;
         }
-        @media (min-width: $big) {
-            width:80%;
-            margin: auto;
-            position: relative;
-            height:300px;
-            
+        @media screen and (min-width: $small) and (max-width: $medium) {
+           width: 80%;  
+           max-height: 30vh; 
+        }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            max-height: 35vh;    
         }
         &:hover{
             background-color:rgba(255, 255, 255, 0.881);
