@@ -142,7 +142,7 @@ body {
       margin: auto;
       height: 20vh;
       position: relative;
-      top: -100px; } }
+      top: -50px; } }
   @media screen and (min-width: 600px) and (max-width: 900px) {
     .logo_container {
       width: 60%;
@@ -175,7 +175,7 @@ body {
   @media (max-width: 600px) {
     .grid_section {
       display: flex;
-      top: -150px;
+      top: -80px;
       position: relative;
       justify-content: center;
       flex-direction: column;

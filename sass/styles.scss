@@ -197,7 +197,7 @@ body
         margin: auto ;
         height: 20vh;
         position: relative;
-        top: -100px;
+        top: -50px;
     }
     @media screen and (min-width: $small) and (max-width: $medium) {
         width: 60%;
@@ -238,7 +238,7 @@ body
     grid-template-columns: 50% 50%;
         @media (max-width: $small) {
             display: flex;
-            top: -150px;
+            top: -80px;
             position: relative;
             justify-content:center;
             flex-direction: column;
