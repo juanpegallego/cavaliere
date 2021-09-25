@@ -134,6 +134,7 @@ body
 .container_1
 {  
     display: flex;
+    
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -141,6 +142,8 @@ body
         position: relative;
         top:-100px;
         height: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
     }
     
     .bgc_video
@@ -216,14 +219,14 @@ body
     grid-template-columns: 50% 50%;
         @media (max-width: $small) {
             display: flex;
-            height: 150vh;
+            min-height: 150vh;
             transform: translateY(-200px);
             justify-content:center;
             flex-direction: column;
             align-items: center;
             padding: 0px;   
         }
-        @media screen and (max-width: $big) {
+        @media screen and (min-width: $big) {
             display: flex;
             min-height: 100vh;
             justify-content:space-evenly;
