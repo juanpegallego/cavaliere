@@ -225,7 +225,8 @@ body
     grid-template-columns: 50% 50%;
         @media (max-width: $small) {
             display: flex;
-            top: -100px;
+            margin-top: 20px;
+            top: -10px;
             position: relative;
             justify-content:center;
             flex-direction: column;
@@ -248,7 +249,7 @@ body
                 width: 100%;   
                 left: 0px;                
                 position: relative;
-                transform: translateY(-200px);
+                top: -200px;
                 justify-content:space-evenly;
                 
             }
@@ -359,7 +360,7 @@ body
             left: 0%;
             position: relative;
             border-radius: 3rem;
-            transform: translateY(-150px);
+            top: -150px;
             border-radius: 1rem;
         }
         @media (min-width: $big) {
