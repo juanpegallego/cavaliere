@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 * {
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
   font-size: 10px; }
 
@@ -87,18 +87,21 @@ body {
 .container_1 {
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  width: 100vw; }
   @media screen and (max-width: 600px) {
     .container_1 {
       position: relative;
-      top: -50px;
-      min-height: 150vh; } }
+      top: -100px;
+      height: 100%; } }
   .container_1 .bgc_video {
     position: absolute;
-    min-height: 100%; }
+    min-height: 100vh;
+    transform: scale(1); }
     @media screen and (max-width: 600px) {
       .container_1 .bgc_video {
-        filter: brightness(110%) blur(1.5px); } }
+        filter: brightness(110%) blur(1.5px);
+        min-height: 100%; } }
 
 .logo_container {
   width: 35vw;
@@ -183,7 +186,7 @@ body {
         left: 0px;
         position: relative;
         top: 40vh;
-        height: 50px;
+        min-height: 30vh;
         justify-content: space-evenly; } }
     @media (min-width: 600px) {
       .grid_section .left_container {
@@ -198,7 +201,8 @@ body {
       text-shadow: 0px 0px 20px black; }
       @media (max-width: 600px) {
         .grid_section .left_container h1 {
-          font-size: 2.5rem;
+          font-size: 3.5rem;
+          transform: translateY(0px);
           animation: desvanecerSubtitulo 7s infinite ease-in-out; }
         @keyframes desvanecerSubtitulo {
           0% {
@@ -264,7 +268,7 @@ body {
       left: 0%;
       position: relative;
       border-radius: 3rem;
-      top: 200px; } }
+      top: 50px; } }
   @media (min-width: 600px) {
     .section_container {
       width: 80%;
@@ -346,7 +350,7 @@ body {
   @media (max-width: 600px) {
     .banner {
       height: 5vh;
-      top: 250px; } }
+      top: 50px; } }
   @media (min-width: 600px) {
     .banner {
       height: 50vh;
@@ -389,7 +393,7 @@ body {
   top: 200px; }
   @media (max-width: 600px) {
     .container_2 {
-      top: 400px;
+      top: 40px;
       height: 60vh; } }
 
 .slider {
@@ -527,7 +531,7 @@ body {
   align-items: center; }
   @media (max-width: 600px) {
     .banner_container {
-      top: 80vh; } }
+      top: 0vh; } }
   .banner_container:hover img {
     left: 100px;
     top: 170px;
@@ -641,9 +645,10 @@ body {
   grid-template-rows: 20% 80%; }
   @media (max-width: 600px) {
     .container_3 {
-      top: 200vh;
-      position: relative; } }
-  @media (max-width: 1200px) {
+      top: 0vh;
+      position: relative;
+      min-height: 50vh; } }
+  @media (min-width: 1200px) {
     .container_3 {
       min-height: 100vh;
       top: 100vh; } }
@@ -685,14 +690,16 @@ body {
       top: 10px;
       position: relative;
       letter-spacing: -2px;
-      color: red;
+      color: #ff5656;
       font-family: var(--fuenteSecundaria); }
       @media (max-width: 600px) {
         .container_3 .contact_title h1 {
-          font-size: 3.5rem;
-          top: 50px;
-          letter-spacing: -1px;
-          width: 90%; } }
+          font-size: 4rem;
+          top: 75px;
+          letter-spacing: 0px;
+          width: 100%;
+          position: relative;
+          margin: auto; } }
       @media (min-width: 1200px) {
         .container_3 .contact_title h1 {
           font-size: 4rem;
@@ -708,7 +715,7 @@ body {
     @media (max-width: 600px) {
       .container_3 .form_container {
         width: 100%;
-        height: 80%;
+        height: 100%;
         margin: auto;
         transform: translateY(-200px); } }
     @media (min-width: 1200px) {
@@ -728,8 +735,8 @@ body {
       flex-direction: column; }
       @media (max-width: 600px) {
         .container_3 .form_container form {
-          width: 90%; } }
-      @media (max-width: 1200px) {
+          width: 100%; } }
+      @media (min-width: 1200px) {
         .container_3 .form_container form {
           width: 90%; } }
       .container_3 .form_container form input {
@@ -832,13 +839,16 @@ footer {
   @media (max-width: 600px) {
     footer {
       top: 0vh;
-      height: 80vh;
+      margin-top: 0px;
+      bottom: 0px;
+      height: 100vh;
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       background: #060d0d;
-      background: linear-gradient(to top, #060d0d 27%, #666565 85%); } }
+      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   @media (min-width: 1200px) {
     footer {
       top: 20vh; } }
@@ -885,7 +895,7 @@ footer {
           footer .footer_content .logo_container img {
             margin: auto;
             width: 50%;
-            top: -50px;
+            top: 10px;
             position: relative; } }
     footer .footer_content .redes_container {
       width: 20%;
