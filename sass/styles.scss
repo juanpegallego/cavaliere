@@ -56,7 +56,7 @@ body
     flex-direction: column;
     font-family: var(--fuentePrincipal);
     overflow-x: hidden;
-    
+    margin: 0;
 }
 //*------------------W S P --------------------------*//
 
@@ -886,10 +886,10 @@ body
 .container_3
 {
     width: 100vw;
-    min-height: 100vh;
+    height: 100vh;
     position: relative;
     margin: auto;
-    top: 300px;
+    top: 50vh;
     left: 0px;
     display: grid;     
     background-color: rgba(255, 255, 255, 0.375);
@@ -925,7 +925,7 @@ body
     {
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         flex-direction: column;
         position: relative;
         top: 100px;
@@ -942,9 +942,9 @@ body
         h1
         {
            
-            width: 270px;
             text-align: center;
-            top: 10px;
+            margin: auto;
+            font-size: 6rem;
             position: relative;
             letter-spacing: -2px;
             color: rgb(255, 86, 86);
@@ -957,10 +957,7 @@ body
                 position: relative;
                 margin: auto;
             }
-            @media (min-width: $big) {
-                font-size:4rem;
-                top: -100px;
-            }
+            
            
         }
 
@@ -985,13 +982,7 @@ body
             transform: translateY(-200px);
             
         }
-        @media (min-width: $big) {
-            width: 100%;
-            min-height: 80%;
-            margin: auto;
-            position: relative;
-            top: -200px;
-        }
+        
         form
         {
             height: 100%;
@@ -1126,9 +1117,7 @@ footer
     width: 100vw;
     height: 100px;
     position: relative;
-    bottom: 0px;
-    margin: auto;
-    margin-top: 100vh;    
+    top: 50vh;
     background: #060d0d;
     background: radial-gradient(circle, #060d0d 27%, #666565 85%);
     display: flex;
@@ -1147,9 +1136,7 @@ footer
         background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
-        @media (min-width: $big) {
-        top: 20vh;
-    }
+        
     .footer_content{
         width:70%;
         height: 100%;

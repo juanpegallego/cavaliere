@@ -28,13 +28,13 @@ function mostrar(a) {
 
   
     visualViewport.width >= 600 ?  window.scroll({
-        top: 2200,
+        top: 3000,
         left: 0,
         behavior: 'smooth'
       })
       :
       window.scroll({
-        top: 3200,
+        top: 4200,
         left: 0,
         behavior: 'smooth'
       })
@@ -54,14 +54,14 @@ function ocultarTarjetas(){
     }
 
     visualViewport.width >= 600 ?  window.scroll({
-        top: 1800,
+        top: 2400,
         left: 0,
         behavior: 'smooth'
       })
 
       :
       window.scroll({
-        top: 2650,
+        top: 3550,
         left: 0,
         behavior: 'smooth'
       })

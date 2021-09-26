@@ -33,7 +33,8 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: var(--fuentePrincipal);
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0; }
 
 .wsp_container {
   position: fixed;
@@ -667,10 +668,10 @@ body {
 
 .container_3 {
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   margin: auto;
-  top: 300px;
+  top: 50vh;
   left: 0px;
   display: grid;
   background-color: rgba(255, 255, 255, 0.375);
@@ -704,7 +705,7 @@ body {
   .container_3 .contact_title {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     position: relative;
     top: 100px; }
@@ -718,9 +719,9 @@ body {
         position: relative;
         top: 50px; } }
     .container_3 .contact_title h1 {
-      width: 270px;
       text-align: center;
-      top: 10px;
+      margin: auto;
+      font-size: 6rem;
       position: relative;
       letter-spacing: -2px;
       color: #ff5656;
@@ -733,10 +734,6 @@ body {
           width: 100%;
           position: relative;
           margin: auto; } }
-      @media (min-width: 1200px) {
-        .container_3 .contact_title h1 {
-          font-size: 4rem;
-          top: -100px; } }
   .container_3 .form_container {
     width: 100%;
     position: relative;
@@ -751,13 +748,6 @@ body {
         height: 100%;
         margin: auto;
         transform: translateY(-200px); } }
-    @media (min-width: 1200px) {
-      .container_3 .form_container {
-        width: 100%;
-        min-height: 80%;
-        margin: auto;
-        position: relative;
-        top: -200px; } }
     .container_3 .form_container form {
       height: 100%;
       display: flex;
@@ -861,9 +851,7 @@ footer {
   width: 100vw;
   height: 100px;
   position: relative;
-  bottom: 0px;
-  margin: auto;
-  margin-top: 100vh;
+  top: 50vh;
   background: #060d0d;
   background: radial-gradient(circle, #060d0d 27%, #666565 85%);
   display: flex;
@@ -882,9 +870,6 @@ footer {
       flex-direction: column;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
-  @media (min-width: 1200px) {
-    footer {
-      top: 20vh; } }
   footer .footer_content {
     width: 70%;
     height: 100%;

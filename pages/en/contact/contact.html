@@ -136,12 +136,12 @@
 
         </div>
         <div class="form_container" >
-            <form action="">
-                <input type="text" name="name" placeholder="Name">
-                <input type="email" name="email" placeholder="Email Adress">
-                <input type="text" name="phone" placeholder="Phone">
-                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Write your message here"></textarea>
-                <button type="submit">Send</button>
+            <form method="post" action="/form.php">
+                <input type="text" name="name" placeholder="Name" required>
+                <input type="email" name="email" placeholder="Email Adress" required>
+                <input type="text" name="phone" placeholder="Phone" required>
+                <textarea name="textarea" id="" cols="30" rows="10" placeholder="Write your message here" required></textarea>
+                <button type="submit" name="send">Send</button>
             </form>
         </div>
     </div>

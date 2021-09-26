@@ -29,6 +29,17 @@ body {
   scroll-snap-type: y mandatory;
   scroll-snap-align: start; }
 
+/*
+@media (max-width: $small) {
+    
+@media screen and (min-width: $small) and (max-width: $medium) {
+         
+}
+@media screen and (min-width: $medium) and (max-width: $big) {
+    
+}
+ 
+*/
 header {
   scroll-snap-align: start;
   width: 100%;
@@ -41,7 +52,7 @@ header {
   align-items: center;
   flex-direction: column;
   transition: all 3s; }
-  @media screen and (max-width: 667px) {
+  @media screen and (max-width: 600px) {
     header {
       top: -50px;
       height: 200vh; } }
@@ -50,14 +61,14 @@ header {
     color: white;
     transform: translateY(200px) rotate(0deg);
     cursor: pointer; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       header #lamp {
         transform: translateY(200px); } }
   header h1 {
     color: black;
     font-size: 5rem;
     transition: all 5s; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       header h1 {
         font-size: 3rem; } }
   header img {
@@ -71,7 +82,7 @@ header {
     text-align: center;
     padding: 5px;
     transition: all 5s; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       header .first_text,
       header .second_text {
         width: 70%; } }
@@ -87,7 +98,7 @@ header {
     width: 200px;
     transform: translateY(0px) rotate(180deg);
     color: #ffff47; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .lights_on #lamp {
         transform: translateY(100px) rotate(180deg); } }
   .lights_on h1 {
@@ -118,13 +129,13 @@ header {
   .content .title_container {
     width: 50%;
     display: flex;
-    grid-template-rows: 50% 50%;
     position: relative;
     top: 0px;
     min-height: 50vh; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .content .title_container {
-        width: 100%; } }
+        width: 100%;
+        flex-direction: column; } }
     .content .title_container .content_background_img {
       width: 100%;
       display: flex;
@@ -134,12 +145,11 @@ header {
         width: 100%;
         z-index: -1;
         transform: rotate(55deg); }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .content .title_container .content_background_img img {
             width: 40%;
-            top: 50px;
-            z-index: -2;
-            left: 170px; } }
+            position: absolute;
+            transform: translateY(180px) rotate(55deg); } }
     .content .title_container .title {
       display: flex;
       justify-content: center;
@@ -151,20 +161,19 @@ header {
         justify-content: space-evenly;
         align-items: center;
         font-size: 6rem; }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .content .title_container .title h1 {
             font-size: 4rem;
             letter-spacing: -1px;
             text-align: center;
-            margin: auto;
-            transform: translateY(-50px); } }
+            margin: auto; } }
         .content .title_container .title h1 .wand_icon {
           font-size: 10rem;
           position: relative;
           right: 20px; }
-          @media screen and (max-width: 667px) {
+          @media screen and (max-width: 600px) {
             .content .title_container .title h1 .wand_icon {
-              left: 50px; } }
+              right: inherit; } }
   .content:hover .title h1 .wand_icon {
     transform: rotate(-45deg);
     color: red; }
@@ -176,7 +185,7 @@ header {
     grid-gap: 0px;
     position: relative;
     grid-template-columns: 50% 50%; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .content .cards_container {
         width: 95%;
         top: 200px; } }
@@ -195,16 +204,16 @@ header {
         border-top-left-radius: 40%;
         border-top-right-radius: 0%;
         border-bottom-right-radius: 0%; }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .content .cards_container .card:first-child {
-            border-top-left-radius: 10%; } }
+            border-top-left-radius: 3%; } }
       .content .cards_container .card:nth-child(2) {
         border-top-right-radius: 40%;
         border-top-left-radius: 0%;
         border-bottom-left-radius: 0%; }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .content .cards_container .card:nth-child(2) {
-            border-top-right-radius: 10%; } }
+            border-top-right-radius: 3%; } }
       .content .cards_container .card .service_icon {
         width: 50px;
         height: 50px; }
@@ -216,7 +225,7 @@ header {
         text-align: center;
         color: white;
         text-shadow: 0px 0px 10px white; }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .content .cards_container .card h2 {
             font-size: 2rem; } }
       .content .cards_container .card span {
@@ -225,13 +234,13 @@ header {
         text-decoration: underline red; }
       .content .cards_container .card ul {
         width: 80%; }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .content .cards_container .card ul {
             width: 90%; } }
         .content .cards_container .card ul li {
           font-size: 1.7rem;
           text-align: left; }
-          @media screen and (max-width: 667px) {
+          @media screen and (max-width: 600px) {
             .content .cards_container .card ul li {
               font-size: 1.5rem; } }
   .content a {
@@ -246,7 +255,7 @@ header {
     text-decoration: none;
     font-weight: bold;
     border-bottom: 2px solid red; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .content a {
         width: 50%;
         top: 250px;
@@ -258,14 +267,14 @@ header {
     transition: all 1s;
     transform: translateX(-40px);
     border-top-left-radius: 10px; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .content:hover .card:first-child {
         transform: translateX(-10px); } }
   .content:hover .card:nth-child(2) {
     transition: all 1s;
     transform: translateX(40px);
     border-top-right-radius: 10px; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .content:hover .card:nth-child(2) {
         transform: translateX(10px); } }
 
@@ -276,11 +285,17 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100vw; }
+  width: 100vw;
+  padding: 10px; }
   .white_space h3 {
     color: black;
     font-size: 3rem;
-    animation: letterSpacing 10s infinite ease-in-out; }
+    animation: letterSpacing 10s infinite ease-in-out;
+    text-align: center; }
+    @media screen and (max-width: 600px) {
+      .white_space h3 {
+        font-size: 2.5rem;
+        animation: none; } }
 @keyframes letterSpacing {
   0% {
     letter-spacing: -3px;
@@ -299,13 +314,20 @@ header {
   width: 100%;
   position: relative;
   top: 80vh;
-  min-height: 150vh;
-  transition: all 1s; }
-  @media screen and (max-width: 667px) {
-    .container_logistica {
-      top: 500px; } }
-  .container_logistica .title_container {
+  min-height: 150vh; }
+  .container_logistica:hover .title_container {
     backdrop-filter: blur(20px);
+    transition: all 2s; }
+  @media screen and (max-width: 600px) {
+    .container_logistica {
+      top: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-size: cover; } }
+  .container_logistica .title_container {
+    transition: all 4s;
     width: 100%;
     min-height: 100vh;
     color: white;
@@ -314,9 +336,18 @@ header {
     align-items: center;
     flex-direction: column;
     position: relative; }
+    @media screen and (max-width: 600px) {
+      .container_logistica .title_container {
+        backdrop-filter: blur(20px);
+        min-height: 100%; } }
     .container_logistica .title_container h1 {
       font-size: 7rem;
       font-weight: 500; }
+      @media screen and (max-width: 600px) {
+        .container_logistica .title_container h1 {
+          text-align: center;
+          letter-spacing: -1px;
+          text-shadow: 0px 0px 10px black; } }
     .container_logistica .title_container p {
       text-align: center;
       width: 70%;
@@ -325,11 +356,11 @@ header {
       padding: 10px;
       border-radius: 10px;
       font-size: 1.7rem; }
-      @media screen and (max-width: 667px) {
+      @media screen and (max-width: 600px) {
         .container_logistica .title_container p {
           width: 80%;
           position: relative;
-          transform: translateY(100px); } }
+          transform: translateY(50px); } }
     .container_logistica .title_container h4 {
       display: flex;
       flex-direction: column;
@@ -337,12 +368,13 @@ header {
       font-size: 3rem;
       transform: translateY(50px);
       font-weight: 500; }
-      @media screen and (max-width: 667px) {
+      @media screen and (max-width: 600px) {
         .container_logistica .title_container h4 {
           width: 80%;
           position: relative;
           color: red;
-          transform: translateY(150px); } }
+          font-weight: bolder;
+          transform: translateY(100px); } }
       .container_logistica .title_container h4 ion-icon {
         font-size: 7rem;
         animation: translateIcon 2s infinite ease-in-out; }
@@ -359,7 +391,7 @@ header {
       grid-template-columns: 50% 50%;
       position: relative;
       top: 40px; }
-      @media screen and (max-width: 667px) {
+      @media screen and (max-width: 600px) {
         .container_logistica .title_container ul {
           width: 90%;
           top: 150px; } }
@@ -390,7 +422,7 @@ header {
     flex-wrap: wrap;
     flex-direction: row;
     transition: all 1s; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .container_logistica .container_flota {
         min-height: 100vh; } }
     .container_logistica .container_flota .fleet_card {
@@ -404,7 +436,7 @@ header {
       top: 25px;
       padding: 10px;
       border-radius: 3rem; }
-      @media screen and (max-width: 667px) {
+      @media screen and (max-width: 600px) {
         .container_logistica .container_flota .fleet_card {
           top: 150px;
           min-height: 100vh;
@@ -421,7 +453,7 @@ header {
           font-size: 2.5rem;
           color: white;
           font-family: var(--fuenteSecundaria); }
-          @media screen and (max-width: 667px) {
+          @media screen and (max-width: 600px) {
             .container_logistica .container_flota .fleet_card .card_title h3 {
               font-size: 2rem;
               text-align: center; } }
@@ -429,7 +461,7 @@ header {
         height: 50vh;
         display: grid;
         grid-template-columns: 50% 50%; }
-        @media screen and (max-width: 667px) {
+        @media screen and (max-width: 600px) {
           .container_logistica .container_flota .fleet_card .grid_info_container {
             display: flex;
             justify-content: space-evenly; } }
@@ -446,7 +478,7 @@ header {
           .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
             font-size: 1.7rem;
             text-align: justify; }
-            @media screen and (max-width: 667px) {
+            @media screen and (max-width: 600px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
                 font-size: 1.5rem;
                 text-align: left;
@@ -456,7 +488,7 @@ header {
             width: 90%; }
             .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
               font-size: 1.5rem; }
-              @media screen and (max-width: 667px) {
+              @media screen and (max-width: 600px) {
                 .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
                   font-size: 1.3rem; } }
         .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
@@ -466,13 +498,13 @@ header {
           background-color: rgba(0, 0, 0, 0.658);
           grid-template-rows: 60% 40%;
           border-bottom-right-radius: 3rem; }
-          @media screen and (max-width: 667px) {
+          @media screen and (max-width: 600px) {
             .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
               grid-template-rows: 50% 50%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
             margin: auto;
             width: 70%; }
-            @media screen and (max-width: 667px) {
+            @media screen and (max-width: 600px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
                 width: 100%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs {
@@ -484,14 +516,14 @@ header {
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
                 font-size: 1.5rem;
                 color: white; }
-                @media screen and (max-width: 667px) {
+                @media screen and (max-width: 600px) {
                   .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
                     font-size: 1.3rem; } }
                 .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
                   font-weight: bold;
                   font-size: 1.5rem;
                   color: white; }
-                  @media screen and (max-width: 667px) {
+                  @media screen and (max-width: 600px) {
                     .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
                       font-size: 1.3rem; } }
     .container_logistica .container_flota button {
@@ -513,7 +545,7 @@ header {
       font-weight: lighter; }
       .container_logistica .container_flota button ion-icon {
         font-size: 3rem; }
-      @media screen and (max-width: 667px) {
+      @media screen and (max-width: 600px) {
         .container_logistica .container_flota button {
           margin-top: 10px; } }
     .container_logistica .container_flota .active {
@@ -522,7 +554,7 @@ header {
 
 .container_invitacion {
   scroll-snap-align: start;
-  background-color: rgba(94, 81, 153, 0.623);
+  background-color: #6150aa;
   position: relative;
   margin-top: 85vh;
   min-height: 100vh;
@@ -534,31 +566,31 @@ header {
   flex-direction: column;
   color: white;
   font-size: 1.8rem; }
-  @media screen and (max-width: 667px) {
+  @media screen and (max-width: 600px) {
     .container_invitacion {
-      top: 75vh; } }
+      margin-top: 65vh; } }
   .container_invitacion h1 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px; }
   .container_invitacion p {
     font-size: 1.8rem; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .container_invitacion p {
         width: 80%; } }
   .container_invitacion a {
     font-size: 1.7rem;
     color: red;
-    width: 15%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 35px;
+    padding: 10px;
     font-weight: bold;
     border-radius: 1rem;
     background-color: white;
     text-decoration: none; }
-    @media screen and (max-width: 667px) {
+    @media screen and (max-width: 600px) {
       .container_invitacion a {
         width: 50%; } }
     .container_invitacion a .phone_icon {
@@ -574,18 +606,42 @@ footer {
   width: 100vw;
   height: 100px;
   position: relative;
-  bottom: 0px;
+  top: 50vh;
   background: #060d0d;
   background: radial-gradient(circle, #060d0d 27%, #666565 85%);
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth; }
+  @media (max-width: 600px) {
+    footer {
+      margin-top: 0px;
+      bottom: 0px;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: 0px;
+      background: #060d0d;
+      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   footer .footer_content {
     width: 70%;
     height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: space-around; }
+    @media (max-width: 600px) {
+      footer .footer_content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; } }
     footer .footer_content .logo_container {
       background-color: #fffefe;
       width: 100px;
@@ -594,14 +650,28 @@ footer {
       top: 0px;
       position: absolute;
       background-color: transparent; }
+      @media (max-width: 600px) {
+        footer .footer_content .logo_container {
+          margin: auto;
+          width: 100%;
+          height: 50vh;
+          left: 0px;
+          top: 0px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; } }
       footer .footer_content .logo_container img {
         width: 90px;
         position: absolute;
         top: 30px;
         left: 0px; }
-        @media (max-width: 667px) {
+        @media (max-width: 600px) {
           footer .footer_content .logo_container img {
-            left: -30px; } }
+            margin: auto;
+            width: 200px;
+            position: relative; } }
     footer .footer_content .redes_container {
       width: 20%;
       height: 100%;
@@ -609,13 +679,17 @@ footer {
       justify-content: space-evenly;
       align-items: center;
       flex-direction: column; }
-      @media (max-width: 667px) {
+      @media (max-width: 600px) {
         footer .footer_content .redes_container {
-          width: 50%; } }
+          width: 70%; } }
       footer .footer_content .redes_container p {
         color: white;
         font-size: 1.3rem;
         letter-spacing: -1px; }
+        @media (max-width: 600px) {
+          footer .footer_content .redes_container p {
+            transform: translateY(30px);
+            font-size: 1.5rem; } }
       footer .footer_content .redes_container ul {
         width: 100%;
         list-style: none;
@@ -628,5 +702,8 @@ footer {
             color: white; }
             footer .footer_content .redes_container ul li a ion-icon {
               font-size: 3rem; }
+              @media (max-width: 600px) {
+                footer .footer_content .redes_container ul li a ion-icon {
+                  font-size: 3.5rem; } }
 
 /*# sourceMappingURL=services_styles.css.map */
