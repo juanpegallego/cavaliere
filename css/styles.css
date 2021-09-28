@@ -143,7 +143,7 @@ body {
       margin: auto;
       height: 20vh;
       position: relative;
-      top: -50px; } }
+      top: 10px; } }
   @media screen and (min-width: 600px) and (max-width: 900px) {
     .logo_container {
       width: 60%;
@@ -176,7 +176,7 @@ body {
   @media (max-width: 600px) {
     .grid_section {
       display: flex;
-      top: -80px;
+      margin-top: 50px;
       position: relative;
       justify-content: center;
       flex-direction: column;
@@ -193,7 +193,7 @@ body {
       padding: 0px; } }
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     .grid_section {
-      top: 100px;
+      top: 0px;
       position: relative; } }
   .grid_section .left_container {
     display: flex;
@@ -216,6 +216,7 @@ body {
         min-height: 30vh; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .grid_section .left_container {
+        height: 50%;
         justify-content: space-around; } }
     .grid_section .left_container h1 {
       font-size: 4.5rem;
@@ -289,8 +290,8 @@ body {
       position: relative; } }
   .right_container .section_container {
     min-width: 35vw;
-    position: relative;
     max-width: 500px;
+    position: relative;
     border-radius: 5rem;
     display: grid;
     min-height: 50vh;
@@ -314,7 +315,8 @@ body {
         max-height: 30vh; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .right_container .section_container {
-        max-height: 35vh; } }
+        max-height: 400px;
+        min-height: 25vh; } }
     .right_container .section_container:hover {
       background-color: rgba(255, 255, 255, 0.881);
       transition: all .9s; }
@@ -749,7 +751,7 @@ body {
         width: 90%;
         height: 100%;
         margin: auto;
-        transform: translateY(-200px); } }
+        transform: translateY(-50px); } }
     .container_3 .form_container form {
       height: 100%;
       display: flex;
