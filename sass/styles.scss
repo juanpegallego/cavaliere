@@ -530,11 +530,12 @@ body
         height:50vh;
         top:100px;
     }
-    @media (min-width: $big) {
-        height: 50vh;
-        top:250px;
-        padding: 10px;
-    }
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        height:20vh;
+        top:100px;
+       
+     }
+   
     &:hover p{
          animation: textAnimation 1s 1 ease-in-out;
          visibility: visible;
@@ -589,6 +590,10 @@ body
         top:40px;
         height: 60vh;
     }
+    @media screen and (min-width: $medium) and (max-width: $big) {        
+        top:-200px;    
+        display: flex;   
+     }
 }
     
 .slider
@@ -767,7 +772,11 @@ body
     @media (max-width: $small) {
         top: -11vh;
     }
-    
+    @media screen and (min-width: $medium) and (max-width: $big) {        
+        top: -40vh;
+        min-height: initial;
+        max-height: 75vh;
+    }
     &:hover img{
         left: 100px;
         top: 170px;
@@ -915,8 +924,11 @@ body
         min-height: 50vh;
     }
     @media (min-width: $medium) and (max-width: $big)  {
-       
-       margin-top: 20vh;
+       top: -30vh;
+       margin-top: initial;
+       bottom:initial;
+       min-height: initial;
+       max-height: 75vh;
     }
     
     &::after{
@@ -1004,9 +1016,9 @@ body
             
         }
         @media (min-width: $medium) and (max-width: $big)  {
-           
             width: 50vw;
             position: relative;
+            transform: translateY(150px);
         }
         @media (min-width: $big) and (max-width: $desktop) {
             
@@ -1168,7 +1180,8 @@ footer
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
     @media (min-width: $medium) and (max-width: $big)  {
-        
+        position: absolute;
+        height: 150px;
     } 
         
     .footer_content{
