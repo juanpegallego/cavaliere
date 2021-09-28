@@ -388,9 +388,9 @@ body
    
     .section_container
     { 
-        width: 35vw;
+        max-width: 35vw;
         position: relative;
-        height: 50vh;
+        max-height: 50vh;
         border-radius: 5rem;
         display: grid;
         grid-template-columns: 50% 50%;  
