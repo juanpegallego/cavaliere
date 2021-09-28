@@ -14,6 +14,17 @@
   --fuentePrincipal:'Poppins', 'Sans Serif';
   --fuenteSecundaria:'Montserrat', 'Sans Serif'; }
 
+/*
+@media (max-width: $small) {
+    
+@media screen and (min-width: $small) and (max-width: $medium) {
+         
+}
+@media screen and (min-width: $medium) and (max-width: $big) {
+    
+}
+ 
+*/
 body {
   min-height: 100vh;
   display: flex;
@@ -42,6 +53,11 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center; } }
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .container_3 {
+      width: 90%;
+      position: relative;
+      top: 0px; } }
   .container_3::after {
     content: " ";
     background: url(../images/Home/logotipo.png) no-repeat center center;
@@ -70,20 +86,9 @@ body {
       @media screen and (max-width: 600px) {
         .container_3 .contact_title h1 {
           font-size: 4.5rem; } }
-    .container_3 .contact_title h2 {
-      font-size: 2rem;
-      position: relative;
-      width: 70%;
-      text-align: left;
-      top: -40px;
-      left: 2 0px;
-      color: black;
-      font-family: var(--fuenteSecundaria);
-      font-weight: lighter; }
-      @media screen and (max-width: 600px) {
-        .container_3 .contact_title h2 {
-          top: 50px;
-          font-size: 1.7rem; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_3 .contact_title h1 {
+          font-size: 8em; } }
   .container_3 .form_container {
     width: 100%;
     position: relative;
@@ -115,6 +120,11 @@ body {
         @media screen and (max-width: 600px) {
           .container_3 .form_container form input {
             background-color: rgba(184, 179, 179, 0.582); } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .container_3 .form_container form input {
+            background-color: rgba(184, 179, 179, 0.582);
+            height: 50px;
+            font-size: 2rem; } }
         .container_3 .form_container form input:focus {
           background-color: #b8b3b3; }
         .container_3 .form_container form input::placeholder {
@@ -123,6 +133,9 @@ body {
           color: black;
           font-weight: 600;
           font-family: Poppins; }
+          @media screen and (min-width: 900px) and (max-width: 1200px) {
+            .container_3 .form_container form input::placeholder {
+              font-size: 2.2rem; } }
       .container_3 .form_container form textarea {
         width: 100%;
         outline: none;
@@ -137,6 +150,9 @@ body {
         @media screen and (max-width: 600px) {
           .container_3 .form_container form textarea {
             background-color: rgba(184, 179, 179, 0.582); } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .container_3 .form_container form textarea {
+            background-color: rgba(184, 179, 179, 0.582); } }
         .container_3 .form_container form textarea:focus {
           background-color: rgba(255, 255, 255, 0.734);
           backdrop-filter: blur(3px); }
@@ -146,6 +162,9 @@ body {
           color: black;
           font-family: Poppins;
           font-weight: 600; }
+          @media screen and (min-width: 900px) and (max-width: 1200px) {
+            .container_3 .form_container form textarea::placeholder {
+              font-size: 2.2rem; } }
       .container_3 .form_container form button {
         font-family: Poppins;
         width: 30%;
@@ -164,6 +183,11 @@ body {
         @media screen and (max-width: 600px) {
           .container_3 .form_container form button {
             background-color: rgba(184, 179, 179, 0.582); } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .container_3 .form_container form button {
+            background-color: rgba(184, 179, 179, 0.582);
+            height: 60px;
+            font-size: 2.2rem; } }
         .container_3 .form_container form button:hover {
           color: red;
           transition: .5s; }
@@ -172,20 +196,61 @@ footer {
   width: 100vw;
   height: 100px;
   position: relative;
-  top: 200px;
-  bottom: 0px;
-  margin: auto;
+  top: 50vh;
   background: #060d0d;
   background: radial-gradient(circle, #060d0d 27%, #666565 85%);
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  scroll-snap-align: start;
+  scroll-snap-type: mandatory;
+  scroll-behavior: smooth; }
+  @media (max-width: 600px) {
+    footer {
+      margin-top: 0px;
+      bottom: 0px;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: 0px;
+      background: #060d0d;
+      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    footer {
+      margin-top: 0px;
+      bottom: 0px;
+      min-height: 50vh;
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      top: -20vh;
+      background: #060d0d;
+      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   footer .footer_content {
     width: 70%;
     height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: space-around; }
+    @media (max-width: 600px) {
+      footer .footer_content {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      footer .footer_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; } }
     footer .footer_content .logo_container {
       background-color: #fffefe;
       width: 100px;
@@ -194,11 +259,45 @@ footer {
       top: 0px;
       position: absolute;
       background-color: transparent; }
+      @media (max-width: 600px) {
+        footer .footer_content .logo_container {
+          margin: auto;
+          width: 100%;
+          height: 50vh;
+          left: 0px;
+          top: 0px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        footer .footer_content .logo_container {
+          margin: auto;
+          width: 100%;
+          left: 0px;
+          top: 100px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; } }
       footer .footer_content .logo_container img {
         width: 90px;
         position: absolute;
         top: 30px;
         left: 0px; }
+        @media (max-width: 600px) {
+          footer .footer_content .logo_container img {
+            margin: auto;
+            width: 200px;
+            position: relative; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          footer .footer_content .logo_container img {
+            width: 300px;
+            position: relative;
+            margin: auto;
+            top: 0px; } }
     footer .footer_content .redes_container {
       width: 20%;
       height: 100%;
@@ -206,10 +305,25 @@ footer {
       justify-content: space-evenly;
       align-items: center;
       flex-direction: column; }
+      @media (max-width: 600px) {
+        footer .footer_content .redes_container {
+          width: 70%; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        footer .footer_content .redes_container {
+          width: 100%; } }
       footer .footer_content .redes_container p {
         color: white;
         font-size: 1.3rem;
         letter-spacing: -1px; }
+        @media (max-width: 600px) {
+          footer .footer_content .redes_container p {
+            transform: translateY(30px);
+            font-size: 1.5rem; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          footer .footer_content .redes_container p {
+            font-size: 3rem;
+            position: relative;
+            top: 50px; } }
       footer .footer_content .redes_container ul {
         width: 100%;
         list-style: none;
@@ -222,5 +336,13 @@ footer {
             color: white; }
             footer .footer_content .redes_container ul li a ion-icon {
               font-size: 3rem; }
+              @media (max-width: 600px) {
+                footer .footer_content .redes_container ul li a ion-icon {
+                  font-size: 3.5rem; } }
+              @media screen and (min-width: 900px) and (max-width: 1200px) {
+                footer .footer_content .redes_container ul li a ion-icon {
+                  font-size: 5em;
+                  position: relative;
+                  top: 50px; } }
 
 /*# sourceMappingURL=contact_styles.css.map */
