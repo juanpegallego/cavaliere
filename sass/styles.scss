@@ -1181,9 +1181,9 @@ footer
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
     @media (min-width: $medium) and (max-width: $big)  {
-        position: absolute;
-        height: 150px;
-        bottom: 42vh;
+        position: relative;
+        left: 0px;
+        top: -7vh;
     } 
         
     .footer_content{
@@ -1226,8 +1226,8 @@ footer
                 position: absolute;
                 display: block;
                 left: 0px;
-                top: 0px;
-                width: 150px;
+                top: -20px;
+                width: 100px;
            }
             img{
                 width: 90px;
