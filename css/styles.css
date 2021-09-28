@@ -683,7 +683,7 @@ body {
   height: 100vh;
   position: relative;
   margin: auto;
-  margin-top: 50vh;
+  margin-top: 45vh;
   bottom: 0;
   left: 0px;
   display: flex;
@@ -708,7 +708,8 @@ body {
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1; }
+    z-index: -1;
+    transform: translateY(-40px); }
     @media (max-width: 600px) {
       .container_3::after {
         margin: auto;
@@ -852,7 +853,7 @@ body {
         position: relative;
         top: 30px;
         height: 40px;
-        font-size: 1.5rem;
+        font-size: 2rem;
         cursor: pointer;
         background-color: rgba(255, 255, 255, 0.527);
         color: white;
@@ -865,14 +866,8 @@ body {
             height: 50px;
             letter-spacing: 2px;
             font-size: 2rem; } }
-        @media (min-width: 1200px) {
-          .container_3 .form_container form button {
-            font-size: 3rem;
-            width: 50%;
-            height: 45px; } }
         .container_3 .form_container form button:hover {
           transition: .2s;
-          letter-spacing: -2px;
           background-color: #234423; }
 
 footer {
