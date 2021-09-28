@@ -29,15 +29,11 @@
 
 
 /*
-@media (max-width: $small) {
-    
-@media screen and (min-width: $small) and (max-width: $medium) {
-         
+@media (max-width: $small) {    
+@media screen and (min-width: $small) and (max-width: $medium) {        
 }
-@media screen and (min-width: $medium) and (max-width: $big) {
-    
-}
- 
+@media screen and (min-width: $medium) and (max-width: $big) {    
+} 
 */
     
 $small: 600px;
@@ -56,7 +52,6 @@ body
     flex-direction: column;
     font-family: var(--fuentePrincipal);
     overflow-x: hidden;
-    margin: 0;
 }
 //*------------------W S P --------------------------*//
 
@@ -115,7 +110,7 @@ body
 .container_3
 {
     min-height: 100vh;
-    width: 100vw;
+    width: 100%;
     position: relative;
     margin: auto;
     top: 0px;
@@ -757,7 +752,7 @@ body
     justify-content: center;
     align-items: center;
     @media (max-width: $small) {
-        top: 0vh;
+        top: -11vh;
     }
     
     &:hover img{
@@ -894,20 +889,20 @@ body
     height: 100vh;
     position: relative;
     margin: auto;
-    top: 50vh;
+    margin-top: 50vh;
     left: 0px;
-    display: grid;     
+    display: flex;     
     background-color: rgba(255, 255, 255, 0.375);
-    grid-template-rows: 20% 80%;
     @media (max-width: $small) {
         top: 0vh;
         position: relative;
         min-height: 50vh;
     }
-    @media (min-width: $big) {
-        min-height: 100vh;
-        width: 100%;
+    @media (min-width: $medium) and (max-width: $big)  {
+       
+       margin-top: 22vh;
     }
+    
     &::after{
         content: " ";
         background: url(../images/Home/logotipo.png) no-repeat  center 200px;
@@ -925,6 +920,12 @@ body
             background-size: 100%;
             top: 50px;
         } 
+        @media (min-width: $medium) and (max-width: $big)  {
+            margin: auto;
+            position: absolute;
+            top: 150px;
+            background-size: 70%;
+        }
     }
     .contact_title
     {
@@ -933,16 +934,15 @@ body
         justify-content: center;
         flex-direction: column;
         position: relative;
-        top: 100px;
+        top: 0px;
         @media (max-width: $small) {
             width: 100%;
             margin: auto;
             top: 0px;
         }
-        @media (min-width: $big) {
+        @media (min-width: $medium) and (max-width: $big)  {
             position: relative;
-            top: 50px;
-            
+            top: 20px;
         }
         h1
         {
@@ -977,6 +977,7 @@ body
         position: relative;
         height: 100%;
         display: flex;
+        top: 100px;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -987,7 +988,17 @@ body
             transform: translateY(-50px);
             
         }
-        
+        @media (min-width: $medium) and (max-width: $big)  {
+           
+            width: 50vw;
+            position: relative;
+        }
+        @media (min-width: $big) and (max-width: $desktop) {
+            
+        }
+        @media (min-width: $desktop) {
+            background-color: purple;
+        }
         form
         {
             height: 100%;
@@ -999,9 +1010,11 @@ body
             @media (max-width: $small) {
                 width: 100%;
             }
-            @media (min-width: $big) {
-                width: 40vw;
-                margin: auto;
+            @media (min-width: $medium) and (max-width: $big)  {
+                top: -250px;
+                width: 50vw;
+                height: 50%;
+                position: relative;
             }
             input
             {
@@ -1019,7 +1032,7 @@ body
                 background-color: rgba(255, 255, 255, 0.527);
                 @media 
                 (max-width: $small),
-                (min-width: $big)  {
+                (min-width: $desktop)  {
                     background-color: rgba(182, 179, 179, 0.727);
                 } 
                 
@@ -1027,7 +1040,7 @@ body
                 {
                     background-color: white;
                     @media (max-width: $small),
-                    (min-width: $big) {
+                    (min-width: $desktop) {
                         background-color: rgba(182, 179, 179, 0.727);
                     }
                 }
@@ -1060,7 +1073,7 @@ body
                 {
                     background-color: white;
                     @media (max-width: $small),
-                    (min-width: $big) {
+                    (min-width: $desktop) {
                         background-color: rgba(182, 179, 179, 0.727);
                     }
                 }
@@ -1074,7 +1087,7 @@ body
                     font-weight: 600;
                 }
                 @media (max-width: $small),
-                (min-width: $big) {
+                (min-width: $desktop) {
                     background-color: rgba(182, 179, 179, 0.727);
                 }
             }   
@@ -1141,6 +1154,13 @@ footer
         background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
+    @media (min-width: $medium) and (max-width: $big)  {
+        top: 0vh;
+        margin-top: 0px;
+        bottom: 0px;
+        width: 100vw;
+        position: relative;
+    }
         
     .footer_content{
         width:70%;
@@ -1155,6 +1175,9 @@ footer
             justify-content: center;
             align-items: center;
             flex-direction: column;
+        }
+        @media (min-width: $medium) and (max-width: $big)  {
+             width: 100%; 
         }
         .logo_container{
             background-color: rgb(255, 254, 254);
@@ -1186,6 +1209,9 @@ footer
                     width: 200px;
                     position: relative;
                 }
+                @media (min-width: $medium) and (max-width: $big)  {
+                    width: 100px; 
+               }
             }
         }
         .redes_container
@@ -1199,6 +1225,9 @@ footer
             @media (max-width: $small) {
                 width: 70%;
             }
+            @media (min-width: $medium) and (max-width: $big)  {
+                width: 40%; 
+           }
             p{
                 color: white;
                 font-size: 1.3rem;
@@ -1230,6 +1259,9 @@ footer
                             @media (max-width: $small) {
                                 font-size: 3.5rem;
                             }
+                            @media (min-width: $medium) and (max-width: $big)  {
+                                font-size: 4rem;
+                           }
                         }
                     }
                 }
