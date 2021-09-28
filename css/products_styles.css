@@ -161,7 +161,6 @@ body {
     top: 0px;
     position: relative;
     height: 250px;
-    /* background: url(../../../images/Products/Fruits/apple.jpg) no-repeat center center; */
     background-size: cover;
     display: flex;
     background-image: linear-gradient(to right top, #65f971c5, #83f65f, #9cf24c, #b2ee39, #c7e925, #c2e31c, #bcde11, #b7d800, #97d005, #76c812, #51bf1e, #12b528a6); }
@@ -178,7 +177,7 @@ body {
           font-size: 4rem;
           left: 0px; } }
   .products_container .grid_fruit_display {
-    width: 100%;
+    width: 90%;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -196,7 +195,7 @@ body {
     .products_container .grid_fruit_display:nth-child(5) {
       background: url(/images/Products/Fruits/carrot1.png) no-repeat center center; }
     .products_container .grid_fruit_display:nth-child(6) {
-      background: url(/images/Products/Fruits/eggplant.jpg) no-repeat center center; }
+      background: url(/images/Products/Fruits/remolacha.png) no-repeat center center; }
     .products_container .grid_fruit_display:nth-child(7) {
       background: url(/images/Products/Fruits/papaya.png) no-repeat center center; }
     .products_container .grid_fruit_display:nth-child(8) {
@@ -210,36 +209,40 @@ body {
     .products_container .grid_fruit_display:nth-child(12) {
       background: url(/images/Products/Fruits/orange.png) no-repeat center center; }
     .products_container .grid_fruit_display:nth-child(13) {
-      background: url(/images/Products/Fruits/mandarine.png) no-repeat center center; }
+      background: url(/images/Products/Fruits/mandarine.png) no-repeat center center;
+      background-size: 50%; }
     .products_container .grid_fruit_display:nth-child(14) {
       background: url(/images/Products/Fruits/lemon.png) no-repeat center center; }
     .products_container .grid_fruit_display:nth-child(15) {
       background: url(/images/Products/Fruits/pomelo.png) no-repeat center center; }
     .products_container .grid_fruit_display:nth-child(16) {
-      background: url(/images/Products/Fruits/repollo.png) no-repeat center center; }
+      background: url(/images/Products/Fruits/repollo.png) no-repeat center center;
+      background-size: 50%; }
     .products_container .grid_fruit_display .fruit_card {
       width: 100vw;
       min-height: 50vh;
       display: grid;
       grid-template-columns: 50% 50%;
       overflow: hidden;
-      transition: all 2s; }
+      transition: all 2s;
+      backdrop-filter: blur(35px); }
       .products_container .grid_fruit_display .fruit_card:hover {
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(0px);
         transition: all 1s;
-        width: 85vw;
+        width: 70vw;
         display: flex;
         justify-content: center;
         flex-direction: row;
-        margin-top: 50px;
-        margin-bottom: 50px;
+        margin-top: 150px;
+        margin-bottom: 150px;
         align-items: center; }
       .products_container .grid_fruit_display .fruit_card .img_container {
         display: flex;
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        width: 100%; }
+        width: 100%;
+        display: none; }
         .products_container .grid_fruit_display .fruit_card .img_container img {
           width: 50%;
           position: relative;
@@ -257,7 +260,10 @@ body {
         .products_container .grid_fruit_display .fruit_card .fruit_info_container p {
           font-size: 1.5rem;
           text-align: justify;
-          width: 50%; }
+          width: 50%;
+          background-color: rgba(255, 255, 255, 0.623);
+          border-radius: 1rem;
+          padding: 10px; }
           @media screen and (max-width: 600px) {
             .products_container .grid_fruit_display .fruit_card .fruit_info_container p {
               font-size: 1.2rem;
