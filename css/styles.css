@@ -288,11 +288,13 @@ body {
       width: 80%;
       position: relative; } }
   .right_container .section_container {
-    width: 35vw;
+    min-width: 35vw;
     position: relative;
-    height: 50vh;
+    max-width: 500px;
     border-radius: 5rem;
     display: grid;
+    min-height: 50vh;
+    max-height: 400px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
     margin: auto;

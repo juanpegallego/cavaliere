@@ -388,18 +388,20 @@ body
    
     .section_container
     { 
-        max-width: 35vw;
+        min-width: 35vw; 
         position: relative;
-        max-height: 50vh;
+        max-width: 500px;
         border-radius: 5rem;
         display: grid;
+        min-height: 50vh;
+        max-height: 400px;
         grid-template-columns: 50% 50%;  
         grid-template-rows: 50% 50%; 
         margin: auto;    
         transition: all 2s;
         background-color: var(--ventanas);
         box-shadow: 0px 0px 10px 5px rgba(53, 53, 54, 0.445);
-       
+        
         @media (max-width: $small) {
             width: 90%;
             height: 30vh;
