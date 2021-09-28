@@ -4,6 +4,7 @@
 {
     padding: 0;
     margin: 0;
+    border: 0;
     box-sizing: border-box;
     font-size: 10px;
 }
@@ -45,17 +46,18 @@ $desktop:1824px;
 body
 {
     min-height: 100vh;
+    height: 100%;
     width: 100vw;
     display: flex;
     justify-content: center;
+    position: relative;
     align-items: center;
     flex-direction: column;
     font-family: var(--fuentePrincipal);
     overflow-x: hidden;
     @media screen and (min-width: $medium) and (max-width: $big) {
-        background-color: yellowgreen;
+        
         display: block;
-
     }
 }
 //*------------------W S P --------------------------*//
@@ -109,7 +111,14 @@ body
 
 
 
-
+.site_content{
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 150px;
+}
 .container_1,
 .container_2,
 .container_3
@@ -746,12 +755,12 @@ body
 //*----------------------------------GRID BANNER -----------------------------------------------------*//
 
 .banner_container{
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     background-color: rgba(32, 32, 32, 0.95);    
     display: flex;
     position: relative;
-    top: 300px;
+    top: 150px;
     left: 0px;
     justify-content: center;
     align-items: center;
@@ -894,10 +903,12 @@ body
     position: relative;
     margin: auto;
     margin-top: 50vh;
+    bottom: 0;
     left: 0px;
     display: flex;     
+    justify-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.375);
-    background-color: red;
     @media (max-width: $small) {
         top: 0vh;
         position: relative;
@@ -905,7 +916,7 @@ body
     }
     @media (min-width: $medium) and (max-width: $big)  {
        
-       margin-top: 22vh;
+       margin-top: 20vh;
     }
     
     &::after{
@@ -929,7 +940,7 @@ body
             margin: auto;
             position: absolute;
             top: 150px;
-            background-size: 70%;
+            background-size: 80%;
         }
     }
     .contact_title
@@ -939,7 +950,6 @@ body
         justify-content: center;
         flex-direction: column;
         position: relative;
-        top: 0px;
         @media (max-width: $small) {
             width: 100%;
             margin: auto;
@@ -982,7 +992,6 @@ body
         position: relative;
         height: 100%;
         display: flex;
-        top: 100px;
         align-items: center;
         flex-direction: column;
         justify-content: center;
@@ -1002,21 +1011,24 @@ body
             
         }
         @media (min-width: $desktop) {
-            background-color: purple;
         }
         form
         {
             height: 100%;
+            width: 40%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            position: relative;
+            transform: translateY(50px);
+            margin: auto;            
             @media (max-width: $small) {
                 width: 100%;
             }
             @media (min-width: $medium) and (max-width: $big)  {
-                top: -250px;
+                top: -200px;
                 width: 50vw;
                 height: 50%;
                 position: relative;
@@ -1105,9 +1117,8 @@ body
                 position: relative;
                 top: 30px;
                 height: 40px;
-                font-size: 1.7rem;
+                font-size: 1.5rem;
                 cursor: pointer;
-                font-weight: bold;
                 background-color: rgba(255, 255, 255, 0.527);
                 color: white    ;
                 background-color: rgb(68, 131, 68);
@@ -1126,8 +1137,9 @@ body
                  }
                 &:hover
                 {   
-                    color: red;
-                    transition: .5s;
+                    transition: .2s;
+                    letter-spacing: -2px;
+                    background-color: rgb(35, 68, 35);
                 }
             }
         }
@@ -1137,10 +1149,10 @@ body
 
 footer
 {
-    width: 100vw;
+    width: 100%;
     height: 100px;
-    position: relative;
-    top: 50vh;
+    position: absolute;
+    bottom: 0;
     background: #060d0d;
     background: radial-gradient(circle, #060d0d 27%, #666565 85%);
     display: flex;
@@ -1160,20 +1172,16 @@ footer
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
     @media (min-width: $medium) and (max-width: $big)  {
-        margin-bottom: 0px;
-        width: 100vw;
-        position: relative;
-        width: 100%;
-        bottom: 0px;
-        top: 0px;
-    }
+        
+    } 
         
     .footer_content{
-        width:70%;
+        width:100%;
         height: 100%;
-        overflow: hidden;
+        /* overflow: hidden; */
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
         @media (max-width: $small) {
             width: 100%;
             height: 100vh;
@@ -1186,10 +1194,9 @@ footer
              width: 100%; 
         }
         .logo_container{
-            background-color: rgb(255, 254, 254);
             width: 100px;
             height: 100px;
-            left: 50px;
+            left: 0px;
             top: 0px;
             position: absolute;
             background-color: transparent;
@@ -1238,6 +1245,7 @@ footer
                 color: white;
                 font-size: 1.3rem;
                 letter-spacing: -1px;
+               
                 @media (max-width: $small) {
                    transform: translateY(30px);
                    font-size: 1.5rem;

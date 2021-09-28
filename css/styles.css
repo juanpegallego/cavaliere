@@ -3,6 +3,7 @@
 * {
   padding: 0;
   margin: 0;
+  border: 0;
   box-sizing: border-box;
   font-size: 10px; }
 
@@ -23,16 +24,17 @@
 */
 body {
   min-height: 100vh;
+  height: 100%;
   width: 100vw;
   display: flex;
   justify-content: center;
+  position: relative;
   align-items: center;
   flex-direction: column;
   font-family: var(--fuentePrincipal);
   overflow-x: hidden; }
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     body {
-      background-color: yellowgreen;
       display: block; } }
 
 .wsp_container {
@@ -69,6 +71,14 @@ body {
     color: black; }
     .wsp_container a .wsp_icon {
       font-size: 3rem; }
+
+.site_content {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  padding-bottom: 150px; }
 
 .container_1,
 .container_2,
@@ -555,12 +565,12 @@ body {
   background: var(--opcional); }
 
 .banner_container {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background-color: rgba(32, 32, 32, 0.95);
   display: flex;
   position: relative;
-  top: 300px;
+  top: 150px;
   left: 0px;
   justify-content: center;
   align-items: center; }
@@ -674,10 +684,12 @@ body {
   position: relative;
   margin: auto;
   margin-top: 50vh;
+  bottom: 0;
   left: 0px;
   display: flex;
-  background-color: rgba(255, 255, 255, 0.375);
-  background-color: red; }
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.375); }
   @media (max-width: 600px) {
     .container_3 {
       top: 0vh;
@@ -685,7 +697,7 @@ body {
       min-height: 50vh; } }
   @media (min-width: 900px) and (max-width: 1200px) {
     .container_3 {
-      margin-top: 22vh; } }
+      margin-top: 20vh; } }
   .container_3::after {
     content: " ";
     background: url(../images/Home/logotipo.png) no-repeat center 200px;
@@ -708,14 +720,13 @@ body {
         margin: auto;
         position: absolute;
         top: 150px;
-        background-size: 70%; } }
+        background-size: 80%; } }
   .container_3 .contact_title {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative;
-    top: 0px; }
+    position: relative; }
     @media (max-width: 600px) {
       .container_3 .contact_title {
         width: 100%;
@@ -746,7 +757,6 @@ body {
     position: relative;
     height: 100%;
     display: flex;
-    top: 100px;
     align-items: center;
     flex-direction: column;
     justify-content: center; }
@@ -760,22 +770,23 @@ body {
       .container_3 .form_container {
         width: 50vw;
         position: relative; } }
-    @media (min-width: 1824px) {
-      .container_3 .form_container {
-        background-color: purple; } }
     .container_3 .form_container form {
       height: 100%;
+      width: 40%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      flex-direction: column; }
+      flex-direction: column;
+      position: relative;
+      transform: translateY(50px);
+      margin: auto; }
       @media (max-width: 600px) {
         .container_3 .form_container form {
           width: 100%; } }
       @media (min-width: 900px) and (max-width: 1200px) {
         .container_3 .form_container form {
-          top: -250px;
+          top: -200px;
           width: 50vw;
           height: 50%;
           position: relative; } }
@@ -841,9 +852,8 @@ body {
         position: relative;
         top: 30px;
         height: 40px;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
         cursor: pointer;
-        font-weight: bold;
         background-color: rgba(255, 255, 255, 0.527);
         color: white;
         background-color: #448344;
@@ -861,14 +871,15 @@ body {
             width: 50%;
             height: 45px; } }
         .container_3 .form_container form button:hover {
-          color: red;
-          transition: .5s; }
+          transition: .2s;
+          letter-spacing: -2px;
+          background-color: #234423; }
 
 footer {
-  width: 100vw;
+  width: 100%;
   height: 100px;
-  position: relative;
-  top: 50vh;
+  position: absolute;
+  bottom: 0;
   background: #060d0d;
   background: radial-gradient(circle, #060d0d 27%, #666565 85%);
   display: flex;
@@ -887,20 +898,13 @@ footer {
       flex-direction: column;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
-  @media (min-width: 900px) and (max-width: 1200px) {
-    footer {
-      margin-bottom: 0px;
-      width: 100vw;
-      position: relative;
-      width: 100%;
-      bottom: 0px;
-      top: 0px; } }
   footer .footer_content {
-    width: 70%;
+    width: 100%;
     height: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: flex;
-    justify-content: space-around; }
+    justify-content: center;
+    align-items: center; }
     @media (max-width: 600px) {
       footer .footer_content {
         width: 100%;
@@ -913,10 +917,9 @@ footer {
       footer .footer_content {
         width: 100%; } }
     footer .footer_content .logo_container {
-      background-color: #fffefe;
       width: 100px;
       height: 100px;
-      left: 50px;
+      left: 0px;
       top: 0px;
       position: absolute;
       background-color: transparent; }
