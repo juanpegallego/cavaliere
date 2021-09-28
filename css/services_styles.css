@@ -64,6 +64,10 @@ header {
     @media screen and (max-width: 600px) {
       header #lamp {
         transform: translateY(200px); } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      header #lamp {
+        transform: translateY(400px);
+        font-size: 20rem; } }
   header h1 {
     color: black;
     font-size: 5rem;
@@ -101,12 +105,20 @@ header {
     @media screen and (max-width: 600px) {
       .lights_on #lamp {
         transform: translateY(100px) rotate(180deg); } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .lights_on #lamp {
+        transform: translateY(60px) rotate(180deg);
+        font-size: 20rem; } }
   .lights_on h1 {
     transition: all 5s;
     color: white; }
   .lights_on .first_text {
     background-color: rgba(0, 0, 0, 0.692);
     color: white; }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .lights_on .first_text {
+        width: 60%;
+        font-size: 2rem; } }
   .lights_on img {
     width: 100px;
     height: 100px; }
@@ -120,12 +132,14 @@ header {
   scroll-snap-align: start;
   width: 100%;
   position: relative;
-  top: 150px;
+  margin-top: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 100vh; }
+  min-height: 100vh;
+  background: url(/images/campo.jpg) no-repeat center center;
+  background-size: cover; }
   .content .title_container {
     width: 50%;
     display: flex;
@@ -136,20 +150,10 @@ header {
       .content .title_container {
         width: 100%;
         flex-direction: column; } }
-    .content .title_container .content_background_img {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center; }
-      .content .title_container .content_background_img img {
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .content .title_container {
         width: 100%;
-        z-index: -1;
-        transform: rotate(55deg); }
-        @media screen and (max-width: 600px) {
-          .content .title_container .content_background_img img {
-            width: 40%;
-            position: absolute;
-            transform: translateY(180px) rotate(55deg); } }
+        flex-direction: column; } }
     .content .title_container .title {
       display: flex;
       justify-content: center;
@@ -167,6 +171,11 @@ header {
             letter-spacing: -1px;
             text-align: center;
             margin: auto; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .content .title_container .title h1 {
+            position: relative;
+            transform: translateY(500px);
+            font-size: 5rem; } }
         .content .title_container .title h1 .wand_icon {
           font-size: 10rem;
           position: relative;
@@ -181,7 +190,6 @@ header {
     display: grid;
     width: 60%;
     transition: all 1s;
-    top: 50px;
     grid-gap: 0px;
     position: relative;
     grid-template-columns: 50% 50%; }
@@ -189,6 +197,9 @@ header {
       .content .cards_container {
         width: 95%;
         top: 200px; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .content .cards_container {
+        width: 90%; } }
     .content .cards_container .card {
       display: flex;
       flex-direction: column;
@@ -207,6 +218,9 @@ header {
         @media screen and (max-width: 600px) {
           .content .cards_container .card:first-child {
             border-top-left-radius: 3%; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .content .cards_container .card:first-child {
+            border-top-left-radius: 5%; } }
       .content .cards_container .card:nth-child(2) {
         border-top-right-radius: 40%;
         border-top-left-radius: 0%;
@@ -214,9 +228,20 @@ header {
         @media screen and (max-width: 600px) {
           .content .cards_container .card:nth-child(2) {
             border-top-right-radius: 3%; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .content .cards_container .card:nth-child(2) {
+            border-top-right-radius: 5%; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .content .cards_container .card {
+          min-height: 70vh;
+          justify-content: space-around; } }
       .content .cards_container .card .service_icon {
         width: 50px;
         height: 50px; }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .content .cards_container .card .service_icon {
+            width: 80px;
+            height: 80px; } }
       .content .cards_container .card h2 {
         font-size: 2.5rem;
         height: 50px;
@@ -228,10 +253,16 @@ header {
         @media screen and (max-width: 600px) {
           .content .cards_container .card h2 {
             font-size: 2rem; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .content .cards_container .card h2 {
+            font-size: 4rem; } }
       .content .cards_container .card span {
         font-size: 1.7rem;
         margin-top: 50px;
         text-decoration: underline red; }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .content .cards_container .card span {
+            font-size: 3rem; } }
       .content .cards_container .card ul {
         width: 80%; }
         @media screen and (max-width: 600px) {
@@ -243,6 +274,9 @@ header {
           @media screen and (max-width: 600px) {
             .content .cards_container .card ul li {
               font-size: 1.5rem; } }
+          @media screen and (min-width: 900px) and (max-width: 1200px) {
+            .content .cards_container .card ul li {
+              font-size: 2.5rem; } }
   .content a {
     width: 20%;
     height: 40px;
@@ -260,6 +294,10 @@ header {
         width: 50%;
         top: 250px;
         position: relative; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .content a {
+        width: 30%;
+        top: 150px; } }
     .content a:hover {
       background-color: black;
       color: white; }
@@ -280,13 +318,16 @@ header {
 
 .white_space {
   min-height: 80vh;
-  top: 80vh;
+  top: 50vh;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   padding: 10px; }
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .white_space {
+      top: 0vh; } }
   .white_space h3 {
     color: black;
     font-size: 3rem;
@@ -296,13 +337,18 @@ header {
       .white_space h3 {
         font-size: 2.5rem;
         animation: none; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .white_space h3 {
+        font-size: 4rem;
+        animation: none;
+        width: 70%;
+        font-weight: lighter; } }
 @keyframes letterSpacing {
   0% {
     letter-spacing: -3px;
     font-weight: lighter; }
   50% {
-    letter-spacing: 1px;
-    color: red; }
+    letter-spacing: 1px; }
   100% {
     font-weight: lighter;
     color: black;
@@ -314,7 +360,8 @@ header {
   width: 100%;
   position: relative;
   top: 80vh;
-  min-height: 150vh; }
+  min-height: 150vh;
+  overflow-x: hidden; }
   .container_logistica:hover .title_container {
     backdrop-filter: blur(20px);
     transition: all 2s; }
@@ -326,6 +373,10 @@ header {
       align-items: center;
       flex-direction: column;
       background-size: cover; } }
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .container_logistica {
+      background-size: 250%;
+      top: -300px; } }
   .container_logistica .title_container {
     transition: all 4s;
     width: 100%;
@@ -348,19 +399,32 @@ header {
           text-align: center;
           letter-spacing: -1px;
           text-shadow: 0px 0px 10px black; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_logistica .title_container h1 {
+          font-size: 8rem;
+          width: 100%;
+          text-align: center;
+          backdrop-filter: blur(20px); } }
     .container_logistica .title_container p {
       text-align: center;
       width: 70%;
-      background-color: rgba(0, 0, 0, 0.437);
+      background-color: rgba(92, 92, 94, 0.768);
       color: white;
       padding: 10px;
       border-radius: 10px;
-      font-size: 1.7rem; }
+      font-size: 1.7rem;
+      text-indent: 3rem;
+      padding: 10px; }
       @media screen and (max-width: 600px) {
         .container_logistica .title_container p {
           width: 80%;
           position: relative;
           transform: translateY(50px); } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_logistica .title_container p {
+          font-size: 3rem;
+          width: 80%;
+          backdrop-filter: blur(10px); } }
     .container_logistica .title_container h4 {
       display: flex;
       flex-direction: column;
@@ -375,9 +439,15 @@ header {
           color: red;
           font-weight: bolder;
           transform: translateY(100px); } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_logistica .title_container h4 {
+          width: 40%;
+          min-height: 150px;
+          border-radius: 1rem;
+          background-color: rgba(92, 92, 94, 0.768); } }
       .container_logistica .title_container h4 ion-icon {
         font-size: 7rem;
-        animation: translateIcon 2s infinite ease-in-out; }
+        animation: translateIcon 1.5s infinite ease-in-out; }
 @keyframes translateIcon {
   0% {
     transform: translateY(0px); }
@@ -395,24 +465,35 @@ header {
         .container_logistica .title_container ul {
           width: 90%;
           top: 150px; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_logistica .title_container ul {
+          width: 85%; } }
       .container_logistica .title_container ul li {
         font-size: 1.6rem;
         margin: 10px;
         background-color: rgba(92, 92, 94, 0.768);
         cursor: pointer;
-        height: 45px;
+        height: 50px;
         list-style: none;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         border-radius: 5px;
         color: white; }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          .container_logistica .title_container ul li {
+            height: 70px;
+            font-size: 2.5rem;
+            justify-content: center; } }
         .container_logistica .title_container ul li:hover {
           color: var(--secundario);
           background-color: white;
           font-weight: bold; }
         .container_logistica .title_container ul li ion-icon {
           font-size: 1.6rem; }
+          @media screen and (min-width: 900px) and (max-width: 1200px) {
+            .container_logistica .title_container ul li ion-icon {
+              font-size: 3rem; } }
   .container_logistica .container_flota {
     min-height: 50vh;
     width: 100%;
@@ -440,6 +521,9 @@ header {
         .container_logistica .container_flota .fleet_card {
           top: 150px;
           min-height: 100vh;
+          width: 95%; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_logistica .container_flota .fleet_card {
           width: 95%; } }
       .container_logistica .container_flota .fleet_card .card_title {
         width: 100%;
@@ -483,6 +567,9 @@ header {
                 font-size: 1.5rem;
                 text-align: left;
                 padding: 5px; } }
+            @media screen and (min-width: 900px) and (max-width: 1200px) {
+              .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
+                font-size: 2.5rem; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul {
             padding: 5px;
             width: 90%; }
@@ -491,6 +578,9 @@ header {
               @media screen and (max-width: 600px) {
                 .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
                   font-size: 1.3rem; } }
+              @media screen and (min-width: 900px) and (max-width: 1200px) {
+                .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
+                  font-size: 2rem; } }
         .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
           display: grid;
           padding: 10px;
@@ -501,12 +591,18 @@ header {
           @media screen and (max-width: 600px) {
             .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
               grid-template-rows: 50% 50%; } }
+          @media screen and (min-width: 900px) and (max-width: 1200px) {
+            .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
+              grid-template-rows: 60% 40%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
             margin: auto;
             width: 70%; }
             @media screen and (max-width: 600px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
                 width: 100%; } }
+            @media screen and (min-width: 900px) and (max-width: 1200px) {
+              .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
+                width: 90%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs {
             display: flex;
             justify-content: center;
@@ -519,6 +615,9 @@ header {
                 @media screen and (max-width: 600px) {
                   .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
                     font-size: 1.3rem; } }
+                @media screen and (min-width: 900px) and (max-width: 1200px) {
+                  .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
+                    font-size: 2rem; } }
                 .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
                   font-weight: bold;
                   font-size: 1.5rem;
@@ -526,6 +625,9 @@ header {
                   @media screen and (max-width: 600px) {
                     .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
                       font-size: 1.3rem; } }
+                  @media screen and (min-width: 900px) and (max-width: 1200px) {
+                    .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li span {
+                      font-size: 2rem; } }
     .container_logistica .container_flota button {
       font-size: 2rem;
       background-color: rgba(0, 0, 255, 0.768);
@@ -569,18 +671,30 @@ header {
   @media screen and (max-width: 600px) {
     .container_invitacion {
       margin-top: 65vh; } }
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    .container_invitacion {
+      margin-top: initial;
+      top: -20vh; } }
   .container_invitacion h1 {
     font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: 1px; }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .container_invitacion h1 {
+        font-size: 3em; } }
   .container_invitacion p {
-    font-size: 1.8rem; }
+    font-size: 1.8rem;
+    text-align: center; }
     @media screen and (max-width: 600px) {
       .container_invitacion p {
         width: 80%; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .container_invitacion p {
+        width: 80%;
+        font-size: 3.5rem; } }
   .container_invitacion a {
     font-size: 1.7rem;
-    color: red;
+    color: black;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -593,14 +707,25 @@ header {
     @media screen and (max-width: 600px) {
       .container_invitacion a {
         width: 50%; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      .container_invitacion a {
+        width: 50%;
+        height: 100px;
+        font-size: 3rem; } }
     .container_invitacion a .phone_icon {
-      font-size: 2.5rem; }
+      font-size: 2.5rem;
+      color: black; }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        .container_invitacion a .phone_icon {
+          font-size: 5rem; } }
     .container_invitacion a:hover {
       color: #03a103;
       background-color: rgba(202, 198, 198, 0.616); }
       .container_invitacion a:hover .phone_icon {
         transform: rotate(40deg);
-        transition: all .7s; }
+        transition: all .7s;
+        font-size: 6rem;
+        color: #03a103; }
 
 footer {
   width: 100vw;
@@ -628,6 +753,19 @@ footer {
       top: 0px;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
+  @media screen and (min-width: 900px) and (max-width: 1200px) {
+    footer {
+      margin-top: 0px;
+      bottom: 0px;
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      top: -20vh;
+      background: #060d0d;
+      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   footer .footer_content {
     width: 70%;
     height: 100%;
@@ -638,6 +776,12 @@ footer {
       footer .footer_content {
         width: 100%;
         height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; } }
+    @media screen and (min-width: 900px) and (max-width: 1200px) {
+      footer .footer_content {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -662,6 +806,17 @@ footer {
           justify-content: center;
           align-items: center;
           flex-direction: column; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        footer .footer_content .logo_container {
+          margin: auto;
+          width: 100%;
+          left: 0px;
+          top: 0px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; } }
       footer .footer_content .logo_container img {
         width: 90px;
         position: absolute;
@@ -672,6 +827,12 @@ footer {
             margin: auto;
             width: 200px;
             position: relative; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          footer .footer_content .logo_container img {
+            width: 300px;
+            position: relative;
+            margin: auto;
+            top: 150px; } }
     footer .footer_content .redes_container {
       width: 20%;
       height: 100%;
@@ -682,6 +843,9 @@ footer {
       @media (max-width: 600px) {
         footer .footer_content .redes_container {
           width: 70%; } }
+      @media screen and (min-width: 900px) and (max-width: 1200px) {
+        footer .footer_content .redes_container {
+          width: 100%; } }
       footer .footer_content .redes_container p {
         color: white;
         font-size: 1.3rem;
@@ -690,6 +854,9 @@ footer {
           footer .footer_content .redes_container p {
             transform: translateY(30px);
             font-size: 1.5rem; } }
+        @media screen and (min-width: 900px) and (max-width: 1200px) {
+          footer .footer_content .redes_container p {
+            font-size: 3rem; } }
       footer .footer_content .redes_container ul {
         width: 100%;
         list-style: none;
@@ -705,5 +872,8 @@ footer {
               @media (max-width: 600px) {
                 footer .footer_content .redes_container ul li a ion-icon {
                   font-size: 3.5rem; } }
+              @media screen and (min-width: 900px) and (max-width: 1200px) {
+                footer .footer_content .redes_container ul li a ion-icon {
+                  font-size: 5em; } }
 
 /*# sourceMappingURL=services_styles.css.map */

@@ -72,7 +72,12 @@ header{
     @media screen and (max-width: $small) {
         top: -50px;
         height: 200vh;
-      }
+    }
+    
+    
+    
+      
+
     #lamp{
         font-size: 15rem;
         color: white;
@@ -84,6 +89,11 @@ header{
             transform: 
             translateY(200px);
           }  
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            transform: 
+            translateY(400px);
+            font-size: 20rem;
+        }
     }
 
     h1{
@@ -128,7 +138,13 @@ header{
         @media screen and (max-width: $small) {
             transform: translateY(100px) rotate(180deg) 
           } 
-       
+          
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            transform: 
+            translateY(60px) rotate(180deg);
+            font-size: 20rem;
+            
+        }
     }
     h1{
         transition: all 5s;
@@ -138,7 +154,11 @@ header{
     {
         background-color: rgba(0, 0, 0, 0.692);
         color: white;
-       
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: 60%;
+            font-size: 2rem;
+            
+        }
     }
     
     img{
@@ -157,14 +177,15 @@ header{
     scroll-snap-align: start;
     width: 100%;
     position: relative;
-    top: 150px;
+    margin-top: -20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    min-height: 100vh;
+    background: url(/images/campo.jpg) no-repeat center center;
+    background-size: cover;
     
-   
     .title_container{
         width: 50%;
         display: flex;
@@ -175,32 +196,19 @@ header{
             width: 100%;
             flex-direction: column;
           }
-        .content_background_img{
+          @media screen and (min-width: $medium) and (max-width: $big) {
+        
             width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            
-            img{
-                
-                width: 100%;
-                z-index: -1;
-                transform: rotate(55deg);
-                @media screen and (max-width: $small) {
-                 width: 40%;
-                 position: absolute;
-                 
-                 transform: translateY(180px)
-                 rotate(55deg);
-               }
-            }
-        }
+            flex-direction: column;
+         }
+        
         .title{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             position: relative; 
+
             h1{
                 display: flex;
                 justify-content: space-evenly;
@@ -212,6 +220,11 @@ header{
                     text-align: center;
                     margin: auto;
                   }
+                  @media screen and (min-width: $medium) and (max-width: $big) {
+                   position: relative;
+                    transform: translateY(500px);
+                    font-size: 5rem;
+                  }  
                 .wand_icon{
                     font-size: 10rem;
                     position: relative;
@@ -233,7 +246,6 @@ header{
         display: grid;
         width: 60%;
         transition: all 1s;
-        top: 50px;
         grid-gap: 0px;
         position: relative;
         grid-template-columns: 50% 50%;
@@ -241,6 +253,9 @@ header{
            width: 95%;
            top: 200px;
         }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: 90%;
+        }  
         .card{
             display: flex;
             flex-direction: column;
@@ -258,7 +273,10 @@ header{
                 border-bottom-right-radius: 0%;
                 @media screen and (max-width: $small) {
                     border-top-left-radius: 3%;
-                 } 
+                } 
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                    border-top-left-radius: 5%;
+                }  
             }
             &:nth-child(2){
                 border-top-right-radius: 40%;
@@ -267,7 +285,14 @@ header{
                 @media screen and (max-width: $small) {
                     border-top-right-radius: 3%;
                  } 
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                border-top-right-radius: 5%;
+                   }  
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                min-height: 70vh;
+                justify-content: space-around;
+            }  
 
 
 
@@ -275,7 +300,12 @@ header{
             .service_icon{
                 width: 50px;
                 height: 50px;
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                    width: 80px;
+                    height: 80px;
+                } 
             }
+           
             h2{
                 font-size: 2.5rem;
                 height: 50px;
@@ -287,6 +317,9 @@ header{
                 @media screen and (max-width: $small) {
                     font-size: 2rem;
                  }
+                 @media screen and (min-width: $medium) and (max-width: $big) {
+                    font-size: 4rem;
+                } 
                 
             }
             
@@ -294,11 +327,15 @@ header{
                 font-size: 1.7rem;
                 margin-top: 50px;
                 text-decoration: underline red;
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                    font-size: 3rem;
+                } 
             }
             ul{
                 width: 80%;
                 @media screen and (max-width: $small) {                    
                     width: 90%;
+                    
                  }
                 li{
                     font-size: 1.7rem;
@@ -306,6 +343,9 @@ header{
                     @media screen and (max-width: $small) {
                         font-size: 1.5rem
                      }
+                     @media screen and (min-width: $medium) and (max-width: $big) {
+                        font-size: 2.5rem;
+                    } 
                 }
             }           
         }      
@@ -328,6 +368,10 @@ header{
             top: 250px;
             position: relative;
         }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+           width: 30%;
+           top: 150px;
+        } 
         &:hover{
             background-color: black;
             color: white;
@@ -355,14 +399,16 @@ header{
 
 .white_space{
     min-height: 80vh;
-    top: 80vh;
+    top: 50vh;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     padding: 10px;
-    
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        top: 0vh;
+     }
     h3{
         color: black;
         font-size: 3rem;
@@ -373,6 +419,12 @@ header{
             animation: none;
             
          }
+         @media screen and (min-width: $medium) and (max-width: $big) {
+            font-size: 4rem;
+            animation: none;
+            width: 70%;
+            font-weight: lighter;
+         }
     }
     @keyframes letterSpacing {
         0%{
@@ -381,7 +433,7 @@ header{
         }
         50%{
             letter-spacing: 1px;
-            color: red;
+           
         }
         
         100%{
@@ -398,11 +450,11 @@ header{
     background: url(../images/camion_cavaliere2.jpg) no-repeat center 50px;
     scroll-snap-align: start;
     background-size: 100%;
-    width: 100%;
-    
+    width: 100%;    
     position: relative;
     top:80vh;
     min-height: 150vh;
+    overflow-x: hidden;
     &:hover .title_container{
         backdrop-filter: blur(20px);
         transition: all 2s;
@@ -415,6 +467,10 @@ header{
         flex-direction: column;
         background-size: cover;
     }
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        background-size: 250%;
+        top: -300px;
+     }
     .title_container{
         transition: all 4s;
         width: 100%;
@@ -439,21 +495,35 @@ header{
                letter-spacing: -1px;
                text-shadow: 0px 0px 10px black;
              }
+             @media screen and (min-width: $medium) and (max-width: $big) {
+                font-size: 8rem;
+                width: 100%;
+                text-align: center;
+                backdrop-filter: blur(20px);
+             }
         }
         
         p{
             text-align: center;
             width: 70%;
-            background-color: rgba(0, 0, 0, 0.437);
+            background-color: rgba(92, 92, 94, 0.768);
             color: white;
             padding: 10px;
             border-radius: 10px;
             font-size: 1.7rem;
+            text-indent: 3rem;
+            padding: 10px;
             @media screen and (max-width: $small) {
                 width: 80%;
                 position: relative;
                 transform: translateY(50px);
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                font-size: 3rem;
+                width: 80%;
+                backdrop-filter: blur(10px);
+                
+             }
         }
         h4{
             display: flex;
@@ -469,9 +539,16 @@ header{
                 font-weight: bolder;
                 transform: translateY(100px);
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+               width: 40%;
+               min-height: 150px;
+               border-radius: 1rem;
+                background-color: rgba(92, 92, 94, 0.768);
+                
+             }
             ion-icon{
                 font-size: 7rem;
-                animation: translateIcon 2s infinite ease-in-out;
+                animation: translateIcon 1.5s infinite ease-in-out;
                 
             }
             @keyframes  translateIcon {
@@ -496,18 +573,26 @@ header{
                 width: 90%;
                 top: 150px;
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                width: 85%;
+              }
             li{
                 font-size: 1.6rem;
                 margin: 10px;        
                 background-color: rgba(92, 92, 94, 0.768);
                 cursor: pointer;
-                height: 45px;
+                height: 50px;
                 list-style: none;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
                 border-radius: 5px;
                 color: white;
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                    height: 70px;
+                    font-size: 2.5rem;
+                    justify-content: center;
+                  }
                 &:hover{
                     color: var(--secundario);
                     background-color: white;
@@ -516,6 +601,10 @@ header{
 
                 ion-icon{
                     font-size: 1.6rem;
+                    @media screen and (min-width: $medium) and (max-width: $big) {
+                       
+                        font-size: 3rem;
+                      }
                 }
             }
         }
@@ -550,6 +639,9 @@ header{
                 min-height: 100vh;
                 width: 95%;
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                width: 95%;
+              }
             .card_title{
                 width: 100%;
                 height: 100px;
@@ -566,6 +658,7 @@ header{
                         font-size: 2rem;
                         text-align: center;
                     }
+                    
                 }
             }
             .grid_info_container{
@@ -594,6 +687,9 @@ header{
                             text-align: left;
                             padding: 5px;
                         }
+                        @media screen and (min-width: $medium) and (max-width: $big) {
+                            font-size: 2.5rem;
+                          }
                     }
                     ul{
                         padding: 5px;
@@ -603,6 +699,9 @@ header{
                             @media screen and (max-width: $small) {
                                 font-size: 1.3rem;
                             }
+                            @media screen and (min-width: $medium) and (max-width: $big) {
+                                font-size: 2rem;
+                              }
                         }
                     }
                 }
@@ -616,12 +715,18 @@ header{
                     @media screen and (max-width: $small) {
                         grid-template-rows: 50% 50%;   
                     }
+                    @media screen and (min-width: $medium) and (max-width: $big) {
+                        grid-template-rows: 60% 40%;  
+                      }
                     img{
                         margin: auto;
                         width: 70%;
                         @media screen and (max-width: $small) {
                             width: 100%; 
                         }
+                        @media screen and (min-width: $medium) and (max-width: $big) {
+                            width: 90%;  
+                          }
                     }
                     .specs{
                         display: flex;
@@ -635,6 +740,9 @@ header{
                                 @media screen and (max-width: $small) {
                                     font-size: 1.3rem;
                                 }
+                                @media screen and (min-width: $medium) and (max-width: $big) {
+                                    font-size: 2rem;
+                                  }
                                 span{
                                     font-weight: bold;
                                     font-size: 1.5rem;
@@ -642,6 +750,9 @@ header{
                                     @media screen and (max-width: $small) {
                                         font-size: 1.3rem;
                                     }
+                                    @media screen and (min-width: $medium) and (max-width: $big) {
+                                        font-size: 2rem;
+                                      }
                                 }
                             }
                         }
@@ -715,20 +826,33 @@ header{
         @media screen and (max-width: $small) {
             margin-top: 65vh;
         }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            margin-top: initial;
+            top: -20vh;
+          }
     h1{
         font-size: 3rem;
         text-transform: uppercase;
         letter-spacing: 1px;
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            font-size: 3em;
+          }
     }
     p{
         font-size: 1.8rem;
+        
+        text-align: center;
         @media screen and (max-width: $small) {
             width: 80%;
         }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: 80%;
+            font-size: 3.5rem;
+          }
     }
     a{
         font-size: 1.7rem;
-        color: red;
+        color: black;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -741,8 +865,18 @@ header{
         @media screen and (max-width: $small) {
             width: 50%;
         }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+            width: 50%;
+            height: 100px;
+            font-size: 3rem;
+          }
         .phone_icon{
             font-size: 2.5rem;
+            color: black;
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                
+                font-size: 5rem;
+              }
         }
         &:hover{
             color: rgb(3, 161, 3);
@@ -750,6 +884,8 @@ header{
             .phone_icon{
                 transform: rotate(40deg);                
                 transition: all .7s;
+                font-size: 6rem;
+                color: rgb(3, 161, 3);
             }
         }
     }
@@ -783,6 +919,20 @@ footer
         background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
+    @media screen and (min-width: $medium) and (max-width: $big) {
+                
+        margin-top: 0px;
+        bottom: 0px;
+        min-height: 100vh;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        top: -20vh;
+        background: #060d0d;
+        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
+      }
         
     .footer_content{
         width:70%;
@@ -798,6 +948,13 @@ footer
             align-items: center;
             flex-direction: column;
         }
+        @media screen and (min-width: $medium) and (max-width: $big) {
+                
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+          }
         .logo_container{
             background-color: rgb(255, 254, 254);
             width: 100px;
@@ -818,6 +975,17 @@ footer
                 align-items: center;
                 flex-direction: column;
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                margin: auto;
+                width: 100%;
+                left: 0px;
+                top: 0px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+              }
             img{
                 width: 90px;
                 position: absolute;
@@ -828,6 +996,12 @@ footer
                     width: 200px;
                     position: relative;
                 }
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                    width: 300px;
+                    position: relative;
+                    margin: auto;
+                    top: 150px;
+                  }
             }
         }
         .redes_container
@@ -841,6 +1015,9 @@ footer
             @media (max-width: $small) {
                 width: 70%;
             }
+            @media screen and (min-width: $medium) and (max-width: $big) {
+                width: 100%;
+              }
             p{
                 color: white;
                 font-size: 1.3rem;
@@ -850,6 +1027,9 @@ footer
                    font-size: 1.5rem;
                    
                 }
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                   font-size: 3rem;
+                  }
             }
             ul
             {
@@ -872,6 +1052,9 @@ footer
                             @media (max-width: $small) {
                                 font-size: 3.5rem;
                             }
+                            @media screen and (min-width: $medium) and (max-width: $big) {
+                                font-size: 5em;
+                               }
                         }
                     }
                 }
