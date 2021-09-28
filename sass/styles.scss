@@ -52,6 +52,11 @@ body
     flex-direction: column;
     font-family: var(--fuentePrincipal);
     overflow-x: hidden;
+    @media screen and (min-width: $medium) and (max-width: $big) {
+        background-color: yellowgreen;
+        display: block;
+
+    }
 }
 //*------------------W S P --------------------------*//
 
@@ -113,7 +118,6 @@ body
     width: 100%;
     position: relative;
     margin: auto;
-    top: 0px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -893,6 +897,7 @@ body
     left: 0px;
     display: flex;     
     background-color: rgba(255, 255, 255, 0.375);
+    background-color: red;
     @media (max-width: $small) {
         top: 0vh;
         position: relative;
@@ -1155,11 +1160,12 @@ footer
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
     @media (min-width: $medium) and (max-width: $big)  {
-        top: 0vh;
-        margin-top: 0px;
-        bottom: 0px;
+        margin-bottom: 0px;
         width: 100vw;
         position: relative;
+        width: 100%;
+        bottom: 0px;
+        top: 0px;
     }
         
     .footer_content{
