@@ -21,14 +21,10 @@ body
 {
     min-height: 100vh;
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    display: block;
     font-family: var(--fuentePrincipal);
     overflow-x:hidden;
     scroll-snap-type:y proximity;
-    overflow-y: scroll;
     scroll-behavior: smooth;
 }
 
@@ -37,12 +33,14 @@ body
     
 $small: 600px;
 $medium: 900px;
+$big:1200px;
+$desktop:1824px;
 
 
 //*------------------MEDIA --------------------------*//
 header{
     scroll-snap-align: start;
-    background: url(/images/About/rama.png) no-repeat center bottom;    
+    background: url(../../images/About/rama.png) no-repeat center bottom;    
     background-color: white;
     background-size: 30%;
     width: 75%;
@@ -61,6 +59,19 @@ header{
     @media (max-width: $small) {
         top: 225px;
         width: 100%;
+        border-bottom-left-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+    }
+    @media (min-width: $medium) and (max-width: $big)  {
+        
+        height: inherit;
+        top: 200px;
+        display: grid;
+        border-bottom-left-radius: 10rem;
+        border-bottom-right-radius: 10rem;
+        z-index: 999;
+        height: 40vh;
+        background-size: 20%;
     }
     h3{
         font-size: 3rem;
@@ -93,6 +104,11 @@ header{
             top: 45px;
             
         }
+        @media (min-width: $medium) and (max-width: $big)  {
+            width: 90%;
+            transform: translateY(-120px);
+            font-size: 2rem;
+        }
     }
 }
 
@@ -109,6 +125,11 @@ header{
     @media (max-width: $small) {
         min-height: 300vh;
      }
+    @media (min-width: $medium) and (max-width: $big)  {
+            min-height: 80vh;
+            position: relative;
+            top: 100px;
+    }
     .title{
         display: flex;
         justify-content: center;
@@ -121,9 +142,10 @@ header{
             transform: translateY(50px);
             @media (max-width: $small) {
                 transform: translateY(200px);
-                
+                text-align: center;
             }
         }
+       
     }
     .flex_container{
         display: flex;
@@ -140,6 +162,9 @@ header{
            justify-content: center;
            align-items: center;
         }
+        @media (min-width: $medium) and (max-width: $big)  {
+            width: 95%;
+       }
         .card{
             display: flex;
             position: relative;
@@ -159,6 +184,9 @@ header{
                 top: 20px;
                 min-height: 350px;
             }
+            @media (min-width: $medium) and (max-width: $big)  {
+                top: initial;
+           }
             &:hover{
                 transform: translateY(-75px);
                 transition: all 1s;
@@ -225,6 +253,10 @@ header{
                 margin: auto;
                 top: -20px;
              }
+             @media (min-width: $medium) and (max-width: $big)  {
+                text-align: center;
+                
+            }
             &::after{
                 position: absolute;
                 background: url(/images/About/estructura.png) no-repeat center center;
@@ -285,6 +317,9 @@ header{
         align-items: center;
         flex-direction: column;
      }
+     @media (min-width: $medium) and (max-width: $big)  {
+        top: 200px;
+   }
     .title
     {
         width: 100%;
@@ -356,6 +391,11 @@ header{
         top: 300px;
         height: 150vh;
      }
+     @media (min-width: $medium) and (max-width: $big)  {
+        max-height: 75vh;
+        height: 100vh;
+        top:300px;
+    } 
     h1{
         font-size: 4rem;
         
@@ -399,46 +439,89 @@ header{
 
 footer
 {
-    width: 100vw;
+    width: 100%;
     height: 100px;
     position: relative;
-    top: 300px;
     bottom: 0px;
-    margin: auto;
-    margin-top: 0px;
-    background-color: rgba(68, 68, 68, 0.699);
+    background: #060d0d;
+    background: radial-gradient(circle, #060d0d 27%, #666565 85%);
     display: flex;
     justify-content: center;
     align-items: center;
-    @media (max-width: $small) {
-        top: 60vh;
+    @media (max-width: $small) {        
+        top: 41vh;
+        height: 100vh;
+        position: relative;
+        flex-direction: column;
+        background: #060d0d;
+        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
+    @media (min-width: $medium) and (max-width: $big)  {
+        position: relative;
+        height: 150px;
+        bottom: 0px;
+        top: 30vh;
+    } 
+        
     .footer_content{
-        width:70%;
+        width:100%;
         height: 100%;
-        overflow: hidden;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
+        align-items: center;
         @media (max-width: $small) {
             width: 100%;
-            
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        @media (min-width: $medium) and (max-width: $big)  {
+             width: 100%; 
         }
         .logo_container{
-            background-color: rgb(255, 254, 254);
             width: 100px;
-            height: 100px;
-            left: 50px;
+            height: 100%;
+            left: 0px;
             top: 0px;
             position: absolute;
             background-color: transparent;
+            @media (max-width: $small) {
+                margin: auto;
+                width: 100vw;
+                height: 50vh;
+                left: 0px;
+                top: 0px;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            @media (min-width: $medium) and (max-width: $big)  {
+                position: absolute;
+                display: block;
+                left: 0px;
+                top: 0px;
+                width: 150px;
+           }
             img{
                 width: 90px;
                 position: absolute;
                 top: 30px;
-                left: 0px;
+                left: 20px;
                 @media (max-width: $small) {
-                    left: -30px;
+                    margin: auto;
+                    position: relative;
+                    left: initial;
+                    width: 200px;
                 }
+                @media (min-width: $medium) and (max-width: $big)  {
+                    width: 100%;
+                    position: relative;
+                    transform: translateY(10px) translateX(20px);
+               }
             }
         }
         .redes_container
@@ -450,12 +533,21 @@ footer
             align-items: center;
             flex-direction: column;
             @media (max-width: $small) {
-                width: 50%;
+                width: 70%;
             }
+            @media (min-width: $medium) and (max-width: $big)  {
+                width: 40%; 
+           }
             p{
                 color: white;
                 font-size: 1.3rem;
                 letter-spacing: -1px;
+               
+                @media (max-width: $small) {
+                   transform: translateY(30px);
+                   font-size: 1.5rem;
+                   
+                }
             }
             ul
             {
@@ -475,6 +567,12 @@ footer
                         
                         ion-icon{
                             font-size: 3rem;
+                            @media (max-width: $small) {
+                                font-size: 3.5rem;
+                            }
+                            @media (min-width: $medium) and (max-width: $big)  {
+                                font-size: 4rem;
+                           }
                         }
                     }
                 }

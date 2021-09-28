@@ -24,7 +24,10 @@ nav {
       margin: auto;
       left: 0px;
       position: absolute;
-      top: 0px; } }
+      top: 0px; }
+      nav:hover {
+        height: 50vh;
+        transition: all 1s; } }
   nav .nav_logo_container {
     height: 45px;
     width: 10%;
@@ -126,31 +129,22 @@ nav {
     flex-direction: row; }
     @media screen and (max-width: 1200px) {
       nav .navigation {
-        width: 90%;
+        width: 60%;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        top: 0px; } }
+        justify-content: space-evenly;
+        align-items: center; } }
   nav .nav_wrapper {
     width: 200px;
     transition: all .5s; }
     nav .nav_wrapper:hover {
       background-color: rgba(92, 90, 90, 0.575); }
-    nav .nav_wrapper:hover .hide_lista {
-      display: block; }
     @media screen and (max-width: 1200px) {
       nav .nav_wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        min-height: 45px; }
-        nav .nav_wrapper:hover .nav_item a span {
-          transform: translateX(-95px);
-          transition: all .5s; }
-        nav .nav_wrapper:hover .nav_item a ion-icon {
-          transform: translateX(-50px);
-          transition: all .5s; } }
+        min-height: 45px; } }
     nav .nav_wrapper .nav_item {
       width: 100%;
       list-style: none; }
@@ -165,15 +159,12 @@ nav {
         color: white; }
         @media screen and (max-width: 600px) {
           nav .nav_wrapper .nav_item a {
-            width: 70%;
             margin: auto;
             display: flex;
             flex-direction: row;
+            padding: 10px;
             justify-content: space-between;
             align-items: center; } }
-        @media screen and (min-width: 600px) and (max-width: 1200px) {
-          nav .nav_wrapper .nav_item a {
-            width: 100%; } }
         nav .nav_wrapper .nav_item a .icon {
           font-size: 1.8rem; }
           @media screen and (max-width: 600px) {
@@ -193,7 +184,8 @@ nav {
       @media screen and (max-width: 1200px) {
         nav .nav_wrapper .hide_lista {
           position: relative;
-          left: 180px;
+          width: 100%;
+          background-color: green;
           border-radius: 1rem; } }
       nav .nav_wrapper .hide_lista .hide_item {
         height: 45px; }
