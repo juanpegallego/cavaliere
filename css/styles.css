@@ -79,6 +79,9 @@ body {
   display: block;
   position: relative;
   padding-bottom: 150px; }
+  @media screen and (max-width: 600px) {
+    .site_content {
+      padding-bottom: 0px; } }
 
 .container_1,
 .container_2,
@@ -934,7 +937,7 @@ footer {
       @media (max-width: 600px) {
         footer .footer_content .logo_container {
           margin: auto;
-          width: 100%;
+          width: 100vw;
           height: 50vh;
           left: 0px;
           top: 0px;
@@ -954,12 +957,13 @@ footer {
         width: 90px;
         position: absolute;
         top: 30px;
-        left: 0px; }
+        left: 20px; }
         @media (max-width: 600px) {
           footer .footer_content .logo_container img {
             margin: auto;
-            width: 200px;
-            position: relative; } }
+            position: relative;
+            left: initial;
+            width: 200px; } }
         @media (min-width: 900px) and (max-width: 1200px) {
           footer .footer_content .logo_container img {
             width: 100%;

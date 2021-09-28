@@ -118,6 +118,9 @@ body
     display: block;
     position: relative;
     padding-bottom: 150px;
+    @media screen and (max-width: $small) {
+        padding-bottom: 0px;
+    }
 }
 .container_1,
 .container_2,
@@ -1207,7 +1210,7 @@ footer
             background-color: transparent;
             @media (max-width: $small) {
                 margin: auto;
-                width: 100%;
+                width: 100vw;
                 height: 50vh;
                 left: 0px;
                 top: 0px;
@@ -1228,11 +1231,12 @@ footer
                 width: 90px;
                 position: absolute;
                 top: 30px;
-                left: 0px;
+                left: 20px;
                 @media (max-width: $small) {
                     margin: auto;
-                    width: 200px;
                     position: relative;
+                    left: initial;
+                    width: 200px;
                 }
                 @media (min-width: $medium) and (max-width: $big)  {
                     width: 100%;
