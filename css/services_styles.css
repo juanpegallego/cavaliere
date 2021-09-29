@@ -104,7 +104,7 @@ header {
     color: #ffff47; }
     @media screen and (max-width: 600px) {
       .lights_on #lamp {
-        transform: translateY(100px) rotate(180deg); } }
+        transform: translateY(120px) rotate(180deg); } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .lights_on #lamp {
         transform: translateY(60px) rotate(180deg);
@@ -112,6 +112,9 @@ header {
   .lights_on h1 {
     transition: all 5s;
     color: white; }
+    @media screen and (max-width: 600px) {
+      .lights_on h1 {
+        text-align: center; } }
   .lights_on .first_text {
     background-color: rgba(0, 0, 0, 0.692);
     color: white; }
@@ -140,6 +143,9 @@ header {
   min-height: 100vh;
   background: url(/images/campo.jpg) no-repeat center center;
   background-size: cover; }
+  @media screen and (max-width: 600px) {
+    .content {
+      top: -50px; } }
   .content .title_container {
     width: 50%;
     display: flex;
@@ -148,8 +154,11 @@ header {
     min-height: 50vh; }
     @media screen and (max-width: 600px) {
       .content .title_container {
-        width: 100%;
-        flex-direction: column; } }
+        width: 90%;
+        flex-direction: column;
+        top: 50px;
+        min-height: 10vh;
+        text-align: center; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .content .title_container {
         width: 100%;
@@ -170,7 +179,8 @@ header {
             font-size: 4rem;
             letter-spacing: -1px;
             text-align: center;
-            margin: auto; } }
+            margin: auto;
+            transform: translateY(-40px); } }
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           .content .title_container .title h1 {
             position: relative;
@@ -196,7 +206,11 @@ header {
     @media screen and (max-width: 600px) {
       .content .cards_container {
         width: 95%;
-        top: 200px; } }
+        top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .content .cards_container {
         width: 90%; } }
@@ -211,13 +225,20 @@ header {
       background-color: #4545ce;
       padding: 10px;
       color: white; }
+      @media screen and (max-width: 600px) {
+        .content .cards_container .card {
+          width: 90%;
+          background-color: rgba(69, 69, 206, 0.664);
+          margin-top: 10px;
+          min-height: 100px;
+          justify-content: center; } }
       .content .cards_container .card:first-child {
         border-top-left-radius: 40%;
         border-top-right-radius: 0%;
         border-bottom-right-radius: 0%; }
         @media screen and (max-width: 600px) {
           .content .cards_container .card:first-child {
-            border-top-left-radius: 3%; } }
+            border-radius: 2rem; } }
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           .content .cards_container .card:first-child {
             border-top-left-radius: 5%; } }
@@ -227,7 +248,7 @@ header {
         border-bottom-left-radius: 0%; }
         @media screen and (max-width: 600px) {
           .content .cards_container .card:nth-child(2) {
-            border-top-right-radius: 3%; } }
+            border-radius: 2rem; } }
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           .content .cards_container .card:nth-child(2) {
             border-top-right-radius: 5%; } }
@@ -260,6 +281,9 @@ header {
         font-size: 1.7rem;
         margin-top: 50px;
         text-decoration: underline red; }
+        @media screen and (max-width: 600px) {
+          .content .cards_container .card span {
+            margin-top: 0px; } }
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           .content .cards_container .card span {
             font-size: 3rem; } }
@@ -291,9 +315,11 @@ header {
     border-bottom: 2px solid red; }
     @media screen and (max-width: 600px) {
       .content a {
-        width: 50%;
-        top: 250px;
-        position: relative; } }
+        min-width: 60%;
+        top: 100px;
+        padding: 5px;
+        font-size: 1.5rem;
+        overflow: hidden; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .content a {
         width: 30%;
@@ -325,6 +351,9 @@ header {
   justify-content: center;
   width: 100vw;
   padding: 10px; }
+  @media screen and (max-width: 600px) {
+    .white_space {
+      top: 150px; } }
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     .white_space {
       top: 0vh; } }
@@ -367,7 +396,7 @@ header {
     transition: all 2s; }
   @media screen and (max-width: 600px) {
     .container_logistica {
-      top: 500px;
+      top: 200px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -479,7 +508,11 @@ header {
         justify-content: space-evenly;
         align-items: center;
         border-radius: 5px;
-        color: white; }
+        color: white;
+        padding: 10px; }
+        @media screen and (max-width: 600px) {
+          .container_logistica .title_container ul li {
+            font-size: 1.5rem; } }
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           .container_logistica .title_container ul li {
             height: 70px;
@@ -559,13 +592,17 @@ header {
           color: white;
           padding-left: 10px;
           border-bottom-left-radius: 3rem; }
+          @media screen and (max-width: 600px) {
+            .container_logistica .container_flota .fleet_card .grid_info_container .left_container {
+              padding-left: 5px; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
             font-size: 1.7rem;
-            text-align: justify; }
+            text-align: justify;
+            overflow: hidden; }
             @media screen and (max-width: 600px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
-                font-size: 1.5rem;
-                text-align: left;
+                font-size: 1.3rem;
+                text-align: justify;
                 padding: 5px; } }
             @media screen and (min-width: 900px) and (max-width: 1200px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .left_container p {
@@ -577,7 +614,7 @@ header {
               font-size: 1.5rem; }
               @media screen and (max-width: 600px) {
                 .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
-                  font-size: 1.3rem; } }
+                  font-size: 1rem; } }
               @media screen and (min-width: 900px) and (max-width: 1200px) {
                 .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
                   font-size: 2rem; } }
@@ -590,7 +627,7 @@ header {
           border-bottom-right-radius: 3rem; }
           @media screen and (max-width: 600px) {
             .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
-              grid-template-rows: 50% 50%; } }
+              grid-template-rows: 60% 40%; } }
           @media screen and (min-width: 900px) and (max-width: 1200px) {
             .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
               grid-template-rows: 60% 40%; } }
@@ -670,7 +707,8 @@ header {
   font-size: 1.8rem; }
   @media screen and (max-width: 600px) {
     .container_invitacion {
-      margin-top: 65vh; } }
+      top: 30vh;
+      margin-top: 0px; } }
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     .container_invitacion {
       margin-top: initial;
@@ -706,7 +744,9 @@ header {
     text-decoration: none; }
     @media screen and (max-width: 600px) {
       .container_invitacion a {
-        width: 50%; } }
+        width: 75%;
+        height: 60px;
+        text-align: center; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .container_invitacion a {
         width: 50%;
@@ -750,7 +790,7 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      top: 0px;
+      top: 200px;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   @media screen and (min-width: 900px) and (max-width: 1200px) {

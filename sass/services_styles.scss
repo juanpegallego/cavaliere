@@ -136,8 +136,10 @@ header{
         transform: translateY(0px) rotate(180deg);
         color: rgb(255, 255, 71);
         @media screen and (max-width: $small) {
-            transform: translateY(100px) rotate(180deg) 
+            transform: translateY(120px) rotate(180deg);
+            
           } 
+
           
         @media screen and (min-width: $medium) and (max-width: $big) {
             transform: 
@@ -149,11 +151,16 @@ header{
     h1{
         transition: all 5s;
         color: white;
+        @media screen and (max-width: $small) {
+           
+            text-align: center;
+          } 
     }
     .first_text
     {
         background-color: rgba(0, 0, 0, 0.692);
         color: white;
+        
         @media screen and (min-width: $medium) and (max-width: $big) {
             width: 60%;
             font-size: 2rem;
@@ -185,7 +192,9 @@ header{
     min-height: 100vh;
     background: url(/images/campo.jpg) no-repeat center center;
     background-size: cover;
-    
+    @media screen and (max-width: $small) {
+       top: -50px;
+      }
     .title_container{
         width: 50%;
         display: flex;
@@ -193,8 +202,11 @@ header{
         top: 0px;
         min-height: 50vh;
         @media screen and (max-width: $small) {
-            width: 100%;
+            width: 90%;
             flex-direction: column;
+            top: 50px;
+            min-height: 10vh;
+            text-align: center;
           }
           @media screen and (min-width: $medium) and (max-width: $big) {
         
@@ -219,6 +231,7 @@ header{
                     letter-spacing: -1px;
                     text-align: center;
                     margin: auto;
+                    transform: translateY(-40px);
                   }
                   @media screen and (min-width: $medium) and (max-width: $big) {
                    position: relative;
@@ -251,7 +264,11 @@ header{
         grid-template-columns: 50% 50%;
         @media screen and (max-width: $small) {
            width: 95%;
-           top: 200px;
+           top: 10px;
+           display: flex;
+           flex-direction: column;
+           justify-content: center;
+           align-items: center;
         }
         @media screen and (min-width: $medium) and (max-width: $big) {
             width: 90%;
@@ -266,14 +283,22 @@ header{
             min-height: 500px;
             background-color: rgb(69, 69, 206);
             padding: 10px;
-            color: white;        
+            color: white;  
+            @media screen and (max-width: $small) {
+                width: 90%;
+                background-color: rgba(69, 69, 206, 0.664);
+                margin-top: 10px;
+                min-height: 100px;
+                justify-content: center;
+             }      
             &:first-child{
                 border-top-left-radius: 40%;
                 border-top-right-radius: 0%;
                 border-bottom-right-radius: 0%;
                 @media screen and (max-width: $small) {
-                    border-top-left-radius: 3%;
-                } 
+                    
+                    border-radius: 2rem;
+                 } 
                 @media screen and (min-width: $medium) and (max-width: $big) {
                     border-top-left-radius: 5%;
                 }  
@@ -282,8 +307,8 @@ header{
                 border-top-right-radius: 40%;
                 border-top-left-radius: 0%;
                 border-bottom-left-radius: 0%;
-                @media screen and (max-width: $small) {
-                    border-top-right-radius: 3%;
+                @media screen and (max-width: $small) {                    
+                    border-radius: 2rem;
                  } 
                 @media screen and (min-width: $medium) and (max-width: $big) {
                 border-top-right-radius: 5%;
@@ -327,6 +352,10 @@ header{
                 font-size: 1.7rem;
                 margin-top: 50px;
                 text-decoration: underline red;
+                @media screen and (max-width: $small) {
+                    
+                    margin-top: 0px;
+                 } 
                 @media screen and (min-width: $medium) and (max-width: $big) {
                     font-size: 3rem;
                 } 
@@ -364,9 +393,11 @@ header{
         font-weight: bold;
         border-bottom: 2px solid red;
         @media screen and (max-width: $small) {
-            width: 50%;
-            top: 250px;
-            position: relative;
+            min-width: 60%;
+            top: 100px;
+            padding: 5px;
+            font-size: 1.5rem;
+            overflow: hidden;
         }
         @media screen and (min-width: $medium) and (max-width: $big) {
            width: 30%;
@@ -406,6 +437,9 @@ header{
     justify-content: center;
     width: 100vw;
     padding: 10px;
+    @media screen and (max-width: $small) {
+        top: 150px;
+       }
     @media screen and (min-width: $medium) and (max-width: $big) {
         top: 0vh;
      }
@@ -460,7 +494,7 @@ header{
         transition: all 2s;
     }
     @media screen and (max-width: $small) {
-        top: 500px;
+        top: 200px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -588,6 +622,10 @@ header{
                 align-items: center;
                 border-radius: 5px;
                 color: white;
+                padding: 10px;
+                @media screen and (max-width: $small) {
+                    font-size: 1.5rem;
+                }
                 @media screen and (min-width: $medium) and (max-width: $big) {
                     height: 70px;
                     font-size: 2.5rem;
@@ -665,6 +703,7 @@ header{
                 height: 50vh;
                 display: grid;
                 grid-template-columns: 50% 50%;
+                
                 @media screen and (max-width: $small) {
                     display: flex;
                     justify-content: space-evenly;
@@ -679,12 +718,16 @@ header{
                     color: white;
                     padding-left: 10px;
                     border-bottom-left-radius: 3rem;
+                    @media screen and (max-width: $small) {
+                        padding-left: 5px;
+                    }
                     p{
                         font-size: 1.7rem;
                         text-align: justify;
+                        overflow: hidden;
                         @media screen and (max-width: $small) {
-                            font-size: 1.5rem;
-                            text-align: left;
+                            font-size: 1.3rem;
+                            text-align: justify;
                             padding: 5px;
                         }
                         @media screen and (min-width: $medium) and (max-width: $big) {
@@ -697,7 +740,7 @@ header{
                         li{
                             font-size: 1.5rem;
                             @media screen and (max-width: $small) {
-                                font-size: 1.3rem;
+                                font-size: 1rem;
                             }
                             @media screen and (min-width: $medium) and (max-width: $big) {
                                 font-size: 2rem;
@@ -713,7 +756,7 @@ header{
                     grid-template-rows: 60% 40%;                    
                     border-bottom-right-radius: 3rem;
                     @media screen and (max-width: $small) {
-                        grid-template-rows: 50% 50%;   
+                        grid-template-rows: 60% 40%;   
                     }
                     @media screen and (min-width: $medium) and (max-width: $big) {
                         grid-template-rows: 60% 40%;  
@@ -722,7 +765,7 @@ header{
                         margin: auto;
                         width: 70%;
                         @media screen and (max-width: $small) {
-                            width: 100%; 
+                            width:100%; 
                         }
                         @media screen and (min-width: $medium) and (max-width: $big) {
                             width: 90%;  
@@ -824,7 +867,8 @@ header{
     color: white;
     font-size: 1.8rem;
         @media screen and (max-width: $small) {
-            margin-top: 65vh;
+            top: 30vh;
+            margin-top: 0px;
         }
         @media screen and (min-width: $medium) and (max-width: $big) {
             margin-top: initial;
@@ -863,7 +907,9 @@ header{
         background-color: white;
         text-decoration: none;
         @media screen and (max-width: $small) {
-            width: 50%;
+            width: 75%;
+            height: 60px;
+            text-align: center;
         }
         @media screen and (min-width: $medium) and (max-width: $big) {
             width: 50%;
@@ -915,7 +961,7 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 0px;
+        top: 200px;
         background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }

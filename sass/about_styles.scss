@@ -389,7 +389,8 @@ header{
     color: white;
     @media (max-width: $small) {
         top: 300px;
-        height: 150vh;
+        min-height: 150vh;
+        padding-bottom: 20px;
      }
      @media (min-width: $medium) and (max-width: $big)  {
         max-height: 75vh;
@@ -450,7 +451,7 @@ footer
     align-items: center;
     top: 30vh;
     @media (max-width: $small) {        
-        top: 41vh;
+        top: 45vh;
         height: 100vh;
         position: relative;
         flex-direction: column;

@@ -582,8 +582,7 @@ body {
   align-items: center; }
   @media (max-width: 600px) {
     .banner_container {
-      margin-top: 1vh;
-      top: -10vh; } }
+      top: -92px; } }
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     .banner_container {
       top: -40vh;
@@ -705,9 +704,9 @@ body {
   background-color: rgba(255, 255, 255, 0.375); }
   @media (max-width: 600px) {
     .container_3 {
-      top: -50vh;
+      top: -5vh;
       position: relative;
-      min-height: 50vh; } }
+      min-height: 40vh; } }
   @media (min-width: 900px) and (max-width: 1200px) {
     .container_3 {
       top: -30vh;
@@ -900,7 +899,7 @@ footer {
   align-items: center; }
   @media (max-width: 600px) {
     footer {
-      top: -30vh;
+      top: 10vh;
       margin-top: 0px;
       height: 100vh;
       position: relative;
