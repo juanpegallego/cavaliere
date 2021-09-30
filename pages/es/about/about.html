@@ -21,8 +21,25 @@
 
         </a>
     </div>
-
-    <nav class="nav">
+    <ion-icon name="menu-outline" id="hamburguer" style="display: none;" ></ion-icon>
+    <div class="container_idiomas">
+        <h3>
+            <ion-icon name="chatbubbles-outline" class="lang_icon"></ion-icon>
+            Es
+        </h3>
+        <ul class="select_lang">
+            <li>
+                <a href="../../../pages/en/about/about.html">En</a>
+            </li>
+            <li>
+                <a href="../../../pages/es/about/about.html">Es</a>
+            </li>
+            <li>
+                <a href="../../../pages/por/about/about.html">Por</a>
+            </li>
+        </ul>
+    </div>
+    <nav class="nav" id="nav">
         <div class="nav_logo_container">
             <img src="../../../images/Home/logotipo.png" alt="logotipo_Cavaliere">
         </div>
@@ -116,23 +133,7 @@
             </div>
 
         </ul>
-        <div class="container_idiomas">
-            <h3>
-                <ion-icon name="chatbubbles-outline" class="lang_icon"></ion-icon>
-                Es
-            </h3>
-            <ul class="select_lang">
-                <li>
-                    <a href="../../../pages/en/about/about.html">En</a>
-                </li>
-                <li>
-                    <a href="../../../pages/es/about/about.html">Es</a>
-                </li>
-                <li>
-                    <a href="../../../pages/por/about/about.html">Por</a>
-                </li>
-            </ul>
-        </div>
+        
     </nav>
     <header>
         <h3>
@@ -300,6 +301,8 @@
                 </p>
             </div>
     </footer>
+    
+    <script src="../../../scripts/navBar.js"></script>
 
 </body>
 

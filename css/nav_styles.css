@@ -1,5 +1,112 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+#hamburguer {
+  display: flex;
+  background: #060d0d;
+  background: radial-gradient(circle, #060d0d 27%, #666565 85%);
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
+  color: white;
+  width: 10%;
+  height: 50px;
+  right: 0px;
+  visibility: visible;
+  z-index: 999999; }
+
+.hamburguer_active {
+  display: flex;
+  background: #060d0d;
+  background: radial-gradient(circle, #060d0d 27%, #666565 85%);
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
+  color: white;
+  width: 100%;
+  right: 0px;
+  z-index: 999999;
+  visibility: visible; }
+
+.container_idiomas {
+  position: absolute;
+  transform: translateX(490px);
+  background-color: rgba(255, 255, 255, 0.671);
+  color: black;
+  top: 0px;
+  left: 340px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 45px;
+  border-radius: 5px;
+  transition: all .9s; }
+  @media screen and (max-width: 1200px) {
+    .container_idiomas {
+      position: absolute;
+      display: flex;
+      transform: none;
+      background-color: transparent;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      left: 0px;
+      top: 0px;
+      width: 10%;
+      height: 50px;
+      z-index: 9999999;
+      color: white;
+      background-color: rgba(128, 128, 128, 0.678); } }
+  .container_idiomas h3 {
+    font-size: 1.5rem;
+    top: 20px;
+    position: relative; }
+    .container_idiomas h3 .lang_icon {
+      font-size: 2rem; }
+  .container_idiomas:hover .select_lang {
+    visibility: visible;
+    transition: all .9s; }
+  .container_idiomas .select_lang {
+    cursor: pointer;
+    width: 100%;
+    height: 45px;
+    top: 40px;
+    font: poppins bold 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    flex-direction: column;
+    padding: 1px; }
+    .container_idiomas .select_lang li {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      top: 77px;
+      background-color: rgba(255, 255, 255, 0.671); }
+      .container_idiomas .select_lang li:first-child a {
+        background: url(../images/flags/usa.png) no-repeat center center;
+        background-size: 90%;
+        color: transparent; }
+      .container_idiomas .select_lang li:nth-child(2) a {
+        background: url(../images/flags/spain.png) no-repeat center center;
+        background-size: 90%;
+        color: transparent; }
+      .container_idiomas .select_lang li:nth-child(3) a {
+        background: url(../images/flags/brazil.png) no-repeat center center;
+        background-size: 90%;
+        color: transparent; }
+      .container_idiomas .select_lang li a {
+        font-size: 1.7rem;
+        color: transparent;
+        width: 70%;
+        margin-top: 5px;
+        height: 40px; }
+
 nav {
   width: 60vw;
   height: 45px;
@@ -16,21 +123,21 @@ nav {
   z-index: 1000; }
   @media screen and (max-width: 1200px) {
     nav {
-      width: 100vw;
-      background: rgba(6, 13, 13, 0.555);
+      width: 100%;
+      background: rgba(6, 13, 13, 0.655);
       background: radial-gradient(circle, rgba(6, 13, 13, 0.679) 27%, rgba(102, 101, 101, 0.721) 85%);
-      position: fixed;
+      display: flex;
       height: 225px;
       margin: auto;
-      left: 0px;
       position: absolute;
-      top: 0px; }
+      left: initial;
+      transition: all 1s;
+      top: 0px;
+      right: 0px;
+      left: initial; }
       nav:hover {
         height: 50vh;
         transition: all 1s; } }
-  @media screen and (min-width: 900px) and (max-width: 1200px) {
-    nav {
-      min-height: 300px; } }
   nav .nav_logo_container {
     height: 45px;
     width: 10%;
@@ -45,83 +152,6 @@ nav {
         display: none; } }
     nav .nav_logo_container img {
       width: 70%; }
-  nav .container_idiomas {
-    position: absolute;
-    transform: translateX(490px);
-    background-color: rgba(255, 255, 255, 0.671);
-    color: black;
-    top: 0px;
-    left: 340px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 60px;
-    height: 45px;
-    border-radius: 5px;
-    transition: all .9s; }
-    @media screen and (max-width: 1200px) {
-      nav .container_idiomas {
-        position: absolute;
-        transform: translateX(-10px);
-        display: flex;
-        background-color: transparent;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        left: 10px;
-        top: 13px;
-        height: 30px;
-        z-index: 99;
-        color: white; } }
-    nav .container_idiomas h3 {
-      font-size: 1.5rem;
-      top: 20px;
-      position: relative; }
-      nav .container_idiomas h3 .lang_icon {
-        font-size: 2rem; }
-    nav .container_idiomas:hover .select_lang {
-      visibility: visible;
-      transition: all .9s; }
-    nav .container_idiomas .select_lang {
-      cursor: pointer;
-      width: 100%;
-      height: 45px;
-      top: 40px;
-      font: poppins bold 1.5rem;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      visibility: hidden;
-      flex-direction: column;
-      padding: 1px; }
-      nav .container_idiomas .select_lang li {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        top: 77px;
-        background-color: rgba(255, 255, 255, 0.671); }
-        nav .container_idiomas .select_lang li:first-child a {
-          background: url(../images/flags/usa.png) no-repeat center center;
-          background-size: cover;
-          color: transparent; }
-        nav .container_idiomas .select_lang li:nth-child(2) a {
-          background: url(../images/flags/spain.png) no-repeat center center;
-          background-size: cover;
-          color: transparent; }
-        nav .container_idiomas .select_lang li:nth-child(3) a {
-          background: url(../images/flags/brazil.png) no-repeat center center;
-          background-size: cover;
-          color: transparent; }
-        nav .container_idiomas .select_lang li a {
-          font-size: 1.7rem;
-          color: transparent;
-          width: 70%;
-          margin-top: 5px;
-          height: 40px; }
   nav .navigation {
     display: flex;
     justify-content: space-evenly;
@@ -132,29 +162,28 @@ nav {
     flex-direction: row; }
     @media screen and (max-width: 1200px) {
       nav .navigation {
-        width: 60%;
+        width: 30%;
         flex-direction: column;
+        align-items: center;
         justify-content: space-evenly;
         align-items: center; } }
-    @media screen and (min-width: 900px) and (max-width: 1200px) {
-      nav .navigation {
-        width: 75%; } }
   nav .nav_wrapper {
     width: 200px;
     transition: all .5s; }
     nav .nav_wrapper:hover {
       background-color: rgba(92, 90, 90, 0.575); }
+    nav .nav_wrapper:hover .hide_lista {
+      display: block; }
     @media screen and (max-width: 1200px) {
       nav .nav_wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        min-height: 45px; } }
-    @media screen and (min-width: 900px) and (max-width: 1200px) {
-      nav .nav_wrapper {
-        width: 75%;
-        min-height: 60px; } }
+        flex-direction: row;
+        min-height: 45px;
+        width: 100%; }
+        nav .nav_wrapper:hover .hide_lista {
+          display: none; } }
     nav .nav_wrapper .nav_item {
       width: 100%;
       list-style: none; }
@@ -167,31 +196,24 @@ nav {
         height: 45px;
         justify-content: space-evenly;
         color: white; }
-        @media screen and (max-width: 600px) {
+        @media screen and (max-width: 1200px) {
           nav .nav_wrapper .nav_item a {
-            margin: auto;
-            display: flex;
-            flex-direction: row;
-            padding: 10px;
-            justify-content: space-between;
-            align-items: center; } }
+            text-align: center;
+            justify-content: left; } }
         nav .nav_wrapper .nav_item a .icon {
           font-size: 1.8rem; }
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 1200px) {
             nav .nav_wrapper .nav_item a .icon {
-              font-size: 2.5rem; } }
-          @media screen and (min-width: 900px) and (max-width: 1200px) {
-            nav .nav_wrapper .nav_item a .icon {
-              font-size: 4rem; } }
+              font-size: 2.5rem;
+              position: absolute;
+              left: 40px; } }
         nav .nav_wrapper .nav_item a span {
           font-size: 1.8rem; }
-          @media screen and (max-width: 600px) {
+          @media screen and (max-width: 1200px) {
             nav .nav_wrapper .nav_item a span {
-              font-size: 2rem;
-              position: relative; } }
-          @media screen and (min-width: 900px) and (max-width: 1200px) {
-            nav .nav_wrapper .nav_item a span {
-              font-size: 3.5rem; } }
+              font-size: 2.5rem;
+              position: relative;
+              margin-left: 130px; } }
     nav .nav_wrapper .hide_lista {
       display: none;
       list-style: none;
@@ -201,7 +223,6 @@ nav {
         nav .nav_wrapper .hide_lista {
           position: relative;
           width: 100%;
-          background-color: green;
           border-radius: 1rem; } }
       nav .nav_wrapper .hide_lista .hide_item {
         height: 45px; }

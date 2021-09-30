@@ -11,60 +11,41 @@ $big:1200px;
 $desktop:1824px;
 
 
+#hamburguer{
+  display: flex;  
+  background: rgb(6,13,13);
+  background: radial-gradient(circle, rgba(6,13,13,1) 27%, rgba(102,101,101,1) 85%);
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
+  color: white;
+  width: 10%;
+  height: 50px;
+  right:  0px;
+  visibility: visible;
+  z-index: 999999;
+  
+}
+.hamburguer_active{
+  display: flex;  
+  background: rgb(6,13,13);
+  background: radial-gradient(circle, rgba(6,13,13,1) 27%, rgba(102,101,101,1) 85%);
+  font-size: 5rem;
+  position: absolute;
+  top: 0px;
+  color: white;
+  width: 100%;
+  right:  0px;
+  z-index: 999999;
+  visibility: visible;
+}
 
-nav
-{
-    width: 60vw;
-    height: 45px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    top: 0px;
-    left: 20vw;
-    background: rgb(6,13,13);
-    background: radial-gradient(circle, rgba(6,13,13,1) 27%, rgba(102,101,101,1) 85%);
-    position: fixed;
-    border-bottom-left-radius: .5rem;
-    border-bottom-right-radius: .5rem;
-    z-index: 1000;
-    @media screen and (max-width: $big) {
-        width:100vw;
-        background: rgba(6, 13, 13, 0.555);
-        background: radial-gradient(circle, rgba(6, 13, 13, 0.679) 27%, rgba(102, 101, 101, 0.721) 85%);
-        position: fixed;
-        height: 225px;
-        margin: auto;
-        left: 0px;
-        position: absolute;
-        top: 0px;
-        &:hover{
-          height: 50vh;
-          transition:  all 1s;
-        }
-      }
-      @media screen and (min-width: $medium) and (max-width: $big) {
-        min-height: 300px;
-      }
-      
-    .nav_logo_container{
-      height: 45px;
-      width: 10%;
-      left: 0px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @media screen and (max-width: $big) {
-        display: none;
-      }
-      
-      
-      img{
-        width: 70%;
-      }
-    }  
-    .container_idiomas
+
+
+
+
+
+.container_idiomas
     {
       position: absolute;
       transform: translateX(490px);  
@@ -80,19 +61,22 @@ nav
       height: 45px;   
       border-radius: 5px;
       transition: all .9s;
+     
       @media screen and (max-width: $big) {
         position:absolute;
-        transform: translateX(-10px);
         display: flex;  
+        transform: none;
         background-color: transparent;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        left: 10px;
-        top: 13px; 
-        height: 30px;
-        z-index: 99; 
+        left: 0px;
+        top: 0px; 
+        width: 10%;
+        height: 50px;
+        z-index: 9999999; 
         color: white;
+        background-color: rgba(128, 128, 128, 0.678);
       }
      
       h3{
@@ -103,6 +87,8 @@ nav
           font-size: 2rem;
         }
       }
+
+
       &:hover .select_lang{
         visibility: visible;
         transition: all .9s;
@@ -133,17 +119,17 @@ nav
          
           &:first-child a{
             background: url(../images/flags/usa.png) no-repeat center center;
-            background-size: cover; 
+            background-size: 90%; 
             color: transparent;
           }
           &:nth-child(2) a{
             background: url(../images/flags/spain.png) no-repeat center center;
-            background-size: cover;
+            background-size: 90%; 
             color: transparent;
           }
           &:nth-child(3) a{
            background: url(../images/flags/brazil.png) no-repeat center center;
-           background-size: cover;
+           background-size: 90%; 
            color: transparent;
           }
           a{
@@ -158,6 +144,71 @@ nav
     }
 
 
+
+
+
+
+
+
+
+
+
+
+
+nav
+{
+    width: 60vw;
+    height: 45px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    top: 0px;
+    left: 20vw;
+    background: rgb(6,13,13);
+    background: radial-gradient(circle, rgba(6,13,13,1) 27%, rgba(102,101,101,1) 85%);
+    position: fixed;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    z-index: 1000;
+    
+    @media screen and (max-width: $big) {
+        width:100%;
+        background: rgba(6, 13, 13, 0.655);
+        background: radial-gradient(circle, rgba(6, 13, 13, 0.679) 27%, rgba(102, 101, 101, 0.721) 85%);
+        display: flex;
+        height: 225px;
+        margin: auto;
+        position: absolute;
+        left: initial;
+        transition: all 1s;
+        top: 0px;
+        right: 0px;
+        left: initial;
+        &:hover{
+          height: 50vh;
+          transition:  all 1s;
+        }
+      }
+    .nav_logo_container{
+      height: 45px;
+      width: 10%;
+      left: 0px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media screen and (max-width: $big) {
+        display: none;
+      }
+      
+      
+      img{
+        width: 70%;
+      }
+    }  
+    
+
     .navigation
     {        
         display: flex;
@@ -168,15 +219,13 @@ nav
         left:0px;
         flex-direction: row;   
         @media screen and (max-width: $big) {
-            width: 60%;   
-            flex-direction: column;     
+            width: 30%;
+            flex-direction: column;    
+            align-items: center; 
             justify-content: space-evenly; 
             align-items: center;   
           }  
-          @media screen and (min-width: $medium) and (max-width: $big) {
-            width: 75%;  
-            
-          }
+          
           
     }
 
@@ -184,8 +233,13 @@ nav
     {
         width: 200px;
         transition: all .5s;
+        
         &:hover{
-          background-color: rgba(92, 90, 90, 0.575);          
+          background-color: rgba(92, 90, 90, 0.575); 
+                   
+        }
+        &:hover .hide_lista{
+          display: block;
         }
         
        
@@ -193,17 +247,14 @@ nav
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-direction: column;
+          flex-direction: row;
           min-height: 45px;
-          
-          
-         
+          width: 100%;
+          &:hover .hide_lista{
+            display: none;
+          }
         }   
-        @media screen and (min-width: $medium) and (max-width: $big) {
-          width: 75%;  
-          min-height: 60px;
-        }
-      
+        
 
         
         
@@ -219,46 +270,37 @@ nav
             display: flex;
             align-items: center;
             width: 100%;
-            height: 45px;
-            
+            height: 45px;            
             justify-content:space-evenly;        
             color: white;
-            @media screen and (max-width: $small) {
-              
-              margin: auto;
-              display: flex;
-              flex-direction: row;
-              padding: 10px;
-              justify-content: space-between;
-              align-items: center;
+            @media screen and (max-width: $big) {
+              text-align: center;
+
+              justify-content: left;
             }
             
             .icon
             {
                 font-size: 1.8rem;
 
-                @media screen and (max-width: $small) {
+                @media screen and (max-width: $big) {
                     font-size: 2.5rem;
+                    position: absolute;
+                    left: 40px;
                   }
-                  @media screen and (min-width: $medium) and (max-width: $big) {
-                    font-size: 4rem;
-                    
-                  }
+                  
             }
 
             span
             {
                 font-size: 1.8rem;
 
-                @media screen and (max-width: $small) {
-                    font-size: 2rem;
+                @media screen and (max-width: $big) {
+                    font-size: 2.5rem;
                     position: relative;
-                    
+                    margin-left: 130px;
                   }
-                  @media screen and (min-width: $medium) and (max-width: $big) {
-                    font-size: 3.5rem;
-                    
-                  }
+                  
                   
             }
         } 
@@ -271,7 +313,6 @@ nav
         @media screen and (max-width: $big) {
           position: relative;          
           width: 100%;
-          background-color: green;
           border-radius: 1rem;
         }  
         
