@@ -1,22 +1,19 @@
 <?php
 
-$name = 
+$to = 'info@cavaliere.group';
+$email = $_POST['email']
+$name = $_POST['name']
+$phone = $_POST['phone']
+$textarea = $_POST['textarea'];
 
-if (isset($_POST['enviar'])) {
-    if(!empty($_POST['name'])) && !empty($_POST['email'] && !empty($_POST['phone'] && !empty($_POST['textarea'] {
-        $destinatario = "gallegojpe@gmail.com";
-        $email = $_post['email'];
-        $name = $_post['name'];
-        $phone = $_post['phone'];
-        $textarea = $_post['textarea'];
+$header = "From: Cavaliere Group Landing Page" . "\r\n";
 
-        $header = "From: Cavaliere Group Landing Page" . "\r\n";
-        $header = "X-MAILER: PHP/" . phpversion();\
-        $mail = mail($email, $name, $phone, $textarea);
-        if(mail) {
-            echo "<h4> Mail enviado ! </h4>";
-        }
 
-        }
-    )
-}
+
+
+mail($to, $email, $name, $phone, $textarea);
+  
+
+
+
+?>

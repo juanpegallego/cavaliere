@@ -37,18 +37,8 @@ body
 //*------------------MEDIA --------------------------*//
   
     
-/*
-@media (max-width: $small) {
     
-@media screen and (min-width: $small) and (max-width: $medium) {
-         
-}
-@media screen and (min-width: $medium) and (max-width: $big) {
-    
-}
- 
-*/
-    
+$smallest:375px;
 $small: 600px;
 $medium: 900px;
 $big:1200px;
@@ -61,7 +51,7 @@ header{
     scroll-snap-align: start;
     width: 100%;
     height: 100vh;
-    background-color: black; 
+    background-color: black;
     position: relative;
     top: -20px;
     display: flex;
@@ -69,15 +59,46 @@ header{
     align-items: center;
     flex-direction: column;
     transition: all 3s;
-    @media screen and (max-width: $small) {
-        top: -50px;
-        height: 200vh;
+    @media screen and (max-width: $smallest) {
+        top: 0px;
+        min-height: 150vh;
     }
     
     
     
-      
+   
+    #lamp_arrow{
+        color: white;
+        font-size: 5rem;
+        position: absolute;
+        transform:translateX(-200px)
+        rotate(0deg);
+        animation: moveArrow .5s 5;
+        animation-delay: 3s;
+        @media screen and (max-width: $smallest) {
+           position: absolute;
+            top: 350px;
+          } 
+    }
 
+    @keyframes moveArrow {
+        0%{
+            transform:translateX(-100px)
+            rotate(0deg);
+            @media screen and (max-width: $smallest) {
+                transform:translateX(-5px)
+            rotate(0deg);
+               } 
+        }
+        100%{
+            transform:translateX(-200px)
+            rotate(0deg);
+            @media screen and (max-width: $smallest) {
+                transform:translateX(-150px)
+            rotate(0deg);
+               } 
+        }
+    }
     #lamp{
         font-size: 15rem;
         color: white;
@@ -85,14 +106,28 @@ header{
         translateY(200px)
         rotate(0deg);
         cursor: pointer;      
+        animation: lampEffect 2s 2 ;
+        animation-delay: 1s;
+
+        @keyframes lampEffect {
+            0%{
+                font-size: 17rem;
+            }
+            100%{
+                font-size: 15rem;
+            }
+        }
+
         @media screen and (max-width: $small) {
-            transform: 
-            translateY(200px);
+            transform:  translateY(200px);
+            font-size: 20rem;
+            
           }  
         @media screen and (min-width: $medium) and (max-width: $big) {
             transform: 
             translateY(400px);
             font-size: 20rem;
+            
         }
     }
 
@@ -116,8 +151,12 @@ header{
         text-align: center;
         padding: 5px;
         transition: all 5s;
-        @media screen and (max-width: $small) {
-            width: 70%;
+        @media screen and (max-width: $smallest) {
+            width: 95%;
+            top: -200px;
+          } 
+          @media screen and (min-width: $smallest)  and (max-width: $small){
+            width: 90%;
           } 
         strong{
             font-size: 1.8rem;
@@ -128,17 +167,25 @@ header{
 }
 
 .lights_on{
-    background-color: rebeccapurple;
+    background: rgb(6,8,15);
+    background: linear-gradient(0deg, rgba(6,8,15,1) 28%, rgba(13,17,56,1) 100%);
+    
     #lamp{
         transition: all 2s;
         font-size: 10rem;
         width: 200px;
         transform: translateY(0px) rotate(180deg);
         color: rgb(255, 255, 71);
-        @media screen and (max-width: $small) {
-            transform: translateY(120px) rotate(180deg);
-            
+        top: 0px;
+        position: relative;
+        
+        @media screen and (max-width: $smallest) {
+            transform: translateY(-60px) rotate(180deg);
+           
           } 
+          @media screen and (min-width: $smallest) and (max-width: $small){   
+            transform: translateY(-20px) rotate(180deg);
+          }
 
           
         @media screen and (min-width: $medium) and (max-width: $big) {
@@ -151,9 +198,10 @@ header{
     h1{
         transition: all 5s;
         color: white;
-        @media screen and (max-width: $small) {
-           
+        
+        @media screen and (max-width: $medium) {
             text-align: center;
+            font-size: 2.5rem;
           } 
     }
     .first_text
@@ -192,7 +240,11 @@ header{
     min-height: 100vh;
     background: url(/images/campo.jpg) no-repeat center center;
     background-size: cover;
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $smallest) {
+        top: 0px;
+        min-height: 150vh;
+       }
+    @media screen and (min-width: $small) and (max-width: $medium){
        top: -50px;
       }
     .title_container{
@@ -204,7 +256,7 @@ header{
         @media screen and (max-width: $small) {
             width: 90%;
             flex-direction: column;
-            top: 50px;
+            top: 0px;
             min-height: 10vh;
             text-align: center;
           }
@@ -226,6 +278,7 @@ header{
                 justify-content: space-evenly;
                 align-items: center;
                 font-size: 6rem;
+                text-align: center;
                 @media screen and (max-width: $small) {
                     font-size: 4rem;
                     letter-spacing: -1px;
@@ -238,23 +291,13 @@ header{
                     transform: translateY(500px);
                     font-size: 5rem;
                   }  
-                .wand_icon{
-                    font-size: 10rem;
-                    position: relative;
-                    right: 20px;
-                    @media screen and (max-width: $small) {
-                        right: inherit;
-                      }
-                }
+                
             }
         }
     }
     
     
-    &:hover .title h1 .wand_icon{
-        transform: rotate(-45deg);
-        color: red;
-    }
+    
     .cards_container{
         display: grid;
         width: 60%;
@@ -281,12 +324,12 @@ header{
             width: 100%;
             transition: all 1s;
             min-height: 500px;
-            background-color: rgb(69, 69, 206);
+            background: rgba(6, 8, 15, 0.397);
+            background: linear-gradient(0deg, rgba(6, 8, 15, 0.384) 28%, rgba(13, 17, 56, 0.397) 100%);
             padding: 10px;
             color: white;  
             @media screen and (max-width: $small) {
                 width: 90%;
-                background-color: rgba(69, 69, 206, 0.664);
                 margin-top: 10px;
                 min-height: 100px;
                 justify-content: center;
@@ -295,8 +338,7 @@ header{
                 border-top-left-radius: 40%;
                 border-top-right-radius: 0%;
                 border-bottom-right-radius: 0%;
-                @media screen and (max-width: $small) {
-                    
+                @media screen and (max-width: $small) {                    
                     border-radius: 2rem;
                  } 
                 @media screen and (min-width: $medium) and (max-width: $big) {
@@ -348,18 +390,7 @@ header{
                 
             }
             
-            span{
-                font-size: 1.7rem;
-                margin-top: 50px;
-                text-decoration: underline red;
-                @media screen and (max-width: $small) {
-                    
-                    margin-top: 0px;
-                 } 
-                @media screen and (min-width: $medium) and (max-width: $big) {
-                    font-size: 3rem;
-                } 
-            }
+           
             ul{
                 width: 80%;
                 @media screen and (max-width: $small) {                    
@@ -382,17 +413,34 @@ header{
 
     a{
         width: 20%;
+        min-width: 200px;
         height: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        top: 100px;
-        font-size: 2rem;
+        top: 50px;
+        font-size: 1.8rem;
         text-decoration: none;
         font-weight: bold;
         border-bottom: 2px solid red;
-        @media screen and (max-width: $small) {
+        color: black;
+        padding: 5px;
+        background-color: white;
+        z-index: 99;
+        @media screen and (max-width: $smallest) {
+            top: 200px;
+            min-width: 250px;
+            text-align: center;
+            background-color: black;
+            font-weight: initial;
+            color: white;
+        }
+        @media screen and (min-width: $smallest)and (max-width: $small) {
+            min-width: 250px;
+            top:120px;
+        }
+        @media screen and (min-width: $small)and (max-width: $medium) {
             min-width: 60%;
             top: 100px;
             padding: 5px;
@@ -409,6 +457,8 @@ header{
         }
     }
     &:hover .card:first-child{
+        background: rgb(6,8,15);
+        background: linear-gradient(0deg, rgba(6,8,15,1) 28%, rgba(13,17,56,1) 100%);
         transition: all 1s;
         transform: translateX(-40px);
         border-top-left-radius: 10px;
@@ -417,6 +467,8 @@ header{
            }
     }
     &:hover .card:nth-child(2){
+        background: rgb(6,8,15);
+        background: linear-gradient(0deg, rgba(6,8,15,1) 28%, rgba(13,17,56,1) 100%);
         transition: all 1s;
         transform: translateX(40px);
         border-top-right-radius: 10px;
@@ -430,22 +482,23 @@ header{
 
 .white_space{
     min-height: 80vh;
-    top: 50vh;
+    top: 50px;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100vw;
     padding: 10px;
-    @media screen and (max-width: $small) {
-        top: 150px;
-       }
-    @media screen and (min-width: $medium) and (max-width: $big) {
-        top: 0vh;
+    
+    @media screen and (min-width: $smallest) and (max-width: $small) {
+        top: -50px;
      }
+    
+   
     h3{
         color: black;
         font-size: 3rem;
+        width: 90%;
         animation: letterSpacing 10s infinite ease-in-out;
         text-align: center;
         @media screen and (max-width: $small) {
@@ -481,19 +534,28 @@ header{
 
 //------------------------------------- L O G I S T I C A ----------------------------------------------------//
 .container_logistica{
-    background: url(../images/camion_cavaliere2.jpg) no-repeat center 50px;
+    background: url(../images/camion_cavaliere2.jpg) no-repeat center 70px;
     scroll-snap-align: start;
     background-size: 100%;
     width: 100%;    
     position: relative;
-    top:80vh;
     min-height: 150vh;
+    top: 0px;
+    bottom: 0px;
     overflow-x: hidden;
     &:hover .title_container{
         backdrop-filter: blur(20px);
         transition: all 2s;
     }
-    @media screen and (max-width: $small) {
+    @media screen and (max-width: $smallest) {
+        top: 0px;
+        background-size: cover;
+    }
+    @media screen and (min-width: $smallest) and (max-width :$small) {
+        top: -150px;
+        background-size: cover;
+    }
+    @media screen and (min-width: $small) and (max-width: $big)  {
         top: 200px;
         display: flex;
         justify-content: center;
@@ -566,6 +628,7 @@ header{
             font-size: 3rem;
             transform: translateY(50px);
             font-weight: 500;
+            text-align: center;
             @media screen and (max-width: $small) {
                 width: 80%;
                 position: relative;
@@ -665,13 +728,13 @@ header{
             width: 70%;
             min-height: 70vh;
             overflow: hidden;
-            transition: all 1s;
-            margin-bottom: 20px;
+            transition: all 1s;            
             display: none;
             position: relative;
             top: 25px;
             padding: 10px;
             border-radius: 3rem;
+            
             @media screen and (max-width: $small) {
                 top: 150px;
                 min-height: 100vh;
@@ -691,10 +754,11 @@ header{
                 h3{
                     font-size: 2.5rem;
                     color: white;
+                    text-align: center;
                     font-family: var(--fuenteSecundaria);
                     @media screen and (max-width: $small) {
                         font-size: 2rem;
-                        text-align: center;
+                       
                     }
                     
                 }
@@ -702,7 +766,7 @@ header{
             .grid_info_container{
                 height: 50vh;
                 display: grid;
-                grid-template-columns: 50% 50%;
+                grid-template-columns: 65% 35%;
                 
                 @media screen and (max-width: $small) {
                     display: flex;
@@ -714,7 +778,7 @@ header{
                     align-items: center;
                     flex-direction: column;
                     padding: 10px;
-                    background-color: black;
+                    background-color: rgb(5, 4, 4);
                     color: white;
                     padding-left: 10px;
                     border-bottom-left-radius: 3rem;
@@ -749,11 +813,15 @@ header{
                     }
                 }
                 .img_container{
-                    display: grid;
-                    padding: 10px;
+                    display: flex;
+                    justify-content: center;
+                    height: 100%;
+                    align-items: center;
+                    flex-direction: column;
+                    padding: 5px;
                     overflow: hidden;                    
-                    background-color: rgba(0, 0, 0, 0.658);
-                    grid-template-rows: 60% 40%;                    
+                    /* background-color: rgba(0, 0, 0, 0.658);    */    
+                    background-color: rgb(24, 23, 23);     
                     border-bottom-right-radius: 3rem;
                     @media screen and (max-width: $small) {
                         grid-template-rows: 60% 40%;   
@@ -763,6 +831,7 @@ header{
                       }
                     img{
                         margin: auto;
+                        position: relative;
                         width: 70%;
                         @media screen and (max-width: $small) {
                             width:100%; 
@@ -775,6 +844,8 @@ header{
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        position: relative;
+                        margin: auto;
                         ul{
                             list-style: none;
                             li{
@@ -820,8 +891,9 @@ header{
                 border: none;
                 top: 5px;
                 font-weight: lighter;
+                font-family:'Arial';
                 ion-icon{
-                    font-size: 3rem;
+                    font-size: 2.5rem;
                 }
 
                 @media screen and (max-width: $small) {
@@ -831,7 +903,7 @@ header{
         .active{
             display: block;
             transition: all 1s;
-            
+            margin-bottom: 50px;
         }
     }
 }
@@ -854,19 +926,30 @@ header{
 
 .container_invitacion{
     scroll-snap-align: start;
-    background-color: rgb(97, 80, 170);
-    position: relative;
-    margin-top: 85vh;
+    background: rgb(6,8,15);
+    background: linear-gradient(0deg, rgba(6,8,15,1) 28%, rgba(13,17,56,1) 100%);
     min-height: 100vh;
     margin-bottom: 0px;
+    margin-top: 0px;
+
     width: 100%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     color: white;
-    font-size: 1.8rem;
-        @media screen and (max-width: $small) {
+    overflow: hidden;
+    
+        @media screen and (max-width: $smallest) {
+            top: 0px;
+            margin-top: 0px;
+        }
+        @media screen and (min-width: $smallest) and (max-width :$small) {
+            transform: translateY(-150px);
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        @media screen and (min-width: $small) and (max-width: $medium){
             top: 30vh;
             margin-top: 0px;
         }
@@ -900,11 +983,11 @@ header{
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        height: 35px;
+        height: 35px;        
         padding: 10px;
         font-weight: bold;
-        border-radius: 1rem;
         background-color: white;
+        border-bottom: 2px solid red;
         text-decoration: none;
         @media screen and (max-width: $small) {
             width: 75%;
@@ -916,6 +999,9 @@ header{
             height: 100px;
             font-size: 3rem;
           }
+          @media screen and (min-width: $big)  {
+            min-width: 250px;
+          }
         .phone_icon{
             font-size: 2.5rem;
             color: black;
@@ -925,12 +1011,11 @@ header{
               }
         }
         &:hover{
-            color: rgb(3, 161, 3);
-            background-color: rgba(202, 198, 198, 0.616);
+            background-color: black;
+            color: white;
             .phone_icon{
-                transform: rotate(40deg);                
+                transform: rotate(55deg);                
                 transition: all .7s;
-                font-size: 6rem;
                 color: rgb(3, 161, 3);
             }
         }
@@ -943,7 +1028,7 @@ footer
     width: 100vw;
     height: 100px;
     position: relative;
-    top: 50vh;
+    top: 0vh;
     background: #060d0d;
     background: radial-gradient(circle, #060d0d 27%, #666565 85%);
     display: flex;
@@ -952,7 +1037,7 @@ footer
     scroll-snap-align: start;
     scroll-snap-type: mandatory;
     scroll-behavior: smooth;
-    @media (max-width: $small) {
+    @media screen and (max-width: $big) {
         margin-top: 0px;
         bottom: 0px;
         min-height: 100vh;
@@ -961,24 +1046,11 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 200px;
+        top: 0px;
         background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
-    @media screen and (min-width: $medium) and (max-width: $big) {
-                
-        margin-top: 0px;
-        bottom: 0px;
-        min-height: 100vh;
-        position: relative;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        top: -20vh;
-        background: #060d0d;
-        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
-      }
+    
         
     .footer_content{
         width:70%;
@@ -986,7 +1058,7 @@ footer
         overflow: hidden;
         display: flex;
         justify-content: space-around;
-        @media (max-width: $small) {
+        @media screen and (max-width: $big) {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -994,13 +1066,7 @@ footer
             align-items: center;
             flex-direction: column;
         }
-        @media screen and (min-width: $medium) and (max-width: $big) {
-                
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
+       
         .logo_container{
             background-color: rgb(255, 254, 254);
             width: 100px;
@@ -1009,7 +1075,7 @@ footer
             top: 0px;
             position: absolute;
             background-color: transparent;
-            @media (max-width: $small) {
+            @media (max-width: $big) {
                 margin: auto;
                 width: 100%;
                 height: 50vh;
@@ -1021,33 +1087,18 @@ footer
                 align-items: center;
                 flex-direction: column;
             }
-            @media screen and (min-width: $medium) and (max-width: $big) {
-                margin: auto;
-                width: 100%;
-                left: 0px;
-                top: 0px;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-              }
+        
             img{
                 width: 90px;
                 position: absolute;
                 top: 30px;
                 left: 0px;
-                @media (max-width: $small) {
+                @media (max-width: $big) {
                     margin: auto;
                     width: 200px;
                     position: relative;
                 }
-                @media screen and (min-width: $medium) and (max-width: $big) {
-                    width: 300px;
-                    position: relative;
-                    margin: auto;
-                    top: 150px;
-                  }
+              
             }
         }
         .redes_container
@@ -1058,12 +1109,10 @@ footer
             justify-content: space-evenly;
             align-items: center;
             flex-direction: column;
-            @media (max-width: $small) {
+            @media (max-width: $big) {
                 width: 70%;
             }
-            @media screen and (min-width: $medium) and (max-width: $big) {
-                width: 100%;
-              }
+        
             p{
                 color: white;
                 font-size: 1.3rem;
@@ -1074,7 +1123,7 @@ footer
                    
                 }
                 @media screen and (min-width: $medium) and (max-width: $big) {
-                   font-size: 3rem;
+                   font-size: 2rem;
                   }
             }
             ul
@@ -1099,7 +1148,7 @@ footer
                                 font-size: 3.5rem;
                             }
                             @media screen and (min-width: $medium) and (max-width: $big) {
-                                font-size: 5em;
+                                font-size: 4em;
                                }
                         }
                     }

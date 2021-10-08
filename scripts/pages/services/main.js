@@ -1,22 +1,14 @@
-window.onload = autoTurnOn;
+
         
-/*--Lights on--*/
+/*-----------------Lights on---------------*/
 
 function turnOn(){
-    document.getElementById('header').className = 'lights_on';            
+    document.getElementById('header').className = 'lights_on';      
+    document.getElementById('lamp_arrow').style.display = 'none';      
     document.body.style.overflow = 'scroll'; 
 }
 
-/*--Auto Lights on--*/
-function autoTurnOn(){
-    setTimeout(unlockOverflow, 3000);
-}
-
-function unlockOverflow(){
-    document.body.style.overflow = 'scroll'; 
-    document.body.style.overflowX = 'hidden';
-}
-/*--Show Trucks Data--*/
+/*----------Show Trucks Data----------------*/
 
 
 function mostrar(a) {
@@ -27,17 +19,7 @@ function mostrar(a) {
     }
 
   
-    visualViewport.width >= 600 ?  window.scroll({
-        top: 3000,
-        left: 0,
-        behavior: 'smooth'
-      })
-      :
-      window.scroll({
-        top: 4200,
-        left: 0,
-        behavior: 'smooth'
-      })
+    visualViewport.width >= 600 ?  window.scrollBy(0, 400) : window.scrollBy(0,400);
 
 
     
@@ -53,19 +35,10 @@ function ocultarTarjetas(){
         tarjetasActivas[i].className = 'fleet_card';        
     }
 
-    visualViewport.width >= 600 ?  window.scroll({
-        top: 2400,
-        left: 0,
-        behavior: 'smooth'
-      })
+    visualViewport.width >= 600 ?  window.scrollBy(0,-500) : window.scrollBy(0,-700);
 
-      :
-      window.scroll({
-        top: 3550,
-        left: 0,
-        behavior: 'smooth'
-      })
-
+      
+      
 
 
 

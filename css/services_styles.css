@@ -29,17 +29,6 @@ body {
   scroll-snap-type: y mandatory;
   scroll-snap-align: start; }
 
-/*
-@media (max-width: $small) {
-    
-@media screen and (min-width: $small) and (max-width: $medium) {
-         
-}
-@media screen and (min-width: $medium) and (max-width: $big) {
-    
-}
- 
-*/
 header {
   scroll-snap-align: start;
   width: 100%;
@@ -52,18 +41,46 @@ header {
   align-items: center;
   flex-direction: column;
   transition: all 3s; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 375px) {
     header {
-      top: -50px;
-      height: 200vh; } }
+      top: 0px;
+      min-height: 150vh; } }
+  header #lamp_arrow {
+    color: white;
+    font-size: 5rem;
+    position: absolute;
+    transform: translateX(-200px) rotate(0deg);
+    animation: moveArrow .5s 5;
+    animation-delay: 3s; }
+    @media screen and (max-width: 375px) {
+      header #lamp_arrow {
+        position: absolute;
+        top: 350px; } }
+@keyframes moveArrow {
+  0% {
+    transform: translateX(-100px) rotate(0deg);
+    @media screen and (max-width: 375px) {
+      transform: translateX(-5px) rotate(0deg); } }
+  100% {
+    transform: translateX(-200px) rotate(0deg);
+    @media screen and (max-width: 375px) {
+      transform: translateX(-150px) rotate(0deg); } } }
   header #lamp {
     font-size: 15rem;
     color: white;
     transform: translateY(200px) rotate(0deg);
-    cursor: pointer; }
+    cursor: pointer;
+    animation: lampEffect 2s 2;
+    animation-delay: 1s; }
+@keyframes lampEffect {
+  0% {
+    font-size: 17rem; }
+  100% {
+    font-size: 15rem; } }
     @media screen and (max-width: 600px) {
       header #lamp {
-        transform: translateY(200px); } }
+        transform: translateY(200px);
+        font-size: 20rem; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       header #lamp {
         transform: translateY(400px);
@@ -86,25 +103,36 @@ header {
     text-align: center;
     padding: 5px;
     transition: all 5s; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 375px) {
       header .first_text,
       header .second_text {
-        width: 70%; } }
+        width: 95%;
+        top: -200px; } }
+    @media screen and (min-width: 375px) and (max-width: 600px) {
+      header .first_text,
+      header .second_text {
+        width: 90%; } }
     header .first_text strong,
     header .second_text strong {
       font-size: 1.8rem; }
 
 .lights_on {
-  background-color: rebeccapurple; }
+  background: #06080f;
+  background: linear-gradient(0deg, #06080f 28%, #0d1138 100%); }
   .lights_on #lamp {
     transition: all 2s;
     font-size: 10rem;
     width: 200px;
     transform: translateY(0px) rotate(180deg);
-    color: #ffff47; }
-    @media screen and (max-width: 600px) {
+    color: #ffff47;
+    top: 0px;
+    position: relative; }
+    @media screen and (max-width: 375px) {
       .lights_on #lamp {
-        transform: translateY(120px) rotate(180deg); } }
+        transform: translateY(-60px) rotate(180deg); } }
+    @media screen and (min-width: 375px) and (max-width: 600px) {
+      .lights_on #lamp {
+        transform: translateY(-20px) rotate(180deg); } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
       .lights_on #lamp {
         transform: translateY(60px) rotate(180deg);
@@ -112,9 +140,10 @@ header {
   .lights_on h1 {
     transition: all 5s;
     color: white; }
-    @media screen and (max-width: 600px) {
+    @media screen and (max-width: 900px) {
       .lights_on h1 {
-        text-align: center; } }
+        text-align: center;
+        font-size: 2.5rem; } }
   .lights_on .first_text {
     background-color: rgba(0, 0, 0, 0.692);
     color: white; }
@@ -143,7 +172,11 @@ header {
   min-height: 100vh;
   background: url(/images/campo.jpg) no-repeat center center;
   background-size: cover; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 375px) {
+    .content {
+      top: 0px;
+      min-height: 150vh; } }
+  @media screen and (min-width: 600px) and (max-width: 900px) {
     .content {
       top: -50px; } }
   .content .title_container {
@@ -156,7 +189,7 @@ header {
       .content .title_container {
         width: 90%;
         flex-direction: column;
-        top: 50px;
+        top: 0px;
         min-height: 10vh;
         text-align: center; } }
     @media screen and (min-width: 900px) and (max-width: 1200px) {
@@ -173,7 +206,8 @@ header {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
-        font-size: 6rem; }
+        font-size: 6rem;
+        text-align: center; }
         @media screen and (max-width: 600px) {
           .content .title_container .title h1 {
             font-size: 4rem;
@@ -186,16 +220,6 @@ header {
             position: relative;
             transform: translateY(500px);
             font-size: 5rem; } }
-        .content .title_container .title h1 .wand_icon {
-          font-size: 10rem;
-          position: relative;
-          right: 20px; }
-          @media screen and (max-width: 600px) {
-            .content .title_container .title h1 .wand_icon {
-              right: inherit; } }
-  .content:hover .title h1 .wand_icon {
-    transform: rotate(-45deg);
-    color: red; }
   .content .cards_container {
     display: grid;
     width: 60%;
@@ -222,13 +246,13 @@ header {
       width: 100%;
       transition: all 1s;
       min-height: 500px;
-      background-color: #4545ce;
+      background: rgba(6, 8, 15, 0.397);
+      background: linear-gradient(0deg, rgba(6, 8, 15, 0.384) 28%, rgba(13, 17, 56, 0.397) 100%);
       padding: 10px;
       color: white; }
       @media screen and (max-width: 600px) {
         .content .cards_container .card {
           width: 90%;
-          background-color: rgba(69, 69, 206, 0.664);
           margin-top: 10px;
           min-height: 100px;
           justify-content: center; } }
@@ -277,16 +301,6 @@ header {
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           .content .cards_container .card h2 {
             font-size: 4rem; } }
-      .content .cards_container .card span {
-        font-size: 1.7rem;
-        margin-top: 50px;
-        text-decoration: underline red; }
-        @media screen and (max-width: 600px) {
-          .content .cards_container .card span {
-            margin-top: 0px; } }
-        @media screen and (min-width: 900px) and (max-width: 1200px) {
-          .content .cards_container .card span {
-            font-size: 3rem; } }
       .content .cards_container .card ul {
         width: 80%; }
         @media screen and (max-width: 600px) {
@@ -303,17 +317,34 @@ header {
               font-size: 2.5rem; } }
   .content a {
     width: 20%;
+    min-width: 200px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    top: 100px;
-    font-size: 2rem;
+    top: 50px;
+    font-size: 1.8rem;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 2px solid red; }
-    @media screen and (max-width: 600px) {
+    border-bottom: 2px solid red;
+    color: black;
+    padding: 5px;
+    background-color: white;
+    z-index: 99; }
+    @media screen and (max-width: 375px) {
+      .content a {
+        top: 200px;
+        min-width: 250px;
+        text-align: center;
+        background-color: black;
+        font-weight: initial;
+        color: white; } }
+    @media screen and (min-width: 375px) and (max-width: 600px) {
+      .content a {
+        min-width: 250px;
+        top: 120px; } }
+    @media screen and (min-width: 600px) and (max-width: 900px) {
       .content a {
         min-width: 60%;
         top: 100px;
@@ -328,6 +359,8 @@ header {
       background-color: black;
       color: white; }
   .content:hover .card:first-child {
+    background: #06080f;
+    background: linear-gradient(0deg, #06080f 28%, #0d1138 100%);
     transition: all 1s;
     transform: translateX(-40px);
     border-top-left-radius: 10px; }
@@ -335,6 +368,8 @@ header {
       .content:hover .card:first-child {
         transform: translateX(-10px); } }
   .content:hover .card:nth-child(2) {
+    background: #06080f;
+    background: linear-gradient(0deg, #06080f 28%, #0d1138 100%);
     transition: all 1s;
     transform: translateX(40px);
     border-top-right-radius: 10px; }
@@ -344,22 +379,20 @@ header {
 
 .white_space {
   min-height: 80vh;
-  top: 50vh;
+  top: 50px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100vw;
   padding: 10px; }
-  @media screen and (max-width: 600px) {
+  @media screen and (min-width: 375px) and (max-width: 600px) {
     .white_space {
-      top: 150px; } }
-  @media screen and (min-width: 900px) and (max-width: 1200px) {
-    .white_space {
-      top: 0vh; } }
+      top: -50px; } }
   .white_space h3 {
     color: black;
     font-size: 3rem;
+    width: 90%;
     animation: letterSpacing 10s infinite ease-in-out;
     text-align: center; }
     @media screen and (max-width: 600px) {
@@ -383,18 +416,27 @@ header {
     color: black;
     letter-spacing: -2px; } }
 .container_logistica {
-  background: url(../images/camion_cavaliere2.jpg) no-repeat center 50px;
+  background: url(../images/camion_cavaliere2.jpg) no-repeat center 70px;
   scroll-snap-align: start;
   background-size: 100%;
   width: 100%;
   position: relative;
-  top: 80vh;
   min-height: 150vh;
+  top: 0px;
+  bottom: 0px;
   overflow-x: hidden; }
   .container_logistica:hover .title_container {
     backdrop-filter: blur(20px);
     transition: all 2s; }
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 375px) {
+    .container_logistica {
+      top: 0px;
+      background-size: cover; } }
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    .container_logistica {
+      top: -150px;
+      background-size: cover; } }
+  @media screen and (min-width: 600px) and (max-width: 1200px) {
     .container_logistica {
       top: 200px;
       display: flex;
@@ -460,7 +502,8 @@ header {
       align-items: center;
       font-size: 3rem;
       transform: translateY(50px);
-      font-weight: 500; }
+      font-weight: 500;
+      text-align: center; }
       @media screen and (max-width: 600px) {
         .container_logistica .title_container h4 {
           width: 80%;
@@ -544,7 +587,6 @@ header {
       min-height: 70vh;
       overflow: hidden;
       transition: all 1s;
-      margin-bottom: 20px;
       display: none;
       position: relative;
       top: 25px;
@@ -569,15 +611,15 @@ header {
         .container_logistica .container_flota .fleet_card .card_title h3 {
           font-size: 2.5rem;
           color: white;
+          text-align: center;
           font-family: var(--fuenteSecundaria); }
           @media screen and (max-width: 600px) {
             .container_logistica .container_flota .fleet_card .card_title h3 {
-              font-size: 2rem;
-              text-align: center; } }
+              font-size: 2rem; } }
       .container_logistica .container_flota .fleet_card .grid_info_container {
         height: 50vh;
         display: grid;
-        grid-template-columns: 50% 50%; }
+        grid-template-columns: 65% 35%; }
         @media screen and (max-width: 600px) {
           .container_logistica .container_flota .fleet_card .grid_info_container {
             display: flex;
@@ -588,7 +630,7 @@ header {
           align-items: center;
           flex-direction: column;
           padding: 10px;
-          background-color: black;
+          background-color: #050404;
           color: white;
           padding-left: 10px;
           border-bottom-left-radius: 3rem; }
@@ -619,11 +661,15 @@ header {
                 .container_logistica .container_flota .fleet_card .grid_info_container .left_container ul li {
                   font-size: 2rem; } }
         .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
-          display: grid;
-          padding: 10px;
+          display: flex;
+          justify-content: center;
+          height: 100%;
+          align-items: center;
+          flex-direction: column;
+          padding: 5px;
           overflow: hidden;
-          background-color: rgba(0, 0, 0, 0.658);
-          grid-template-rows: 60% 40%;
+          /* background-color: rgba(0, 0, 0, 0.658);    */
+          background-color: #181717;
           border-bottom-right-radius: 3rem; }
           @media screen and (max-width: 600px) {
             .container_logistica .container_flota .fleet_card .grid_info_container .img_container {
@@ -633,6 +679,7 @@ header {
               grid-template-rows: 60% 40%; } }
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
             margin: auto;
+            position: relative;
             width: 70%; }
             @media screen and (max-width: 600px) {
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container img {
@@ -643,7 +690,9 @@ header {
           .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs {
             display: flex;
             justify-content: center;
-            align-items: center; }
+            align-items: center;
+            position: relative;
+            margin: auto; }
             .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul {
               list-style: none; }
               .container_logistica .container_flota .fleet_card .grid_info_container .img_container .specs ul li {
@@ -681,31 +730,42 @@ header {
       position: relative;
       border: none;
       top: 5px;
-      font-weight: lighter; }
+      font-weight: lighter;
+      font-family: 'Arial'; }
       .container_logistica .container_flota button ion-icon {
-        font-size: 3rem; }
+        font-size: 2.5rem; }
       @media screen and (max-width: 600px) {
         .container_logistica .container_flota button {
           margin-top: 10px; } }
     .container_logistica .container_flota .active {
       display: block;
-      transition: all 1s; }
+      transition: all 1s;
+      margin-bottom: 50px; }
 
 .container_invitacion {
   scroll-snap-align: start;
-  background-color: #6150aa;
-  position: relative;
-  margin-top: 85vh;
+  background: #06080f;
+  background: linear-gradient(0deg, #06080f 28%, #0d1138 100%);
   min-height: 100vh;
   margin-bottom: 0px;
+  margin-top: 0px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
   color: white;
-  font-size: 1.8rem; }
-  @media screen and (max-width: 600px) {
+  overflow: hidden; }
+  @media screen and (max-width: 375px) {
+    .container_invitacion {
+      top: 0px;
+      margin-top: 0px; } }
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    .container_invitacion {
+      transform: translateY(-150px);
+      margin-top: 0px;
+      margin-bottom: 0px; } }
+  @media screen and (min-width: 600px) and (max-width: 900px) {
     .container_invitacion {
       top: 30vh;
       margin-top: 0px; } }
@@ -739,8 +799,8 @@ header {
     height: 35px;
     padding: 10px;
     font-weight: bold;
-    border-radius: 1rem;
     background-color: white;
+    border-bottom: 2px solid red;
     text-decoration: none; }
     @media screen and (max-width: 600px) {
       .container_invitacion a {
@@ -752,6 +812,9 @@ header {
         width: 50%;
         height: 100px;
         font-size: 3rem; } }
+    @media screen and (min-width: 1200px) {
+      .container_invitacion a {
+        min-width: 250px; } }
     .container_invitacion a .phone_icon {
       font-size: 2.5rem;
       color: black; }
@@ -759,19 +822,18 @@ header {
         .container_invitacion a .phone_icon {
           font-size: 5rem; } }
     .container_invitacion a:hover {
-      color: #03a103;
-      background-color: rgba(202, 198, 198, 0.616); }
+      background-color: black;
+      color: white; }
       .container_invitacion a:hover .phone_icon {
-        transform: rotate(40deg);
+        transform: rotate(55deg);
         transition: all .7s;
-        font-size: 6rem;
         color: #03a103; }
 
 footer {
   width: 100vw;
   height: 100px;
   position: relative;
-  top: 50vh;
+  top: 0vh;
   background: #060d0d;
   background: radial-gradient(circle, #060d0d 27%, #666565 85%);
   display: flex;
@@ -780,7 +842,7 @@ footer {
   scroll-snap-align: start;
   scroll-snap-type: mandatory;
   scroll-behavior: smooth; }
-  @media (max-width: 600px) {
+  @media screen and (max-width: 1200px) {
     footer {
       margin-top: 0px;
       bottom: 0px;
@@ -790,20 +852,7 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      top: 200px;
-      background: #060d0d;
-      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
-  @media screen and (min-width: 900px) and (max-width: 1200px) {
-    footer {
-      margin-top: 0px;
-      bottom: 0px;
-      min-height: 100vh;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      top: -20vh;
+      top: 0px;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   footer .footer_content {
@@ -812,16 +861,10 @@ footer {
     overflow: hidden;
     display: flex;
     justify-content: space-around; }
-    @media (max-width: 600px) {
+    @media screen and (max-width: 1200px) {
       footer .footer_content {
         width: 100%;
         height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; } }
-    @media screen and (min-width: 900px) and (max-width: 1200px) {
-      footer .footer_content {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -834,22 +877,11 @@ footer {
       top: 0px;
       position: absolute;
       background-color: transparent; }
-      @media (max-width: 600px) {
+      @media (max-width: 1200px) {
         footer .footer_content .logo_container {
           margin: auto;
           width: 100%;
           height: 50vh;
-          left: 0px;
-          top: 0px;
-          position: relative;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          flex-direction: column; } }
-      @media screen and (min-width: 900px) and (max-width: 1200px) {
-        footer .footer_content .logo_container {
-          margin: auto;
-          width: 100%;
           left: 0px;
           top: 0px;
           position: relative;
@@ -862,17 +894,11 @@ footer {
         position: absolute;
         top: 30px;
         left: 0px; }
-        @media (max-width: 600px) {
+        @media (max-width: 1200px) {
           footer .footer_content .logo_container img {
             margin: auto;
             width: 200px;
             position: relative; } }
-        @media screen and (min-width: 900px) and (max-width: 1200px) {
-          footer .footer_content .logo_container img {
-            width: 300px;
-            position: relative;
-            margin: auto;
-            top: 150px; } }
     footer .footer_content .redes_container {
       width: 20%;
       height: 100%;
@@ -880,12 +906,9 @@ footer {
       justify-content: space-evenly;
       align-items: center;
       flex-direction: column; }
-      @media (max-width: 600px) {
+      @media (max-width: 1200px) {
         footer .footer_content .redes_container {
           width: 70%; } }
-      @media screen and (min-width: 900px) and (max-width: 1200px) {
-        footer .footer_content .redes_container {
-          width: 100%; } }
       footer .footer_content .redes_container p {
         color: white;
         font-size: 1.3rem;
@@ -896,7 +919,7 @@ footer {
             font-size: 1.5rem; } }
         @media screen and (min-width: 900px) and (max-width: 1200px) {
           footer .footer_content .redes_container p {
-            font-size: 3rem; } }
+            font-size: 2rem; } }
       footer .footer_content .redes_container ul {
         width: 100%;
         list-style: none;
@@ -914,6 +937,6 @@ footer {
                   font-size: 3.5rem; } }
               @media screen and (min-width: 900px) and (max-width: 1200px) {
                 footer .footer_content .redes_container ul li a ion-icon {
-                  font-size: 5em; } }
+                  font-size: 4em; } }
 
 /*# sourceMappingURL=services_styles.css.map */

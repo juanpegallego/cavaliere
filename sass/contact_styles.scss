@@ -31,6 +31,7 @@
  
 */
     
+$smallest: 375px;
 $small: 600px;
 $medium: 900px;
 $big:1200px;
@@ -55,7 +56,7 @@ body
 .container_3
 {
     width: 70%;
-    height: 100vh;
+    min-height: 50vh;
     position: relative;
     top: 100px;
     margin: auto;
@@ -63,26 +64,21 @@ body
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: rgba(255, 255, 255, 0.289);
-    @media screen and (max-width: $small) {
+    @media screen and  (max-width: $big)  {
         width: 100%;
         display: flex;
-        top: 250px;
+        top: 50px;
+        justify-content: center;
         flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
       }
-    @media screen and (min-width: $medium) and (max-width: $big) {
-        width: 90%;
-        position: relative;
-        top: 0px;
-    }
+    
     &::after{
         content: " ";
         background: url(../images/Home/logotipo.png) no-repeat  center center;
-        background-size: 100%;
+        background-size: 80%;
         opacity: .9;
         top: 0;
-        left: 0;
+        left: 150px;
         bottom: 0;
         right: 0;
         position: absolute;
@@ -99,11 +95,11 @@ body
            
             text-align: center;
             border-radius: 5px;
-            font-size: 6rem;
+            font-size: 8rem;
             color: black;
             position: relative;
             letter-spacing: -2px;
-            top: 30px;
+            top: 0px;
             font-family: var(--fuenteSecundaria);
             @media screen and (max-width: $small) {
                 font-size: 4.5rem;
@@ -144,26 +140,22 @@ body
                 font-size: 1.3rem;
                 color: black;
                 padding-left: 15px;
-                background-color: rgba(255, 255, 255, 0.334);
+                background-color: rgba(119, 117, 117, 0.834);
                 backdrop-filter: blur(3px);
-                @media screen and (max-width: $small) {
+                @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
                 }
-                  @media screen and (min-width: $medium) and (max-width: $big) {
-                    background-color: rgba(184, 179, 179, 0.582);
-                    height: 50px;
-                    font-size: 2rem;
-                }
+                  
                 &:focus
                 {
-                    background-color: rgb(184, 179, 179);
+                    background-color: rgb(116, 106, 106);
                 }
 
                 &::placeholder
                 {
                     padding-left: 10px;
                     font-size: 1.7rem;
-                    color: black;
+                    color: white;
                     font-weight: 600;
                     font-family: Poppins;
                     @media screen and (min-width: $medium) and (max-width: $big) {
@@ -184,25 +176,23 @@ body
                 color: black;
                 padding: 10px 15px;
                 resize: none;
-                background-color: rgba(255, 255, 255, 0.334);
+                background-color: rgba(119, 117, 117, 0.834);
                 backdrop-filter: blur(3px);
-                @media screen and (max-width: $small) {
+                @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
                   }
-                  @media screen and (min-width: $medium) and (max-width: $big) {
-                    background-color: rgba(184, 179, 179, 0.582);
-                }
+                
                 &:focus
                 {
-                    background-color: rgba(255, 255, 255, 0.734);
-                backdrop-filter: blur(3px);
+                    background-color: rgb(116, 106, 106);
+                    backdrop-filter: blur(3px);
                 }
 
                 &::placeholder
                 {
                     padding-left: 10px;
                     font-size: 1.7rem;
-                    color: black;
+                    color: white;
                     font-family: Poppins;
                     font-weight: 600;
                     @media screen and (min-width: $medium) and (max-width: $big) {
@@ -214,7 +204,7 @@ body
 
             button
             {   font-family: Poppins;
-                width: 30%;
+                width: 50%;
                 outline: none;
                 border: none;
                 position: relative;
@@ -223,18 +213,14 @@ body
                 font-size: 1.7rem;
                 cursor: pointer;
                 font-weight: bold;
-                background-color: rgba(255, 255, 255, 0.734);
+                background-color: rgba(119, 117, 117, 0.834);
                 backdrop-filter: blur(3px);
-                color: black;                
+                color: white;                
                 border-radius: 1rem;
-                @media screen and (max-width: $small) {
+                @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
                   }
-                  @media screen and (min-width: $medium) and (max-width: $big) {
-                    background-color: rgba(184, 179, 179, 0.582);
-                    height: 60px;
-                    font-size: 2.2rem;
-                }
+                  
                 &:hover
                 {   
                     color: red;
@@ -262,7 +248,7 @@ footer
     scroll-snap-align: start;
     scroll-snap-type: mandatory;
     scroll-behavior: smooth;
-    @media (max-width: $small) {
+    @media (max-width: $big) {
         margin-top: 0px;
         bottom: 0px;
         min-height: 100vh;
@@ -271,24 +257,11 @@ footer
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        top: 200px;
+        top: 100px;
         background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
-    @media screen and (min-width: $medium) and (max-width: $big) {
-                
-        margin-top: 0px;
-        bottom: 0px;
-        min-height: 50vh;
-        position: relative;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        top: -20vh;
-        background: #060d0d;
-        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
-      }
+    
         
     .footer_content{
         width:70%;
@@ -296,7 +269,7 @@ footer
         overflow: hidden;
         display: flex;
         justify-content: space-around;
-        @media (max-width: $small) {
+        @media (max-width: $big) {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -304,13 +277,7 @@ footer
             align-items: center;
             flex-direction: column;
         }
-        @media screen and (min-width: $medium) and (max-width: $big) {
-                
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-          }
+      
         .logo_container{
             background-color: rgb(255, 254, 254);
             width: 100px;
@@ -319,7 +286,7 @@ footer
             top: 0px;
             position: absolute;
             background-color: transparent;
-            @media (max-width: $small) {
+            @media (max-width: $big) {
                 margin: auto;
                 width: 100%;
                 height: 50vh;
@@ -331,33 +298,18 @@ footer
                 align-items: center;
                 flex-direction: column;
             }
-            @media screen and (min-width: $medium) and (max-width: $big) {
-                margin: auto;
-                width: 100%;
-                left: 0px;
-                top: 100px;
-                position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
-              }
+          
             img{
                 width: 90px;
                 position: absolute;
                 top: 30px;
                 left: 0px;
-                @media (max-width: $small) {
+                @media (max-width: $big) {
                     margin: auto;
                     width: 200px;
                     position: relative;
                 }
-                @media screen and (min-width: $medium) and (max-width: $big) {
-                    width: 300px;
-                    position: relative;
-                    margin: auto;
-                    top: 0px;
-                  }
+                
             }
         }
         .redes_container
@@ -411,7 +363,7 @@ footer
                                 font-size: 3.5rem;
                             }
                             @media screen and (min-width: $medium) and (max-width: $big) {
-                                font-size: 5em;
+                                font-size: 4em;
                                 position: relative;
                                 top: 50px;
                                }
