@@ -23,6 +23,9 @@
 
         </a>
     </div>
+    <div class="loader-wrapper">
+        <span class="loader"><span class="loader-inner"></span></span>
+      </div>
     <ion-icon name="menu-outline" id="hamburguer" style="display: none;" ></ion-icon>
     <div class="container_idiomas">
         <h3>
@@ -376,7 +379,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://wa.me/1171405022" target="_blank">
+                            <a href="https://wa.me/541171405022" target="_blank">
                                 <ion-icon name="logo-whatsapp"></ion-icon>
                             </a>
                         </li>
@@ -408,6 +411,10 @@
             }
         }, 4500)
 
+        /*-------------- Loader-------------------*/
+        $(window).on("load",function(){
+          $(".loader-wrapper").fadeOut("slow");
+        });
 
         
     </script>
