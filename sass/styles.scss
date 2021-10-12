@@ -89,6 +89,7 @@ body
     height: 100vh;
     .video_loading{
      background: url(../images/campo.jpg)no-repeat center center;
+     background-size: cover;
        position: absolute;
     }
     .bgc_video

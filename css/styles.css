@@ -64,6 +64,7 @@ body {
   height: 100vh; }
   .container_1 .video_loading {
     background: url(../images/campo.jpg) no-repeat center center;
+    background-size: cover;
     position: absolute; }
   .container_1 .bgc_video {
     position: absolute;
