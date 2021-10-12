@@ -46,49 +46,6 @@ body
         display: block;
     }
 }
-//*------------------l o a d er--------------------------*//
-
-.loader-wrapper {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #242f3f;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .loader {
-    display: inline-block;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    border: 4px solid #Fff;
-    animation: loader 2s infinite ease;
-  }
-  .loader-inner {
-    vertical-align: top;
-    display: inline-block;
-    width: 100%;
-    background-color: #fff;
-    animation: loader-inner 2s infinite ease-in;
-  }
-  @keyframes loader {
-    0% { transform: rotate(0deg);}
-    25% { transform: rotate(180deg);}
-    50% { transform: rotate(180deg);}
-    75% { transform: rotate(360deg);}
-    100% { transform: rotate(360deg);}
-  }
-  @keyframes loader-inner {
-    0% { height: 0%;}
-    25% { height: 0%;}
-    50% { height: 100%;}
-    75% { height: 100%;}
-    100% { height: 0%;}
-  }
-
 
 
 .site_content{
@@ -121,19 +78,6 @@ body
 }
 
 
-.container_1
-{
-    background-color: rgb(235, 229, 229);
-    background-color: white;
-}
-.container_2
-{
-    height: 100vh;    
-}
-.container_3
-{
-    height: 150vh;  
-}
 
 //*------------------------ CONTAINER 1 ----------------------------//
 .container_1
@@ -143,13 +87,16 @@ body
     align-items: center;
     width: 100%;
     height: 100vh;
-    
+    .video_loading{
+     background: url(../images/campo.jpg)no-repeat center center;
+       position: absolute;
+    }
     .bgc_video
     {
         position: absolute;
         min-height: 100vh;
         transform: scale(1);
-        
+         
         @media screen and (max-width: $small) {
             transform: scale(5);
             top: 0px;        
@@ -172,7 +119,7 @@ body
     align-items: center;
     flex-direction: column;
     @media screen and (max-width: $smallest)  {
-        top: 0%;
+        top: 10%;
         margin-top: 150px;
         width: 60vw;
     }
@@ -180,7 +127,7 @@ body
     
     @media screen and (min-width: $smallest)and (max-width: $small)  {
         width: 45%;
-        top: 15%;
+        top: 5%;
         margin-top: 200px;
     }
     
@@ -209,11 +156,11 @@ body
     margin-top: 100px; 
     
     @media screen and (max-width: $smallest)  {
-        top: -10%;
+        top: -5%;
         margin-top: 100px;
     }
     @media screen and (min-width: $smallest)and (max-width: $small)  {
-        top: -10%;
+        top: -15%;
     }
     
     @media screen  and (min-width: $small) {
@@ -243,7 +190,7 @@ body
         h1
         {
             font-size: 4.5rem;
-            letter-spacing: -2px;
+            letter-spacing: 0px;
             text-align: center;
             font-family: var(--fuenteSecundaria);
             text-shadow: 0px 0px 20px black;
@@ -265,10 +212,11 @@ body
             min-width: 60%;
             max-width: 400px;
             padding: 20px; 
-            text-align: justify;
+            text-align: center;
             font-size: 1.8rem;
             border-radius: 10px;            
             background: rgba(55, 56, 56, 0.897);
+            
             background: radial-gradient(circle, rgba(37, 39, 39, 0.778) 27%, rgba(102, 101, 101, 0.733) 85%); 
             @media screen and (max-width: $small)  {
                 width: 100%;
@@ -360,7 +308,8 @@ body
         box-shadow: 0px 0px 10px 5px rgba(53, 53, 54, 0.445);
        
         @media screen and (max-width: $small)  {
-            height: 300px;
+            height: 280px;
+            width: 300px;
             max-height: initial;
             min-height: initial;
         }
@@ -474,7 +423,7 @@ body
 
 .banner{
     width: 100vw;
-    height: 75vh;    
+    height: 50vh;    
     top: 200px;
     left: 0px;
     display: flex;
@@ -483,7 +432,6 @@ body
     position: relative;
     flex-direction: column;
     margin: auto;
-    background-color: white;
     padding: 5px;
     @media screen and (max-width: $small)  {
        top: 150px;
@@ -509,6 +457,8 @@ body
     p{
         font-size: 2.4rem;        
         font-family: var(--fuenteSecundaria);
+        transform: translateY(10px);
+        color: rgb(71, 70, 70);
         @media screen and (max-width: $small)  {
             font-size: 1.2rem;  
         }
@@ -526,14 +476,14 @@ body
     height:75vh;
     position: relative;
     top: 200px;
+    background-color: rgba(32, 32, 32, 0.95); 
     @media screen and (max-width: $small)  {
-        top: -50px;
+        top: 50px;
     }
    
     
     @media screen  and (min-width: $small) {
-         top: 0px;   
-    
+         top: 200px;  
     }
 
     
@@ -541,7 +491,7 @@ body
     
 .slider
 {
-    width: 75vw;
+    width: 100%;
     height: 500px;
     overflow: hidden;
     position: relative;
@@ -549,7 +499,10 @@ body
     background-size: cover;
     background-blend-mode: overlay;
     animation: sliderImagenes 30s infinite ease-in-out; 
-
+    border-radius: 2rem;
+    @media (max-width: $small) {
+        border-radius: initial;
+    }
      @keyframes sliderImagenes {
         0%{
             background: url(../images/Home/oranges.jpeg) no-repeat center center;
@@ -573,6 +526,7 @@ body
         height: 400px;
         display: flex;
         align-items: center;
+        
         @media (max-width: $small) {
             width: calc(100vw*500%);
             top: 50px;
@@ -592,7 +546,6 @@ body
             align-items: center;
             overflow: hidden;
             flex-direction: column;
-           
             .slide_text
             {
                 display: flex;
@@ -629,7 +582,7 @@ body
                     font-size: 4rem;
                     position: relative;
                     top: 0px;
-                    letter-spacing: -2px;
+                    letter-spacing: -1px;
                     @media (max-width: $small) {
                         font-size: 3rem;
                         top: 0px;
@@ -641,9 +594,10 @@ body
                     position: relative;
                     width: 80%;
                     top: 0px;
-                    text-align: justify;
+                    text-align: center;
                     font-size: 2rem;
-                    letter-spacing: -1px;
+                    font-family: var(--fuenteSecundaria);
+                    letter-spacing: -1.5px;
                     @media (max-width: $small) {
                         width: 70%;
                         top: 0px;
@@ -746,8 +700,8 @@ body
     justify-content: center;
     align-items: center;
     @media screen and (max-width: $small)  {
-        top: -200px;
-        margin-top: 150px;   
+        top: 50px;
+        margin-top: 0px;   
     }
    
     
@@ -758,7 +712,7 @@ body
     
     
     @media screen and (min-width: $medium) {
-        top: -50px;
+        top: 100px;
        
     }
     
@@ -907,13 +861,14 @@ body
     background-color: rgba(255, 255, 255, 0.375);
     @media screen and (max-width: $small)  {
         margin-top: 0px;
+        top: 100px;
     }
    
     
     @media screen  and (min-width: $small) {
         margin-top: 0px;
-        top: 0px;
-        margin-bottom: 0px;
+       top: 150px;
+        margin-bottom: 150px;
     
     }
     
@@ -1159,10 +1114,11 @@ footer
     align-items: center;
     
     @media screen and (max-width: $small)  {
-       min-height: 150vh;
+       min-height: 120vh;
        bottom: 0px;
        margin-bottom: 0px;
        position: relative;
+       top: 50px;
        background: #060d0d;
         background: linear-gradient(to top, #060d0d 27%, #666565 85%);
     }
@@ -1198,7 +1154,7 @@ footer
         .logo_container{
             width: 100px;
             height: 100%;
-            left: 0px;
+            margin-left: 10px;
             top: 0px;
             position: absolute;
             background-color: transparent;

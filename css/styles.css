@@ -30,54 +30,6 @@ body {
     body {
       display: block; } }
 
-.loader-wrapper {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #242f3f;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-
-.loader {
-  display: inline-block;
-  width: 30px;
-  height: 30px;
-  position: relative;
-  border: 4px solid #Fff;
-  animation: loader 2s infinite ease; }
-
-.loader-inner {
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-  background-color: #fff;
-  animation: loader-inner 2s infinite ease-in; }
-
-@keyframes loader {
-  0% {
-    transform: rotate(0deg); }
-  25% {
-    transform: rotate(180deg); }
-  50% {
-    transform: rotate(180deg); }
-  75% {
-    transform: rotate(360deg); }
-  100% {
-    transform: rotate(360deg); } }
-@keyframes loader-inner {
-  0% {
-    height: 0%; }
-  25% {
-    height: 0%; }
-  50% {
-    height: 100%; }
-  75% {
-    height: 100%; }
-  100% {
-    height: 0%; } }
 .site_content {
   min-height: 150vh;
   width: 100%;
@@ -105,21 +57,14 @@ body {
   transition: all 1s; }
 
 .container_1 {
-  background-color: #ebe5e5;
-  background-color: white; }
-
-.container_2 {
-  height: 100vh; }
-
-.container_3 {
-  height: 150vh; }
-
-.container_1 {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   height: 100vh; }
+  .container_1 .video_loading {
+    background: url(../images/campo.jpg) no-repeat center center;
+    position: absolute; }
   .container_1 .bgc_video {
     position: absolute;
     min-height: 100vh;
@@ -144,13 +89,13 @@ body {
   flex-direction: column; }
   @media screen and (max-width: 375px) {
     .logo_container {
-      top: 0%;
+      top: 10%;
       margin-top: 150px;
       width: 60vw; } }
   @media screen and (min-width: 375px) and (max-width: 600px) {
     .logo_container {
       width: 45%;
-      top: 15%;
+      top: 5%;
       margin-top: 200px; } }
   .logo_container img {
     position: absolute;
@@ -170,11 +115,11 @@ body {
   margin-top: 100px; }
   @media screen and (max-width: 375px) {
     .grid_section {
-      top: -10%;
+      top: -5%;
       margin-top: 100px; } }
   @media screen and (min-width: 375px) and (max-width: 600px) {
     .grid_section {
-      top: -10%; } }
+      top: -15%; } }
   @media screen and (min-width: 600px) {
     .grid_section {
       flex-wrap: nowrap; } }
@@ -195,7 +140,7 @@ body {
         width: 95%; } }
     .grid_section .left_container h1 {
       font-size: 4.5rem;
-      letter-spacing: -2px;
+      letter-spacing: 0px;
       text-align: center;
       font-family: var(--fuenteSecundaria);
       text-shadow: 0px 0px 20px black; }
@@ -209,7 +154,7 @@ body {
       min-width: 60%;
       max-width: 400px;
       padding: 20px;
-      text-align: justify;
+      text-align: center;
       font-size: 1.8rem;
       border-radius: 10px;
       background: rgba(55, 56, 56, 0.897);
@@ -283,7 +228,8 @@ body {
     box-shadow: 0px 0px 10px 5px rgba(53, 53, 54, 0.445); }
     @media screen and (max-width: 600px) {
       .right_container .section_container {
-        height: 300px;
+        height: 280px;
+        width: 300px;
         max-height: initial;
         min-height: initial; } }
     @media screen and (min-width: 1200px) {
@@ -353,7 +299,7 @@ body {
 
 .banner {
   width: 100vw;
-  height: 75vh;
+  height: 50vh;
   top: 200px;
   left: 0px;
   display: flex;
@@ -362,7 +308,6 @@ body {
   position: relative;
   flex-direction: column;
   margin: auto;
-  background-color: white;
   padding: 5px; }
   @media screen and (max-width: 600px) {
     .banner {
@@ -380,7 +325,9 @@ body {
         font-size: 3.5rem; } }
   .banner p {
     font-size: 2.4rem;
-    font-family: var(--fuenteSecundaria); }
+    font-family: var(--fuenteSecundaria);
+    transform: translateY(10px);
+    color: #474646; }
     @media screen and (max-width: 600px) {
       .banner p {
         font-size: 1.2rem; } }
@@ -388,23 +335,28 @@ body {
 .container_2 {
   height: 75vh;
   position: relative;
-  top: 200px; }
+  top: 200px;
+  background-color: rgba(32, 32, 32, 0.95); }
   @media screen and (max-width: 600px) {
     .container_2 {
-      top: -50px; } }
+      top: 50px; } }
   @media screen and (min-width: 600px) {
     .container_2 {
-      top: 0px; } }
+      top: 200px; } }
 
 .slider {
-  width: 75vw;
+  width: 100%;
   height: 500px;
   overflow: hidden;
   position: relative;
   background: url(../images/Home/oranges.jpeg) no-repeat center center;
   background-size: cover;
   background-blend-mode: overlay;
-  animation: sliderImagenes 30s infinite ease-in-out; }
+  animation: sliderImagenes 30s infinite ease-in-out;
+  border-radius: 2rem; }
+  @media (max-width: 600px) {
+    .slider {
+      border-radius: initial; } }
 @keyframes sliderImagenes {
   0% {
     background: url(../images/Home/oranges.jpeg) no-repeat center center; }
@@ -466,7 +418,7 @@ body {
           font-size: 4rem;
           position: relative;
           top: 0px;
-          letter-spacing: -2px; }
+          letter-spacing: -1px; }
           @media (max-width: 600px) {
             .slider .slides .slide .slide_text h1 {
               font-size: 3rem;
@@ -475,9 +427,10 @@ body {
           position: relative;
           width: 80%;
           top: 0px;
-          text-align: justify;
+          text-align: center;
           font-size: 2rem;
-          letter-spacing: -1px; }
+          font-family: var(--fuenteSecundaria);
+          letter-spacing: -1.5px; }
           @media (max-width: 600px) {
             .slider .slides .slide .slide_text p {
               width: 70%;
@@ -553,15 +506,15 @@ body {
   align-items: center; }
   @media screen and (max-width: 600px) {
     .banner_container {
-      top: -200px;
-      margin-top: 150px; } }
+      top: 50px;
+      margin-top: 0px; } }
   @media screen and (min-width: 600px) {
     .banner_container {
       top: -150px;
       margin-top: 100px; } }
   @media screen and (min-width: 900px) {
     .banner_container {
-      top: -50px; } }
+      top: 100px; } }
   .banner_container:hover img {
     left: 100px;
     top: 170px;
@@ -678,12 +631,13 @@ body {
   background-color: rgba(255, 255, 255, 0.375); }
   @media screen and (max-width: 600px) {
     .container_3 {
-      margin-top: 0px; } }
+      margin-top: 0px;
+      top: 100px; } }
   @media screen and (min-width: 600px) {
     .container_3 {
       margin-top: 0px;
-      top: 0px;
-      margin-bottom: 0px; } }
+      top: 150px;
+      margin-bottom: 150px; } }
   .container_3::after {
     content: " ";
     background: url(../images/Home/logotipo.png) no-repeat center 200px;
@@ -876,10 +830,11 @@ footer {
   align-items: center; }
   @media screen and (max-width: 600px) {
     footer {
-      min-height: 150vh;
+      min-height: 120vh;
       bottom: 0px;
       margin-bottom: 0px;
       position: relative;
+      top: 50px;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #666565 85%); } }
   @media screen and (min-width: 600px) {
@@ -906,7 +861,7 @@ footer {
     footer .footer_content .logo_container {
       width: 100px;
       height: 100%;
-      left: 0px;
+      margin-left: 10px;
       top: 0px;
       position: absolute;
       background-color: transparent; }

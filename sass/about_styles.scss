@@ -52,7 +52,18 @@ header{
     flex-direction: column;    
     border-bottom-left-radius: 10rem;
     border-bottom-right-radius: 10rem;
-  
+    @media (max-width: $big) {
+        height: 120vh;
+       
+    }
+    @media (min-width: $medium) {
+        height: 80vh;
+       
+    }
+    @media (min-width: $big) {
+        height: 70vh;
+       
+    }
     h3{
         font-size: 3rem;
         color: black;
@@ -65,7 +76,10 @@ header{
         align-items: center;
         flex-direction: column;
         color: white;
-       
+        @media (min-width: $big) {
+            transform: translateY(30px);
+           
+        }
         .share_icon{
             font-size: 5rem;
             color: black;
@@ -75,67 +89,57 @@ header{
     .ghost_text_container{
         top: 100px;
         width: 100%;
-        display: block;
+        display: flex;
         justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
         position: relative;
+        flex-wrap: wrap;
+        @media (max-width: $big) {
+            top: 0px;
+           
+        }
+        .first_text{      
+               
+                       
+        }
+        .second_text{      
+            
+        }
+        .third_text{      
+           
+          
+        }
         
-        .first_text,
-        .second_text,
-        .third_text{
-            position: absolute;
-            color: transparent;
-            animation: ghostText 5s infinite ease-in-out;
-        }
-        .first_text{            
-            
-            animation-delay: 0s;            
-            top:0vh;
-        }
-        .second_text{
-            animation-delay: 5s;
-            top: 10vh;
-            margin-top: 20px;
-            @media (max-width: $small) {
-                top: 10vh;
-                margin-top: 40px;
-               
-            }
-        }
-        .third_text{          
-            animation-delay: 10s;
-            top: 20vh;
-            margin-top: 20px;
-            @media (max-width: $small) {
-                top: 25vh;
-                margin-top: 50px;
-               
-            }
-        }
-        @keyframes ghostText {
-            0%{
-               color: transparent;
-            }
-            50%{
-                color: white;
-            }
-            100%{
-                color: transparent;
-            }
-        }    
+           
         p{
-            font-size: 2.2rem;
-            width: 100%;            
-            position: absolute;
-            line-height: 35px;
+            font-size: 2rem;;            
+            position: relative;
+            line-height: 30px;
+            min-height: 150px;
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
             text-align: center;
-            height: 100%;
-            font-family: var(--fuenteSecundaria);
-            background-color: rgba(255, 255, 255, 0.616);
             color: white;
+            font-weight: bolder;
+            border-radius: 2px 40px;
             
-            margin-bottom: 20px;
+            box-shadow: inset 0px 0px 40px rgb(49, 48, 48);
+            margin-bottom: 50px;
+            @keyframes fondoImagen {
+                0%{
+                    background: inherit;
+                    color: white;
+                }
+                
+                100%{
+                    background:inherit;
+                }
+            }
+
             @media (max-width: $smallest) {
                 font-size: 1.5rem;
                
@@ -143,17 +147,8 @@ header{
             @media (min-width: $smallest)and (max-width: $small) {
                 font-size: 2rem;
                 width: 100%;
-                color: greenyellow;
             }
-            &:hover{
-                animation: none;
-                color: black;
-               
-            }
-            .shield_icon{
-                font-size: 2.5rem;
-                color: green;
-            }
+           
             
         }
       
@@ -231,7 +226,7 @@ header{
             border-radius: 15px;
             overflow: hidden;
             transition: all 2s;
-            background-color: white;
+            background-color: rgb(224, 222, 222);
             @media (max-width: $small) {
                 transform: translateY(-40px);
                 transition: all .5s; 
@@ -316,7 +311,7 @@ header{
             justify-content: space-evenly;
             align-items: center;
             flex-direction: column;            
-            height: 300px;   
+            height: 250px;   
             width: 50%;
             min-width: 250px;
             padding: 15px 10px;              
@@ -336,36 +331,25 @@ header{
             
                         
 
-            @keyframes backRotation {
-                0%{
-                    transform: none;
-                }
-                50%{
-                    transform: scaleX(1.3);
-                }
-                100%{
-                    transform: none;
-                }
-            }
+           
             h2{
                 color: white;
                 text-align: center;
-                font-size: 3rem;
+                font-size: 2.5rem;
                
             }
             
             p{
                 width: 90%;
-                color: rgb(7, 7, 53);
+                color: white;
                 text-align: center;
-                font-size: 1.8rem;
+                font-size: 1.5rem;
                 font-weight: bolder;
-                text-shadow: 0px 0px 20px white;
                 
             }
             strong{
-                color: rgb(7, 7, 53);
-                font-size: 1.8rem;
+                color: white;
+                font-size: 1.5rem;
                 
             }
         }
@@ -413,6 +397,7 @@ header{
         h1
         {
             font-size: 4rem;
+            color: white;
             @media (max-width: $small) {
                 text-align: center;
                 font-size: 3rem;
@@ -456,7 +441,8 @@ header{
     padding: 10px;
     position: relative;
     top: 200px;
-    min-height: 150vh;    
+    min-height: 150vh;   
+    padding-bottom:150px; 
     display: flex;
     justify-content: space-evenly;
     align-items: center;

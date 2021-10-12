@@ -2,10 +2,13 @@
 <html lang="es">
 
 <head>
+    <title>Cavaliere - Home</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content= "Cavaliere Group . Frutas Premium directo del campo, Servicios de Comercio Exterior y de Logistica." />
+    <meta name="robots" content= "index, follow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cavaliere Group - Home</title>
+    <link rel="icon" type="image/png" sizes="192x192" href="/images/Home/logotipo.png">
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/nav_styles.css">
     <link rel="stylesheet" href="/css/wsp_styles.css">
@@ -24,9 +27,7 @@
 
         </a>
     </div>
-    <div class="loader-wrapper">
-        <span class="loader"><span class="loader-inner"></span></span>
-      </div>
+   
     <ion-icon name="menu-outline" id="hamburguer" style="display: none;" ></ion-icon>
     <div class="container_idiomas">
         <h3>
@@ -144,7 +145,7 @@
     
     <div class="site_content">
         <div class="container_1">
-            <video src="/bgc_video_short.mp4" class="bgc_video" autoplay loop></video>
+            <video src="/bgc_video_short.mp4" id='bgc_video'  class="bgc_video" autoplay loop ></video>
     
             <div class="logo_container">
                 <img src="images/Home/logotipo_column.png" alt="logo cavaliere">
@@ -412,13 +413,21 @@
             }
         }, 4500)
 
-        /*-------------- Loader-------------------*/
+     
+        
 
-        window.addEventListener('onload', function(){
-            document.getElementsByClassName('loader-wrapper').fadeOut('slow');
-        })
+
+        function videoBgc (){
+            const video = document.getElementById('bgc_video');
+            video.className  = 'video_loading';
+            
+            video.onloadeddata = function(){
+                video.className = 'bgc_video';
+            }
        
+        } 
 
+        videoBgc()
         
     </script>
     <script src="/scripts/navBar.js"></script>

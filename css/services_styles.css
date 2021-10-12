@@ -45,6 +45,10 @@ header {
     header {
       top: 0px;
       min-height: 150vh; } }
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    header {
+      min-height: 120vh;
+      top: -50px; } }
   header #lamp_arrow {
     color: white;
     font-size: 5rem;
@@ -56,6 +60,10 @@ header {
       header #lamp_arrow {
         position: absolute;
         top: 350px; } }
+    @media screen and (min-width: 375px) and (max-width: 600px) {
+      header #lamp_arrow {
+        position: absolute;
+        top: 280px; } }
 @keyframes moveArrow {
   0% {
     transform: translateX(-100px) rotate(0deg);
@@ -201,13 +209,15 @@ header {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      position: relative; }
+      position: relative;
+      margin: auto; }
       .content .title_container .title h1 {
         display: flex;
         justify-content: space-evenly;
         align-items: center;
         font-size: 6rem;
-        text-align: center; }
+        text-align: center;
+        font-family: var(--fuenteSecundaria); }
         @media screen and (max-width: 600px) {
           .content .title_container .title h1 {
             font-size: 4rem;
@@ -393,8 +403,9 @@ header {
     color: black;
     font-size: 3rem;
     width: 90%;
-    animation: letterSpacing 10s infinite ease-in-out;
-    text-align: center; }
+    animation: letterSpacing 25s infinite ease-in-out;
+    text-align: center;
+    font-weight: bold; }
     @media screen and (max-width: 600px) {
       .white_space h3 {
         font-size: 2.5rem;
@@ -407,12 +418,10 @@ header {
         font-weight: lighter; } }
 @keyframes letterSpacing {
   0% {
-    letter-spacing: -3px;
-    font-weight: lighter; }
+    letter-spacing: -2px; }
   50% {
     letter-spacing: 1px; }
   100% {
-    font-weight: lighter;
     color: black;
     letter-spacing: -2px; } }
 .container_logistica {
@@ -668,7 +677,6 @@ header {
           flex-direction: column;
           padding: 5px;
           overflow: hidden;
-          /* background-color: rgba(0, 0, 0, 0.658);    */
           background-color: #181717;
           border-bottom-right-radius: 3rem; }
           @media screen and (max-width: 600px) {
@@ -748,7 +756,7 @@ header {
   background: linear-gradient(0deg, #06080f 28%, #0d1138 100%);
   min-height: 100vh;
   margin-bottom: 0px;
-  margin-top: 0px;
+  margin-top: -5px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
@@ -792,14 +800,14 @@ header {
         font-size: 3.5rem; } }
   .container_invitacion a {
     font-size: 1.7rem;
-    color: black;
+    color: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 35px;
     padding: 10px;
     font-weight: bold;
-    background-color: white;
+    background-color: transparent;
     border-bottom: 2px solid red;
     text-decoration: none; }
     @media screen and (max-width: 600px) {
@@ -817,13 +825,13 @@ header {
         min-width: 250px; } }
     .container_invitacion a .phone_icon {
       font-size: 2.5rem;
-      color: black; }
+      color: white; }
       @media screen and (min-width: 900px) and (max-width: 1200px) {
         .container_invitacion a .phone_icon {
           font-size: 5rem; } }
     .container_invitacion a:hover {
-      background-color: black;
-      color: white; }
+      background-color: white;
+      color: black; }
       .container_invitacion a:hover .phone_icon {
         transform: rotate(55deg);
         transition: all .7s;
@@ -852,7 +860,7 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      top: 0px;
+      top: -150px;
       background: #060d0d;
       background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
   footer .footer_content {
