@@ -16,20 +16,16 @@
     --fuentePrincipal:'Poppins', 'Sans Serif';
     --fuenteSecundaria:'Montserrat', 'Sans Serif';
 }
+$colorPrincipal: #bce027;
+$colorPrincipalClaro:#d2f153;
+$colorPrincipalOscuro:#a4c425;
 
-//*------------------MEDIA --------------------------*//
-    
-/*
-@media (max-width: $small) {
-    
-@media screen and (min-width: $small) and (max-width: $medium) {
-         
-}
-@media screen and (min-width: $medium) and (max-width: $big) {
-    
-}
- 
-*/
+$colorSecundarioClaro: rgb(27, 70, 90);
+$colorSecundario: rgb(16,40,51);  
+$colorSecundarioOscuro: rgb(7, 17, 22);
+  
+  
+
     
 $smallest: 375px;
 $small: 600px;
@@ -43,27 +39,28 @@ $desktop:1824px;
 
 body
 {
-    min-height: 100vh;
+    min-height: 50vh;
     display: flex;
     width: 100vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: var(--fuentePrincipal);
-    overflow-x: hidden;    
+    overflow: hidden; 
+    background-color: $colorSecundarioClaro;   
 }
 
 .container_3
 {
     width: 70%;
-    min-height: 50vh;
     position: relative;
-    top: 100px;
-    margin: auto;
     left: 0px;
+    top: 100px;
     display: grid;
+    margin: auto;
     grid-template-columns: 50% 50%;
-    background-color: rgba(255, 255, 255, 0.289);
+    margin-bottom: 100px;
+    padding-bottom: 50px;
     @media screen and  (max-width: $big)  {
         width: 100%;
         display: flex;
@@ -83,6 +80,9 @@ body
         right: 0;
         position: absolute;
         z-index: -1;   
+        @media screen and (max-width: $small) {
+           left: 0px;
+          }
     }
     .contact_title
     {
@@ -96,13 +96,15 @@ body
             text-align: center;
             border-radius: 5px;
             font-size: 8rem;
-            color: black;
+            color: $colorSecundarioOscuro;
             position: relative;
             letter-spacing: -2px;
             top: 0px;
+            color: white;
             font-family: var(--fuenteSecundaria);
             @media screen and (max-width: $small) {
                 font-size: 4.5rem;
+                top: -20px;
               }
               @media screen and (min-width: $medium) and (max-width: $big) {
                 font-size: 8em;
@@ -140,7 +142,7 @@ body
                 font-size: 1.3rem;
                 color: black;
                 padding-left: 15px;
-                background-color: rgba(119, 117, 117, 0.834);
+                background-color: white;
                 backdrop-filter: blur(3px);
                 @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
@@ -148,18 +150,21 @@ body
                   
                 &:focus
                 {
-                    background-color: rgb(116, 106, 106);
+                    background-color: $colorSecundarioOscuro;
+                    color: white;
                 }
 
                 &::placeholder
                 {
                     padding-left: 10px;
                     font-size: 1.7rem;
-                    color: white;
+                    color: $colorSecundarioOscuro;
                     font-weight: 600;
                     font-family: Poppins;
+                    @media screen and (max-width: $medium) {
+                        color: black;
+                    }
                     @media screen and (min-width: $medium) and (max-width: $big) {
-                    
                         font-size: 2.2rem;
                     }
                 }
@@ -173,10 +178,10 @@ body
                 border: none;
                 border-radius: 1rem;
                 font-size: 1.3rem;
-                color: black;
+                color: $colorSecundarioOscuro;
                 padding: 10px 15px;
                 resize: none;
-                background-color: rgba(119, 117, 117, 0.834);
+                background-color: white;
                 backdrop-filter: blur(3px);
                 @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
@@ -184,17 +189,22 @@ body
                 
                 &:focus
                 {
-                    background-color: rgb(116, 106, 106);
+                    background-color: $colorSecundarioOscuro;
                     backdrop-filter: blur(3px);
+                    color: white;
                 }
 
                 &::placeholder
                 {
                     padding-left: 10px;
                     font-size: 1.7rem;
-                    color: white;
+                    
+                    color: $colorSecundarioOscuro;
                     font-family: Poppins;
                     font-weight: 600;
+                    @media screen and (max-width: $medium) {
+                        color: black;
+                    }
                     @media screen and (min-width: $medium) and (max-width: $big) {
                     
                         font-size: 2.2rem;
@@ -204,7 +214,7 @@ body
 
             button
             {   font-family: Poppins;
-                width: 50%;
+                width: 30%;
                 outline: none;
                 border: none;
                 position: relative;
@@ -213,18 +223,22 @@ body
                 font-size: 1.7rem;
                 cursor: pointer;
                 font-weight: bold;
-                background-color: rgba(119, 117, 117, 0.834);
+                background-color: white;
                 backdrop-filter: blur(3px);
-                color: white;                
+                color: $colorSecundario;                
                 border-radius: 1rem;
+                @media screen and (max-width: $medium) {
+                    color: black;
+                }
                 @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
                   }
                   
                 &:hover
                 {   
-                    color: red;
+                    background-color: $colorPrincipal;
                     transition: .5s;
+                    color: $colorSecundarioOscuro;
                 }
             }
         }
@@ -239,9 +253,9 @@ footer
     width: 100vw;
     height: 100px;
     position: relative;
-    top: 50vh;
-    background: #060d0d;
-    background: radial-gradient(circle, #060d0d 27%, #666565 85%);
+    bottom: 0px;
+    background: rgb(7,12,22);
+    background: radial-gradient(circle, rgba(7,12,22,1) 32%, rgba(16,40,51,1) 78%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,8 +272,8 @@ footer
         align-items: center;
         flex-direction: column;
         top: 100px;
-        background: #060d0d;
-        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
+        background: rgb(7,12,22);
+        background: linear-gradient(circle, rgba(7,12,22,1) 27%, rgba(27,70,90,1) 88%);
     }
     
         
@@ -279,13 +293,15 @@ footer
         }
       
         .logo_container{
-            background-color: rgb(255, 254, 254);
             width: 100px;
             height: 100px;
             left: 50px;
             top: 0px;
             position: absolute;
-            background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             @media (max-width: $big) {
                 margin: auto;
                 width: 100%;
@@ -300,10 +316,8 @@ footer
             }
           
             img{
-                width: 90px;
-                position: absolute;
-                top: 30px;
-                left: 0px;
+                width: 70px;
+                position: relative;
                 @media (max-width: $big) {
                     margin: auto;
                     width: 200px;

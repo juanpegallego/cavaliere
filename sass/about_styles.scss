@@ -15,7 +15,19 @@
     --ventanas:rgba(255, 255, 255, 0.782);
     --fuentePrincipal:'Poppins', 'Sans Serif';
     --fuenteSecundaria:'Montserrat', 'Sans Serif';
+
+    
+
   }
+  
+  
+    $colorPrincipalClaro:#d2f153;
+    $colorPrincipal: #bce027;
+    $colorPrincipalOscuro:#a4c425;
+    $colorSecundarioClaro: rgb(27, 70, 90);
+    $colorSecundario: rgb(16,40,51);  
+    $colorSecundarioOscuro: rgb(7, 17, 22);
+    
 
 body
 {
@@ -26,7 +38,7 @@ body
     overflow-x:hidden;
     scroll-snap-type:y proximity;
     scroll-behavior: smooth;
-    background-color: rgb(37, 35, 35) ; 
+    background-color: $colorSecundario; 
 }
 
 //*------------------MEDIA --------------------------*//
@@ -38,86 +50,83 @@ $medium: 900px;
 $big:1200px;
 $desktop:1824px;
 
-//*------------------MEDIA --------------------------*//
+//*------------------ STYLES --------------------------*//
 header{
     scroll-snap-align: start;     
-    background-color: rgb(37, 35, 35) ;   
+    background-color: $colorSecundario;   
     background-size: 30%;
     width: 80%;
     position: relative;
     top: 50px;
     margin: auto;
-    height: 80vh;
+    min-height:50vh;
     display: flex;    
     flex-direction: column;    
     border-bottom-left-radius: 10rem;
     border-bottom-right-radius: 10rem;
-    @media (max-width: $big) {
-        height: 120vh;
+    
+    
+    &::after{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        content: '';
+        border-radius: 10%;
+        left: 0;
+        top: 0;
+        
+    }
+    @media (max-width: $small) {
+        min-height: 150vh;
        
     }
-    @media (min-width: $medium) {
-        height: 80vh;
-       
+    @media (min-width: $small){
+        min-height: 100vh;
     }
-    @media (min-width: $big) {
-        height: 70vh;
-       
-    }
-    h3{
-        font-size: 3rem;
-        color: black;
+   
+    
+    
+    
+    .header_title{
+        font-size:5em;
         display: flex;
         width:100%;
-        position: relative;
         height: 100px;
-        text-decoration: underline 2px red;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        color: white;
+        opacity: 0;
+        color: rgba(255, 255, 255, 0.678);
+        top: 0px;
+        position: relative;
         @media (min-width: $big) {
-            transform: translateY(30px);
-           
+            transform: translateY(0px) ;
+           top: 0px;
         }
-        .share_icon{
-            font-size: 5rem;
-            color: black;
-            
-        }
+        
     }
     .ghost_text_container{
-        top: 100px;
+        top: 200px; 
         width: 100%;
         display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         position: relative;
         flex-wrap: wrap;
+        opacity: 0;
         @media (max-width: $big) {
-            top: 0px;
-           
+            top: 100px;
+            margin-top: 0px;
+            padding-bottom: 50px;
         }
-        .first_text{      
-               
-                       
-        }
-        .second_text{      
-            
-        }
-        .third_text{      
-           
-          
-        }
+       
         
            
         p{
-            font-size: 2rem;;            
+            font-size: 2rem;            
             position: relative;
             line-height: 30px;
             min-height: 150px;
-            width: 350px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -125,9 +134,7 @@ header{
             text-align: center;
             color: white;
             font-weight: bolder;
-            border-radius: 2px 40px;
-            
-            box-shadow: inset 0px 0px 40px rgb(49, 48, 48);
+            border-radius:5px;
             margin-bottom: 50px;
             @keyframes fondoImagen {
                 0%{
@@ -141,8 +148,7 @@ header{
             }
 
             @media (max-width: $smallest) {
-                font-size: 1.5rem;
-               
+                font-size:1rem;
             }
             @media (min-width: $smallest)and (max-width: $small) {
                 font-size: 2rem;
@@ -173,7 +179,9 @@ header{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background: linear-gradient(160deg, rgb(177, 9, 9) 28%, rgba(63, 10, 10, 0.956) 100%);
+    background: linear-gradient(160deg, #dcf86e 28%, #68772d 100%);
+    
+    
     @media (max-width: $smallest) {
         top: -50px;
         min-height: 250vh;
@@ -186,16 +194,17 @@ header{
         z-index: -1;
      }
    
-    .title{
+    .content_title{
         display: flex;
         justify-content: center;
         position: relative;
         top: 0px;
         margin: 50px;
+        transform: translateX(-150vw);
         align-items: center;
         h1{
             font-size: 4rem;
-            color: white;
+            color: $colorSecundario;
             transform: translateY(50px);
            text-align: center;
         }
@@ -211,8 +220,7 @@ header{
         margin: auto;
         margin-top: 50px;
        
-        .card{
-            
+        .card{            
             position: relative;
             display: flex;
             align-items: center;
@@ -226,7 +234,10 @@ header{
             border-radius: 15px;
             overflow: hidden;
             transition: all 2s;
-            background-color: rgb(224, 222, 222);
+            background-color: rgb(209, 206, 206);
+            opacity: 0;
+            transform: translateY(50vw);
+  
             @media (max-width: $small) {
                 transform: translateY(-40px);
                 transition: all .5s; 
@@ -234,33 +245,25 @@ header{
                 cursor: pointer;
             }
             
-            @media (min-width: $small) and (max-width: $medium) {
-              
-                
-            }
-            @media (min-width: $medium) and (max-width: $big)  {
-               
-           }
+            
+           
             &:hover{
-                transform: translateY(-40px);
+                
                 transition: all .5s; 
-                justify-content: initial;
+                justify-content: center;
                 cursor: pointer;
-                box-shadow: 0px 0px 20px 15px rgb(160, 2, 2);
                 @media (max-width: $small) {
-                    transform: translateY(0px);
-                    
+                    transform: translateY(0px);                    
                  }
             }
             &:hover p {
                 display: block;
                 transition: all 1s;
                 @media (max-width: $smallest) {
-                    transform: translateY(-20px);
-                    
+                    transform: translateY(-20px);                    
                  }
             }
-            
+        }
             .icon_container{
                 position: relative;
                 width: 100%;
@@ -269,6 +272,8 @@ header{
                 .card_icon{
                     font-size: 7rem;
                     margin: auto;
+                    
+                color: $colorSecundario;
                 }
             }
             
@@ -279,6 +284,7 @@ header{
                 justify-content: center;
                 align-items: center;
                 min-height: 100px;
+                color: $colorSecundario;
             }
             p{
                 position: relative;
@@ -288,12 +294,12 @@ header{
                 font-size: 1.5rem;
                 text-align: center;
                 text-align: justify;
-                line-height: 20px;         
+                line-height: 20px;    
+                color: $colorSecundario;     
                 font-family: var(--fuenteSecundaria);
                 @media (max-width: $small) {
                     display: block;
-                }
-                
+                }                
             }
         }
     }
@@ -315,28 +321,25 @@ header{
             width: 50%;
             min-width: 250px;
             padding: 15px 10px;              
-            background: rgb(227,220,223);
-            background: linear-gradient(36deg, rgb(160, 155, 157) 0%, rgba(62,63,64,1) 100%);
+           background-color: $colorSecundarioClaro;
             border-radius: 15px;
             box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.471);
             color: white;
             overflow: hidden;
+            opacity: 0;
             @media (max-width: $small) {
                 width: 100%;
                 min-width: 300px;
              }
              @media (min-width: $small)and (max-width :$medium) {
                 width: 75%;
-             }
-            
+             }          
                         
-
            
             h2{
                 color: white;
                 text-align: center;
-                font-size: 2.5rem;
-               
+                font-size: 2.5rem;               
             }
             
             p{
@@ -344,8 +347,7 @@ header{
                 color: white;
                 text-align: center;
                 font-size: 1.5rem;
-                font-weight: bolder;
-                
+                font-weight: bolder;                
             }
             strong{
                 color: white;
@@ -354,7 +356,7 @@ header{
             }
         }
     }
-}
+
 
 
 .container_branches
@@ -367,16 +369,16 @@ header{
     min-height: 100vh;
     grid-template-columns: 40% 60%;
     @media (max-width: $small) {
-        top: -150px;
+        top: 0px;
         display: flex;
         justify-content: center;
-        height: 100vh;
+        min-height: 100vh;
         align-items: center;
+        top: 0px;
+        
         flex-direction: column;
      }
-     @media (min-width: $smallest) and (max-width: $big)  {
-        top: -50px;
-   }
+   
     
     .title
     {
@@ -388,6 +390,8 @@ header{
         flex-direction: column;
         padding-left: 20px;
         margin: 10px;
+        transform: translateX(-100vw);
+        opacity: 0;
         h3
         {
             font-size: 2rem;
@@ -440,8 +444,8 @@ header{
     width: 100%;
     padding: 10px;
     position: relative;
-    top: 200px;
-    min-height: 150vh;   
+    top: 250px;
+    min-height:200vh;   
     padding-bottom:150px; 
     display: flex;
     justify-content: space-evenly;
@@ -450,11 +454,14 @@ header{
     color: white;    
     @media (max-width: $smallest) {
         top: 50px;
+        transform: translateY(-100px);
         min-height: 150vh;
         padding-bottom: 20px;
+        
      }
      @media (min-width: $smallest)and (max-width: $small)  {        
-        top: 50px;
+        top: -50px;
+        min-height: 120vh;
      }
     @media (min-width: $small)and (max-width: $medium)  {
         top: -150px;
@@ -471,9 +478,9 @@ header{
         top: -5%;
         margin: auto;
         width: 100%;
-        min-height: 25vh;
+        min-height: 50vh;
         content: '';
-        background: url(/images/About/sust_plant.jpg) no-repeat center center fixed ;        
+        background: url(../images/About/bolsa_peras.jpg) no-repeat center -200px  fixed ;        
         background-size: 100%;
         z-index: -1;
         border-radius: 1%;
@@ -483,76 +490,116 @@ header{
 
     }
          
-    
-    h1{
-        font-size: 5rem;
-        z-index: 999;
-        margin-top: 75px;
-        font-weight: bolder;
-        letter-spacing: -1.5px;
-    }
-    .sync_icon{
-        font-size: 8rem;
-        animation: rotateIcon 9s infinite ease-in-out;
-        z-index: 999;
+    .title_container{
         position: relative;
-        color: rgb(26, 206, 50);
+        top: 100px;
+        display: flex;
+        min-height: 400px;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
         @media (max-width: $small) {
-            font-size: 6rem;
+            min-height: 150px;
          }
-        &:hover{
-            animation: rotateIcon 5s infinite ease-in-out;
+        h1{
+            font-size: 5rem;
+            z-index: 999;
+            margin-top: 75px;
+            font-weight: bolder;
+            letter-spacing: -1.5px;
+            @media (max-width: $small) {
+                margin-top: initial;
+             }
         }
-    }
-    @keyframes rotateIcon {
-        0%{
-            transform: rotate(0deg);
-        }
-        100%{
-            transform: rotate(999deg);
-        }
-    }
-    h3{
-        font-size: 2rem;
-        font-family: var(--fuenteSecundaria);
-        @media (max-width: $smallest) {        
-            top: 100px;
+        .sync_icon{
+            font-size: 8rem;
+            animation: rotateIcon 9s infinite ease-in-out;
+            z-index: 999;
             position: relative;
+            color: rgb(26, 206, 50);
+            @media (max-width: $small) {
+                font-size: 6rem;
+             }
+            &:hover{
+                animation: rotateIcon 5s infinite ease-in-out;
+            }
         }
-        @media (max-width: $small) {
-            width: 90%;
-            text-align: center;
-         }
-        span{
-            font-size: 2rem;            
-            text-decoration: underline 2px red;
-            
+        @keyframes rotateIcon {
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(999deg);
+            }
         }
+        h3{
+            font-size: 2rem;
+            font-family: var(--fuenteSecundaria);
+           
+            @media (max-width: $small) {
+                width: 90%;
+                text-align: center;
+             }
+            span{
+                font-size: 2rem;            
+                text-decoration: underline 2px red;
+                
+            }
+        }
+
+
     }
-    p{
-        font-size: 1.7rem;
+   
+    .grid_container{
+        display: grid;
         width: 70%;
-        text-align: justify;
-        text-indent: 3rem;
-        padding: 15px;
-        font-weight: bold;
-        @media (max-width: $smallest) {        
-            top: 200px;
-            width: 100%;
-            position: relative;
+        padding: 10px;
+        position: relative;
+        top: 100px;
+        grid-template-columns: 40% 60%;
+        @media (max-width: $small) {      
+            width: 90%;  
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
         }
-        @media (min-width: $smallest)and(max-width: $small) {        
-            top: 0px;
+        img{
             width: 100%;
+            height: 100%;
+            border-radius: 1rem;
             position: relative;
+            
+            @media (max-width: $small) {      
+                width: 100%;
+                margin: auto;
+                padding-top: 50px;
+            }
         }
-        @media (min-width: $small) and(max-width: $medium) {
-            position: relative;
-            top: 20px;
-            width: 95%;
+        p{
             font-size: 1.7rem;
-         }
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: left;
+            margin-left: 20px;
+            @media (max-width: $small) {        
+                text-align: center;
+                margin: auto;
+                position: relative;
+                padding-left: initial;
+            }
+            @media (min-width: $small) and(max-width: $medium) {
+                position: relative;
+                top: 20px;
+                width: 95%;
+                font-size: 1.7rem;
+             }
+        }
+
     }
+   
 }
 
 footer
@@ -561,8 +608,7 @@ footer
     height: 100px;
     position: relative;
     bottom: 0px;
-    background: #060d0d;
-    background: radial-gradient(circle, #060d0d 27%, #666565 85%);
+    background-color: $colorSecundarioOscuro;
     display: flex;
     justify-content: center;
     align-items: center;

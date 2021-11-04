@@ -24,6 +24,16 @@ $big:1200px;
 $desktop:1824px;
 
 
+$colorPrincipal: #bce027;
+$colorPrincipalClaro:#d2f153;
+$colorPrincipalOscuro:#a4c425;
+
+$colorSecundarioClaro: rgb(27, 70, 90);
+$colorSecundario: rgb(16,40,51);  
+$colorSecundarioOscuro: rgb(7, 17, 22);
+  
+
+
 //*------------------MEDIA --------------------------*//
 body
 {
@@ -38,6 +48,7 @@ body
     background-color: white;
     scroll-behavior: smooth;
     overflow-y: scroll;
+    overflow-x: hidden;
     scroll-snap-type: y proximity;
 }
 
@@ -65,6 +76,7 @@ body
         z-index: 2;
         background: url(../images/Home/logotipo.png) no-repeat center 250px;
         background-size: 18%;
+        
         @media screen and (max-width: $small) {        
             background-size: 38%;
           }
@@ -72,6 +84,7 @@ body
 
     h1
     {
+        transform: translateY(0px); 
         font-size: 7rem;
         color: white;
         position: relative;
@@ -81,7 +94,7 @@ body
         text-align: center;
         @media screen and (max-width: $small) {        
             transform: translateY(-50px);
-            
+            font-size: 4rem;
         }
         
     }
@@ -96,22 +109,20 @@ body
 .finca_container{
     
     scroll-snap-align: start;
-    min-height: 130vh;    
+    min-height:70vh;    
     width: 100%;
     display: grid;
     grid-template-rows: 30% 70%;    
-    background: url(../images/Material_Cavaliere/cajas_naranjas.jpeg) no-repeat center center fixed ;    
+    background: url(../images/campo.jpg) no-repeat center center fixed;   
     background-size:cover;
+    
     @media screen and (max-width: $small) {        
-        display: flex;
+     
         min-height: 100vh;  
-        flex-direction: column;
-        align-items: center;        
-        background-size: cover;
-        justify-content: center;
+        display: grid;
+        grid-template-rows: 30% 70%; 
         background-color: rgba(255, 255, 255, 0.603); 
-        position: relative;
-        
+        position: relative;        
         padding-bottom: 50px;
       }
     .banner{
@@ -119,7 +130,8 @@ body
         display: block;
         justify-content: center;
         align-items: center;
-        
+        opacity: 0;
+        transform: translateX(500px);
         h1{
             font-size: 5rem;
             letter-spacing: -1px;
@@ -130,22 +142,12 @@ body
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 25vh;
+            min-height: 15vh;
             margin-top: 0px;
             text-align: center;
             background: rgb(99,99,99);
             background: linear-gradient(180deg, rgba(59, 59, 59, 0.582) 28%, rgba(247, 255, 247, 0.334) 100%);
-            @media screen and (max-width: $smallest) {        
             
-               
-            }
-            @media screen and (min-width: $small) {        
-                
-            }
-            
-            @media screen and (min-width: $medium) {        
-                
-            }
             
            
         }
@@ -155,6 +157,8 @@ body
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        opacity: 0;
+        transform: translateX(-500px);
         p{
             font-size: 2rem;            
             text-align: justify;
@@ -162,13 +166,13 @@ body
             display: flex;
             align-items: center;
             position: relative;
-            width: 60%;
+            min-width: 60%;
+            max-width: 65%;
             min-height:30vh;
-            padding: 0px;
-            text-indent: 2cm;
+            padding: 15px;
             border-radius: .5rem 4rem;
             font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.941);
+            background-color: rgba(255, 255, 255, 0.741);
             color: black;
             letter-spacing: 0px;
             padding: 20px;
@@ -194,19 +198,30 @@ body
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 50vh;
-    h1{
-        font-size: 3rem;
-        text-align: center;
-        @media screen and (max-width: $smallest) {   
-            font-size: 2rem;
-          }
-          @media screen and (min-width: $small) and (max-width :$medium) {   
-            font-size: 2.5rem;
-          }
+    
+    background-color: $colorPrincipal;
+    .dron{
+        width:90px;
+        z-index: 0;
+        margin-top: 100px;
     }
-}
+        h1{
+            font-size: 4rem;
+            color: $colorSecundario;
+            text-align: center;
+            @media screen and (max-width: $smallest) {   
+                font-size: 2rem;
+              }
+              @media screen and (min-width: $small) and (max-width :$medium) {   
+                font-size: 2.5rem;
+              }
+        }
+    }
+   
+
 
 
 
@@ -219,21 +234,10 @@ body
 {
     scroll-snap-align: start;
     width: 100%;
-    min-height: 100vh; 
+    min-height: 0vh; 
     background-color: white;
     position: relative;
-    
-    
-    .products
-    {
-        width: 100%;
-        top: 0px;
-        position: relative;
-        height: 250px;
-        background-size: cover;
-        display: flex;
-        background-image: linear-gradient(to right top, #65f971c5, #83f65f, #9cf24c, #b2ee39, #c7e925, #c2e31c, #bcde11, #b7d800, #97d005, #76c812, #51bf1e, #12b528a6);
-        h3
+    .products_title
         {
             font-size: 7rem;
             margin: auto;
@@ -243,147 +247,160 @@ body
             font-family: var(--fuenteSecundaria);
             color: white;
             text-align: center;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;        
+            background-color: $colorPrincipal;
             @media screen and (max-width: $small) {   
                 font-size: 4rem;
                 left: 0px;
               }
         }   
-    }
-    .grid_fruit_display
+    .products
     {
-        position: relative;
         width: 100%;
-        height: 50vh;
+        top: 0px;
         margin: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-size: cover;
+        position: relative;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;    
         @media screen and (max-width: $small) {   
-            width: 100%;
-          }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        .grid_fruit_display
+            {
+                position: relative;
+                height: 45vh;
+                width: 100%;
+                margin: auto;
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                background-size: cover;
+                overflow: hidden;
+                
 
-        &:nth-child(2) {
-        background: url(../images/Products/Fruits/banana.png) no-repeat center center;     
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        }
-        &:nth-child(3) {
-        background: url(../images/Products/Fruits/cebolla.png) no-repeat center center;        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        } 
-        &:nth-child(4) {
-        background: url(../images/Products/Fruits/garlick.png) no-repeat center center;  
-        @media screen and (max-width: $medium) {   
-            background-size: 80%;
-             
-           }   
-        }
-        &:nth-child(5) {
-        background: url(../images/Products/Fruits/carrot1.png) no-repeat center center;   
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }     
-        } 
-        &:nth-child(6) {
-        background: url(../images/Products/Fruits/remolacha.png) no-repeat center center;  
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }          
-        }
-        &:nth-child(7) {
-        background: url(../images/Products/Fruits/papaya.png) no-repeat center center; 
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }       
-        } 
-        &:nth-child(8) {
-        background: url(../images/Products/Fruits/melon.png) no-repeat center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        }
-        &:nth-child(9) {
-        background: url(../images/Products/Fruits/watermelon.png) no-repeat center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        } 
-        &:nth-child(10) {
-        background: url(../images/Products/Fruits/mango.png) no-repeat  center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        } 
-        &:nth-child(11) {
-        background: url(../images/Products/Fruits/anana.png) no-repeat  center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        } 
-        &:nth-child(12) {
-        background: url(../images/Products/Fruits/orange.png) no-repeat  center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        } 
-        &:nth-child(13) {
-        background: url(../images/Products/Fruits/mandarine.png) no-repeat  center center
-        ;
-        @media screen and (max-width: $medium) {   
-            background-size: 80%;
-             
-           }
-        background-size: 50%;
-        } 
-        &:nth-child(14) {
-        background: url(../images/Products/Fruits/lemon.png) no-repeat  center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 80%;
-             
-           }
-        } 
-        &:nth-child(15) {
-        background: url(../images/Products/Fruits/pomelo.png) no-repeat  center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 100%;
-             
-           }
-        } 
-        &:nth-child(16) {
-        background: url(../images/Products/Fruits/repollo.png) no-repeat  center center;
-        
-        @media screen and (max-width: $medium) {   
-            background-size: 80%;
-             
-           }
-        background-size: 50%;
-        
-        } 
+                &:nth-child(1) {
+                    background: url(../images/Products/Fruits/banana.png) no-repeat center center;     
+                    background-size: 60%; 
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;                    
+                        }
+                }
+                &:nth-child(2) {
+                    background: url(../images/Products/Fruits/cebolla.png) no-repeat center center;   
+                    background-size: 70%;      
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;
+                            
+                        }
+                } 
+                &:nth-child(3) {
+                    background: url(../images/Products/Fruits/garlick.png) no-repeat center center;  
+                    background-size: 55%; 
+                        @media screen and (max-width: $medium) {   
+                            background-size: 80%;
+                            
+                        }   
+                }
+                &:nth-child(4) {
+                    background: url(../images/Products/Fruits/carrot1.png) no-repeat center center;   
+                    background-size: 55%; 
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;
+                            
+                        }     
+                } 
+                &:nth-child(5) {
+                    background: url(../images/Products/Fruits/remolacha.png) no-repeat center center;  
+                    background-size: 55%; 
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;
+                            
+                        }          
+                }
+                &:nth-child(6) {
+                    background: url(../images/Products/Fruits/papaya.png) no-repeat center center; 
+                    background-size: 55%; 
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;
+                            
+                        }       
+                } 
+                &:nth-child(7) {
+                    background: url(../images/Products/Fruits/melon.png) no-repeat center center;   
+                    background-size: 55%;              
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;
+                            
+                        }
+                }
+                &:nth-child(8) {
+                    background: url(../images/Products/Fruits/watermelon.png) no-repeat center center;  
+                    background-size: 55%;               
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;
+                            
+                }
+                } 
+                &:nth-child(9) {
+                    background: url(../images/Products/Fruits/mango.png) no-repeat  center center;   
+                    background-size: 55%;             
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;                            
+                        }
+                } 
+                &:nth-child(10) {
+                    background: url(../images/Products/Fruits/anana.png) no-repeat  center center;   
+                    background-size: 55%;              
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;                    
+                        }
+                } 
+                &:nth-child(11) {
+                    background: url(../images/Products/Fruits/orange.png) no-repeat  center center;    
+                    background-size: 80%;            
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;                    
+                        }
+                } 
+                &:nth-child(12) {
+                    background: url(../images/Products/Fruits/mandarine.png) no-repeat  center center;
+                    background-size: 55%;
+                        @media screen and (max-width: $medium) {   
+                            background-size: 80%;                            
+                        }
+                } 
+                &:nth-child(13) {
+                    background: url(../images/Products/Fruits/lemon.png) no-repeat  center center; 
+                    background-size: 55%;                
+                        @media screen and (max-width: $medium) {   
+                            background-size: 80%;                    
+                        }
+                } 
+                &:nth-child(14) {
+                    background: url(../images/Products/Fruits/pomelo.png) no-repeat  center center;      
+                    background-size: 55%;             
+                        @media screen and (max-width: $medium) {   
+                            background-size: 100%;                    
+                        }
+                } 
+                &:nth-child(15) {
+                    background: url(../images/Products/Fruits/repollo.png) no-repeat  center center;
+                    width: 100vw;
+                        @media screen and (max-width: $medium) {   
+                            background-size: 80%;                            
+                        }
+                    background-size: 20%;                
+                } 
        
-        .fruit_card{
-            
-            width: 100vw;
+        .fruit_card{            
+            width: 100%;
             min-height: 50vh;
             display: grid;
             grid-template-columns: 50% 50%;
@@ -405,14 +422,13 @@ body
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
-                margin-top: 100px;
-                margin-bottom: 100px;
+                
                 align-items: center;
                
                 
             }
             &:hover .fruit_info_container p {
-                transform: translateX(200px);
+                transform: translateX(50px);
                 transition: all 1s;
                 @media screen and (max-width: $big) {   
                     transform: none;
@@ -432,10 +448,10 @@ body
                 align-items: center;
                 justify-content: center;
                 flex-direction: column;
-                background-color: rgba(0, 0, 0, 0.363);
+                color: $colorSecundario;
                 border-radius:  0rem 3rem;
                 backdrop-filter: blur(30px);
-                min-width: 250px;
+                min-width: 100px;
                 transform: translateY(-30px);
             } 
             .img_container
@@ -465,7 +481,8 @@ body
                     margin: auto;
                     position: relative;
                     font-size: 4em;
-                    color: white;
+                    color: $colorSecundarioClaro;
+                    transition: all 1s;
                     @media screen and (max-width: $small) {   
                         font-size:4rem;
                         
@@ -477,10 +494,10 @@ body
                     text-align: center;
                     width: 50%;
                     min-width: 250px;
-                    background-color: rgba(95, 197, 95, 0.782);
+                    background-color: rgba(95, 197, 95, 0.682);
+                    display: none;
                     border-radius: 0rem 3rem;
-                    padding: 15px;
-                    
+                    padding: 10px;                    
                     color: white;
                     @media screen and (max-width: $smallest) {   
                        font-size: 1.4rem;
@@ -506,6 +523,8 @@ body
     
    
 }    
+    }
+    
 
 .products_link{
     display: block;
@@ -516,7 +535,7 @@ body
     margin-top: 10px;
     transform: translateY(200px);
     text-decoration: none;
-    border-bottom: 2px solid red;
+    background-color: $colorPrincipal;
     width: 250px;
     z-index: 99999;
     display: flex;
@@ -524,7 +543,7 @@ body
     align-items: center;
     color: black;
     &:hover{
-        background-color: black;
+        background-color: $colorSecundario;
         color: white;
     }
     @media screen and (max-width: $small) {   
@@ -540,8 +559,7 @@ footer
     height: 100px;
     position: relative;
     top: 50vh;
-    background: #060d0d;
-    background: radial-gradient(circle, #060d0d 27%, #666565 85%);
+    background-color: $colorSecundario;
     display: flex;
     justify-content: center;
     align-items: center;

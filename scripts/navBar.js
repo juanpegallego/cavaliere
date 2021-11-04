@@ -13,15 +13,19 @@ function hideNavBar (){
 
         function responsiveNav (){
             nav.style.display = 'none';
-            hamburguer.style.display = 'flex';  
-            hamburguer.addEventListener('click', function(){
+            hamburguer.style.display = 'flex';              
+
+            hamburguer.addEventListener('click', function(){       
+              
+              hamburguer.className = 'hamburguer_active';
                 nav.style.transition = 'all 1s';
                 nav.style.display === 'flex' ? 
                 nav.style.display = 'none' : nav.style.display = 'flex'; 
-                hamburguer.classList = 'hamburguer_active';
+
             })
         }
         function basicNav (){
+          
             nav.style.display = 'flex';
             hamburguer.style.display = 'none';
         }

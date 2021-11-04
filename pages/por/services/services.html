@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cavaliere Group - Services</title>
+    <title>Cavaliere Group - Serviços</title>
     <link rel="stylesheet" href="../../../css/nav_styles.css">
     <link rel="stylesheet" href="../../../css/services_styles.css">
     <link rel="stylesheet" href="../../../css/wsp_styles.css">
@@ -108,19 +108,7 @@
                         <ion-icon name="color-wand-outline" class="icon"></ion-icon>
                         <span>Serviços</span>
                     </a>
-                </li>
-                <ul class="hide_lista">
-                    <li class="hide_item">
-                        <a href="../../../pages/por/services/services.html#services">
-                            Serviços
-                        </a>
-                    </li>
-                    <li class="hide_item">
-                        <a href="../../../pages/por/services/services.html#logistica">
-                            Logistica
-                        </a>
-                    </li>
-                </ul>
+                </li>               
             </div>
 
             <div class="nav_wrapper">
@@ -131,29 +119,27 @@
                     </a>
                 </li>
             </div>
-
         </ul>
-
     </nav>
-    <header id="header">
-        <ion-icon name="caret-forward-outline" id="lamp_arrow"></ion-icon>
-        <ion-icon name="bulb-outline" onclick="turnOn()" id="lamp"></ion-icon>
+    <header id="header" class="header">
+        <div class="header_text">
+            <h1>
 
-        <h1>
-
-            ¿ Como vamos te ajudar ?
-        </h1>
-
-        <p class="first_text">
-            Sabemos que comprar e / ou vender no exterior são processos que podem ser complicados se você não tiver
-            com o conhecimento de como fazê-lo.
-        </p>
-        <p class="second_text">
-            É por isso que oferecemos <strong> nossa experiência </strong> para
-            pavimentar o seu caminho, implementando a metodologia de trabalho que desenvolvemos para a realização de
-            projetos de
-            diferentes áreas e setores.
-        </p>
+                Comércio internacional
+            </h1>
+    
+            <h3>
+                Comprar e / ou vender no exterior são processos que podem ser complicados se você não tiver
+                com o conhecimento de como fazê-lo.
+            </h3>
+            <p >
+                Oferecemos nossa experiência  para
+                pavimentar o seu caminho, implementando a metodologia de trabalho que desenvolvemos para a realização de
+                projetos de
+                diferentes áreas e setores.
+            </p>
+        </div>
+      
     </header>
 
     <div class="content">
@@ -205,233 +191,6 @@
     </div>
 
 
-    <div class="white_space">
-        <h3>
-
-            OS MELHORES SERVIÇOS EXIGEM A TECNOLOGIA MAIS AVANÇADA
-        </h3>
-    </div>
-
-
-
-    <div class="container_logistica" id="logistica">
-        <div class="title_container">
-            <h1>
-                Cavaliere Logistica
-            </h1>
-
-            <p>
-                Na gestão de transportes, a melhor estratégia é sempre aquela que vai direto ao ponto. <br>
-                Por isso, a Cavaliere Group investe constantemente em inovação sustentável, traduzindo cada etapa
-                dos processos em economia, segurança e objetividade.
-
-            </p>
-            <h4>
-
-                Conheça nossa frota <br>
-                <ion-icon name="caret-down-outline"></ion-icon>
-            </h4>
-            <ul>
-                <li onclick="mostrar('refri30')">
-                    Caminhão refrigerador 30 paletes
-                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                </li>
-                <li onclick="mostrar('refri28')">
-                    Caminhão refrigerador 28 paletes
-                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                </li>
-                <li onclick="mostrar('carga30')">
-                    Caminhão de carga geral 30 paletes
-                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                </li>
-                <li onclick="mostrar('carga28')">
-                    Caminhão de carga geral 28 paletes
-                    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-                </li>
-            </ul>
-        </div>
-        <div class="container_flota">
-            <div class="fleet_card" id="refri30">
-                <div class="card_title">
-                    <h3>CAMINHÃO REFRIGERADOR 30 PALETES</h3>
-                </div>
-                <div class="grid_info_container">
-                    <div class="left_container">
-                        <p>
-                            O Semi-reboque Refrigerado Cavaliere Cargo 30 Pallets tem a maior capacidade de carga
-                            do mercado. <br> As informações monitoradas via telemetria permitem saber em tempo real a
-                            condições de carregamento e velocidade do veículo.
-                        </p>
-                        <ul>
-                            <li> Temperatura controlada (até 3 temperaturas diferentes). </li>
-                            <li> Capacidade para 30 paletes. </li>
-                            <li> Volume corporal: 96,4 m³. </li>
-                            <li> Maior câmara fria do Brasil - Argentina. </li>
-
-                        </ul>
-                    </div>
-                    <div class="img_container">
-                        <img src="../../../images/Logistic/truck.png" alt="truck_image">
-                        <div class="specs">
-                            <ul>
-                                <li>
-                                    Tipo de carga: <span>Refrigerado</span>
-                                </li>
-                                <li>
-                                <li>Dimensões do corpo:
-                                    <span>15,2 m x 2,6 m</span>
-
-                                </li>
-                                <li>
-                                    Capacidade: <span>30 paletes</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <button onclick="ocultarTarjetas()">
-                    <ion-icon name="caret-up-outline"></ion-icon>
-                    Ocultar
-                </button>
-            </div>
-
-            <div class="fleet_card" id="refri28">
-                <div class="card_title">
-                    <h3>CAMINHÃO REFRIGERADOR 28 PALETES</h3>
-                </div>
-                <div class="grid_info_container">
-                    <div class="left_container">
-                        <p>
-                            Conjunto totalmente preparado para o transporte de cargas com temperatura controlada, como
-                            alimentos e outros perecíveis. <br> A troca de informações via telemetria permite o
-                            monitoramento em tempo real da velocidade do veículo e das condições de carga.
-                        </p>
-                        <ul>
-                            <li> Temperatura controlada (até 3 temperaturas diferentes). </li>
-                            <li> Capacidade para 28 paletes. </li>
-                            <li> Volume corporal: 84m³ / 87,6m³ </li>
-
-                        </ul>
-                    </div>
-                    <div class="img_container">
-                        <img src="../../../images/Logistic/png_truck.png" alt="truck_image">
-                        <div class="specs">
-                            <ul>
-                                <li>
-                                    Tipo de carga: <span>Refrigerado</span>
-                                </li>
-                                <li>
-                                <li>Dimensões do corpo: <span>14,3 m x 2,6 m</span>
-
-                                </li>
-                                <li>
-                                    Capacidade: <span>28 paletes</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <button onclick="ocultarTarjetas()">
-                    <ion-icon name="caret-up-outline"></ion-icon>
-                    Ocultar
-                </button>
-            </div>
-
-            <div class="fleet_card" id="carga30">
-                <div class="card_title">
-                    <h3> CAMINHÃO DE CARGA GERAL 30 PALETES</h3>
-                </div>
-                <div class="grid_info_container">
-                    <div class="left_container">
-                        <p>
-                            A mesma excelência que aplicamos ao manuseio de cargas com temperaturas controladas endossa
-                            nossa atuação em carga seca. <br> Nossos conjuntos estão preparados para atender a demanda
-                            logística dos mais diversos bens de consumo.
-                        </p>
-                        <ul>
-                            <li>Capacidad para 30 palets.</li>
-                            <li>Volumen del cuerpo: 108m³.</li>
-                            <li>Carga seca / geral</li>
-
-                        </ul>
-                    </div>
-                    <div class="img_container">
-                        <img src="../../../images/Logistic/png_truck_white.png" alt="truck_image">
-                        <div class="specs">
-                            <ul>
-                                <li>
-                                    Tipo de carga: <span>Geral - Seco</span>
-                                </li>
-                                <li>
-                                <li>Dimensões do corpo: <span>15,3 m x 2,8 m</span>
-
-                                </li>
-                                <li>
-                                    Capacidade: <span>30 paletes</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <button onclick="ocultarTarjetas()">
-                    <ion-icon name="caret-up-outline"></ion-icon>
-                    Ocultar
-                </button>
-            </div>
-
-            <div class="fleet_card  " id="carga28">
-                <div class="card_title">
-                    <h3> CAMINHÃO DE CARGA GERAL 28 PALETES</h3>
-                </div>
-                <div class="grid_info_container">
-                    <div class="left_container">
-                        <p>
-                            A mesma excelência que aplicamos ao manuseio de cargas com temperaturas controladas endossa
-                            nossa atuação em carga seca. Nossos corpos estão preparados para atender a demanda logística
-                            dos mais diversos bens de consumo.
-                        </p>
-                        <ul>
-                            <li>Carga seca / geral</li>
-                            <li>Capacidad para 28 palets.</li>
-                            <li>Volumen del cuerpo: 101 m³.</li>
-
-                        </ul>
-                    </div>
-                    <div class="img_container">
-                        <img src="../../../images/Logistic/png_truck_white.png" alt="truck_image">
-                        <div class="specs">
-                            <ul>
-                                <li>
-                                    Tipo de carga: <span>Geral - Seco</span>
-                                </li>
-                                <li>
-                                <li>Dimensões do corpo: <span>14,3 m x 2,7 m</span>
-                                </li>
-                                <li>
-                                    Capacidade: <span>28 paletes</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <button onclick="ocultarTarjetas()">
-                    <ion-icon name="caret-up-outline"></ion-icon>
-                    Ocultar
-                </button>
-            </div>
-
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
 
 
     <div class="container_invitacion">
@@ -452,16 +211,11 @@
 
 
 
-
-
-
-
-
     <footer>
         <div class="footer_content">
             <div class="logo_container">
                 <a href="../../../pages/por/index/index.html">
-                    <img src="../../../images/Home/logotipo_column.png" alt="cavaliere_logo">
+                    <img src="../../../images/Home/logotipo.png" alt="cavaliere_logo">
                 </a>
 
             </div>
