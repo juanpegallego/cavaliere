@@ -599,7 +599,6 @@ body {
         cursor: pointer;
         background-color: rgba(182, 179, 179, 0.727);
         color: white;
-        border-radius: .5rem;
         font-size: 1.7rem;
         font-weight: bolder; }
         @media (max-width: 600px) {
@@ -611,7 +610,6 @@ body {
             font-weight: bolder;
             background-color: rgba(182, 179, 179, 0.727); } }
         .container_3 .form_container form button:hover {
-          transition: .2s;
           background-color: #bce027;
           color: #071116; }
 

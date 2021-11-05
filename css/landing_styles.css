@@ -12,8 +12,7 @@
   --fuenteSecundaria:'Montserrat', 'Sans Serif'; }
 
 body {
-  min-height: 100vh;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -22,15 +21,12 @@ body {
   flex-direction: column;
   font-family: var(--fuentePrincipal);
   overflow: hidden; }
-  @media screen and (min-width: 900px) and (max-width: 1200px) {
-    body {
-      display: block; } }
 
 .video_loading {
   background: url(../images/campo.jpg) no-repeat center center;
   background-size: cover;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   position: absolute; }
 
 .site {
@@ -40,34 +36,51 @@ body {
   align-items: center;
   width: 100%; }
   .site video {
-    width: 100%;
+    width: 100vw;
     z-index: -1;
     position: absolute; }
-  .site .flags_container ul {
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-    align-items: center; }
-    .site .flags_container ul li:first-child a {
-      background: url(../images/flags/usa.png) no-repeat center center;
-      background-size: 90%;
-      color: transparent; }
-    .site .flags_container ul li:nth-child(2) a {
-      background: url(../images/flags/spain.png) no-repeat center center;
-      background-size: 90%;
-      color: transparent; }
-    .site .flags_container ul li:nth-child(3) a {
-      background: url(../images/flags/brazil.png) no-repeat center center;
-      background-size: 90%;
-      color: transparent; }
-    .site .flags_container ul li a {
-      margin-right: 15px;
-      width: 70px;
-      height: 35px;
-      display: block; }
+    @media screen and (max-width: 1200px) {
+      .site video {
+        transform: scale(350%); } }
+  .site .flags_container {
+    position: absolute;
+    right: 30px;
+    top: 30px; }
+    @media screen and (max-width: 600px) {
+      .site .flags_container {
+        position: absolute;
+        display: flex;
+        top: 150px;
+        justify-content: center;
+        width: 100%;
+        right: inherit; } }
+    .site .flags_container ul {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center; }
+      .site .flags_container ul li:first-child a {
+        background: url(../images/flags/usa.png) no-repeat center center;
+        background-size: 70%;
+        color: transparent; }
+      .site .flags_container ul li:nth-child(2) a {
+        background: url(../images/flags/spain.png) no-repeat center center;
+        background-size: 70%;
+        color: transparent; }
+      .site .flags_container ul li:nth-child(3) a {
+        background: url(../images/flags/brazil.png) no-repeat center center;
+        background-size: 70%;
+        color: transparent; }
+      .site .flags_container ul li a {
+        width: 70px;
+        height: 35px;
+        display: block; }
+        .site .flags_container ul li a:hover {
+          opacity: .7; }
   .site .site_title {
     min-width: 500px;
     min-height: 350px;
+    text-align: center;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -76,34 +89,52 @@ body {
     color: white;
     z-index: 1;
     background-size: contain; }
+    @media screen and (max-width: 600px) {
+      .site .site_title {
+        position: relative;
+        top: 100px; } }
     .site .site_title::before {
       position: absolute;
-      top: -80px;
-      left: -80px;
+      top: -90px;
+      left: -90px;
       width: 350px;
       height: 300px;
       background: url(../images/Home/logotipo.png) no-repeat center center;
-      background-size: 40%;
+      background-size: 30%;
       content: '';
       z-index: 9999999; }
+      @media screen and (max-width: 600px) {
+        .site .site_title::before {
+          transform: translateY(-250px) translateX(160px);
+          position: absolute;
+          background-size: 30%; } }
     .site .site_title h1 {
       font-size: 7rem;
       letter-spacing: -1px;
       text-shadow: 0px 0px 5px white; }
+      @media screen and (max-width: 600px) {
+        .site .site_title h1 {
+          font-size: 4rem; } }
     .site .site_title h2 {
       font-size: 3rem;
       text-shadow: 0px 0px 5px white; }
+      @media screen and (max-width: 600px) {
+        .site .site_title h2 {
+          font-size: 2rem; } }
     .site .site_title a {
       text-decoration: none;
       font-size: 3rem;
       color: #d2f153;
       color: white;
       border: 2px solid white;
-      padding: 5px 10px;
+      padding: 5px 15px;
       font-weight: bold;
       box-shadow: 0px 0px 5px white, inset 0px 0px 5px rgba(255, 255, 255, 0.514); }
+      @media screen and (max-width: 600px) {
+        .site .site_title a {
+          font-size: 2.5rem;
+          padding: 10px 20px; } }
       .site .site_title a:hover {
-        background-color: #bce027;
-        color: #102833; }
+        backdrop-filter: blur(10px); }
 
 /*# sourceMappingURL=landing_styles.css.map */

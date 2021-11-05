@@ -13,7 +13,7 @@
     --fuentePrincipal:'Poppins', 'Sans Serif';
     --fuenteSecundaria:'Montserrat', 'Sans Serif';
   }
- 
+
   $colorPrincipal: #bce027;
   $colorPrincipalClaro:#d2f153;
   $colorPrincipalOscuro:#a4c425;
@@ -27,13 +27,11 @@ $smallest: 375px;
 $small: 600px;
 $medium: 900px;
 $big:1200px;
-$desktop:1824px;
 
 //*------------------MEDIA --------------------------*//
 body
 {
-    min-height: 100vh;
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -41,20 +39,15 @@ body
     align-items: center;
     flex-direction: column;
     font-family: var(--fuentePrincipal);
-    
-    
     overflow: hidden;
-    @media screen and (min-width: $medium) and (max-width: $big) {
-        
-        display: block;
-    }
+   
 }
 
 .video_loading{
     background: url(../images/campo.jpg)no-repeat center center;
     background-size: cover;
     width:100%;
-    height: 100%;
+    min-height: 100vh;    
     position: absolute;
     }
 .site{
@@ -64,38 +57,61 @@ body
     align-items: center;
     width: 100%;
     video{
-        width: 100%;
+        width: 100vw;
         z-index: -1;
         position: absolute;
+        @media screen and (max-width: $big) {           
+            transform: scale(350%);
+         } 
     }
+
+
+
+
+
+
+
     .flags_container{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        @media screen and (max-width: $small) {           
+            position: absolute;
+            display: flex;
+            top: 150px;
+            justify-content: center;
+            width: 100%;
+            right: inherit;
+         }
         ul{
-            
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
         flex-direction: row;
         align-items: center;
+        
             li{
                 &:first-child a{
                     background: url(../images/flags/usa.png) no-repeat center center;
-                    background-size: 90%; 
+                    background-size: 70%; 
                     color: transparent;
                   }
                   &:nth-child(2) a{
                     background: url(../images/flags/spain.png) no-repeat center center;
-                    background-size: 90%; 
+                    background-size: 70%; 
                     color: transparent;
                   }
                   &:nth-child(3) a{
                    background: url(../images/flags/brazil.png) no-repeat center center;
-                   background-size: 90%; 
+                   background-size: 70%; 
                    color: transparent;
                   }
                   a{
-                    margin-right: 15px;
                     width: 70px;
                     height: 35px;
                     display: block;
+                    &:hover{
+                        opacity: .7;
+                    }
                 }  
             }
         }
@@ -105,11 +121,14 @@ body
     }
 
 
-
+    @media screen and (max-width: $big) {
+       
+     } 
 
     .site_title{
         min-width: 500px;
         min-height: 350px;
+        text-align: center;
         display: flex;
         justify-content: space-evenly;
         align-items: center;
@@ -118,25 +137,41 @@ body
         color: white;   
         z-index: 1;
         background-size: contain;
+        @media screen and (max-width: $small) {           
+            position: relative;
+            top: 100px;
+          }
         &::before{
             position: absolute;
-            top: -80px;
-            left: -80px;
+            top: -90px;
+            left: -90px;
             width: 350px;
             height: 300px;
             background: url(../images/Home/logotipo.png) no-repeat center center;
-            background-size: 40%;
+            background-size: 30%;
             content: '';
             z-index: 9999999;
+            @media screen and (max-width: $small) {           
+             transform: translateY(-250px) translateX(160px); 
+             
+              position: absolute;
+              background-size: 30%;
+            }
         }
         h1{
             font-size: 7rem;
             letter-spacing: -1px;
             text-shadow: 0px 0px 5px white;
+            @media screen and (max-width: $small) {           
+                font-size: 4rem;
+            }
         }
         h2{
             font-size: 3rem;
             text-shadow: 0px 0px 5px white;
+            @media screen and (max-width: $small) {           
+                font-size: 2rem;
+            }
         }
         a{
             text-decoration: none;
@@ -144,13 +179,17 @@ body
             color: $colorPrincipalClaro;
             color: white;
             border: 2px solid white;
-            padding: 5px 10px;
+            padding: 5px 15px;
             font-weight: bold;
             box-shadow: 0px 0px 5px white,
             inset 0px 0px 5px rgba(255, 255, 255, 0.514);
+            @media screen and (max-width: $small) {           
+                font-size: 2.5rem;
+                padding: 10px 20px;
+            }
             &:hover{
-              background-color: $colorPrincipal;
-              color: $colorSecundario;  
+             backdrop-filter: blur(10px);
+
             }
         }
     

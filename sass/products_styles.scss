@@ -109,7 +109,7 @@ body
 .finca_container{
     
     scroll-snap-align: start;
-    min-height:70vh;    
+    min-height:50vh;    
     width: 100%;
     display: grid;
     grid-template-rows: 30% 70%;    
@@ -130,8 +130,7 @@ body
         display: block;
         justify-content: center;
         align-items: center;
-        opacity: 0;
-        transform: translateX(500px);
+        display: none;
         h1{
             font-size: 5rem;
             letter-spacing: -1px;
@@ -143,6 +142,7 @@ body
             justify-content: center;
             align-items: center;
             min-height: 15vh;
+            position: relative;
             margin-top: 0px;
             text-align: center;
             background: rgb(99,99,99);
@@ -152,62 +152,17 @@ body
            
         }
     }
-    .text{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        opacity: 0;
-        transform: translateX(-500px);
-        p{
-            font-size: 2rem;            
-            text-align: justify;
-            margin: auto;
-            display: flex;
-            align-items: center;
-            position: relative;
-            min-width: 60%;
-            max-width: 65%;
-            min-height:30vh;
-            padding: 15px;
-            border-radius: .5rem 4rem;
-            font-weight: bold;
-            background-color: rgba(255, 255, 255, 0.741);
-            color: black;
-            letter-spacing: 0px;
-            padding: 20px;
-            @media screen and (max-width: $smallest) {        
-                transform: none;
-                font-size: 1.8rem;
-                
-            }
-            @media screen and (max-width: $small) {        
-                width: 90%;
-                
-            }
-            @media screen and (min-width: $small) and (max-width :$medium){   
-                transform: none;
-                margin: auto;
-                width: 80%;
-              }
-        }
-    }
+    
 }
 
 .white_space{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    min-height: 50vh;
-    
-    background-color: $colorPrincipal;
-    .dron{
-        width:90px;
-        z-index: 0;
-        margin-top: 100px;
-    }
+    min-height: 50vh;    
+    background-color: white;
         h1{
             font-size: 4rem;
             color: $colorSecundario;
@@ -218,6 +173,41 @@ body
               @media screen and (min-width: $small) and (max-width :$medium) {   
                 font-size: 2.5rem;
               }
+        }
+
+
+        .text{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            p{
+                font-size: 2rem;            
+                text-align: justify;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                position: relative;
+                max-width: 70%;
+                min-height:30vh;
+                background-color: rgba(255, 255, 255, 0.741);
+                color: black;
+                padding: 20px;
+                @media screen and (max-width: $smallest) {        
+                    transform: none;
+                    font-size: 1.8rem;
+                    
+                }
+                @media screen and (max-width: $small) {        
+                    width: 90%;
+                    
+                }
+                @media screen and (min-width: $small) and (max-width :$medium){   
+                    transform: none;
+                    margin: auto;
+                    width: 80%;
+                  }
+            }
         }
     }
    
@@ -247,6 +237,8 @@ body
             font-family: var(--fuenteSecundaria);
             color: white;
             text-align: center;
+            transform: translateX(200vw);
+            opacity: 0;
             height: 200px;
             display: flex;
             align-items: center;
@@ -406,7 +398,7 @@ body
             grid-template-columns: 50% 50%;
             overflow: hidden;
             transition: all 2s;
-            backdrop-filter: blur(35px);
+            backdrop-filter: blur(15px);
             display: flex;
             justify-content: center;
             align-items: center;

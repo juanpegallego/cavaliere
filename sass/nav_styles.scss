@@ -187,7 +187,8 @@ nav
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
     z-index: 99999999999999999999;
-    
+    border: .2px solid rgba(255, 255, 255, 0.286);
+    border-top : none;
     @media screen and (max-width: $big) {
         width:100vw;
         display: flex;

@@ -70,7 +70,7 @@ body {
 
 .finca_container {
   scroll-snap-align: start;
-  min-height: 70vh;
+  min-height: 50vh;
   width: 100%;
   display: grid;
   grid-template-rows: 30% 70%;
@@ -89,8 +89,7 @@ body {
     display: block;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    transform: translateX(500px); }
+    display: none; }
     .finca_container .banner h1 {
       font-size: 5rem;
       letter-spacing: -1px;
@@ -102,59 +101,20 @@ body {
       justify-content: center;
       align-items: center;
       min-height: 15vh;
+      position: relative;
       margin-top: 0px;
       text-align: center;
       background: #636363;
       background: linear-gradient(180deg, rgba(59, 59, 59, 0.582) 28%, rgba(247, 255, 247, 0.334) 100%); }
-  .finca_container .text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    transform: translateX(-500px); }
-    .finca_container .text p {
-      font-size: 2rem;
-      text-align: justify;
-      margin: auto;
-      display: flex;
-      align-items: center;
-      position: relative;
-      min-width: 60%;
-      max-width: 65%;
-      min-height: 30vh;
-      padding: 15px;
-      border-radius: .5rem 4rem;
-      font-weight: bold;
-      background-color: rgba(255, 255, 255, 0.741);
-      color: black;
-      letter-spacing: 0px;
-      padding: 20px; }
-      @media screen and (max-width: 375px) {
-        .finca_container .text p {
-          transform: none;
-          font-size: 1.8rem; } }
-      @media screen and (max-width: 600px) {
-        .finca_container .text p {
-          width: 90%; } }
-      @media screen and (min-width: 600px) and (max-width: 900px) {
-        .finca_container .text p {
-          transform: none;
-          margin: auto;
-          width: 80%; } }
 
 .white_space {
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
   min-height: 50vh;
-  background-color: #bce027; }
-  .white_space .dron {
-    width: 90px;
-    z-index: 0;
-    margin-top: 100px; }
+  background-color: white; }
   .white_space h1 {
     font-size: 4rem;
     color: #102833;
@@ -165,6 +125,35 @@ body {
     @media screen and (min-width: 600px) and (max-width: 900px) {
       .white_space h1 {
         font-size: 2.5rem; } }
+  .white_space .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .white_space .text p {
+      font-size: 2rem;
+      text-align: justify;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      position: relative;
+      max-width: 70%;
+      min-height: 30vh;
+      background-color: rgba(255, 255, 255, 0.741);
+      color: black;
+      padding: 20px; }
+      @media screen and (max-width: 375px) {
+        .white_space .text p {
+          transform: none;
+          font-size: 1.8rem; } }
+      @media screen and (max-width: 600px) {
+        .white_space .text p {
+          width: 90%; } }
+      @media screen and (min-width: 600px) and (max-width: 900px) {
+        .white_space .text p {
+          transform: none;
+          margin: auto;
+          width: 80%; } }
 
 .products_container {
   scroll-snap-align: start;
@@ -181,6 +170,8 @@ body {
     font-family: var(--fuenteSecundaria);
     color: white;
     text-align: center;
+    transform: translateX(200vw);
+    opacity: 0;
     height: 200px;
     display: flex;
     align-items: center;
@@ -311,7 +302,7 @@ body {
         grid-template-columns: 50% 50%;
         overflow: hidden;
         transition: all 2s;
-        backdrop-filter: blur(35px);
+        backdrop-filter: blur(15px);
         display: flex;
         justify-content: center;
         align-items: center;

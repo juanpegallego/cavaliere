@@ -824,8 +824,7 @@ body
                 height: 40px;
                 cursor: pointer;
                 background-color: rgba(182, 179, 179, 0.727);
-                color: white;
-                border-radius: .5rem;                
+                color: white;          
                 font-size: 1.7rem;
                 font-weight: bolder;
                 @media (max-width: $small) {
@@ -839,7 +838,6 @@ body
                 
                 &:hover
                 {   
-                    transition: .2s;
                     background-color: $colorPrincipal;
                     color: $colorSecundarioOscuro;
                 }

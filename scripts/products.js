@@ -28,31 +28,19 @@ gsap.to('.header_title',{
 });
 
 
-gsap.to('.banner',{
-    scrollTrigger: {
-        trigger:".header",
-        start: "center top",
-		end: "bottom top",
-        scrub:true
-    },  
-    duration:1,
-    ease:Sine.easeOut,
-    opacity:1,
-    x:0,
-});
+
     
-gsap.to('.text',{
+
+gsap.to('.products_title',{
     scrollTrigger: {
-        trigger:".header",
-        start: "center top",
-		end: "bottom top",
-        scrub:true
+        trigger:".white_space",
+        start: "top bottom",
+		end: "top top"
     },  
-    duration:1,
+    duration:.5,
     delay:.5,
     ease:Sine.easeOut,
     opacity:1,
     x:0
 });
     
-
