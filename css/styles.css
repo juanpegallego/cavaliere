@@ -176,7 +176,7 @@ body {
         .container_1 .slider .slides .slide a {
           text-decoration: none;
           border-bottom: 2px solid #1b465a;
-          padding: 4px;
+          padding: 5px 10px;
           min-width: 20%;
           display: flex;
           justify-content: center;
@@ -376,8 +376,7 @@ body {
       height: 400px;
       flex-direction: column;
       padding-bottom: 20px;
-      position: relative;
-      top: 100px; }
+      position: relative; }
       @media (max-width: 600px) {
         .banner_container .grid_banner .grid_img {
           top: -100px; } }
@@ -426,14 +425,13 @@ body {
       justify-content: space-evenly;
       align-items: center;
       flex-direction: column;
-      position: relative;
-      top: -50px; }
+      position: relative; }
       @media (max-width: 600px) {
         .banner_container .grid_banner .grid_message {
           height: 300px;
           top: -150px; } }
       .banner_container .grid_banner .grid_message h1 {
-        font-size: 7rem;
+        font-size: 6rem;
         letter-spacing: -2px;
         color: #1b465a; }
         @media (max-width: 600px) {

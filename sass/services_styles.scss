@@ -60,30 +60,36 @@ $desktop:1824px;
 header{
     scroll-snap-align: start;
     width: 100%;
-    height: 100vh;
+    min-height: 110vh;
     position: relative;
-    top: -20px;
     display: block;
     justify-content:center;
     align-items: center;
     flex-direction: column;
     transition: all 3s;
-    color: white;          
-    background-color: #39657785;
-    
+    color: white;           
     padding-bottom: 50px;
-    ::before{
+    overflow: hidden;
+    
+    background-color: rgba(84, 82, 204, 0.722);
+    .header_bgc{
+        width: 100%;
         position: absolute;
-        top: 0%;
-        left: 0;
-        width: 190%;
-        height: 100vh;
-        background: url(../images/Logistic/services.jpg) no-repeat center center fixed;
-        background-size: cover;
-        content: '';
+        margin: auto;
+        height: 100%;
         z-index: -1;
+        .header_video{
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            margin: auto;
+            min-height: 120vh;
+            transform: scale(1.3);
+            z-index: -2;
+        }
     }
-   
     
     
    
@@ -101,9 +107,8 @@ header{
         align-items: left;
         flex-direction: column;
         position: relative;
-        top: 10%;
+        top: 35vh;
         height: 100%;
-        
         @media screen and (max-width: $smallest) {
             top: 50px;
         }
@@ -131,6 +136,7 @@ header{
             color: $colorSecundarioOscuro;
             margin-left: 50px;
             width: 50%;
+            color: white;
             @media screen and (max-width: $smallest) {
                 font-size: 1.7rem;
                 margin-top: 20px;
@@ -217,12 +223,13 @@ header{
     
     
     .cards_container{
-        display: grid;
-        width: 60%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        width: 100%;
         transition: all 1s;
-        grid-gap: 0px;
-        position: relative;
-        grid-template-columns: 50% 50%;
         @media screen and (max-width: $small) {
            width: 95%;
            top: 10px;
@@ -239,9 +246,9 @@ header{
             flex-direction: column;
             justify-content: space-evenly;
             align-items: center;
-            width: 100%;
             transition: all 1s;
             min-height: 500px;
+            max-width: 380px;
             background: rgba(6, 8, 15, 0.705);
             background: linear-gradient(0deg, $colorSecundarioOscuro 28%, $colorSecundarioClaro 100%);
             box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.425);
@@ -255,7 +262,7 @@ header{
                 justify-content: center;
              }      
             &:first-child{
-                border-top-left-radius: 40%;
+                border-top-left-radius: 15%;
                 border-top-right-radius: 0%;
                 border-bottom-right-radius: 0%;
                 @media screen and (max-width: $small) {                    
@@ -265,8 +272,8 @@ header{
                     border-top-left-radius: 5%;
                 }  
             }
-            &:nth-child(2){
-                border-top-right-radius: 40%;
+            &:nth-child(3){
+                border-top-right-radius: 15%;
                 border-top-left-radius: 0%;
                 border-bottom-left-radius: 0%;
                 @media screen and (max-width: $small) {                    
@@ -279,7 +286,7 @@ header{
             @media screen and (min-width: $medium) and (max-width: $big) {
                 min-height: 70vh;
                 justify-content: space-around;
-            }  
+            }   
 
 
 
@@ -378,7 +385,7 @@ header{
             color: $colorPrincipal;
         }
     }
-    &:hover .card:first-child{
+    /* &:hover .card:first-child{
         background: rgba(6, 8, 15, 0.705);
         background: linear-gradient(0deg, $colorSecundarioOscuro 28%, $colorSecundarioClaro 100%);
         transition: all 1s;
@@ -397,7 +404,7 @@ header{
         @media screen and (max-width: $small) {
             transform: translateX(10px);
            }
-    }
+    } */
 }
 
 
