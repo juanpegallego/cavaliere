@@ -69,9 +69,9 @@ header{
     transition: all 3s;
     color: white;           
     padding-bottom: 50px;
-    overflow: hidden;
-    
+    overflow: hidden;    
     background-color: rgba(84, 82, 204, 0.722);
+    
     .header_bgc{
         width: 100%;
         position: absolute;
@@ -88,6 +88,9 @@ header{
             min-height: 120vh;
             transform: scale(1.3);
             z-index: -2;
+            @media screen and (max-width :$small){
+                transform: scale(3);
+            }
         }
     }
     
@@ -100,7 +103,7 @@ header{
     @media screen and (min-width: $smallest) and (max-width :$small){
         min-height: 120vh;
         top: 0px;
-       } 
+    } 
     .header_text{
         display: flex;
         justify-content:center;
@@ -109,22 +112,23 @@ header{
         position: relative;
         top: 35vh;
         height: 100%;
-        @media screen and (max-width: $smallest) {
-            top: 50px;
+        @media screen and (max-width: $small) {
+            top: 80px;
+            padding: 20px;
         }
         h1{
             font-size: 5rem;
             color: $colorSecundario;
             margin-left: 50px;
-            @media screen and (max-width: $smallest) {
+            @media screen and (max-width: $small) {
                 font-size: 3rem;
             }
         }
 
         h3{
             font-size: 2.5rem;
-            color: $colorSecundarioClaro;
-            margin-left: 50px;
+            margin-left: 50px;            
+            color: $colorSecundario;
             width: 70%;
             @media screen and (max-width: $smallest) {
                 font-size: 2rem;
@@ -152,13 +156,13 @@ header{
     width: 100%;
     position: relative;
     margin-top: -20px;
-    padding-bottom: 150px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     min-height: 100vh;
-    background-color: $colorPrincipalOscuro;
+    background-color:white; 
     @media screen and (max-width: $smallest) {
         top: 0px;
         margin-top: 0px;
@@ -171,7 +175,7 @@ header{
         display: flex;
         position: relative;
         top: 0px;
-        min-height: 50vh;
+        min-height: 40vh;
         @media screen and (max-width: $small) {
             width: 90%;
             flex-direction: column;
@@ -197,10 +201,10 @@ header{
                 display: flex;
                 justify-content: space-evenly;
                 align-items: center;
-                font-size: 6rem;
+                font-size: 5rem;
                 text-align: center;
                 font-family: var(--fuenteSecundaria);
-                color: white;
+                color: $colorSecundario;
                 
                 
 
@@ -355,9 +359,9 @@ header{
         font-weight: bold;
         color: $colorSecundario;
         padding: 5px;
-        background-color: white;
         z-index: 99;
-        
+        color: white;
+        background-color: $colorSecundarioOscuro;
         @media screen and (max-width: $smallest) {
             top: 50px;
             min-width: 200px;
@@ -381,8 +385,8 @@ header{
            top: 150px;
         } 
         &:hover{
-            background-color: $colorSecundarioOscuro;
-            color: $colorPrincipal;
+            transition: all .5s;
+            color: $colorPrincipalClaro;
         }
     }
     /* &:hover .card:first-child{
@@ -415,8 +419,9 @@ header{
 
 .container_invitacion{
     scroll-snap-align: start;
-    background-color: $colorSecundarioClaro;
-    min-height: 100vh;
+    background: url(../images/Logistic/separador.png) no-repeat center 10px;
+    background-size: cover;
+    min-height: 120vh;
     margin-bottom: 0px;
     width: 100%;
     display: flex;
@@ -426,86 +431,44 @@ header{
     color: white;
     overflow: hidden;
     
-        @media screen and (max-width: $smallest) {
-            top: 0px;
-            margin-top: 0px;
-        }
-        @media screen and (min-width: $smallest) and (max-width :$small) {
-            
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-        @media screen and (min-width: $small) and (max-width: $medium){
-            top: 30vh;
-            margin-top: 0px;
-        }
-        @media screen and (min-width: $medium) and (max-width: $big) {
-            margin-top: initial;
-            top: -20vh;
-          }
-    h1{
-        font-size: 3rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        text-align: center;
-        @media screen and (min-width: $medium) and (max-width: $big) {
-            font-size: 3em;
-          }
-    }
-    p{
-        font-size: 1.8rem;
-        
-        text-align: center;
-        @media screen and (max-width: $small) {
-            width: 80%;
-        }
-        @media screen and (min-width: $medium) and (max-width: $big) {
-            width: 80%;
-            font-size: 3.5rem;
-          }
-    }
-    a{
-        font-size: 1.7rem;
-        color: $colorSecundario;
-        display: flex;
+    .invitacion_text{
         justify-content: space-evenly;
         align-items: center;
-        height: 35px;        
-        padding: 10px;
-        font-weight: bold;
-        background-color: white;
-        text-decoration: none;
-        @media screen and (max-width: $small) {
-            width: 75%;
-            height: 60px;
-            text-align: center;
+        display: flex;
+        flex-direction: row;
+        width: 65%;
+        position: relative;
+        top: 150px;
+        .invitacion_title{
+            width: 900px;
+            position: relative;
+            top: -80px;
         }
-        @media screen and (min-width: $medium) and (max-width: $big) {
-            width: 50%;
-            height: 100px;
-            font-size: 3rem;
-          }
-          @media screen and (min-width: $big)  {
-            min-width: 250px;
-          }
-        .phone_icon{
-            font-size: 2.5rem;
-            color: $colorSecundarioClaro;
-            @media screen and (min-width: $medium) and (max-width: $big) {
-                
-                font-size: 5rem;
-              }
-        }
-        &:hover{
-            background-color: $colorSecundarioOscuro;
-            color: $colorPrincipal;
-            .phone_icon{
-                transform: rotate(55deg);                
-                transition: all .2s;
-                color: $colorPrincipal;
+        a{
+            position: absolute;
+            text-decoration: none;
+            color: white;
+            font-size: 2rem;
+            border: 4px solid white;
+            padding: 4px 8px;
+            left: 100px;
+            top: 320px;
+            font-weight: bold;
+            border-radius: 1rem;
+            transition: all .2s;
+            &:hover{
+                background-color: $colorSecundarioClaro;
+                border: none;
             }
         }
+        .invitacion_img{
+            width: 400px;
+        }
+        
+        
     }
+        
+    
 }
 
 //-------------------------- F O O T E R -----------------------------//@at-root

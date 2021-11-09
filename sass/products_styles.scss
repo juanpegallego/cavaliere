@@ -251,7 +251,7 @@ body
         }   
     .products
     {
-        width: 100%;
+        width: 80%;
         top: 0px;
         margin: auto;
         position: relative;
@@ -398,7 +398,7 @@ body
             grid-template-columns: 50% 50%;
             overflow: hidden;
             transition: all 2s;
-            backdrop-filter: blur(15px);
+            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -408,15 +408,12 @@ body
                 margin-top: 50px;
               }
             &:hover{
-                backdrop-filter: blur(0px);
-                transition: all 1s;
-                width: 70vw;
+                backdrop-filter: blur(30px);
+                transition: all .5s;
                 display: flex;
                 justify-content: center;
-                flex-direction: column;
-                
-                align-items: center;
-               
+                flex-direction: column;                
+                align-items: center;              
                 
             }
             &:hover .fruit_info_container p {
@@ -475,6 +472,7 @@ body
                     font-size: 4em;
                     color: $colorSecundarioClaro;
                     transition: all 1s;
+                    display: none;
                     @media screen and (max-width: $small) {   
                         font-size:4rem;
                         

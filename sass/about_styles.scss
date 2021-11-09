@@ -449,6 +449,7 @@ header{
     min-height:200vh;   
     padding-bottom:150px; 
     display: flex;
+    background-color: transparent;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
@@ -609,7 +610,7 @@ footer
     height: 100px;
     position: relative;
     bottom: 0px;
-    background-color: $colorSecundarioOscuro;
+    background-color: $colorSecundario;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -701,6 +702,8 @@ footer
                 position: absolute;
                 top: 30px;
                 left: 20px;
+                
+            padding-left: 20px;
                 @media (max-width: $small) {
                     margin: auto;
                     position: relative;

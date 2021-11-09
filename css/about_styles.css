@@ -337,6 +337,7 @@ header {
   min-height: 200vh;
   padding-bottom: 150px;
   display: flex;
+  background-color: transparent;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
@@ -471,7 +472,7 @@ footer {
   height: 100px;
   position: relative;
   bottom: 0px;
-  background-color: #071116;
+  background-color: #102833;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -561,7 +562,8 @@ footer {
         width: 90px;
         position: absolute;
         top: 30px;
-        left: 20px; }
+        left: 20px;
+        padding-left: 20px; }
         @media (max-width: 600px) {
           footer .footer_content .logo_container img {
             margin: auto;

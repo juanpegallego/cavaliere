@@ -79,7 +79,7 @@ body {
     background-size: cover;
     background-color: transparent;
     background-blend-mode: overlay;
-    animation: sliderImagenes 20s infinite; }
+    animation: sliderImagenes 10s infinite eas; }
     @media (max-width: 600px) {
       .container_1 .slider {
         border-radius: initial;
@@ -145,7 +145,7 @@ body {
               width: 90%; } }
           .container_1 .slider .slides .slide .slide_text h1 {
             font-weight: bold;
-            font-size: 4rem;
+            font-size: 3rem;
             margin-left: 20px;
             color: #071116;
             position: relative;
@@ -163,9 +163,9 @@ body {
           top: 0px;
           margin: 5px;
           text-align: center;
-          font-size: 2rem;
+          font-size: 1.8rem;
           font-family: var(--fuenteSecundaria);
-          letter-spacing: -1.5px; }
+          letter-spacing: -.5px; }
           @media (max-width: 600px) {
             .container_1 .slider .slides .slide p {
               width: 80%;
@@ -441,6 +441,42 @@ body {
         font-size: 3rem;
         color: rgba(16, 40, 51, 0.827); }
 
+.ig_slider {
+  width: 100%;
+  background-color: #bce027;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 20px;
+  min-height: 200px; }
+  .ig_slider .slider_ig_link {
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #102833;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    transition: all .5s;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #102833;
+    font-family: var(--fuenteSecundaria);
+    letter-spacing: -1px; }
+    .ig_slider .slider_ig_link ion-icon {
+      padding-right: 5px;
+      font-size: 2rem; }
+    .ig_slider .slider_ig_link:hover {
+      background-color: #102833;
+      color: white; }
+  .ig_slider .snapwidget-widget {
+    width: 100%;
+    height: 500px; }
+
 .container_3 {
   width: 100%;
   min-height: 100vh;
@@ -468,7 +504,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    position: relative; }
+    position: relative;
+    transform: translateX(500px); }
     @media (max-width: 600px) {
       .container_3 .contact_title {
         width: 100%;
@@ -522,6 +559,7 @@ body {
       align-items: center;
       flex-direction: column;
       position: relative;
+      opacity: 0;
       margin: auto; }
       @media (max-width: 600px) {
         .container_3 .form_container form {

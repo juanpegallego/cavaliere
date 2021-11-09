@@ -18,39 +18,27 @@ function videoBgc (){
 } ;
 
 
-gsap.to('.banner',{
-    scrollTrigger:'.banner',
-    x:0,
-    duration:1,
-    delay:.5,
-    pin:true,
-    opacity:1,
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.to('.contact_title', {
+    ScrollTrigger: {
+        trigger: 'container_3',
+        scrub: true
+    },
+    duration: 1,
+    delay: 0,
+    x: 0,
+    opacity: 1,
     start: "bottom center"
 })
 
-gsap.to('.banner_title',{
-    scrollTrigger:'.banner',
-    x:0,
-    duration:1,
-    delay:.5,
-    pin:true,
-    opacity:1,
+gsap.to('form', {
+    ScrollTrigger: {
+        trigger: 'container_3',
+        scrub: true
+    },
+    duration: 3,
+    delay: 0,
+    opacity: 1,
     start: "bottom center"
-})
-gsap.to('.banner_text',{
-    scrollTrigger:'.banner',
-    x:0,
-    duration:.5,
-    delay:1,
-    pin:true,
-    opacity:1,
-    start: "start center"
-})
-
-gsap.to('.banner_text:after',{
-    scrollTrigger:'.banner',
-    x:0,
-    duration:1,
-    delay:.5,
-    opacity:1
 })
