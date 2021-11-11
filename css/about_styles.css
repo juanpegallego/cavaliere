@@ -26,92 +26,60 @@ body {
 
 header {
   scroll-snap-align: start;
-  background-color: #102833;
   background-size: 30%;
-  width: 80%;
+  width: 100%;
   position: relative;
-  top: 50px;
   margin: auto;
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  border-bottom-left-radius: 10rem;
-  border-bottom-right-radius: 10rem; }
-  header::after {
+  min-height: 120vh;
+  display: grid;
+  grid-template-rows: 50% 50%;
+  flex-direction: column; }
+  header .shape_img {
     position: absolute;
+    top: 35vh;
+    z-index: 9999999;
+    width: 90%; }
+  header .header_layer {
+    overflow: hidden;
+    height: 100%;
     width: 100%;
-    height: 100vh;
-    content: '';
-    border-radius: 10%;
-    left: 0;
-    top: 0; }
-  @media (max-width: 600px) {
-    header {
-      min-height: 150vh; } }
-  @media (min-width: 600px) {
-    header {
-      min-height: 100vh; } }
-  header .header_title {
-    font-size: 6em;
     display: flex;
-    width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    opacity: 0;
-    color: white;
-    top: 0px;
-    backdrop-filter: blur(10px);
-    position: relative; }
-    header .header_title::before {
-      content: '';
-      position: absolute;
-      width: 900px;
-      height: 200px;
+    background: url(../images/About/header\ 1.1.png) no-repeat center center;
+    background-size: 100%;
+    background-color: rgba(16, 40, 51, 0.879); }
+    header .header_layer .header_bgc {
+      overflow: hidden;
       z-index: -1;
-      transform: translateY(0px);
-      filter: contrast(65%);
-      background: url(../images/Products/frutas/pexels-ryan-baker-129574.jpg) no-repeat center bottom fixed;
-      background-size: cover; }
-    @media (min-width: 1200px) {
-      header .header_title {
-        transform: translateY(0px);
-        top: 0px; } }
-  header .ghost_text_container {
-    top: 100px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    flex-wrap: wrap;
-    opacity: 0; }
-    @media (max-width: 1200px) {
-      header .ghost_text_container {
-        top: 100px;
-        margin-top: 0px;
-        padding-bottom: 50px; } }
-    header .ghost_text_container p {
-      font-size: 2rem;
-      position: relative;
-      line-height: 30px;
-      min-height: 150px;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+      left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      color: rgba(255, 255, 255, 0.678);
-      border-radius: 5px;
-      margin-bottom: 50px;
-      width: 900px;
-      text-align: justify; }
-      @media (max-width: 375px) {
-        header .ghost_text_container p {
-          font-size: 1rem; } }
-      @media (min-width: 375px) and (max-width: 600px) {
-        header .ghost_text_container p {
-          font-size: 2rem;
-          width: 100%; } }
+      background-color: rgba(16, 40, 51, 0.679);
+      z-index: 9999;
+      backdrop-filter: blur(1px) contrast(50%);
+      top: 0; }
+      header .header_layer .header_bgc h3 {
+        color: white;
+        font-size: 7rem;
+        position: relative;
+        top: -20px; }
+  header .header_text {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    color: white;
+    padding-left: 100px;
+    background-color: white; }
+    header .header_text p {
+      color: black;
+      width: 50%;
+      font-size: 1.6rem; }
+      header .header_text p strong {
+        font-weight: bolder;
+        font-size: 1.6rem; }
 
 .content {
   scroll-snap-align: start;

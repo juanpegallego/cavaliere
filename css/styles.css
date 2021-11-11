@@ -248,9 +248,9 @@ body {
     position: relative;
     display: grid;
     grid-template-columns: 50% 50%;
-    min-height: 80vh;
+    min-height: 30vh;
     background-color: #1b465a;
-    padding-top: 50px; }
+    padding-top: 0px; }
     @media screen and (max-width: 600px) {
       .container_2 .grid_section {
         display: flex;
@@ -269,8 +269,7 @@ body {
       color: white;
       position: relative;
       width: 100%;
-      min-height: 550px;
-      padding-bottom: 150px; }
+      min-height: 550px; }
       .container_2 .grid_section .left_container h1 {
         text-align: center;
         font-family: var(--fuenteSecundaria); }
@@ -297,22 +296,6 @@ body {
             font-size: 1.8rem; } }
       .container_2 .grid_section .left_container strong {
         font-size: 1.8rem; }
-      .container_2 .grid_section .left_container a {
-        font-size: 1.5rem;
-        text-decoration: none;
-        background-color: #bce027;
-        color: #071116;
-        font-weight: bolder;
-        text-align: center;
-        position: relative;
-        height: 45px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 150px; }
-        .container_2 .grid_section .left_container a:hover {
-          background-color: #a4c425;
-          color: #071116; }
     .container_2 .grid_section .right_container {
       display: flex;
       justify-content: center;
@@ -320,8 +303,8 @@ body {
       flex-direction: column;
       color: white;
       position: relative;
-      top: -50px;
-      padding: 50px; }
+      top: -100px;
+      padding: 20px; }
       @media screen and (max-width: 600px) {
         .container_2 .grid_section .right_container {
           top: -100px; } }
@@ -344,6 +327,23 @@ body {
             font-size: 1.5rem;
             width: 100%;
             margin-top: 20px; } }
+      .container_2 .grid_section .right_container a {
+        font-size: 1.5rem;
+        text-decoration: none;
+        background-color: #bce027;
+        color: #071116;
+        font-weight: bolder;
+        text-align: center;
+        position: relative;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        margin-top: 20px; }
+        .container_2 .grid_section .right_container a:hover {
+          background-color: #a4c425;
+          color: #071116; }
 
 .banner_container {
   width: 100%;
@@ -454,47 +454,6 @@ body {
       .banner_container .grid_banner .grid_message h3 {
         font-size: 3rem;
         color: rgba(16, 40, 51, 0.827); }
-
-.ig_slider {
-  width: 100vw;
-  padding: 0px 100px 80px 100px;
-  background-color: #bce027;
-  display: grid;
-  grid-template-rows: 30% 70%;
-  min-height: 300px;
-  overflow: hidden; }
-  .ig_slider .ig_slider_title {
-    width: 100%;
-    display: flex;
-    background-color: #bce027;
-    margin: auto;
-    justify-content: left;
-    align-items: center; }
-    .ig_slider .ig_slider_title .slider_ig_link {
-      font-size: 3rem;
-      text-decoration: none;
-      color: #102833;
-      margin-top: 50px;
-      display: flex;
-      justify-content: center;
-      flex-direction: row;
-      align-items: center;
-      padding: 8px 15px;
-      margin-bottom: 20px;
-      letter-spacing: -1px;
-      color: #102833;
-      color: white;
-      background-color: #1b465a;
-      font-weight: bold; }
-      .ig_slider .ig_slider_title .slider_ig_link ion-icon {
-        padding-right: 10px;
-        font-size: 3rem; }
-      .ig_slider .ig_slider_title .slider_ig_link:hover {
-        box-shadow: none;
-        background-color: #102833; }
-  .ig_slider .ig-widget {
-    width: 80%;
-    padding: 120px; }
 
 .container_3 {
   width: 100%;

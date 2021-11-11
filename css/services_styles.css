@@ -381,8 +381,8 @@ footer {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      background: #070c16;
-      background: linear-gradient(circle, #070c16 32%, #102833 78%); } }
+      background: #102833;
+      background: linear-gradient(to top, #102833 26%, #1b465a 98%); } }
   footer .footer_content {
     width: 70%;
     height: 100%;
