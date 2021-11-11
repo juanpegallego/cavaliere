@@ -389,26 +389,7 @@ header{
             color: $colorPrincipalClaro;
         }
     }
-    /* &:hover .card:first-child{
-        background: rgba(6, 8, 15, 0.705);
-        background: linear-gradient(0deg, $colorSecundarioOscuro 28%, $colorSecundarioClaro 100%);
-        transition: all 1s;
-        transform: translateX(-40px);
-        border-top-left-radius: 10px;
-        @media screen and (max-width: $small) {
-            transform: translateX(-10px);
-           }
-    }
-    &:hover .card:nth-child(2){
-        background: rgba(6, 8, 15, 0.705);
-        background: linear-gradient(0deg, $colorSecundarioOscuro 28%, $colorSecundarioClaro 100%);
-        transition: all 1s;
-        transform: translateX(40px);
-        border-top-right-radius: 10px;
-        @media screen and (max-width: $small) {
-            transform: translateX(10px);
-           }
-    } */
+    
 }
 
 
@@ -449,16 +430,15 @@ header{
             text-decoration: none;
             color: white;
             font-size: 2rem;
-            border: 4px solid white;
+            border: 2px solid white;
             padding: 4px 8px;
             left: 100px;
             top: 320px;
             font-weight: bold;
-            border-radius: 1rem;
             transition: all .2s;
             &:hover{
-                background-color: $colorSecundarioClaro;
-                border: none;
+                border: 2px solid transparent;
+                background-color: $colorSecundario;
             }
         }
         .invitacion_img{
@@ -485,6 +465,8 @@ footer
     scroll-snap-align: start;
     scroll-snap-type: mandatory;
     scroll-behavior: smooth;
+    background: rgb(16,40,51);
+    background: radial-gradient(circle, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     @media screen and (max-width: $big) {
         margin-top: 0px;
         bottom: 0px;

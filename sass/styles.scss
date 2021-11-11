@@ -619,43 +619,53 @@ body
 }
 
 .ig_slider{
-    width: 100%;
-    background-color: $colorPrincipal; 
-    background-color: white;     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding-top: 50px;
-    padding-bottom: 20px;
-    min-height: 200px;;
-    .slider_ig_link{
-        font-size: 2.5rem;
-        text-decoration: none;
-        color: $colorSecundario;
-        padding-bottom: 20px;
+    width: 100vw;
+    padding: 0px 100px 80px 100px;
+    background-color: $colorPrincipal;    
+    display: grid;
+    grid-template-rows: 30% 70%;
+    min-height: 300px;
+    scrollbar-color: transparent;
+
+    .ig_slider_title{
+        width: 100%;
         display: flex;
-        justify-content: center;
-        flex-direction: row;
+        
+        background-color: $colorPrincipal; 
+        margin: auto;
+        justify-content: left;
         align-items: center;
-        padding: 5px;
-        transition:  all .5s;
-        margin-bottom: 20px;
-        border-bottom: 2px solid $colorSecundario;
-        font-family: var(--fuenteSecundaria);
-        letter-spacing: -1px;
-        ion-icon{
-            padding-right: 5px;
-            font-size: 2rem;
-        }
-        &:hover{
-            background-color: $colorSecundario;
-            color: white;
+        .slider_ig_link{
+            font-size: 3rem;
+            text-decoration: none;
+            color: $colorSecundario;
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            align-items: center;     
+            padding: 8px 15px;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+            color: $colorSecundario;
+            background-color: $colorPrincipalClaro;
+            font-weight: bold;
+            ion-icon{
+            padding-right: 10px;                
+            font-size: 3rem;    
+            }
+            &:hover{
+                box-shadow: none;
+                color: white;
+                background-color: $colorSecundarioClaro;
+            }
         }
     }
-    .snapwidget-widget{
-        width: 100%;
-        height: 500px;
+    
+    .ig-widget{
+        width: 80%;
+        padding: 120px;
+        
     }
 }
 

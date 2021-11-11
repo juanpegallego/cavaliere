@@ -26,7 +26,7 @@ gsap.to('.contact_title', {
         scrub: true
     },
     duration: 1,
-    delay: 0,
+    delay: 1,
     x: 0,
     opacity: 1,
     start: "bottom center"
@@ -38,7 +38,8 @@ gsap.to('form', {
         scrub: true
     },
     duration: 3,
-    delay: 0,
+    delay: 2,
     opacity: 1,
     start: "bottom center"
 })
+ 

@@ -182,12 +182,12 @@ nav
     justify-content: center;
     top: 0px;
     left: 20vw;
-    background-color: $colorSecundario;
+    background: rgb(16,40,51);
+    background: radial-gradient(circle, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     position: fixed;
     border-bottom-left-radius: .5rem;
     border-bottom-right-radius: .5rem;
-    z-index: 99999999999999999999;
-    border: .2px solid rgba(255, 255, 255, 0.286);
+    z-index: 999999999;
     border-top : none;
     @media screen and (max-width: $big) {
         width:100vw;
