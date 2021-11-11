@@ -615,11 +615,10 @@ footer
     justify-content: center;
     align-items: center;
     top: 30vh;
+    background: rgb(16,40,51);
+    background: radial-gradient(circle, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     @media (max-width: $smallest) {        
         top: 50px;
-        background: #060d0d;
-        min-height: 100vh;
-        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
     }
     @media (min-width: $smallest)and(max-width: $small) {        
         top: 50px;
@@ -628,16 +627,16 @@ footer
         margin-top: 0px;
         position: relative;
         flex-direction: column;
-        background: #060d0d;
-        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
+        background: rgb(16,40,51);
+        background: linear-gradient(to top, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     }
     @media (min-width: $medium) and (max-width: $big)  {
         top: 0px;
         min-height: 80vh;
         height: initial;
         flex-direction: column;
-        background: #060d0d;
-        background: linear-gradient(to top, #060d0d 27%, #74727294 85%);
+        background: rgb(16,40,51);
+        background: linear-gradient(to top, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     } 
         
     .footer_content{

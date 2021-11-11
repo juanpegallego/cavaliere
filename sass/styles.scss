@@ -116,7 +116,7 @@ body
 .slider
 {
     width: 100%;
-    height: 600px;
+    height: 100vh;
     margin-top: 0px;
     overflow: hidden;
     left: 0px;
@@ -125,7 +125,7 @@ body
     background-size: cover; 
     background-color: transparent;
     background-blend-mode: overlay;
-    animation: sliderImagenes 10s infinite eas;  
+    animation: sliderImagenes 10s infinite forwards;  
 
 
     @media (max-width: $small) {
@@ -158,7 +158,7 @@ body
         align-items: center;        
         z-index: 99999;
         position: relative;
-        top: 200px;
+        top: 250px;
         @media (max-width: $small) {
             width: calc(100vw*500%);
             top: 80px;
@@ -182,15 +182,15 @@ body
             {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-evenly;
+                justify-content: space-between;
                 align-items: center;
                 position: relative; 
                 color: black;
-                padding: 2px;
+                padding: 20px 10px;
                 width: 600px;
                 min-height: 200px;
-                border-radius: 15px;            
-                background-color: rgba(255, 255, 255, 0.789);
+                border-radius: 0px;            
+                background-color: rgba(255, 255, 255, 0.589);
                 top: 0px;  
                 
                 &::after{
@@ -198,9 +198,11 @@ body
                     position: absolute;
                     top: 5%;
                     left: 5%;
-                    width:90%;
+                    width:85%;
+                    margin: auto;
                     height: 90%;
                     background-color: rgba(100, 97, 97, 0.197);
+                    display: none;
                    
                 }
                 
@@ -232,7 +234,7 @@ body
                 {
                     position: relative;
                     width: 80%;
-                    top: 0px;
+                    top: 5px;
                     margin: 5px;
                     text-align: center;
                     font-size: 1.8rem;
@@ -259,14 +261,15 @@ body
                     color: var(--principal);
                     font-weight: bolder;
                     position: relative;
-                    font-size:1.8rem;
+                    font-size:1.5rem;
                     background-color: white;
                     position: relative;
-                    top: 0px;
+                    top: 10px;
                     height: 40px;
                     text-align: center;
                     z-index: 9999;
-                    margin-bottom: 10px;
+                    margin-bottom: 10px;                    
+                    background-color: $colorPrincipal;
                     @media (max-width: $small) {
                         font-size: 1.7rem;
                         width: 30%;
@@ -373,7 +376,7 @@ body
     .left_container
     {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         align-items: center;    
         margin: auto;
         flex-direction: column;
@@ -381,7 +384,7 @@ body
         color: white;
         position: relative;          
         width: 100%;         
-        min-height: 450px; 
+        min-height: 550px; 
         padding-bottom: 150px; 
        
         h1
@@ -399,9 +402,9 @@ body
 
         p
         {   font-size: 1.8rem;
-          
-            @media screen and (max-width: $small)  {
-               
+            line-height: 25px;
+            text-align: center;
+            @media screen and (max-width: $small)  {               
                 font-size: 1.5rem;
                 padding: 10px; 
             }           
@@ -411,19 +414,22 @@ body
                 font-size: 1.3rem;    
             }            
             
-            @media screen and (min-width: $medium) {
-                
-                max-width: 400px; 
-                font-size: 1.7rem;    
+            @media screen and (min-width: $medium) {                
+                max-width: 600px; 
+                font-size: 1.8rem;    
             }              
+        }
+
+        strong{
+            font-size: 1.8rem;
         }
         a
         {
             font-size: 1.5rem;
             text-decoration: none;            
             background-color: $colorPrincipal;
-            color: white;
-            font-weight: bold;
+            color: $colorSecundarioOscuro;
+            font-weight: bolder;
             text-align: center;
             position: relative;
             height: 45px;
@@ -454,9 +460,18 @@ body
             width: 80px;
         }
         p{
-            width: 70%;
-            padding: 20px;
-            font-size: 2rem;
+            width: 80%;
+            line-height: 25px;
+            padding: 20px 10px;
+            background-color: rgba(128, 128, 128, 0.39);
+            font-size: 1.7rem;
+            text-align: center;
+            border-radius: 10px;
+            strong{
+                font-size: 2rem;
+                color: $colorPrincipalOscuro;
+            }
+
             @media screen  and (max-width: $small) {                 
                 font-size: 1.5rem;
                 width: 100%;
@@ -625,16 +640,16 @@ body
     display: grid;
     grid-template-rows: 30% 70%;
     min-height: 300px;
-    scrollbar-color: transparent;
-
+    overflow: hidden;
+    
     .ig_slider_title{
         width: 100%;
-        display: flex;
-        
+        display: flex;        
         background-color: $colorPrincipal; 
         margin: auto;
         justify-content: left;
         align-items: center;
+
         .slider_ig_link{
             font-size: 3rem;
             text-decoration: none;
@@ -647,25 +662,26 @@ body
             padding: 8px 15px;
             margin-bottom: 20px;
             letter-spacing: -1px;
-            color: $colorSecundario;
-            background-color: $colorPrincipalClaro;
+            color: $colorSecundario;            
+            color: white;
+            background-color: $colorSecundarioClaro;
             font-weight: bold;
+
             ion-icon{
-            padding-right: 10px;                
-            font-size: 3rem;    
-            }
+                padding-right: 10px;                
+                font-size: 3rem;    
+                    }
+
             &:hover{
-                box-shadow: none;
-                color: white;
-                background-color: $colorSecundarioClaro;
+                box-shadow: none;                
+                background-color: $colorSecundario;
             }
         }
     }
     
     .ig-widget{
         width: 80%;
-        padding: 120px;
-        
+        padding: 120px;        
     }
 }
 
@@ -679,11 +695,11 @@ body
     justify-content: center;
     align-items: center;
     flex-direction:column;
-    top: 0px;
-    
+    top: 0px;    
     background: url(../images/Home/logotipo.png) no-repeat center center;
     background-size: 60%;
     background-color: $colorSecundarioClaro;
+
     @media screen and (max-width: $small)  {
         margin-top: 0px;
         top: 1px;
@@ -812,7 +828,8 @@ body
                 &:focus
                 {
                     background-color: rgba(255, 255, 255, 0.689);
-                    @media (max-width: $small),
+                    @media 
+                    (max-width: $small),
                     (min-width: $desktop) {
                         background-color: rgba(182, 179, 179, 0.727);
                     }
@@ -909,14 +926,15 @@ footer
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    background: rgb(16,40,51);
+    background: radial-gradient(circle, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     @media screen and (max-width: $small)  {
-    min-height: 120vh;
-    bottom: 0px;
-    margin-bottom: 0px;
-    position: relative;
-    background: #060d0d;     
-    background: linear-gradient(to top, #060d0d 27%, #666565 85%);
+        min-height: 120vh;
+        bottom: 0px;
+        margin-bottom: 0px;
+        position: relative;
+        background: rgb(16,40,51);
+        background: linear-gradient(to top, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     }
    
     
