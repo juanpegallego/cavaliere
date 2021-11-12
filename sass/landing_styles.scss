@@ -10,8 +10,8 @@
 }
 :root 
 {
-    --fuentePrincipal:'Poppins', 'Sans Serif';
-    --fuenteSecundaria:'Montserrat', 'Sans Serif';
+    $principal:'Poppins', 'Sans Serif';
+    $secundaria:'Montserrat', 'Sans Serif';
   }
 
   $colorPrincipal: #bce027;
@@ -28,6 +28,13 @@ $small: 600px;
 $medium: 900px;
 $big:1200px;
 
+
+/*----------------- FONTS -------------------------*/
+
+$principal: 'Poppins', 'Sans Serif', 'Comic Sans';
+$secundaria: 'Montserrat', 'Sans Serif', 'Comic Sans';
+
+
 //*------------------MEDIA --------------------------*//
 body
 {
@@ -38,7 +45,7 @@ body
     position: relative;
     align-items: center;
     flex-direction: column;
-    font-family: var(--fuentePrincipal);
+    font-family: $principal;
     overflow: hidden;
    
 }

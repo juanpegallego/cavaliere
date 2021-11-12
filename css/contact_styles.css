@@ -1,5 +1,9 @@
+/*---- PRIMARY  FONT POPPINS -----*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+/*---- SECONDARY FONT MONTSERRAT -----*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,42 +14,57 @@
   --principal: black;
   --secundario: red;
   --opcional:white;
-  --ventanas:rgba(255, 255, 255, 0.782);
-  --fuentePrincipal:'Poppins', 'Sans Serif';
-  --fuenteSecundaria:'Montserrat', 'Sans Serif'; }
+  --ventanas:rgba(255, 255, 255, 0.782); }
 
+/*----------------- FONTS -------------------------*/
 body {
-  min-height: 50vh;
+  min-height: 100vh;
   display: flex;
   width: 100vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-family: var(--fuentePrincipal);
+  font-family: "Poppins", "Sans Serif", "Comic Sans";
   overflow: hidden;
-  background-color: #1b465a; }
+  background-size: cover;
+  background: url(../images/Home/fondoContact.jpg) no-repeat center center;
+  backdrop-filter: contrast(25%);
+  background-color: #1b465a;
+  animation: bgcImage 480s infinite forwards;
+  animation-delay: 4s; }
+  @media screen and (max-width: 1200px) {
+    body {
+      overflow-y: scroll;
+      overflow-x: hidden; } }
 
-.container_3 {
+@keyframes bgcImage {
+  0% {
+    background: url(../images/Home/fondoContact.jpg) no-repeat center center; }
+  33% {
+    background: url(../images/Home/fondoContact.jpg) repeat-x 100px -100px; }
+  66% {
+    background: url(../images/Home/fondoContact.jpg) repeat-x -50px -50px; } }
+.container {
   width: 70%;
+  height: 100%;
   position: relative;
   left: 0px;
-  top: 100px;
   display: grid;
   margin: auto;
   grid-template-columns: 50% 50%;
-  margin-bottom: 100px;
+  margin-top: 100px;
   padding-bottom: 50px; }
   @media screen and (max-width: 1200px) {
-    .container_3 {
+    .container {
       width: 100%;
       display: flex;
       top: 50px;
       justify-content: center;
       flex-direction: column; } }
-  .container_3::after {
+  .container::after {
     content: " ";
     background: url(../images/Home/logotipo.png) no-repeat center center;
-    background-size: 80%;
+    background-size: 60%;
     opacity: .9;
     top: 0;
     left: 150px;
@@ -54,31 +73,32 @@ body {
     position: absolute;
     z-index: -1; }
     @media screen and (max-width: 600px) {
-      .container_3::after {
+      .container::after {
         left: 0px; } }
-  .container_3 .contact_title {
+  .container .contact_title {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column; }
-    .container_3 .contact_title h1 {
+    .container .contact_title h1 {
       text-align: center;
       border-radius: 5px;
-      font-size: 8rem;
-      color: #071116;
+      font-size: 13rem;
       position: relative;
-      letter-spacing: -2px;
       top: 0px;
-      color: white;
-      font-family: var(--fuenteSecundaria); }
+      left: -50px;
+      letter-spacing: -2px;
+      color: rgba(255, 255, 255, 0.748);
+                                  /* 
+font-family: $secundaria;  */ }
       @media screen and (max-width: 600px) {
-        .container_3 .contact_title h1 {
+        .container .contact_title h1 {
           font-size: 4.5rem;
           top: -20px; } }
       @media screen and (min-width: 900px) and (max-width: 1200px) {
-        .container_3 .contact_title h1 {
+        .container .contact_title h1 {
           font-size: 8em; } }
-  .container_3 .form_container {
+  .container .form_container {
     width: 100%;
     position: relative;
     height: 100%;
@@ -86,7 +106,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: center; }
-    .container_3 .form_container form {
+    .container .form_container form {
       width: 80%;
       height: 100%;
       display: flex;
@@ -94,37 +114,40 @@ body {
       justify-content: center;
       align-items: center;
       flex-direction: column; }
-      .container_3 .form_container form input {
+      .container .form_container form input {
         margin: 10px auto;
         width: 100%;
         height: 45px;
-        border-radius: 1rem;
+        border-radius: .8rem;
         border: none;
         outline: none;
         font-size: 1.3rem;
         color: black;
         padding-left: 15px;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.355);
         backdrop-filter: blur(3px); }
         @media screen and (max-width: 1200px) {
-          .container_3 .form_container form input {
+          .container .form_container form input {
             background-color: rgba(184, 179, 179, 0.582); } }
-        .container_3 .form_container form input:focus {
-          background-color: #071116;
+        .container .form_container form input:focus {
+          background-color: #102833;
           color: white; }
-        .container_3 .form_container form input::placeholder {
+          .container .form_container form input:focus::placeholder {
+            color: white; }
+        .container .form_container form input::placeholder {
           padding-left: 10px;
-          font-size: 1.7rem;
-          color: #071116;
-          font-weight: 600;
+          color: white;
+          letter-spacing: 1px;
+          font-weight: lighter;
+          font-size: 2rem;
           font-family: Poppins; }
           @media screen and (max-width: 900px) {
-            .container_3 .form_container form input::placeholder {
+            .container .form_container form input::placeholder {
               color: black; } }
           @media screen and (min-width: 900px) and (max-width: 1200px) {
-            .container_3 .form_container form input::placeholder {
+            .container .form_container form input::placeholder {
               font-size: 2.2rem; } }
-      .container_3 .form_container form textarea {
+      .container .form_container form textarea {
         width: 100%;
         outline: none;
         border: none;
@@ -133,51 +156,54 @@ body {
         color: #071116;
         padding: 10px 15px;
         resize: none;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.355);
         backdrop-filter: blur(3px); }
         @media screen and (max-width: 1200px) {
-          .container_3 .form_container form textarea {
+          .container .form_container form textarea {
             background-color: rgba(184, 179, 179, 0.582); } }
-        .container_3 .form_container form textarea:focus {
-          background-color: #071116;
+        .container .form_container form textarea:focus {
+          background-color: #102833;
           backdrop-filter: blur(3px);
           color: white; }
-        .container_3 .form_container form textarea::placeholder {
+          .container .form_container form textarea:focus::placeholder {
+            color: white; }
+        .container .form_container form textarea::placeholder {
           padding-left: 10px;
-          font-size: 1.7rem;
-          color: #071116;
+          color: white;
           font-family: Poppins;
-          font-weight: 600; }
+          font-weight: 600;
+          letter-spacing: 1px;
+          font-weight: lighter;
+          font-size: 2rem; }
           @media screen and (max-width: 900px) {
-            .container_3 .form_container form textarea::placeholder {
+            .container .form_container form textarea::placeholder {
               color: black; } }
           @media screen and (min-width: 900px) and (max-width: 1200px) {
-            .container_3 .form_container form textarea::placeholder {
+            .container .form_container form textarea::placeholder {
               font-size: 2.2rem; } }
-      .container_3 .form_container form button {
+      .container .form_container form button {
         font-family: Poppins;
-        width: 30%;
+        width: 200px;
         outline: none;
         border: none;
         position: relative;
         top: 20px;
+        color: white;
         height: 40px;
-        font-size: 1.7rem;
+        font-size: 2.5rem;
         cursor: pointer;
-        font-weight: bold;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.355);
         backdrop-filter: blur(3px);
-        color: #102833;
-        border-radius: 1rem; }
+        border-radius: 1rem;
+        letter-spacing: 1px; }
         @media screen and (max-width: 900px) {
-          .container_3 .form_container form button {
+          .container .form_container form button {
             color: black; } }
         @media screen and (max-width: 1200px) {
-          .container_3 .form_container form button {
+          .container .form_container form button {
             background-color: rgba(184, 179, 179, 0.582); } }
-        .container_3 .form_container form button:hover {
+        .container .form_container form button:hover {
           background-color: #bce027;
-          transition: .5s;
           color: #071116; }
 
 footer {
@@ -192,7 +218,10 @@ footer {
   align-items: center;
   scroll-snap-align: start;
   scroll-snap-type: mandatory;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  opacity: .5;
+  cursor: pointer;
+  transition: all 2s; }
   @media (max-width: 1200px) {
     footer {
       margin-top: 0px;
@@ -206,6 +235,9 @@ footer {
       top: 100px;
       background: #070c16;
       background: linear-gradient(circle, #070c16 27%, #1b465a 88%); } }
+  footer:hover {
+    opacity: 1;
+    transition: all .5s; }
   footer .footer_content {
     width: 70%;
     height: 100%;

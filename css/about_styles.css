@@ -1,5 +1,9 @@
+/*---- PRIMARY  FONT POPPINS -----*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+/*---- SECONDARY FONT MONTSERRAT -----*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -10,15 +14,14 @@
   --principal: black;
   --secundario: red;
   --opcional:white;
-  --ventanas:rgba(255, 255, 255, 0.782);
-  --fuentePrincipal:'Poppins', 'Sans Serif';
-  --fuenteSecundaria:'Montserrat', 'Sans Serif'; }
+  --ventanas:rgba(255, 255, 255, 0.782); }
 
+/*----------------- FONTS -------------------------*/
 body {
   min-height: 100vh;
   width: 100vw;
   display: block;
-  font-family: var(--fuentePrincipal);
+  font-family: "Poppins", "Sans Serif", "Comic Sans";
   overflow-x: hidden;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
@@ -26,60 +29,75 @@ body {
 
 header {
   scroll-snap-align: start;
-  background-size: 30%;
   width: 100%;
   position: relative;
   margin: auto;
-  min-height: 120vh;
-  display: grid;
-  grid-template-rows: 50% 50%;
-  flex-direction: column; }
+  min-height: 100vh;
+  flex-direction: column;
+  background: url(../images/About/header\ 1.1.png) no-repeat center center fixed;
+  background-size: cover;
+  z-index: -2;
+  background-color: rgba(16, 40, 51, 0.879);
+  display: flex;
+  align-items: center; }
+  header h3 {
+    color: white;
+    font-size: 7rem;
+    position: absolute;
+    top: 100px;
+    margin: auto;
+    letter-spacing: 1px;
+    z-index: 9; }
   header .shape_img {
     position: absolute;
-    top: 35vh;
-    z-index: 9999999;
-    width: 90%; }
+    top: 35vh; }
   header .header_layer {
     overflow: hidden;
     height: 100%;
     width: 100%;
-    display: flex;
-    background: url(../images/About/header\ 1.1.png) no-repeat center center;
-    background-size: 100%;
-    background-color: rgba(16, 40, 51, 0.879); }
+    display: flex; }
+    header .header_layer .shape_img {
+      width: 100%;
+      position: absolute;
+      top: 0px;
+      z-index: 2; }
     header .header_layer .header_bgc {
       overflow: hidden;
       z-index: -1;
       position: absolute;
       width: 100%;
-      height: 50%;
+      height: 100%;
       left: 0;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: rgba(16, 40, 51, 0.679);
-      z-index: 9999;
       backdrop-filter: blur(1px) contrast(50%);
       top: 0; }
-      header .header_layer .header_bgc h3 {
-        color: white;
-        font-size: 7rem;
-        position: relative;
-        top: -20px; }
   header .header_text {
     display: flex;
     justify-content: left;
     align-items: center;
     color: white;
+    width: 100%;
+    margin: auto;
+    top: 120px;
+    position: relative;
     padding-left: 100px;
-    background-color: white; }
+    z-index: 9999; }
+    @media (max-width: 600px) {
+      header .header_text {
+        padding-left: 10px; } }
     header .header_text p {
-      color: black;
       width: 50%;
-      font-size: 1.6rem; }
+      color: white;
+      font-size: 1.8rem;
+      padding-bottom: 50px; }
+      @media (max-width: 600px) {
+        header .header_text p {
+          width: 100%; } }
       header .header_text p strong {
-        font-weight: bolder;
-        font-size: 1.6rem; }
+        font-size: 1.8rem; }
 
 .content {
   scroll-snap-align: start;
@@ -91,7 +109,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: linear-gradient(160deg, #dcf86e 28%, #68772d 100%); }
+  background-color: #bce027; }
   @media (max-width: 375px) {
     .content {
       top: -50px;
@@ -131,14 +149,12 @@ header {
       align-items: center;
       justify-content: space-evenly;
       flex-direction: column;
-      padding: 10px 20px;
-      min-height: 400px;
-      width: 300px;
-      min-width: 250px;
+      padding: 40px;
+      min-height: 450px;
+      max-width: 350px;
       margin: 10px;
       border-radius: 15px;
       overflow: hidden;
-      transition: all 2s;
       background-color: #d1cece;
       opacity: 0;
       transform: translateY(50vw); }
@@ -150,8 +166,8 @@ header {
           cursor: pointer; } }
       .content .flex_container .card:hover {
         transition: all .5s;
-        justify-content: center;
-        cursor: pointer; }
+        justify-content: space-around;
+        box-shadow: 0px 0px 30px 5px black; }
         @media (max-width: 600px) {
           .content .flex_container .card:hover {
             transform: translateY(0px); } }
@@ -180,15 +196,13 @@ header {
       color: #102833; }
     .content .flex_container p {
       position: relative;
-      top: 20px;
+      top: 0px;
       transition: all 1s;
-      display: none;
       font-size: 1.5rem;
-      text-align: center;
       text-align: justify;
-      line-height: 20px;
+      line-height: 25px;
       color: #102833;
-      font-family: var(--fuenteSecundaria); }
+      font-family: "Montserrat", "Sans Serif", "Comic Sans"; }
       @media (max-width: 600px) {
         .content .flex_container p {
           display: block; } }
@@ -231,8 +245,7 @@ header {
       width: 90%;
       color: white;
       text-align: center;
-      font-size: 1.5rem;
-      font-weight: bolder; }
+      font-size: 1.5rem; }
     .content_subtitle .final_card strong {
       color: white;
       font-size: 1.5rem; }
@@ -305,7 +318,7 @@ header {
   min-height: 200vh;
   padding-bottom: 150px;
   display: flex;
-  background-color: transparent;
+  background-color: #bce027;
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
@@ -332,14 +345,14 @@ header {
       margin-bottom: 0px; } }
   .section::after {
     position: absolute;
-    top: -5%;
+    top: 0px;
     margin: auto;
     width: 100%;
-    min-height: 50vh;
+    min-height: 35vh;
     content: '';
     background: url(../images/About/bolsa_peras.jpg) no-repeat center -200px fixed;
     background-size: 100%;
-    z-index: -1;
+    z-index: 1;
     border-radius: 1%; }
     @media (max-width: 1200px) {
       .section::after {
@@ -363,7 +376,8 @@ header {
       letter-spacing: -1.5px; }
       @media (max-width: 600px) {
         .section .title_container h1 {
-          margin-top: initial; } }
+          margin-top: initial;
+          font-size: 4rem; } }
     .section .title_container .sync_icon {
       font-size: 8rem;
       animation: rotateIcon 9s infinite ease-in-out;
@@ -382,21 +396,23 @@ header {
     transform: rotate(999deg); } }
     .section .title_container h3 {
       font-size: 2rem;
-      font-family: var(--fuenteSecundaria); }
+      font-family: "Montserrat", "Sans Serif", "Comic Sans";
+      text-align: center; }
       @media (max-width: 600px) {
         .section .title_container h3 {
           width: 90%;
           text-align: center; } }
       .section .title_container h3 span {
         font-size: 2rem;
-        text-decoration: underline 2px red; }
+        text-decoration: underline 2px #071116; }
   .section .grid_container {
     display: grid;
     width: 70%;
     padding: 10px;
     position: relative;
     top: 100px;
-    grid-template-columns: 40% 60%; }
+    grid-template-columns: 50% 50%;
+    padding: 20px; }
     @media (max-width: 600px) {
       .section .grid_container {
         width: 90%;
@@ -406,9 +422,10 @@ header {
         align-items: center; } }
     .section .grid_container img {
       width: 100%;
-      height: 100%;
+      height: 90%;
       border-radius: 1rem;
-      position: relative; }
+      position: relative;
+      margin: auto; }
       @media (max-width: 600px) {
         .section .grid_container img {
           width: 100%;
@@ -420,8 +437,11 @@ header {
       display: flex;
       justify-content: center;
       align-items: center;
-      text-align: left;
-      margin-left: 20px; }
+      text-align: center;
+      margin-left: 20px;
+      padding: 20px;
+      border-radius: 1rem;
+      color: #102833; }
       @media (max-width: 600px) {
         .section .grid_container p {
           text-align: center;

@@ -6,14 +6,7 @@
   box-sizing: border-box;
   font-size: 10px; }
 
-:root {
-  --principal: black;
-  --secundario: red;
-  --opcional:white;
-  --ventanas:rgba(255, 255, 255, 0.582);
-  --fuentePrincipal:'Poppins', 'Sans Serif';
-  --fuenteSecundaria:'Montserrat', 'Sans Serif'; }
-
+/*----------------- FONTS -------------------------*/
 body {
   width: 100vw;
   min-height: 100vh;
@@ -60,7 +53,7 @@ body {
     color: white;
     position: relative;
     top: 100px;
-    font-family: var(--fuenteSecundaria);
+    font-family: "Montserrat", "Sans Serif", "Comic Sans";
     letter-spacing: -2px;
     text-align: center; }
     @media screen and (max-width: 600px) {
@@ -78,34 +71,12 @@ body {
   background-size: cover; }
   @media screen and (max-width: 600px) {
     .finca_container {
-      min-height: 100vh;
+      min-height: 30vh;
       display: grid;
       grid-template-rows: 30% 70%;
       background-color: rgba(255, 255, 255, 0.603);
       position: relative;
       padding-bottom: 50px; } }
-  .finca_container .banner {
-    width: 100%;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    display: none; }
-    .finca_container .banner h1 {
-      font-size: 5rem;
-      letter-spacing: -1px;
-      font-weight: bolder;
-      font-family: var(--fuenteSecundaria);
-      color: white;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 15vh;
-      position: relative;
-      margin-top: 0px;
-      text-align: center;
-      background: #636363;
-      background: linear-gradient(180deg, rgba(59, 59, 59, 0.582) 28%, rgba(247, 255, 247, 0.334) 100%); }
 
 .white_space {
   width: 100%;
@@ -119,12 +90,10 @@ body {
     font-size: 4rem;
     color: #102833;
     text-align: center; }
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: 600px) {
       .white_space h1 {
-        font-size: 2rem; } }
-    @media screen and (min-width: 600px) and (max-width: 900px) {
-      .white_space h1 {
-        font-size: 2.5rem; } }
+        font-size: 2rem;
+        padding-top: 50px; } }
   .white_space .text {
     display: flex;
     justify-content: center;
@@ -142,13 +111,11 @@ body {
       background-color: rgba(255, 255, 255, 0.741);
       color: black;
       padding: 20px; }
-      @media screen and (max-width: 375px) {
-        .white_space .text p {
-          transform: none;
-          font-size: 1.8rem; } }
       @media screen and (max-width: 600px) {
         .white_space .text p {
-          width: 90%; } }
+          transform: none;
+          font-size: 1.5rem;
+          max-width: 90%; } }
       @media screen and (min-width: 600px) and (max-width: 900px) {
         .white_space .text p {
           transform: none;
@@ -167,7 +134,7 @@ body {
     font-weight: bold;
     position: relative;
     letter-spacing: -2px;
-    font-family: var(--fuenteSecundaria);
+    font-family: "Montserrat", "Sans Serif", "Comic Sans";
     color: white;
     text-align: center;
     transform: translateX(200vw);
@@ -190,10 +157,9 @@ body {
     grid-template-columns: 33% 33% 33%; }
     @media screen and (max-width: 600px) {
       .products_container .products {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column; } }
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-gap: 20px; } }
     .products_container .products .grid_fruit_display {
       position: relative;
       height: 45vh;
@@ -204,6 +170,11 @@ body {
       align-items: center;
       background-size: cover;
       overflow: hidden; }
+      @media screen and (max-width: 600px) {
+        .products_container .products .grid_fruit_display {
+          width: 100%;
+          flex-wrap: wrap;
+          max-height: 200px; } }
       .products_container .products .grid_fruit_display:nth-child(1) {
         background: url(../images/Products/Fruits/banana.png) no-repeat center center;
         background-size: 60%; }
@@ -292,9 +263,9 @@ body {
         background: url(../images/Products/Fruits/repollo.png) no-repeat center center;
         width: 100vw;
         background-size: 20%; }
-        @media screen and (max-width: 900px) {
+        @media screen and (max-width: 600px) {
           .products_container .products .grid_fruit_display:nth-child(15) {
-            background-size: 80%; } }
+            background-size: 30%; } }
       .products_container .products .grid_fruit_display .fruit_card {
         width: 100%;
         min-height: 50vh;
