@@ -112,7 +112,24 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #bce027; }
+  background-color: #bce027;
+  overflow: hidden; }
+  .content::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: url(../images/png/fruits/banana.png) repeat-x center center;
+    background-size: 350px;
+    transform: rotateX(-20deg); }
+    @media (max-width: 600px) {
+      .content::before {
+        background: url(../images/png/fruits/banana.png) repeat center center;
+        top: 200px;
+        background-size: 120px;
+        opacity: .3; } }
   @media (max-width: 375px) {
     .content {
       top: -50px;
@@ -338,10 +355,12 @@ header {
     top: 0px;
     margin: auto;
     width: 100%;
-    min-height: 35vh;
+    min-height: vh;
     content: '';
-    background: url(../images/About/bolsa_peras.jpg) no-repeat center -200px fixed;
-    background-size: 100%;
+    background: url(../images/png/fruits/naranja.png) repeat center center fixed;
+    background-size: 100px;
+    opacity: .6;
+    background-color: #1b465a;
     z-index: 1;
     border-radius: 1%; }
     @media (max-width: 1200px) {
@@ -354,7 +373,8 @@ header {
     min-height: 400px;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column; }
+    flex-direction: column;
+    padding-top: 50px; }
     @media (max-width: 600px) {
       .section .title_container {
         min-height: 150px; } }
@@ -373,7 +393,7 @@ header {
       animation: rotateIcon 9s infinite ease-in-out;
       z-index: 999;
       position: relative;
-      color: #1ace32; }
+      color: #a4c425; }
       @media (max-width: 600px) {
         .section .title_container .sync_icon {
           font-size: 6rem; } }
@@ -385,7 +405,7 @@ header {
   100% {
     transform: rotate(999deg); } }
     .section .title_container h3 {
-      font-size: 2rem;
+      font-size: 3rem;
       font-family: "Montserrat", "Sans Serif", "Comic Sans";
       text-align: center; }
       @media (max-width: 600px) {
@@ -393,7 +413,7 @@ header {
           width: 90%;
           text-align: center; } }
       .section .title_container h3 span {
-        font-size: 2rem;
+        font-size: 3rem;
         text-decoration: underline 2px #071116; }
   .section .grid_container {
     display: grid;
@@ -422,7 +442,7 @@ header {
           margin: auto;
           padding-top: 50px; } }
     .section .grid_container p {
-      font-size: 1.7rem;
+      font-size: 2rem;
       width: 100%;
       display: flex;
       justify-content: center;

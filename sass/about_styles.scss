@@ -167,8 +167,24 @@ header{
     align-items: center;
     flex-direction: column;
     background-color: $colorPrincipal;
-    
-    
+   overflow: hidden;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: url(../images/png/fruits/banana.png) repeat-x center center;
+        background-size: 350px;
+        transform: rotateX(-20deg);
+        @media (max-width: $small) {
+            background: url(../images/png/fruits/banana.png) repeat center center;
+            top: 200px;
+            background-size: 120px;
+            opacity: .3;
+         }
+    }
     @media (max-width: $smallest) {
         top: -50px;
         min-height: 250vh;
@@ -447,10 +463,12 @@ header{
         top: 0px;
         margin: auto;
         width: 100%;
-        min-height: 35vh;
+        min-height: vh;
         content: '';
-        background: url(../images/About/bolsa_peras.jpg) no-repeat center -200px  fixed ;        
-        background-size: 100%;
+        background: url(../images/png/fruits/naranja.png) repeat center center  fixed   ;        
+        background-size: 100px;
+        opacity: .6;
+        background-color: $colorSecundarioClaro;
         z-index: 1;
         border-radius: 1%;
         @media (max-width: $big)  {        
@@ -467,6 +485,7 @@ header{
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column;
+        padding-top: 50px;
         @media (max-width: $small) {
             min-height: 150px;
          }
@@ -486,7 +505,7 @@ header{
             animation: rotateIcon 9s infinite ease-in-out;
             z-index: 999;
             position: relative;
-            color: rgb(26, 206, 50);
+            color: $colorPrincipalOscuro;
             @media (max-width: $small) {
                 font-size: 6rem;
              }
@@ -503,7 +522,7 @@ header{
             }
         }
         h3{
-            font-size: 2rem;
+            font-size: 3rem;
             font-family: $secundaria;
             text-align: center;
             @media (max-width: $small) {
@@ -511,7 +530,7 @@ header{
                 text-align: center;
              }
             span{
-                font-size: 2rem;            
+                font-size: 3rem;            
                 text-decoration: underline 2px $colorSecundarioOscuro;
                 
             }
@@ -549,7 +568,7 @@ header{
             }
         }
         p{
-            font-size: 1.7rem;
+            font-size: 2rem;
             width: 100%;
             display: flex;
             justify-content: center;
