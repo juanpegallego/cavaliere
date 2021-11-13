@@ -136,10 +136,23 @@ body
     align-items: center;
     min-height: 50vh;    
     background-color: white;
+    &::before{
+        position: relative;
+        top: 200px;
+        margin: auto;
+        width: 25%;
+        height: 2px;
+        background-color: rgba(0, 0, 0, 0.521);
+        content: '';
+    }
+    
+    
         h1{
             font-size: 4rem;
+            padding-top: 50px;
             color: $colorSecundario;
             text-align: center;
+            color: $colorSecundarioOscuro;
             @media screen and (max-width: $small) {   
                 font-size: 2rem;
                 padding-top: 50px;
@@ -155,14 +168,15 @@ body
             p{
                 font-size: 2rem;            
                 text-align: justify;
-                margin: auto;
+                margin: 100px auto;
                 display: flex;
                 align-items: center;
                 position: relative;
                 max-width: 70%;
                 min-height:30vh;
+                font-weight: bold;
                 background-color: rgba(255, 255, 255, 0.741);
-                color: black;
+                color: $colorSecundarioOscuro;
                 padding: 20px;
                 @media screen and (max-width: $small) {        
                     transform: none;
@@ -492,8 +506,7 @@ body
     position: relative;
     letter-spacing: -1px;
     height: 40px;
-    margin-top: 10px;
-    transform: translateY(200px);
+    margin-top: 100px;
     text-decoration: none;
     background-color: $colorPrincipal;
     width: 250px;
@@ -518,7 +531,7 @@ footer
     width: 100vw;
     height: 100px;
     position: relative;
-    top: 50vh;
+    top: 20vh;
     background-color: $colorSecundario;
     display: flex;
     justify-content: center;
@@ -526,6 +539,8 @@ footer
     scroll-snap-align: start;
     scroll-snap-type: mandatory;
     scroll-behavior: smooth;
+    background: rgb(16,40,51);
+    background: radial-gradient(circle, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     @media (max-width: $small) {
         margin-top: 0px;
         bottom: 0px;
@@ -662,11 +677,13 @@ footer
                 li
                 {
                     position: relative;
-    
+                    
                     a
                     {
                         color: white;
-                        
+                        &:hover{
+                            color: grey;
+                        }
                         ion-icon{
                             font-size: 3rem;
                             @media (max-width: $small) {

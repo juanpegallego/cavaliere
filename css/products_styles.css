@@ -90,10 +90,20 @@ body {
   align-items: center;
   min-height: 50vh;
   background-color: white; }
+  .white_space::before {
+    position: relative;
+    top: 200px;
+    margin: auto;
+    width: 25%;
+    height: 2px;
+    background-color: rgba(0, 0, 0, 0.521);
+    content: ''; }
   .white_space h1 {
     font-size: 4rem;
+    padding-top: 50px;
     color: #102833;
-    text-align: center; }
+    text-align: center;
+    color: #071116; }
     @media screen and (max-width: 600px) {
       .white_space h1 {
         font-size: 2rem;
@@ -106,14 +116,15 @@ body {
     .white_space .text p {
       font-size: 2rem;
       text-align: justify;
-      margin: auto;
+      margin: 100px auto;
       display: flex;
       align-items: center;
       position: relative;
       max-width: 70%;
       min-height: 30vh;
+      font-weight: bold;
       background-color: rgba(255, 255, 255, 0.741);
-      color: black;
+      color: #071116;
       padding: 20px; }
       @media screen and (max-width: 600px) {
         .white_space .text p {
@@ -369,8 +380,7 @@ body {
   position: relative;
   letter-spacing: -1px;
   height: 40px;
-  margin-top: 10px;
-  transform: translateY(200px);
+  margin-top: 100px;
   text-decoration: none;
   background-color: #bce027;
   width: 250px;
@@ -392,14 +402,16 @@ footer {
   width: 100vw;
   height: 100px;
   position: relative;
-  top: 50vh;
+  top: 20vh;
   background-color: #102833;
   display: flex;
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
   scroll-snap-type: mandatory;
-  scroll-behavior: smooth; }
+  scroll-behavior: smooth;
+  background: #102833;
+  background: radial-gradient(circle, #102833 26%, #1b465a 98%); }
   @media (max-width: 600px) {
     footer {
       margin-top: 0px;
@@ -527,6 +539,8 @@ footer {
           position: relative; }
           footer .footer_content .redes_container ul li a {
             color: white; }
+            footer .footer_content .redes_container ul li a:hover {
+              color: grey; }
             footer .footer_content .redes_container ul li a ion-icon {
               font-size: 3rem; }
               @media (max-width: 600px) {
