@@ -347,12 +347,22 @@ header {
     width: 65%;
     position: relative;
     top: 150px; }
+    @media screen and (max-width: 600px) {
+      .container_invitacion .invitacion_text {
+        width: 100%; } }
     .container_invitacion .invitacion_text .invitacion_title {
       width: 900px;
       position: relative;
       top: 0px; }
+      @media screen and (max-width: 600px) {
+        .container_invitacion .invitacion_text .invitacion_title {
+          position: absolute;
+          width: 350px; } }
     .container_invitacion .invitacion_text .invitacion_img {
       width: 400px; }
+      @media screen and (max-width: 600px) {
+        .container_invitacion .invitacion_text .invitacion_img {
+          visibility: hidden; } }
   .container_invitacion .link_container {
     position: relative;
     margin-top: 5rem; }

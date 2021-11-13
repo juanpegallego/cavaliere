@@ -40,6 +40,9 @@ header {
   background-color: rgba(16, 40, 51, 0.879);
   display: flex;
   align-items: center; }
+  @media (max-width: 600px) {
+    header {
+      min-height: 150vh; } }
   header h3 {
     color: white;
     font-size: 7rem;
@@ -87,7 +90,7 @@ header {
     z-index: 9999; }
     @media (max-width: 600px) {
       header .header_text {
-        padding-left: 10px; } }
+        padding: 40px; } }
     header .header_text p {
       width: 50%;
       color: white;
@@ -323,26 +326,13 @@ header {
   align-items: center;
   flex-direction: column;
   color: white; }
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
     .section {
       top: 50px;
       transform: translateY(-100px);
       min-height: 150vh;
-      padding-bottom: 20px; } }
-  @media (min-width: 375px) and (max-width: 600px) {
-    .section {
-      top: -50px;
-      min-height: 120vh; } }
-  @media (min-width: 600px) and (max-width: 900px) {
-    .section {
-      top: -150px;
-      min-height: 150vh;
-      padding-bottom: 20px; } }
-  @media (min-width: 900px) and (max-width: 1200px) {
-    .section {
-      min-height: 150vh;
-      top: 0px;
-      margin-bottom: 0px; } }
+      padding-bottom: 150px;
+      margin-bottom: -50px; } }
   .section::after {
     position: absolute;
     top: 0px;
@@ -472,7 +462,7 @@ footer {
       top: 50px; } }
   @media (min-width: 375px) and (max-width: 600px) {
     footer {
-      top: 50px;
+      top: 0px;
       min-height: 100vh;
       bottom: 0px;
       margin-top: 0px;

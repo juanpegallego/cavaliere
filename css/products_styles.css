@@ -34,6 +34,9 @@ body {
   justify-content: space-evenly;
   align-items: center;
   flex-direction: column; }
+  @media screen and (max-width: 600px) {
+    .header {
+      position: relative; } }
   .header::after {
     position: absolute;
     content: '';
@@ -71,12 +74,13 @@ body {
   background-size: cover; }
   @media screen and (max-width: 600px) {
     .finca_container {
+      display: flex;
       min-height: 30vh;
-      display: grid;
-      grid-template-rows: 30% 70%;
       background-color: rgba(255, 255, 255, 0.603);
       position: relative;
-      padding-bottom: 50px; } }
+      object-fit: cover;
+      background: url(../images/campo.jpg) no-repeat center center;
+      background-size: cover; } }
 
 .white_space {
   width: 100%;
@@ -407,8 +411,8 @@ footer {
       align-items: center;
       flex-direction: column;
       top: 200px;
-      background: #060d0d;
-      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
+      background: #102833;
+      background: linear-gradient(to top, #102833 26%, #1b465a 98%); } }
   @media screen and (min-width: 900px) and (max-width: 1200px) {
     footer {
       margin-top: 0px;
@@ -420,8 +424,8 @@ footer {
       align-items: center;
       flex-direction: column;
       top: -20vh;
-      background: #060d0d;
-      background: linear-gradient(to top, #060d0d 27%, #74727294 85%); } }
+      background: #102833;
+      background: linear-gradient(to top, #102833 26%, #1b465a 98%); } }
   footer .footer_content {
     width: 70%;
     height: 100%;

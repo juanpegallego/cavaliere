@@ -74,6 +74,7 @@ body {
     z-index: -1; }
     @media screen and (max-width: 600px) {
       .container::after {
+        background-size: 90%;
         left: 0px; } }
   .container .contact_title {
     display: flex;
@@ -88,13 +89,13 @@ body {
       top: 0px;
       left: -50px;
       letter-spacing: -2px;
-      color: rgba(255, 255, 255, 0.748);
-                                  /* 
-font-family: $secundaria;  */ }
+      color: rgba(255, 255, 255, 0.748); }
       @media screen and (max-width: 600px) {
         .container .contact_title h1 {
-          font-size: 4.5rem;
-          top: -20px; } }
+          font-size: 7rem;
+          left: initial;
+          margin-bottom: 50px;
+          padding: 20px; } }
       @media screen and (min-width: 900px) and (max-width: 1200px) {
         .container .contact_title h1 {
           font-size: 8em; } }
@@ -228,13 +229,14 @@ footer {
       bottom: 0px;
       min-height: 100vh;
       position: relative;
+      opacity: 1;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
       top: 100px;
-      background: #070c16;
-      background: linear-gradient(circle, #070c16 27%, #1b465a 88%); } }
+      background: #102833;
+      background: linear-gradient(to top, #102833 26%, #1b465a 98%); } }
   footer:hover {
     opacity: 1;
     transition: all .5s; }

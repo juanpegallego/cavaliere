@@ -425,6 +425,7 @@ header{
     color: white;
     overflow: hidden;
     padding-bottom: 50px;
+    
     .invitacion_text{
         justify-content: space-evenly;
         align-items: center;
@@ -433,22 +434,31 @@ header{
         width: 65%;
         position: relative;
         top: 150px;
+        @media screen and (max-width: $small) {
+            width: 100%;
+        } 
         .invitacion_title{
             width: 900px;
             position: relative;
             top: 0px;
+            @media screen and (max-width: $small) {
+                position: absolute;
+                width: 350px;
+            } 
         }
         
         .invitacion_img{
             width: 400px;
+            @media screen and (max-width: $small) {
+                visibility: hidden;
+            } 
         }
         
         
     }
         
     .link_container{
-        position: relative;
-        
+        position: relative;        
         margin-top: 5rem;  
         a{
             position: relative;

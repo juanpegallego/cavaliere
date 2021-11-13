@@ -113,6 +113,7 @@ body
         position: absolute;
         z-index: -1;   
         @media screen and (max-width: $small) {
+            background-size: 90%;
            left: 0px;
           }
     }
@@ -132,11 +133,12 @@ body
             top: 0px;
             left: -50px;
             letter-spacing: -2px;
-            color: rgba(255, 255, 255, 0.748);/* 
-            font-family: $secundaria;  */
+            color: rgba(255, 255, 255, 0.748);
             @media screen and (max-width: $small) {
-                font-size: 4.5rem;
-                top: -20px;
+                font-size: 7rem;
+                left: initial;
+                margin-bottom: 50px;
+                padding: 20px;
               }
               @media screen and (min-width: $medium) and (max-width: $big) {
                 font-size: 8em;
@@ -311,13 +313,14 @@ footer
         bottom: 0px;
         min-height: 100vh;
         position: relative;
+        opacity: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         top: 100px;
-        background: rgb(7,12,22);
-        background: linear-gradient(circle, rgba(7,12,22,1) 27%, rgba(27,70,90,1) 88%);
+        background: rgb(16,40,51);
+        background: linear-gradient(to top, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     }
     &:hover{
         opacity: 1;
