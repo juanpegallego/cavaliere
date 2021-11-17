@@ -89,6 +89,7 @@ body
             justify-content: center;
             width: 100%;
             right: inherit;
+            margin-top: 50px;
          }
         ul{
         display: flex;
@@ -121,16 +122,11 @@ body
                     }
                 }  
             }
-        }
-       
-          
+        }              
         
     }
 
 
-    @media screen and (max-width: $big) {
-       
-     } 
 
     .site_title{
         min-width: 500px;
@@ -147,6 +143,7 @@ body
         @media screen and (max-width: $small) {           
             position: relative;
             top: 100px;
+            padding: 50px;
           }
         &::before{
             position: absolute;
@@ -198,11 +195,8 @@ body
              backdrop-filter: blur(10px);
 
             }
-        }
-    
-    }
-    
-   
+        }    
+    }       
 }
     
 

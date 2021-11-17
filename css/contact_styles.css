@@ -212,8 +212,8 @@ footer {
   height: 100px;
   position: relative;
   bottom: 0px;
-  background: #070c16;
-  background: radial-gradient(circle, #070c16 32%, #102833 78%);
+  background: #102833;
+  background: radial-gradient(circle, #102833 26%, #1b465a 98%);
   display: flex;
   justify-content: center;
   align-items: center;

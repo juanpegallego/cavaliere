@@ -50,7 +50,8 @@ body {
         top: 150px;
         justify-content: center;
         width: 100%;
-        right: inherit; } }
+        right: inherit;
+        margin-top: 50px; } }
     .site .flags_container ul {
       display: flex;
       justify-content: space-between;
@@ -89,7 +90,8 @@ body {
     @media screen and (max-width: 600px) {
       .site .site_title {
         position: relative;
-        top: 100px; } }
+        top: 100px;
+        padding: 50px; } }
     .site .site_title::before {
       position: absolute;
       top: -90px;

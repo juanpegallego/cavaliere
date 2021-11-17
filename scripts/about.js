@@ -28,14 +28,7 @@ gsap.to('.content_title', {
     ease:Sine.easeOut,
     
 })
-gsap.to('.content', {
-    scrollTrigger: '.content',
-    duration: 1,
-    delay:1,
-    x:0,
-    opacity:1,
-    ease:Sine.easeOut
-})
+
 
 gsap.to('.card', {
     scrollTrigger: '.flex_container',
@@ -48,7 +41,7 @@ gsap.to('.card', {
 gsap.to('.final_card', {
     scrollTrigger: '.final_card',
     duration: 2,
-    delay:2,
+    delay:1,
     opacity:1,
 })
 
@@ -60,4 +53,5 @@ gsap.to('.title', {
     opacity:1,
     ease:Sine.easeOut
 })
+
 

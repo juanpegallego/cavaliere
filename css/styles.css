@@ -262,7 +262,9 @@ body {
       color: white;
       position: relative;
       width: 100%;
-      min-height: 550px; }
+      min-height: 550px;
+      opacity: 0;
+      transform: translateX(-50vw); }
       .container_2 .grid_section .left_container h1 {
         text-align: center;
         font-family: "Montserrat", "Sans Serif", "Comic Sans"; }
@@ -298,7 +300,9 @@ body {
       color: white;
       position: relative;
       top: 0px;
-      padding: 50px 20px; }
+      padding: 50px 20px;
+      opacity: 0;
+      transform: translateX(50vw); }
       .container_2 .grid_section .right_container img {
         color: white;
         width: 80px; }
@@ -370,7 +374,9 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     position: relative;
-    min-height: 400px; }
+    min-height: 400px;
+    opacity: 0;
+    transform: translateX(-50vw); }
     @media (max-width: 600px) {
       .banner_container .grid_banner {
         display: flex;
@@ -468,6 +474,7 @@ body {
     justify-content: center;
     flex-direction: row;
     padding-bottom: 50px;
+    opacity: 0;
     padding-top: 50px; }
     @media (max-width: 600px) {
       .fruit_out_container .fruits_container {
@@ -532,7 +539,9 @@ body {
       background-color: #1b465a;
       position: relative;
       max-height: 70vh;
-      padding: 30px; }
+      padding: 30px;
+      opacity: 0;
+      transform: translateX(50vw); }
       .fruit_out_container .fruits_container .widget_container::-webkit-scrollbar {
         display: none; }
       @media (max-width: 600px) {
@@ -841,7 +850,7 @@ footer {
             transform: translateY(30px);
             font-size: 1.5rem; } }
       footer .footer_content .redes_container ul {
-        width: 100%;
+        width: 70%;
         list-style: none;
         display: flex;
         justify-content: space-evenly;
@@ -858,5 +867,25 @@ footer {
               @media (min-width: 900px) and (max-width: 1200px) {
                 footer .footer_content .redes_container ul li a ion-icon {
                   font-size: 4rem; } }
+      footer .footer_content .redes_container .work {
+        position: absolute;
+        right: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 50px;
+        flex-direction: row;
+        margin: auto;
+        text-decoration: none; }
+        footer .footer_content .redes_container .work ion-icon {
+          font-size: 2rem;
+          color: white;
+          margin-right: 10px; }
+        footer .footer_content .redes_container .work span {
+          color: white;
+          font-size: 1.5rem;
+          text-decoration: underline; }
+
+/* --- Intersection observer classes ---*/
 
 /*# sourceMappingURL=styles.css.map */
