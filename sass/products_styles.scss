@@ -137,6 +137,10 @@ body
     align-items: center;
     min-height: 50vh;    
     background-color: white;
+    @media screen and (max-width: $small) {    
+        min-height: 15vh;  
+        max-height: 800px;
+      }
     &::before{
         position: relative;
         top: 320px;
@@ -147,18 +151,21 @@ body
         background-size: 200px;
         background-color: $colorSecundario;
         content: '';
+        @media screen and (max-width: $small) {    
+            top: 180px;
+            height: 300px;
+          }
     }
     
     
         h1{
             font-size: 4rem;
-            padding-top: 0px;
-            color: $colorSecundario;
             text-align: center;
             color: $colorSecundarioOscuro;
             @media screen and (max-width: $small) {   
                 font-size: 2rem;
-                padding-top: 0px;
+                top: -100px;
+                position: relative;
               }
         }
 
@@ -169,6 +176,11 @@ body
             align-items: center;
             flex-direction: column;
             margin-top: 200px;
+            @media screen and (max-width: $small) {    
+                padding-top: 20px;
+                margin-top: 100px;
+                position: relative;
+              }
             p{
                 font-size: 2rem;            
                 text-align: justify;
@@ -396,27 +408,16 @@ body
                 margin-top: 50px;
               }
             &:hover{
-                backdrop-filter: blur(30px);
-                transition: all .5s;
-                display: flex;
-                justify-content: center;
-                flex-direction: column;                
-                align-items: center;              
+                backdrop-filter: blur(3px);
+                       
                 
             }
-            &:hover .fruit_info_container p {
-                transform: translateX(50px);
-                transition: all 1s;
-                @media screen and (max-width: $big) {   
-                    transform: none;
-                    transition: all 1s;
-                    
-                  }
+           
                   
                
                  
       
-            } 
+             
             &:hover .fruit_info_container h3{
                 transition: all 1s;
                 width: 50%;
@@ -427,7 +428,6 @@ body
                 flex-direction: column;
                 color: $colorSecundario;
                 border-radius:  0rem 3rem;
-                backdrop-filter: blur(30px);
                 min-width: 100px;
                 transform: translateY(-30px);
             } 
@@ -463,45 +463,16 @@ body
                     display: none;
                     @media screen and (max-width: $small) {   
                         font-size:4rem;
-                        
                       }
                 }
-                p
-                {
-                    font-size: 1.5rem;
-                    text-align: center;
-                    width: 50%;
-                    min-width: 250px;
-                    background-color: rgba(95, 197, 95, 0.682);
-                    display: none;
-                    border-radius: 0rem 3rem;
-                    padding: 10px;                    
-                    color: white;
-                    @media screen and (max-width: $smallest) {   
-                       font-size: 1.4rem;
-                        width: 70%;
-                        max-height: 50%;
-                        min-width: 100px;
-                      }
-                    @media screen and (min-width: $smallest) and (max-width: $medium){   
-                        font-size: 1.5rem;
-                        padding: 10px;   
-                        width: 90%;                   
-                        text-align: center;
-                        min-width: 150px;
-                        padding: 10px;
-                      }
-                }
+                
             }
             
         }
         }
     
-        
-    
-   
-}    
-    }
+    }    
+ }
     
 
 .products_link{

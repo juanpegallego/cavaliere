@@ -374,6 +374,7 @@ body
     min-height: 30vh;
     background-color: $colorSecundarioClaro;    
     padding-top: 0px;
+    padding: 10px;
     @media screen and (max-width: $small)  {
      display: flex;
      justify-content: center;
@@ -396,8 +397,8 @@ body
         position: relative;          
         width: 100%;         
         min-height: 550px; 
-       opacity: 0;
-       transform: translateX(-50vw);
+        opacity: 0;
+        transform: translateX(-50vw);
         h1
         {
             text-align: center;
@@ -419,6 +420,7 @@ body
             @media screen and (max-width: $small)  {               
                 font-size: 1.5rem;
                 padding: 10px; 
+                width: 95%;
             }           
             
             @media screen  and (min-width: $small) {                 
