@@ -11,7 +11,8 @@
     <meta name="robots" content="index, follow">
     <link rel="stylesheet" href="../../../css/styles.css">
     <link rel="stylesheet" href="../../../css/nav_styles.css">
-    <link rel="stylesheet" href="../../../css/reset_css.css">
+    <link rel="stylesheet" href="../../../css/reset_css.css">    
+    <link rel="stylesheet" href="../../../css/spinner_styles.css">
     <link rel="stylesheet" href="../../../css/wsp_styles.css">
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -133,18 +134,28 @@
     </nav>
 
     <div class="site_content">
-        <div class="container_1">
+
+        <div id="loading-indicator" style="width: 60px; height: 60px;" role="progressbar"
+            class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate">
+            <svg viewBox="22 22 44 44" class="MuiCircularProgress-svg">
+                <circle cx="44" cy="44" r="20.2" fill="none" stroke-width="3.6"
+                    class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate">
+                </circle>
+            </svg>
+        </div>
+        
+        <div class="container_1" id="slider">
             <div class="logo_container">
                 <img src="../../..//images/Home/logotipo_column.png" alt="logo cavaliere">
             </div>
-            <div class="slider">
+            <div class="slider" >
                 <div class="slides">
                     <input type="radio" name="radio-btn" id="radio1">
                     <input type="radio" name="radio-btn" id="radio2">
                     <input type="radio" name="radio-btn" id="radio3">
 
                     <div class="slide first">
-                        
+
                         <div class="slide_text">
                             <h1>Somos productores</h1>
                             <p>
@@ -194,11 +205,14 @@
                             Del campo sin escalas
                         </h1>
                         <p>
-                            Trabajar junto con Cavaliere Group es sin&oacute;nimo de <strong>tranquilidad y garant&iacute;a. </strong>
-                            <br> 
-                            Somos una empresa l&iacute;der en el mercado de comercializaci&oacute;n de productos frescos, reconocida por su compromiso, trayectoria, alto nivel de excelencia y calidad de sus productos. 
+                            Trabajar junto con Cavaliere Group es sin&oacute;nimo de <strong>tranquilidad y
+                                garant&iacute;a. </strong>
+                            <br>
+                            Somos una empresa l&iacute;der en el mercado de comercializaci&oacute;n de productos
+                            frescos, reconocida por su compromiso, trayectoria, alto nivel de excelencia y calidad de
+                            sus productos.
                         </p>
-                        
+
                     </div>
                     <div class="right_container">
                         <img src="../../../images/png/agricultor.png" alt="">
@@ -207,7 +221,10 @@
                                 Tenemos un compromiso con la ecolog&iacute;a.
                             </strong>
 
-                             <br> Contamos con tecnolog&iacute;a adecuada para cada proceso de elaboración manteniendo los mas altos estandares y  cuidados necesarios que se necesitan.  <br> Por ello exportamos frutas y verduras producidas bajo estrictas normas de respeto y no agresión al medio ambiente.
+                            <br> Contamos con tecnolog&iacute;a adecuada para cada proceso de elaboración manteniendo
+                            los mas altos estandares y cuidados necesarios que se necesitan. <br> Por ello exportamos
+                            frutas y verduras producidas bajo estrictas normas de respeto y no agresión al medio
+                            ambiente.
                         </p>
                         <a href="../../../pages/es/about/about.html">
                             Sustentabilidad
@@ -217,7 +234,7 @@
             </main>
         </div>
     </div>
-    
+
     <div class="banner_container">
         <div class="grid_banner">
             <div class="grid_message">
@@ -239,10 +256,10 @@
                     Donde encontrarnos
                 </a>
             </div>
-            
+
         </div>
     </div>
-    
+
     <div class="fruit_out_container">
         <div class="fruits_container">
             <div class="fruit_img_box">
@@ -251,27 +268,27 @@
             <div class="fruit_title">
 
                 <a href="../../../pages/es/products/products.html#products">
-                    Nuestras frutas 
+                    Nuestras frutas
                 </a>
             </div>
             <div class="widget_container">
                 <div class="widget_title">
                     <ion-icon name="logo-instagram"></ion-icon>
                     <h3>Cavaliere.group</h3>
-                </div>                
+                </div>
                 <div class="embedsocial-hashtag" data-ref="aa9bfdcc65ad8897c8df271bcc127f5b1992bb48">
                 </div>
                 <script>
-                    (function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialHashtagScript"));
+                    (function (d, s, id) { var js; if (d.getElementById(id)) { return; } js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js); }(document, "script", "EmbedSocialHashtagScript"));
                 </script>
             </div>
 
         </div>
     </div>
-    
+
     <div class="container_3" id="formContainer">
         <div class="contact_title">
-            
+
             <h1>
                 Contacto
             </h1>
@@ -288,8 +305,8 @@
             </form>
         </div>
     </div>
-    
-        
+
+
 
     <footer>
         <div class="footer_content">
@@ -323,30 +340,36 @@
                             <ion-icon name="mail-outline"></ion-icon>
                         </a>
                     </li>
-                    
-                        
-                    
+
+
+
                 </ul>
-                    <a href="https://www.linkedin.com/company/cavaliere-group/jobs/" class="work">
-                        
-                        <span>
-                            Trabaja con nosotros
-                        </span>
-                    </a>
-                    <p>
-                        Be Tech - Web Design
-                    </p>
+                <a href="https://www.linkedin.com/company/cavaliere-group/jobs/" class="work">
+
+                    <span>
+                        Trabaja con nosotros
+                    </span>
+                </a>
+                <p>
+                    Be Tech - Web Design
+                </p>
             </div>
     </footer>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"> </script>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/ScrollTrigger.min.js "> </script>
-    <script src="../../../scripts/index.js" ></script>
+    <script src="../../../scripts/index__loader.js"></script>
+    <script src="../../../scripts/index.js"></script>
     <script src="../../../scripts/navBar.js"></script>
-    
-    
+    <script>
+
+        /*----------------------- Loader Spinner ------------------------*/
+        loader('slider')
+    </script>
+
+
 </body>
 
 
