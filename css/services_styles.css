@@ -376,15 +376,15 @@ header {
       text-decoration: none;
       color: white;
       font-size: 2rem;
-      border: 2px solid white;
       padding: 4px 8px;
       font-weight: bold;
       transition: all .2s;
+      padding: 5px 10px;
+      background-color: #102833;
       text-align: center;
       min-width: 200px; }
       .container_invitacion .link_container a:hover {
-        border: 2px solid transparent;
-        background-color: #102833; }
+        background-color: #1b465a; }
 
 footer {
   width: 100vw;

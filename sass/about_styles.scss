@@ -13,19 +13,7 @@
     box-sizing: border-box;
     font-size: 10px;
 }
-:root 
-{
-    --principal: black;
-    --secundario: red;
-    --opcional:white;
-    --ventanas:rgba(255, 255, 255, 0.782);
-    $principal:'Poppins', 'Sans Serif';
-    $secundaria:'Montserrat', 'Sans Serif';
 
-    
-
-  }
-  
   
     $colorPrincipalClaro:#d2f153;
     $colorPrincipal: #bce027;
@@ -99,8 +87,7 @@ header{
         .shape_img{
             width: 100%;
             position: absolute;
-            background-color: rgba(10, 19, 24, 0.31);
-            top: 0px;
+            top: 0px;   
             z-index: 2;
         }
         .header_bgc{
@@ -113,10 +100,9 @@ header{
             display: flex;
             justify-content: center;
             align-items: center;  
-            background-color: rgba(16, 40, 51, 0.679);        
+            background-color: rgba(16, 40, 51, 0.679);  
             backdrop-filter: blur(1px) contrast(50%);
-            top: 0;
-           
+            top: 0;           
         }
        
     }
@@ -148,13 +134,7 @@ header{
                 font-size: 1.8rem;
             }
         }
-    }
- 
-       
-        
-       
-    
-   
+    }  
 }
 
 .content{
@@ -195,8 +175,7 @@ header{
         top: 0px;
         position: relative;
         z-index: -1;
-     }
-   
+     }   
     .content_title{
         display: flex;
         justify-content: center;
@@ -210,8 +189,7 @@ header{
             color: $colorSecundario;
             transform: translateY(50px);
            text-align: center;
-        }
-       
+        }       
     }
     .flex_container{
         display: flex;
@@ -221,8 +199,7 @@ header{
         flex-wrap: wrap;
         width: 90%;
         margin: auto;
-        margin-top: 50px;
-       
+        margin-top: 50px;       
         .card{            
             position: relative;
             display: flex;
@@ -244,9 +221,7 @@ header{
                 transition: all .5s; 
                 justify-content: initial;
                 cursor: pointer;
-            }
-            
-            
+            }                       
            
             &:hover{
                 
@@ -328,11 +303,10 @@ header{
             @media (max-width: $small) {
                 width: 100%;
                 min-width: 300px;
-             }
+            }
              @media (min-width: $small)and (max-width :$medium) {
                 width: 75%;
-             }          
-                        
+            }                                  
            
             h2{
                 color: white;
@@ -354,8 +328,6 @@ header{
         }
     }
 
-
-
 .container_branches
 {
     scroll-snap-align: start;
@@ -375,8 +347,8 @@ header{
         min-height: 200vh;
         align-items: center;
         top: 0px;        
-       padding: 20px;
-       padding-bottom: 50px;
+        padding: 20px;
+        padding-bottom: 50px;
      }
    .branches_data{
        width: 80%;
@@ -418,13 +390,37 @@ header{
         }
         .arrow_icon
         {
-            font-size: 9rem;
+            font-size: 6rem;
+            
+            transform: rotate(90deg);
             @media (max-width: $small) {
-                transform: rotate(90deg);
                 font-size: 5rem;
              }
         }
+        .container_map
+    {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: .5rem;        
+        padding: 25px;
+        margin-top: 50px;
+        @media (max-width: $small) {
+            margin-top: 0px;
+          }
+        iframe{
+            width: 100%;
+            border-radius: .5rem;
+            border: none;
+            @media (max-width: $small) {
+               width: 100%;
+               height: 250px;
+             }
+        }
     }
+}
     .container{
         display: flex;
         justify-content: space-evenly;
@@ -432,6 +428,8 @@ header{
         flex-direction: column;
         color: white;
         width: 100%;
+        transform: translateX(200vw); 
+        opacity: 0;
         .table_title{
             width: 60%;
             display: flex;
@@ -444,7 +442,7 @@ header{
             min-width: 150px;
             @media (max-width: $small) {
                 min-width: 300px;
-             }
+            }
             h3{
                 text-align: center;
                 font-size: 2rem;
@@ -462,8 +460,7 @@ header{
             @media (max-width: $small) {
                 padding: 20px;
                 overflow: hidden;
-             }
-         
+            }         
            th{
                font-size: 1.7rem;
                background-color: rgba(255, 255, 255, 0.101);
@@ -477,31 +474,7 @@ header{
                 }
             }
         }
-    }
-    .container_map
-    {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        border-radius: .5rem;        
-        padding: 25px;
-        margin-top: 50px;
-        @media (max-width: $small) {
-            margin-top: 0px;
-          }
-        iframe{
-            width: 50%;
-            border-radius: .5rem;
-            
-            border: none;
-            @media (max-width: $small) {
-               width: 100%;
-               height: 250px;
-             }
-        }
-    }
+    }    
 }
 
 
@@ -639,7 +612,7 @@ header{
             }
         }
         p{
-            font-size: 2rem;
+            font-size: 1.8rem;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -662,9 +635,7 @@ header{
                 font-size: 1.7rem;
              }
         }
-
-    }
-   
+    }   
 }
 
 footer
@@ -763,9 +734,8 @@ footer
                 width: 90px;
                 position: absolute;
                 top: 30px;
-                left: 20px;
-                
-            padding-left: 20px;
+                left: 20px;                
+                padding-left: 20px;
                 @media (max-width: $small) {
                     margin: auto;
                     position: relative;
@@ -807,11 +777,9 @@ footer
                
                 @media (max-width: $small) {
                    transform: translateY(30px);
-                   font-size: 1.5rem;
-                   
+                   font-size: 1.5rem;                   
                 }
-                @media (min-width: $medium) and (max-width: $big)  {
-                  
+                @media (min-width: $medium) and (max-width: $big)  {                  
                     transform: translateY(200px);
                }
             }
@@ -847,6 +815,5 @@ footer
                 }
             }
         }
-    }
-    
+    }    
 }

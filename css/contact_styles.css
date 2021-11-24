@@ -25,7 +25,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", "Sans Serif", "Comic Sans";
-  overflow: hidden;
+  overflow-x: hidden;
   background-size: cover;
   background: url(../images/Home/fondoContact.jpg) no-repeat center center;
   backdrop-filter: contrast(25%);
@@ -64,10 +64,10 @@ body {
   .container::after {
     content: " ";
     background: url(../images/Home/logotipo.png) no-repeat center center;
-    background-size: 60%;
-    opacity: .9;
+    background-size: 70%;
+    opacity: .7;
     top: 0;
-    left: 150px;
+    left: 0px;
     bottom: 0;
     right: 0;
     position: absolute;
@@ -122,25 +122,24 @@ body {
         border-radius: .8rem;
         border: none;
         outline: none;
-        font-size: 1.3rem;
+        font-size: 2rem;
         color: black;
-        padding-left: 15px;
-        background-color: rgba(255, 255, 255, 0.355);
+        padding-left: 10px;
+        background-color: #1b465a;
         backdrop-filter: blur(3px); }
         @media screen and (max-width: 1200px) {
           .container .form_container form input {
             background-color: rgba(184, 179, 179, 0.582); } }
         .container .form_container form input:focus {
-          background-color: #102833;
+          background-color: rgba(255, 255, 255, 0.355);
           color: white; }
           .container .form_container form input:focus::placeholder {
             color: white; }
         .container .form_container form input::placeholder {
-          padding-left: 10px;
           color: white;
-          letter-spacing: 1px;
           font-weight: lighter;
-          font-size: 2rem;
+          padding-left: 10px;
+          font-size: 1.8rem;
           font-family: Poppins; }
           @media screen and (max-width: 900px) {
             .container .form_container form input::placeholder {
@@ -153,27 +152,26 @@ body {
         outline: none;
         border: none;
         border-radius: 1rem;
-        font-size: 1.3rem;
+        font-size: 2rem;
         color: #071116;
-        padding: 10px 15px;
         resize: none;
-        background-color: rgba(255, 255, 255, 0.355);
+        padding-left: 10px;
+        padding-top: 5px;
+        background-color: #1b465a;
         backdrop-filter: blur(3px); }
         @media screen and (max-width: 1200px) {
           .container .form_container form textarea {
             background-color: rgba(184, 179, 179, 0.582); } }
         .container .form_container form textarea:focus {
-          background-color: #102833;
+          background-color: rgba(255, 255, 255, 0.355);
           backdrop-filter: blur(3px);
           color: white; }
-          .container .form_container form textarea:focus::placeholder {
-            color: white; }
         .container .form_container form textarea::placeholder {
-          padding-left: 10px;
           color: white;
           font-family: Poppins;
+          padding-top: 5px;
+          padding-left: 10px;
           font-weight: 600;
-          letter-spacing: 1px;
           font-weight: lighter;
           font-size: 2rem; }
           @media screen and (max-width: 900px) {
@@ -184,19 +182,18 @@ body {
               font-size: 2.2rem; } }
       .container .form_container form button {
         font-family: Poppins;
-        width: 200px;
+        min-width: 150px;
         outline: none;
         border: none;
         position: relative;
         top: 20px;
         color: white;
         height: 40px;
-        font-size: 2.5rem;
+        font-size: 2rem;
         cursor: pointer;
-        background-color: rgba(255, 255, 255, 0.355);
+        background-color: #1b465a;
         backdrop-filter: blur(3px);
-        border-radius: 1rem;
-        letter-spacing: 1px; }
+        border-radius: 1rem; }
         @media screen and (max-width: 900px) {
           .container .form_container form button {
             color: black; } }
@@ -204,11 +201,11 @@ body {
           .container .form_container form button {
             background-color: rgba(184, 179, 179, 0.582); } }
         .container .form_container form button:hover {
-          background-color: #bce027;
+          background-color: rgba(255, 255, 255, 0.355);
           color: #071116; }
 
 footer {
-  width: 100vw;
+  width: 100%;
   height: 100px;
   position: relative;
   bottom: 0px;

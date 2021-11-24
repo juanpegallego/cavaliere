@@ -472,15 +472,15 @@ header{
             text-decoration: none;
             color: white;
             font-size: 2rem;
-            border: 2px solid white;
             padding: 4px 8px;
             font-weight: bold;
             transition: all .2s;
+            padding: 5px 10px;
+            background-color: $colorSecundario; 
             text-align: center;
             min-width: 200px;
             &:hover{
-                border: 2px solid transparent;
-                background-color: $colorSecundario;
+                background-color: $colorSecundarioClaro;
             }
         }
     }

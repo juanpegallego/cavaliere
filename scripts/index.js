@@ -82,9 +82,10 @@ gsap.to('.widget_container', {
 
 gsap.to('.fruits_container', {
     scrollTrigger: {
-        trigger: '.fruit_img_box',
-        start: 'top top+=100'
+        trigger: '.grid_banner',
+        start: 'top top+=200'
     },
-    duration:1.5,
-    opacity:1
+    duration:1,
+    opacity:1,
+    delay:.5
 });

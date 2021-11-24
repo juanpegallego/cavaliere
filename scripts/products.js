@@ -37,8 +37,8 @@ gsap.to('.products_title',{
         start: "top bottom",
 		end: "top top"
     },  
-    duration:.5,
-    delay:.5,
+    duration:.8,
+    delay:1,
     ease:Sine.easeOut,
     opacity:1,
     x:0
