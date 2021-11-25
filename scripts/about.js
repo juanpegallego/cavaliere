@@ -1,3 +1,5 @@
+/*---------- GSAP TRANSITIONS ------------------*/
+
 gsap.registerPlugin(ScrollTrigger)
 
 
@@ -64,4 +66,4 @@ gsap.to('.container', {
 })
 
 
-
+/*---------- MAP HOVER SELECTION ------------------*/

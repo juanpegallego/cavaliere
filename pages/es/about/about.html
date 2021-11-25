@@ -191,7 +191,8 @@
                     </div>
                     <h2>Atención al cliente</h2>
                     <p>
-                        Trabajamos con la máxima atención a nuestros clientes. Ofrecemos una estructura de planificacion de carga, con profesionales enfocados en ofrecerte lo mejor.
+                        Trabajamos con la máxima atención a nuestros clientes. Ofrecemos una estructura de planificacion
+                        de carga, con profesionales enfocados en ofrecerte lo mejor.
                     </p>
                 </div>
             </div>
@@ -213,102 +214,85 @@
 
 
     <div class="container_branches" id="branches">
-        
-        <div class="branches_data">
-            <div class="title">
-                <h3>Presencia constante</h3>
-                <h1> Donde estamos</h1>
-                <ion-icon name="return-down-forward-outline" class="arrow_icon"></ion-icon>
-                <div class="container_map">        
 
-                    <iframe 
-                        src="https://www.google.com/maps/d/embed?mid=1VTjplJLozau7w06DBPCM9P3jM_42KBId&hl=es&z=2"
-                        width="100%"
-                        height="480">
-                    </iframe>
-                </div>
-            </div>
-            <div class="container">
-                <table class="offices_table">
-                    <div class="table_title">
+
+        <div class="title">
+            <h3>Presencia constante</h3>
+            <h1> Donde estamos</h1>
+            <ion-icon name="return-down-forward-outline" class="arrow_icon"></ion-icon>
+
+        </div>
+        <div class="container" id="containerMap">
+            <div class="list_wrapper">
+                <div class="offices_list">
+                    <div class="list_title">
                         <img src="../../../images/About/empresa.png" alt="logo-empresa">
                         <h3>Oficinas Administrativas</h3>
                     </div>
-                    <thead>
-                        <tr>
-                            <th>Pais</th>
-                            <th>Ciudad</th>                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Argentina</td>
-                            <td>Buenos Aires</td>
-                        </tr>
-                        <tr>
-                            <td>Argentina</td>
-                            <td>Cordoba</td>
-                        </tr>
-                        <tr>
-                            <td>Chile</td>
-                            <td>Huechuraba</td>
-                        </tr>
-                        <tr>
-                            <td>Uruguay</td>
-                            <td>Montevideo</td>
-                        </tr>
-                        <tr>
-                            <td>Brasil</td>
-                            <td>Londrina</td>
-                        </tr>
-                        <tr>
-                            <td>Brasil</td>
-                            <td>Dionísio Cerqueira</td>
-                        </tr>
-                        <tr>
-                            <td>EEUU</td>
-                            <td>Miami</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <table class="offices_table">
-                    <div class="table_title">
-                        <img src="../../../images/About/cultivo.png" alt="logo-campo">
-                        <h3>Nuestros campos</h3>
-                    </div>
-                    <thead>
-                        <tr>
-                            <th>Ciudad</th>
-                            <th>Fruto</th>                         
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Corupa, Santa Catarina</td>
-                            <td>Banana</td>
-                        </tr>
-                        <tr>
-                            <td>Uruana, Goias</td>
-                            <td>Sandia</td>
-                        </tr>
-                        <tr>
-                            <td>Bom Jesus da Lapa</td>
-                            <td>Papaya</td>
-                        </tr>
-                        <tr>
-                            <td>Mau&aacute; da serra</td>
-                            <td>Zanahoria y remolacha</td>
-                        </tr>
-                        <tr>
-                            <td>Divin&oacute;polis, Minas Gerais</td>
-                            <td>Anana</td>
-                        </tr>
-                       
-                    </tbody>
-                </table>
+                    <ul>
+                        <li class="map_option">
+                            <img src="../../../images/flags/argentina.png" alt="arg-flag">
+                            Buenos Aires
+                        </li>
+                        <li>
+                            <img src="../../../images/flags/argentina.png" alt="arg-flag">
+                            Cordoba
+                        </li>
+                        <li>
+                            <img src="../../../images/flags/chile.png" alt="chile-flag">
+                            Huechuraba
+                        </li>
+                        <li>
+                            <img src="../../../images/flags/uruguay.png" alt="uruguay-flag">
+                            Montevideo
+                        </li>
+                        <li>
+                            <img src="../../../images/flags/brazil.png" alt="brazil-flag">
+                            Londrina
+                        </li>
+                        <li>
+                            <img src="../../../images/flags/brazil.png" alt="brazil-flag">
+                            Dionísio Cerqueira
+                        </li>
+                        <li>
+                            <img src="../../../images/flags/usa.png" alt="usa-flag">
+                            Miami
+                        </li>
+                    </ul>
+
+                </div>
             </div>
+
+            <div class="list_wrapper">
+                <div class="container_map">
+
+                    <iframe id="map"
+                            src="https://www.google.com/maps/d/embed?mid=1VTjplJLozau7w06DBPCM9P3jM_42KBId&hl=es&z=2"
+                            width="100%" 
+                            height="480">
+                    </iframe>
+                </div>
+            </div>
+            <div class="list_wrapper">
+                <div class="offices_list">
+                    <div class="list_title">
+                        <img src="../../../images/About/cultivo.png" alt="logo-cultivo">
+                        <h3>Nuestros Campos</h3>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
         </div>
-        
+
+
     </div>
 
 
@@ -400,7 +384,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
     <script src="../../../scripts/about.js"></script>
     <script src="../../../scripts/navBar.js"></script>
+    <script src="../../../scripts/mapSelector.js"></script>
 
+   
 </body>
 
 </html>
