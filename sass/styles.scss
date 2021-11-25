@@ -504,7 +504,7 @@ body
 
 .banner_container{
     width: 100%;
-    min-height: 80vh;
+    height: 70vh;
     background-color: $colorPrincipal;    
     display: flex;
     position: relative;
@@ -570,7 +570,7 @@ body
                 top: -100px;
             }
             img{
-                width: 20%;
+                max-width: 100px;
             }
             p{
                 font-size: 1.8rem;
@@ -611,7 +611,6 @@ body
                    {
                     width: auto;
                     height: 30px;
-                    padding:5px ;
                     font-size: 2rem;
                     top: 50px;
             }

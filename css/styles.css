@@ -344,7 +344,7 @@ body {
 
 .banner_container {
   width: 100%;
-  min-height: 80vh;
+  height: 70vh;
   background-color: #bce027;
   display: flex;
   position: relative;
@@ -398,7 +398,7 @@ body {
         .banner_container .grid_banner .grid_img {
           top: -100px; } }
       .banner_container .grid_banner .grid_img img {
-        width: 20%; }
+        max-width: 100px; }
       .banner_container .grid_banner .grid_img p {
         font-size: 1.8rem;
         text-align: center;
@@ -432,7 +432,6 @@ body {
           .banner_container .grid_banner .grid_img a {
             width: auto;
             height: 30px;
-            padding: 5px;
             font-size: 2rem;
             top: 50px; } }
       .banner_container .grid_banner .grid_img img {
