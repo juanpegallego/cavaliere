@@ -376,7 +376,7 @@ body {
     display: grid;
     grid-template-columns: 50% 50%;
     position: relative;
-    min-height: 400px;
+    height: 95%;
     opacity: 0;
     transform: translateX(-50vw); }
     @media (max-width: 600px) {
@@ -386,14 +386,30 @@ body {
         justify-content: center;
         align-items: center;
         min-height: 150vh; } }
+    .banner_container .grid_banner .grid_message {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      flex-direction: column;
+      position: relative; }
+      .banner_container .grid_banner .grid_message h1 {
+        font-size: 6rem;
+        letter-spacing: -2px;
+        color: #1b465a; }
+        @media (max-width: 600px) {
+          .banner_container .grid_banner .grid_message h1 {
+            font-size: 4rem; } }
+      .banner_container .grid_banner .grid_message h3 {
+        font-size: 3rem;
+        color: rgba(16, 40, 51, 0.827); }
     .banner_container .grid_banner .grid_img {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
       height: 100%;
       flex-direction: column;
-      padding-bottom: 20px;
-      position: relative; }
+      position: relative;
+      background-color: red; }
       @media (max-width: 600px) {
         .banner_container .grid_banner .grid_img {
           top: -100px; } }
@@ -436,22 +452,6 @@ body {
             top: 50px; } }
       .banner_container .grid_banner .grid_img img {
         width: 20%; }
-    .banner_container .grid_banner .grid_message {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      flex-direction: column;
-      position: relative; }
-      .banner_container .grid_banner .grid_message h1 {
-        font-size: 6rem;
-        letter-spacing: -2px;
-        color: #1b465a; }
-        @media (max-width: 600px) {
-          .banner_container .grid_banner .grid_message h1 {
-            font-size: 4rem; } }
-      .banner_container .grid_banner .grid_message h3 {
-        font-size: 3rem;
-        color: rgba(16, 40, 51, 0.827); }
 
 .fruit_out_container {
   width: 100%;
