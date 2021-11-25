@@ -10,14 +10,15 @@ gsap.to('.header_title', {
 })
 
 
-
-gsap.to('.ghost_text_container', {
-    scrollTrigger: '.ghost_text_container',
-    duration: 1,
-    delay:1,
+gsap.to('.header_text', {
+    scrollTrigger: 'header',
+    duration: .5,
+    delay:.3,
+    x:0,
     opacity:1,
     ease:Sine.easeOut
 })
+
 
 gsap.to('.content_title', {
     scrollTrigger: '.content_title',

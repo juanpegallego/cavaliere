@@ -81,7 +81,9 @@ header {
     top: 120px;
     position: relative;
     padding-left: 100px;
-    z-index: 9999; }
+    z-index: 9999;
+    opacity: 0;
+    transform: translateX(-200vw); }
     @media (max-width: 600px) {
       header .header_text {
         padding: 40px; } }

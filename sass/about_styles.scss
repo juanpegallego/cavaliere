@@ -118,6 +118,8 @@ header{
         position: relative;
         padding-left: 100px;    
         z-index: 9999;
+        opacity: 0;
+        transform: translateX(-200vw);
         @media (max-width: $small) {
            padding: 40px;
         
