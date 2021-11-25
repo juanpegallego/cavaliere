@@ -879,6 +879,9 @@ footer {
         flex-direction: row;
         margin: auto;
         text-decoration: none; }
+        @media (max-width: 600px) {
+          footer .footer_content .redes_container .work {
+            right: initial; } }
         footer .footer_content .redes_container .work ion-icon {
           font-size: 2rem;
           color: white;

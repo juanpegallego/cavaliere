@@ -13,9 +13,7 @@ const loader = (x) => {
     }
 
     if (!localStorage.getItem('loader')) {
-
         localStorage.setItem('loader', true);
-
         document.getElementById('loading-indicator').style.display = 'flex';
         target.style.opacity = '0';
 
