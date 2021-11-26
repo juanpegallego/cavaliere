@@ -58,11 +58,10 @@ gsap.to('.title', {
 })
 gsap.to('.container', {
     scrollTrigger: '.container',
-    duration:3,
+    duration:.5,
     delay:.5,
     opacity:1,
-    x:0,
-    ease:Sine.easeOut
+    x:0
 })
 
 

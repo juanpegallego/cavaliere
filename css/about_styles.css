@@ -343,6 +343,7 @@ header {
       display: flex;
       justify-content: space-evenly;
       align-items: center;
+      flex-direction: column;
       background-color: #1b465a;
       height: 100px;
       padding: 5px 10px;
@@ -353,8 +354,8 @@ header {
       .container .list_wrapper .list_title h3 {
         text-align: center;
         font-size: 2rem; }
-      .container .list_wrapper .list_title img {
-        width: 50px; }
+      .container .list_wrapper .list_title p {
+        font-size: 1.7rem; }
     .container .list_wrapper .offices_list {
       margin-top: 10px;
       position: relative;
@@ -369,7 +370,12 @@ header {
       .container .list_wrapper .offices_list ul {
         list-style: none;
         margin-top: 10px;
-        width: 300px; }
+        width: 300px;
+        height: 350px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column; }
         .container .list_wrapper .offices_list ul li {
           display: flex;
           font-size: 1.8rem;
@@ -380,10 +386,13 @@ header {
           padding-left: 10px;
           margin: auto;
           margin-top: 5px;
-          height: 40px;
-          cursor: pointer; }
+          height: 50px;
+          cursor: pointer;
+          transition: all .3s; }
           .container .list_wrapper .offices_list ul li:hover {
-            background-color: #1b465a; }
+            background-color: #1b465a;
+            font-weight: bolder;
+            letter-spacing: 1px; }
           .container .list_wrapper .offices_list ul li img {
             position: relative;
             width: 40px;
