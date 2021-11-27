@@ -90,7 +90,7 @@ gsap.to('.fruits_container', {
         trigger: '.grid_banner',
         start: 'top top+=200'
     },
-    duration:1,
+    duration:.5,
     opacity:1,
-    delay:.5
+    delay:0
 });
