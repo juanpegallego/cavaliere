@@ -167,7 +167,9 @@ nav {
       nav .nav_logo_container {
         display: none; } }
     nav .nav_logo_container img {
-      width: 70%; }
+      width: 60px;
+      position: relative;
+      top: 2px; }
   nav .navigation {
     display: flex;
     justify-content: space-evenly;

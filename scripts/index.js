@@ -1,4 +1,7 @@
- let counter = 1;
+/*-------------------- SLIDER --------------------------*/
+
+
+let counter = 1;
 setInterval(function () {
     document.getElementById('radio' + counter).checked = true;
     counter++;
@@ -8,6 +11,8 @@ setInterval(function () {
 }, 4500);
 
 
+
+/*-------------------- GSAP ---------------------------*/
 
 
 gsap.registerPlugin(ScrollTrigger);

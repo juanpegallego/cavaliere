@@ -219,12 +219,7 @@ body
                 @media (max-width: $small) {
                     width: 90%;
                 }
-                
-
-                
-                
-                
-                
+            
 
                     h1
                 {
@@ -337,12 +332,12 @@ body
     }
 }
 
-#radio1:checked ~ .navigation-auto .auto-btn1,
+/* #radio1:checked ~ .navigation-auto .auto-btn1,
 #radio2:checked ~ .navigation-auto .auto-btn2,
 #radio3:checked ~ .navigation-auto .auto-btn3
 {   
     background: var(--opcional);
-}
+} */
 
 }
 
@@ -1185,7 +1180,19 @@ footer
                     span{
                         color: white;                        
                         font-size: 1.5rem;
+                        display: flex;
+                        padding: 5px;
+                        justify-content: space-between;
+                        align-items: center;
                         text-decoration: underline;   
+                        ion-icon{
+                            margin-left: 5px;
+                        }
+
+                        &:hover{
+                            background-color: $colorSecundarioClaro;
+                            
+                        }
                     }
                 
             }

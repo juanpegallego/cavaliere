@@ -306,7 +306,7 @@ header {
     transform: translateX(-100vw);
     opacity: 0; }
     .container_branches .title h3 {
-      font-size: 2rem;
+      font-size: 2.5rem;
       color: grey; }
     .container_branches .title h1 {
       font-size: 4rem;
@@ -317,6 +317,7 @@ header {
           font-size: 3rem; } }
     .container_branches .title .arrow_icon {
       font-size: 6rem;
+      color: #bce027;
       transform: rotate(90deg); }
       @media (max-width: 600px) {
         .container_branches .title .arrow_icon {

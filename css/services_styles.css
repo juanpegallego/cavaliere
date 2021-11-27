@@ -34,7 +34,7 @@ header {
   color: white;
   padding-bottom: 50px;
   overflow: hidden;
-  background-color: rgba(84, 82, 204, 0.722); }
+  background-color: rgba(16, 40, 51, 0.766); }
   @media screen and (max-width: 600px) {
     header {
       min-height: 50vh;
@@ -82,8 +82,8 @@ header {
         width: 100%; } }
     header .header_text h1 {
       font-size: 5rem;
-      color: #102833;
-      margin-left: 50px; }
+      margin-left: 50px;
+      color: white; }
       @media screen and (max-width: 600px) {
         header .header_text h1 {
           font-size: 3rem;
@@ -92,7 +92,7 @@ header {
     header .header_text h3 {
       font-size: 2.5rem;
       margin-left: 50px;
-      color: #102833;
+      color: #2d789b;
       width: 70%;
       margin-top: 10px; }
       @media screen and (max-width: 600px) {
@@ -189,7 +189,7 @@ header {
     justify-content: space-evenly;
     align-items: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     transition: all 1s;
     z-index: 0; }
     @media screen and (max-width: 600px) {
@@ -213,7 +213,7 @@ header {
       max-width: 380px;
       background: rgba(6, 8, 15, 0.705);
       background: linear-gradient(0deg, #071116 28%, #1b465a 100%);
-      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.425);
+      box-shadow: 0px 0px 10px 5px rgba(27, 16, 48, 0.425);
       padding: 10px;
       color: white;
       z-index: 1;
@@ -332,9 +332,9 @@ header {
 
 .container_invitacion {
   scroll-snap-align: start;
-  background: url(../images/Logistic/separador.png) no-repeat center 10px;
+  background: url(../images/Logistic/separador.png) no-repeat center -10px;
   background-size: cover;
-  min-height: 120vh;
+  min-height: 80vh;
   margin-bottom: 0px;
   width: 100%;
   display: flex;
@@ -355,22 +355,12 @@ header {
     @media screen and (max-width: 600px) {
       .container_invitacion .invitacion_text {
         width: 100%; } }
-    .container_invitacion .invitacion_text .invitacion_title {
-      width: 900px;
-      position: relative;
-      top: 0px; }
-      @media screen and (max-width: 600px) {
-        .container_invitacion .invitacion_text .invitacion_title {
-          position: absolute;
-          width: 350px; } }
-    .container_invitacion .invitacion_text .invitacion_img {
-      width: 400px; }
-      @media screen and (max-width: 600px) {
-        .container_invitacion .invitacion_text .invitacion_img {
-          visibility: hidden; } }
+    .container_invitacion .invitacion_text h1 {
+      font-size: 5rem; }
   .container_invitacion .link_container {
     position: relative;
-    margin-top: 7rem; }
+    margin-top: 7rem;
+    margin-top: 100px; }
     .container_invitacion .link_container a {
       position: relative;
       text-decoration: none;

@@ -16,18 +16,27 @@ gsap.to('.nav',{
 });
 
 
-gsap.to('.header_title',{
+gsap.to('.left_wall', {
     scrollTrigger: {
-        trigger:".banner",
+        trigger: '.finca_container',
+        start: 'top top+=400',
         scrub:true
-    },  
-    duration:2,
-    ease:Sine.easeOut,
-    opacity:1,
-    y:-100,
-});
+    },
+    duration:1,
+    delay:5,
+    x:-800
+}) 
 
-
+gsap.to('.right_wall', {
+    scrollTrigger: {
+        trigger: '.finca_container',
+        start: 'top top+=400',
+        scrub:true
+    },
+    duration:5,
+    delay:1,
+    x:800
+}) 
 
     
 
@@ -44,3 +53,15 @@ gsap.to('.products_title',{
     x:0
 });
     
+
+
+gsap.to('.img_container', {
+    scrollTrigger: {
+        trigger: '.img_container',
+        start: 'top bottom+=300'
+    },
+    duration:1,
+    delay:.5,
+    opacity: 1,
+    x:0
+}) 
