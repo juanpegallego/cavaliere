@@ -331,12 +331,6 @@ body
     }
 }
 
-/* #radio1:checked ~ .navigation-auto .auto-btn1,
-#radio2:checked ~ .navigation-auto .auto-btn2,
-#radio3:checked ~ .navigation-auto .auto-btn3
-{   
-    background: var(--opcional);
-} */
 
 }
 
@@ -356,7 +350,6 @@ body
     @media screen and (max-width: $small)  {
         min-height: 50vh;
         padding-bottom: 50px;
-        
        }
        
 .grid_section
@@ -366,14 +359,13 @@ body
     display: grid;
     grid-template-columns: 50% 50%;  
     min-height: 30vh; 
-    padding-top: 0px;
     padding: 10px;    
     background-color: $colorSecundarioClaro;   
     @media screen and (max-width: $small)  {
      display: flex;
      justify-content: center;
      align-items: center;
-     min-height: 50vh;
+     min-height: 40vh;
      flex-direction: column;
     }
     
@@ -393,6 +385,13 @@ body
         min-height: 550px; 
         opacity: 0;
         transform: translateX(-50vw);
+
+        @media screen and (max-width: $small)  {            
+            min-height: initial; 
+            padding: none;
+            margin: auto;
+            left: 0px;
+           }
         h1
         {
             text-align: center;
@@ -414,7 +413,8 @@ body
             @media screen and (max-width: $small)  {               
                 font-size: 1.5rem;
                 padding: 10px; 
-                width: 95%;
+                width: 100%;
+                margin-top: 20px;
             }           
             
             @media screen  and (min-width: $small) {                 
@@ -442,8 +442,13 @@ body
         position: relative;
         top: 0px;
         padding: 50px 20px;
-         opacity: 0;
-         transform: translateX(50vw);
+        opacity: 0;
+        transform: translateX(50vw);
+        @media screen and (max-width: $small)  {               
+            padding:initial;
+            padding-top: 20px;
+        }
+        
         img{
             color: white;
             width: 80px;
@@ -456,6 +461,7 @@ body
             font-size: 1.7rem;
             text-align: center;
             border-radius: 10px;
+            
             strong{
                 font-size: 2rem;
                 color: $colorPrincipalOscuro;
@@ -523,8 +529,8 @@ body
     }
     @media screen and (max-width: $small)  {
         margin-top: -50px; 
-        padding-top: 10px;
-        height: 100vh;
+        padding-top: 0px;
+        min-height: 80vh;
     }
    
     
@@ -544,10 +550,11 @@ body
         transform: translateX(-50vw);
         @media (max-width: $small) {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 150vh;
+            min-height: 80vh;
+            height: inherit;
         }
         
         .grid_message{
@@ -556,6 +563,9 @@ body
             align-items: center;
             flex-direction: column;
             position: relative;
+            @media (max-width: $small) {
+                min-height: 30vh;         
+            }
             h1{
                 font-size: 6rem;
                 letter-spacing: -2px;
@@ -578,10 +588,14 @@ body
             flex-direction: column;
             position: relative; 
             @media (max-width: $small) {
-                top: -100px;
+                top: 0px;
+                height: 50%;             
             }
             img{
                 max-width: 100px;
+                @media (max-width: $small) {
+                   display: none;
+                }
             }
             p{
                 font-size: 1.8rem;
@@ -591,6 +605,9 @@ body
                 line-height: 30px;
                 width: 70%;
                 margin-top: 25px;
+                @media (max-width: $small) {
+                    width: 100%;
+                 }
                 strong{
                     font-size: 1.8rem;
                 }
@@ -611,6 +628,9 @@ body
                 text-align: center;
                 position: relative;
                 border-radius: 2px;
+                @media (max-width: $small) {
+                    margin-bottom: 50px;
+                 }
                 &:hover{
                     background-color: $colorSecundario;
                     color: white;
@@ -715,6 +735,8 @@ body
                     position: relative;
                     left: initial;
                     margin: 50px auto;   
+                    min-width: 150px;
+                    font-size: 2.5rem;
                  }
                 &:hover{
                     background-color: $colorSecundarioOscuro;
@@ -798,6 +820,8 @@ body
     @media screen and (max-width: $small)  {
         margin-top: 0px;
         top: 0px;
+        min-height: 60vh;
+        padding-bottom: 100px;
     }
    
     
@@ -805,6 +829,7 @@ body
         margin-top: 0px;
         padding-bottom: 150px;
         padding-top: 150px;
+        
     }
     
   
@@ -819,7 +844,7 @@ body
         justify-content: center;
         flex-direction: column;
         position: relative;
-        transform: translateX(500px);
+        transform: translateX(100vw);
         @media (max-width: $small) {
             width: 100%;
             margin: auto;
@@ -831,7 +856,7 @@ body
         }
         h1
         {
-           top: -80px;
+            top: -80px;
             text-align: center;
             margin: auto;
             font-size: 6rem;
@@ -841,8 +866,8 @@ body
             font-family: $secundaria;
             
             @media (max-width: $small) {
-                font-size: 2.5rem;
-                top: 5px;
+                font-size: 3.5rem;
+                top: 20px;
                 letter-spacing: 0px;
                 width: 100%;
                 position: relative;
@@ -868,10 +893,10 @@ body
         justify-content: space-evenly;
         
         @media (max-width: $small) {
-            width: 70%;
+            width: 85%;
             height: 100%;
             margin: auto;
-            transform: translateY(-50px);
+            top: 80px;
             
         }
         @media (min-width: $medium) and (max-width: $big)  {

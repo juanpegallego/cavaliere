@@ -17,37 +17,16 @@ setInterval(function () {
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.to('.contact_title', {
-    scrollTrigger: {
-        trigger: 'container_3',
-        scrub: true
-    },
-    duration: 1,
-    delay: .5,
-    x: 0,
-    opacity: 1,
-    start: "bottom center"
-})
 
-gsap.to('form', {
-    scrollTrigger: {
-        trigger: '.container_3',        
-        start: 'top bottom+=200',
-        scrub: true
-    },
-    duration: 1,
-    delay: .5,
-    opacity: 1,
-}) 
  
 gsap.to('.left_container', {
     scrollTrigger: {
-        trigger: '.container_1',
-        start: 'top bottom+=200',
-        scrub:true
+        trigger: '.left_container',
+        start: 'top bottom-=200'
     },
     duration: .5,
-    opacity: 1,    
+    opacity: 1,  
+    delay:.5,  
     
     x:0
 }) 
@@ -55,10 +34,10 @@ gsap.to('.left_container', {
 gsap.to('.right_container', {
     scrollTrigger: {
         trigger: '.container_1',
-        start: 'top bottom+=200',
-        scrub:true
+        start: 'top bottom-=200'
     },
     duration: .8,
+    delay:.8,
     opacity: 1,    
     x:0
 }) 
@@ -67,11 +46,11 @@ gsap.to('.right_container', {
 gsap.to('.grid_banner', {
     scrollTrigger: {
         trigger: '.banner_container',
-        start: 'top bottom+=200'
+        start: 'top bottom-=200'
     },
     opacity:1,
-    delay:.5,
-    duration:.5,
+    delay:0,
+    duration:1,
     x:0
 });
 
@@ -95,3 +74,25 @@ gsap.to('.fruits_container', {
     opacity:1,
     delay:0
 });
+
+gsap.to('.contact_title', {
+    scrollTrigger: {
+        trigger: '.container_3'       
+    },
+    duration: 1.5,
+    delay: 0,
+    x: 0,
+    opacity: 1,
+    start: "bottom center",
+    ease:'bounce'
+})
+
+gsap.to('form', {
+    scrollTrigger: {
+        trigger: '.container_3',        
+        start: 'top bottom+=200'
+    },
+    duration: 1,
+    delay: .5,
+    opacity: 1,
+}) 
