@@ -172,7 +172,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #bce027; }
+    background-color: #bce027;
+    z-index: 1; }
     @media screen and (max-width: 600px) {
       .products_container .products_title {
         font-size: 4rem;
@@ -183,6 +184,8 @@ body {
     margin: auto;
     position: relative;
     display: grid;
+    transform: translateY(-700px);
+    opacity: 0;
     grid-template-columns: 33% 33% 33%; }
     @media screen and (max-width: 600px) {
       .products_container .products {
@@ -236,8 +239,6 @@ body {
           justify-content: center;
           align-items: center;
           min-height: 200px;
-          opacity: 0;
-          transform: translateX(-500px);
           position: relative; }
           .products_container .products .grid_fruit_display .fruit_card .img_container img {
             width: 60%;

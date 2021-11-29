@@ -245,7 +245,7 @@ body
             align-items: center;
             justify-content: center;        
             background-color: $colorPrincipal;
-            
+            z-index: 1;
             @media screen and (max-width: $small) {   
                 font-size: 4rem;
                 left: 0px;
@@ -258,7 +258,8 @@ body
         margin: auto;
         position: relative;
         display: grid;
-        
+        transform: translateY(-700px);
+        opacity: 0;
         grid-template-columns: 33% 33% 33%;
         @media screen and (max-width: $small) {   
             display: grid;
@@ -320,8 +321,6 @@ body
                 justify-content: center;
                 align-items: center;
                 min-height: 200px;
-                opacity: 0;
-                transform: translateX(-500px);
                 position: relative;
                img
                {

@@ -55,13 +55,15 @@ gsap.to('.products_title',{
     
 
 
-gsap.to('.img_container', {
+gsap.to('.products', {
     scrollTrigger: {
-        trigger: '.img_container',
+        trigger: '.products_title',
         start: 'top bottom+=300'
+        
     },
     duration:1,
-    delay:.5,
+    delay:1.5,
     opacity: 1,
-    x:0
+    y:0,
+    ease:"elastic",
 }) 

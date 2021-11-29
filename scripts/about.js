@@ -43,8 +43,8 @@ gsap.to('.card', {
 
 gsap.to('.final_card', {
     scrollTrigger: '.final_card',
-    duration: 2,
-    delay:1,
+    duration: .5,
+    delay:.5,
     opacity:1,
 })
 
