@@ -37,14 +37,16 @@ header {
   @media (max-width: 600px) {
     header {
       min-height: 150vh; } }
-  header h3 {
+  header .header_title {
     color: white;
     font-size: 7rem;
     position: absolute;
     top: 100px;
     margin: auto;
     letter-spacing: 1px;
-    z-index: 9; }
+    z-index: 9;
+    opacity: 0;
+    transform: translateX(200vw); }
   header .shape_img {
     position: absolute;
     top: 35vh; }
@@ -465,7 +467,9 @@ header {
     min-height: 300px;
     justify-content: space-evenly;
     align-items: center;
-    flex-direction: column; }
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(200vw); }
     @media (max-width: 600px) {
       .section .title_container {
         min-height: 150px; } }
@@ -513,12 +517,13 @@ header {
       .section .sustentab_content .video_container video {
         width: 100%;
         border-radius: 42% 58% 44% 56%/49% 30% 70% 51%; }
-    .section .sustentab_content h3 {
+    .section .sustentab_content .sustent_title {
       color: #bce027;
       font-size: 3.5rem;
       z-index: 1;
-      text-align: left; }
-    .section .sustentab_content p {
+      text-align: left;
+      opacity: 0; }
+    .section .sustentab_content .sustent_text {
       font-size: 1.8rem;
       color: white;
       letter-spacing: 1px;
@@ -526,20 +531,21 @@ header {
       border-radius: 1rem;
       z-index: 1;
       margin-top: 50px;
-      width: 70%; }
+      width: 70%;
+      opacity: 0; }
       @media (max-width: 600px) {
-        .section .sustentab_content p {
+        .section .sustentab_content .sustent_text {
           text-align: center;
           margin: auto;
           position: relative;
           padding-left: initial; } }
       @media (min-width: 600px) and (max-width: 900px) {
-        .section .sustentab_content p {
+        .section .sustentab_content .sustent_text {
           position: relative;
           top: 20px;
           width: 95%;
           font-size: 1.7rem; } }
-      .section .sustentab_content p strong {
+      .section .sustentab_content .sustent_text strong {
         font-size: 1.8rem; }
 
 footer {

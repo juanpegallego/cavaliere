@@ -66,7 +66,7 @@ header{
     @media (max-width: $small) {
         min-height:150vh;
      }
-    h3{
+    .header_title{
         color: white;
         font-size: 7rem;
         position: absolute;
@@ -74,6 +74,8 @@ header{
         margin: auto;
         letter-spacing: 1px;
         z-index: 9;
+        opacity: 0;
+        transform: translateX(200vw);
     }
     .shape_img{
         position: absolute;
@@ -573,6 +575,8 @@ header{
         justify-content: space-evenly;
         align-items: center;
         flex-direction: column; 
+        opacity: 0;
+        transform: translateX(200vw);
         @media (max-width: $small) {
             min-height: 150px;
          }
@@ -633,13 +637,14 @@ header{
                 border-radius:42% 58% 44% 56% / 49% 30% 70% 51%   ;
             }
         }
-        h3{
+        .sustent_title{
             color: $colorPrincipal   ;
             font-size: 3.5rem;
             z-index: 1;
             text-align: left;
+            opacity: 0;
         }
-        p{
+        .sustent_text{
             font-size: 1.8rem;
             color: white;
             letter-spacing: 1px;
@@ -648,6 +653,7 @@ header{
             z-index: 1;
             margin-top: 50px;
             width: 70%;
+            opacity: 0;
             @media (max-width: $small) {        
                 text-align: center;
                 margin: auto;

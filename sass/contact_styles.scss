@@ -50,20 +50,20 @@ $desktop:1824px;
 
 body
 {
+    width: 100vw;
     min-height: 100vh;
     display: flex;
-    width: 100vw;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-family: $principal;
-    overflow-x: hidden; 
-    background-size: cover;      
-    background: url(../images/Home/fondoContact.jpg) no-repeat center center;
-    backdrop-filter: contrast(25%);
+    overflow-x: hidden;    
+    background: url(../images/Home/fondoContact.jpg) no-repeat center center;      
+    background-size: cover;   
+    backdrop-filter: contrast(45%) blur(2px); 
     background-color: $colorSecundarioClaro; 
     animation: bgcImage 480s infinite forwards;
-    animation-delay: 4s;
+    animation-delay: 5s;
     @media screen and  (max-width: $big)  {
        overflow-y: scroll;
        overflow-x: hidden;
@@ -72,7 +72,7 @@ body
 
 @keyframes bgcImage {
     0%{
-        background: url(../images/Home/fondoContact.jpg) no-repeat center center;
+        background: url(../images/Home/fondoContact.jpg)  repeat-x  center center;
     }
     33%{
         background: url(../images/Home/fondoContact.jpg) repeat-x 100px -100px ;
@@ -168,7 +168,7 @@ body
             input
             {
                 margin: 10px auto;
-                width: 100%;
+                width: 90%;
                 height: 45px;
                 border-radius: .8rem;
                 border: none;
@@ -176,11 +176,26 @@ body
                 font-size: 2rem;
                 color: black;
                 padding-left: 10px;
-                background-color: $colorSecundarioClaro;                
+                background-color: $colorSecundarioClaro;
+                background-color: $colorPrincipal   ;                 
                 backdrop-filter: blur(3px);
+                &::-webkit-outer-spin-button,
+                &::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }   
+
+                input[type=number] {
+                    -moz-appearance: textfield;
+                }
+
+
                 @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
                 }
+
+
+                
                   
                 &:focus
                 {
@@ -210,7 +225,7 @@ body
 
             textarea
             {
-                width: 100%;
+                width: 90%;
                 outline: none;
                 border: none;
                 border-radius: 1rem;
@@ -220,6 +235,8 @@ body
                 padding-left: 10px;
                 padding-top: 5px;
                 background-color: $colorSecundarioClaro;
+                
+                background-color: $colorPrincipal   ; 
                 backdrop-filter: blur(3px);
                 @media screen and (max-width: $big) {
                     background-color: rgba(184, 179, 179, 0.582);
@@ -263,6 +280,8 @@ body
                 font-size: 2rem;
                 cursor: pointer;            
                 background-color: $colorSecundarioClaro;
+                
+                background-color: $colorPrincipal   ; 
                 backdrop-filter: blur(3px);            
                 border-radius: 1rem;
                 @media screen and (max-width: $medium) {

@@ -18,20 +18,20 @@
 
 /*----------------- FONTS -------------------------*/
 body {
+  width: 100vw;
   min-height: 100vh;
   display: flex;
-  width: 100vw;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   font-family: "Poppins", "Sans Serif", "Comic Sans";
   overflow-x: hidden;
-  background-size: cover;
   background: url(../images/Home/fondoContact.jpg) no-repeat center center;
-  backdrop-filter: contrast(25%);
+  background-size: cover;
+  backdrop-filter: contrast(45%) blur(2px);
   background-color: #1b465a;
   animation: bgcImage 480s infinite forwards;
-  animation-delay: 4s; }
+  animation-delay: 5s; }
   @media screen and (max-width: 1200px) {
     body {
       overflow-y: scroll;
@@ -39,7 +39,7 @@ body {
 
 @keyframes bgcImage {
   0% {
-    background: url(../images/Home/fondoContact.jpg) no-repeat center center; }
+    background: url(../images/Home/fondoContact.jpg) repeat-x center center; }
   33% {
     background: url(../images/Home/fondoContact.jpg) repeat-x 100px -100px; }
   66% {
@@ -117,7 +117,7 @@ body {
       flex-direction: column; }
       .container .form_container form input {
         margin: 10px auto;
-        width: 100%;
+        width: 90%;
         height: 45px;
         border-radius: .8rem;
         border: none;
@@ -126,7 +126,13 @@ body {
         color: black;
         padding-left: 10px;
         background-color: #1b465a;
+        background-color: #bce027;
         backdrop-filter: blur(3px); }
+        .container .form_container form input::-webkit-outer-spin-button, .container .form_container form input::-webkit-inner-spin-button {
+          -webkit-appearance: none;
+          margin: 0; }
+        .container .form_container form input input[type=number] {
+          -moz-appearance: textfield; }
         @media screen and (max-width: 1200px) {
           .container .form_container form input {
             background-color: rgba(184, 179, 179, 0.582); } }
@@ -148,7 +154,7 @@ body {
             .container .form_container form input::placeholder {
               font-size: 2.2rem; } }
       .container .form_container form textarea {
-        width: 100%;
+        width: 90%;
         outline: none;
         border: none;
         border-radius: 1rem;
@@ -158,6 +164,7 @@ body {
         padding-left: 10px;
         padding-top: 5px;
         background-color: #1b465a;
+        background-color: #bce027;
         backdrop-filter: blur(3px); }
         @media screen and (max-width: 1200px) {
           .container .form_container form textarea {
@@ -192,6 +199,7 @@ body {
         font-size: 2rem;
         cursor: pointer;
         background-color: #1b465a;
+        background-color: #bce027;
         backdrop-filter: blur(3px);
         border-radius: 1rem; }
         @media screen and (max-width: 900px) {
