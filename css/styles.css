@@ -1,7 +1,13 @@
+/*---- PRIMARY  FONT POPPINS -----*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap");
+/*---- SECONDARY FONT MONTSERRAT -----*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Poppins:wght@900&display=swap");
+/*------------------ UI COLOURS --------------------------*/
+/*------------------MEDIA --------------------------*/
+/*----------------- FONTS -------------------------*/
+/*----------------- START STYLES -------------------------*/
 * {
   padding: 0;
   margin: 0;
@@ -9,11 +15,6 @@
   box-sizing: border-box;
   font-size: 10px; }
 
-/*---- PRIMARY  FONT POPPINS -----*/
-/*---- SECONDARY FONT MONTSERRAT -----*/
-/*------------------ UI COLOURS --------------------------*/
-/*------------------MEDIA --------------------------*/
-/*----------------- FONTS -------------------------*/
 body {
   min-height: 100vh;
   height: 100%;

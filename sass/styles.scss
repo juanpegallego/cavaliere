@@ -1,13 +1,4 @@
 
-*
-{
-    padding: 0;
-    margin: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-size: 10px;
-}
-
 /*---- PRIMARY  FONT POPPINS -----*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
@@ -28,8 +19,6 @@
   $colorSecundarioOscuro: rgb(7, 17, 22);
   $colorSecundarioTransparente:rgba(16, 40, 51, 0.827);
 
-
-
 /*------------------MEDIA --------------------------*/ 
 
 $smallest: 375px;
@@ -43,6 +32,16 @@ $desktop:1824px;
 $principal: 'Poppins', 'Sans Serif', 'Comic Sans';
 $secundaria: 'Montserrat', 'Sans Serif', 'Comic Sans';
 
+/*----------------- START STYLES -------------------------*/
+
+*
+{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
 
 body
 {

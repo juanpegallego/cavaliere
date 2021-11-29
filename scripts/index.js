@@ -23,7 +23,7 @@ gsap.to('.contact_title', {
         scrub: true
     },
     duration: 1,
-    delay: 1,
+    delay: .5,
     x: 0,
     opacity: 1,
     start: "bottom center"
@@ -46,7 +46,7 @@ gsap.to('.left_container', {
         start: 'top bottom+=200',
         scrub:true
     },
-    duration: 1.5,
+    duration: .5,
     opacity: 1,    
     
     x:0
@@ -58,7 +58,7 @@ gsap.to('.right_container', {
         start: 'top bottom+=200',
         scrub:true
     },
-    duration: 1.5,
+    duration: .8,
     opacity: 1,    
     x:0
 }) 
@@ -71,6 +71,7 @@ gsap.to('.grid_banner', {
     },
     opacity:1,
     delay:.5,
+    duration:.5,
     x:0
 });
 
@@ -90,7 +91,7 @@ gsap.to('.fruits_container', {
         trigger: '.grid_banner',
         start: 'top top+=200'
     },
-    duration:.5,
+    duration:.3,
     opacity:1,
     delay:0
 });
