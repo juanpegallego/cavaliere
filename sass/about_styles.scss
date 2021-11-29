@@ -64,7 +64,8 @@ header{
     display: flex;
     align-items: center;
     @media (max-width: $small) {
-        min-height:150vh;
+        min-height:130vh;
+        padding-bottom: 50px;
      }
     .header_title{
         color: white;
@@ -76,6 +77,9 @@ header{
         z-index: 9;
         opacity: 0;
         transform: translateX(200vw);
+        @media (max-width: $small) {
+            font-size: 5rem;
+        }
     }
     .shape_img{
         position: absolute;
@@ -164,10 +168,10 @@ header{
         background-size: 350px;
         transform: rotateX(-20deg);
         @media (max-width: $small) {
-            background: url(../images/png/fruits/banana.png) repeat center center;
-            top: 200px;
-            background-size: 120px;
-            opacity: .3;
+            background: url(../images/About/fruits_png/banana.png) repeat center center;
+            top: -80px;
+            background-size: 100px;
+            opacity: .1;
          }
     }
     @media (max-width: $smallest) {
@@ -226,6 +230,7 @@ header{
                 transition: all .5s; 
                 justify-content: initial;
                 cursor: pointer;
+                min-height: 200px;
             }                       
            
             &:hover{
@@ -308,6 +313,8 @@ header{
             @media (max-width: $small) {
                 width: 100%;
                 min-width: 300px;
+                z-index: 1;
+                padding: 10px 15px;
             }
              @media (min-width: $small)and (max-width :$medium) {
                 width: 75%;
@@ -316,19 +323,27 @@ header{
             h2{
                 color: white;
                 text-align: center;
-                font-size: 2.5rem;               
+                font-size: 2.5rem;   
+                @media (max-width: $small) {
+                    font-size: 2rem;
+                }            
             }
             
             p{
                 width: 100%;
                 color: white;
                 text-align: center;
-                font-size: 1.8rem;               
+                font-size: 1.8rem;     
+                @media (max-width: $small) {
+                    font-size: 1.5rem;
+                }           
             }
             strong{
                 color: white;
                 font-size: 1.8rem;
-                
+                @media (max-width: $small) {
+                    font-size: 1.5rem;
+                } 
             }
         }
     }
@@ -350,23 +365,14 @@ header{
         top: 0px;
         display: flex;
         justify-content: center;
-        min-height: 200vh;
+        min-height: 150vh;
         align-items: center;
+        flex-direction: column;
         top: 0px;        
         padding: 20px;
         padding-bottom: 50px;
      }
-   .branches_data{
-       width: 80%;
-       display: grid;
-       grid-template-columns: 40% 60%;
-       @media (max-width: $small) {
-            flex-direction: column;
-            display: flex;
-            width: 90%;
-        
-        }
-   }
+   
     .title
     {
         width: 100%;
@@ -378,6 +384,7 @@ header{
         padding-left: 20px;
         transform: translateX(-100vw);
         opacity: 0;
+       
         h3
         {
             font-size: 2.5rem;
@@ -415,6 +422,10 @@ header{
         margin: auto;
         transform: translateX(200vw); 
         opacity: 0;
+        @media (max-width: $small) {
+           flex-direction: column;
+           padding-bottom: 50px;
+          }
         .list_wrapper{
             display: flex;
             flex-direction: column;
@@ -547,7 +558,8 @@ header{
         min-height: 150vh;
         padding-bottom: 150px;
         margin-bottom:-50px;
-     
+        background-color: red;
+        padding-top: 50px;
     } 
     &::after{
         position: absolute;
@@ -619,22 +631,29 @@ header{
         position: relative;
         padding-left: 50px;
         @media (max-width: $small) {      
-            width: 90%;  
+            width: 100%;  
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
+            padding-left: inherit;
+            padding: 10px;
         }
         .video_container{
             position: absolute;
             left: 0px;
             filter: contrast(100%) brightness(60%) blur(1px);
             
-            
+            @media (max-width: $small) {      
+                position: relative;
+            }
 
             video{
                 width: 100%;
                 border-radius:42% 58% 44% 56% / 49% 30% 70% 51%   ;
+                @media (max-width: $small) {      
+                    border-radius: 1rem;
+                }
             }
         }
         .sustent_title{
@@ -643,6 +662,11 @@ header{
             z-index: 1;
             text-align: left;
             opacity: 0;
+            @media (max-width: $small) {      
+                text-align: center;
+                font-size: 3rem;
+                margin-top: 20px;
+             }
         }
         .sustent_text{
             font-size: 1.8rem;
@@ -659,6 +683,8 @@ header{
                 margin: auto;
                 position: relative;
                 padding-left: initial;
+                width: 100%;
+                margin-top: 80px;
             }
             @media (min-width: $small) and(max-width: $medium) {
                 position: relative;
@@ -669,6 +695,7 @@ header{
 
              strong{
                 font-size: 1.8rem;  
+                
              }
         }
     }   
