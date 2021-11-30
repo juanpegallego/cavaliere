@@ -14,8 +14,14 @@
   height: 50px;
   right: 0px;
   visibility: visible;
-  z-index: 999999;
-  transform: none; }
+  z-index: 999999; }
+@keyframes rotateHamburguer {
+  from {
+    transform: none;
+    border-radius: 50%; }
+  to {
+    transform: rotate(360deg);
+    border-radius: 5px; } }
   @media screen and (max-width: 1200px) {
     #hamburguer {
       top: 5px;
@@ -129,9 +135,10 @@ nav {
       left: initial;
       transform: translateY(-500px);
       top: 0px;
+      left: unset;
       border-bottom-left-radius: 1rem;
       border-bottom-right-radius: 1rem;
-      transition: all 1s; } }
+      transition: all .5s; } }
   nav .nav_logo_container {
     height: 45px;
     width: 10%;

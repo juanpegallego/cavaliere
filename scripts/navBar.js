@@ -12,27 +12,40 @@ function hideNavBar (){
         responsiveNav() :  basicNav();
 
         function responsiveNav (){
-            /* nav.style.display = 'none'; */
             hamburguer.style.display = 'flex';              
 
-            hamburguer.addEventListener('click', () => {  
-              nav.style.transform == 'translateY(0px)' ? 
-              nav.style.transform = 'translateY(-500px)' : showResponsiveNav(nav); 
+            hamburguer.addEventListener('click', () => { 
+              nav.style.transition = 'all .9s ease-out';
 
+              hamburguer.style.transform == 'none' ? 
+              hamburguer.style.transform = 'none' : rotateHamburguer(hamburguer);
+
+
+
+
+              nav.style.transform == 'translateY(0px)' ? 
+              nav.style.transform = 'translateY(-500px)' : nav.style.transform = 'translateY(0px)'; 
+
+              
               
             })
         }
+
+        function rotateHamburguer(x){
+          x.style.animation = 'rotateHamburguer 1 .8s';
+
+          setTimeout(() => {
+            x.style.animation = 'none'; 
+          }, 850);
+        }
+
         function basicNav (){          
-            /* nav.style.display = 'flex'; */
+            nav.style.display = 'flex'; 
             hamburguer.style.display = 'none';
             
         }
 
-        function showResponsiveNav(nav){      
-          nav.style.transition = 'all 1.5s';
-          /* nav.style.display = 'flex'; */
-          nav.style.transform = 'translateY(0px)';
-        }
+        
 
         
 }
