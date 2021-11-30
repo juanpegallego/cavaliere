@@ -444,7 +444,16 @@ header{
         width: 90%;
         position: relative;
         top: 100px;
-
+        @media screen and (max-width: $small) {
+            width: 100%;
+            min-height: 50vh;
+            top: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column-reverse;
+            
+        }
         &::before{
             content: '';
             position: absolute;
@@ -453,6 +462,14 @@ header{
             background-color: rgba(7, 17, 22, 0.577);
             right: 80px;
             top: -30px;
+            @media screen and (max-width: $small) {
+                width: 70%;
+                margin: auto;
+                top: 0px;
+                height: 400px;
+                right: unset;
+                background-color: #7a9414;
+            }
         }
 
 
@@ -465,6 +482,10 @@ header{
             position: relative;
             top: 50px;
             filter: contrast(40%);
+            @media screen and (max-width: $small) {
+                top: 0px;
+                width: 95%;
+            }
         }
 
         p{
@@ -479,9 +500,17 @@ header{
             position: relative;
             left: -55px;
             top: 25px;
+            @media screen and (max-width: $small) {
+                left: initial;
+                position: relative;
+                padding-bottom: 50px;
+            }
             strong{
                 font-size: 2rem;
                 letter-spacing: 1px;
+                @media screen and (max-width: $small) {
+                    text-align: right;
+                }
             }
         }
         
@@ -492,6 +521,9 @@ header{
     .link_container{
         position: relative;     
         margin-top: 200px;
+        @media screen and (max-width: $small) {
+            margin-top: 50px;
+        }
         a{
             position: relative;
             text-decoration: none;

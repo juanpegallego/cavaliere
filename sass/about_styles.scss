@@ -28,6 +28,16 @@
 $principal: 'Poppins', 'Sans Serif', 'Comic Sans';
 $secundaria: 'Montserrat', 'Sans Serif', 'Comic Sans';
 
+//*------------------MEDIA --------------------------*//
+  
+    
+$smallest: 375px;
+$small: 600px;
+$medium: 900px;
+$big:1200px;
+$desktop:1824px;
+
+
 body
 {
     min-height: 100vh;
@@ -38,16 +48,14 @@ body
     scroll-snap-type:y proximity;
     scroll-behavior: smooth;
     background-color: $colorSecundario; 
+    @media (max-width: $big) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+     }
 }
 
-//*------------------MEDIA --------------------------*//
-  
-    
-$smallest: 375px;
-$small: 600px;
-$medium: 900px;
-$big:1200px;
-$desktop:1824px;
 
 //*------------------ STYLES --------------------------*//
 header{

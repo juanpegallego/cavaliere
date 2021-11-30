@@ -16,27 +16,19 @@ gsap.to('.nav',{
 });
 
 
-gsap.to('.left_wall', {
+gsap.to('.text',{
     scrollTrigger: {
-        trigger: '.finca_container',
-        start: 'top top+=400',
-        scrub:true
-    },
+        trigger:".white_space",
+        start: "top bottom",
+		end: "top top"
+    },  
     duration:1,
-    delay:5,
-    x:-800
-}) 
-
-gsap.to('.right_wall', {
-    scrollTrigger: {
-        trigger: '.finca_container',
-        start: 'top top+=400',
-        scrub:true
-    },
-    duration:5,
-    delay:1,
-    x:800
-}) 
+    delay:.5,
+    ease:Sine.easeOut,
+    opacity:1,
+    x:0
+});
+    
 
     
 

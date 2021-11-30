@@ -116,7 +116,7 @@ body {
         font-size: 2rem;
         height: initial;
         height: 100px; } }
-  .white_space .text {
+  .white_space .text_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -124,11 +124,11 @@ body {
     background: url(../images/Products/frutas/pexels-lumn-1028599.jpg) no-repeat center center;
     background-size: 100%; }
     @media screen and (max-width: 600px) {
-      .white_space .text {
+      .white_space .text_container {
         top: 0px;
         background-size: cover;
         position: relative; } }
-    .white_space .text p {
+    .white_space .text_container .text {
       font-size: 2rem;
       text-align: justify;
       margin: 100px auto;
@@ -142,14 +142,16 @@ body {
       background-color: rgba(27, 70, 90, 0.566);
       color: white;
       left: -150px;
-      padding: 20px; }
+      padding: 20px;
+      opacity: 0;
+      transform: translateX(-100vw); }
       @media screen and (max-width: 600px) {
-        .white_space .text p {
+        .white_space .text_container .text {
           font-size: 1.5rem;
           max-width: 90%;
           left: initial; } }
       @media screen and (min-width: 600px) and (max-width: 900px) {
-        .white_space .text p {
+        .white_space .text_container .text {
           margin: auto;
           width: 80%; } }
 
@@ -193,7 +195,7 @@ body {
       .products_container .products {
         display: grid;
         grid-template-columns: 50% 50%;
-        grid-gap: 5px; } }
+        grid-gap: 0px; } }
     .products_container .products .grid_fruit_display {
       position: relative;
       height: 45vh;
@@ -207,8 +209,9 @@ body {
       @media screen and (max-width: 600px) {
         .products_container .products .grid_fruit_display {
           width: 100%;
-          flex-wrap: wrap;
-          max-height: 250px; } }
+          justify-content: center;
+          max-height: 220px;
+          height: unset; } }
       .products_container .products .grid_fruit_display .fruit_card {
         width: 100%;
         min-height: 50vh;
@@ -256,21 +259,14 @@ body {
           flex-direction: column; }
           .products_container .products .grid_fruit_display .fruit_card .fruit_info_container h3 {
             font-size: 3rem;
-            display: none; }
+            display: none;
+            color: #102833; }
             @media screen and (max-width: 600px) {
               .products_container .products .grid_fruit_display .fruit_card .fruit_info_container h3 {
-                transition: all 1s;
-                width: 50%;
                 display: flex;
-                padding: 10px;
-                align-items: center;
-                justify-content: center;
-                flex-direction: column;
-                color: #102833;
-                transform: translateY(20px);
-                position: absolute;
-                font-weight: bolder;
-                opacity: 1; } }
+                font-size: 2rem;
+                position: relative;
+                top: -20px; } }
 
 .products_link {
   display: block;
