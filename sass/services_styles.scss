@@ -288,7 +288,7 @@ header{
                 width: 90%;
                 margin-top: 50px;
                 min-height: 100px;
-                justify-content: center;
+                padding-left: 50px;
              }      
             &:first-child{
                 border-top-left-radius: 15%;
@@ -301,6 +301,18 @@ header{
                     border-top-left-radius: 5%;
                 }  
             }
+            &:nth-child(2){
+                
+                @media screen and (max-width: $small) {                    
+                    border-radius: 2rem;
+                 } 
+                @media screen and (min-width: $medium) and (max-width: $big) {
+                border-top-right-radius: 5%;
+                   }  
+            }
+
+
+
             &:nth-child(3){
                 border-top-right-radius: 15%;
                 border-top-left-radius: 0%;
@@ -337,9 +349,13 @@ header{
                 text-align: center;
                 letter-spacing: 1px;
                 color: white;
+                margin: 15px;
                 text-shadow: 0px 0px 8px rgba(223, 220, 220, 0.507);
                 @media screen and (max-width: $small) {
                     font-size: 2rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                  }
                  @media screen and (min-width: $medium) and (max-width: $big) {
                     font-size: 4rem;
@@ -353,7 +369,7 @@ header{
                 margin-top: 50px;
                 @media screen and (max-width: $small) {                    
                     width: 90%;
-                    
+                    margin-top: 10px;
                  }
                 li{
                     font-size: 1.7rem;
@@ -438,6 +454,10 @@ header{
     flex-direction: column;
     color: white;
     overflow: hidden;
+
+    @media screen and (max-width: $small) {
+        padding-bottom: 100px;
+    }
     .invitacion_text{
         display: grid;
         grid-template-columns: 60% 40%;
@@ -509,12 +529,12 @@ header{
                 font-size: 2rem;
                 letter-spacing: 1px;
                 @media screen and (max-width: $small) {
-                    text-align: right;
+                    text-align: center;
                 }
             }
         }
         
-    
+       
         
         
     }
@@ -610,7 +630,7 @@ footer
             }
         
             img{
-                width: 90px;
+                width: 70px;
                 position: absolute;
                 top: 30px;
                 left: 0px;

@@ -141,14 +141,15 @@ header {
   @media (max-width: 375px) {
     .content {
       top: -50px;
-      min-height: 250vh;
+      min-height: 200vh;
       position: relative; } }
   @media (min-width: 375px) and (max-width: 600px) {
     .content {
-      min-height: 250vh;
+      min-height: 200vh;
       top: 0px;
       position: relative;
-      z-index: -1; } }
+      z-index: -1;
+      padding-bottom: 50px; } }
   .content .content_title {
     display: flex;
     justify-content: center;
@@ -192,7 +193,9 @@ header {
           transition: all .5s;
           justify-content: initial;
           cursor: pointer;
-          min-height: 200px; } }
+          min-height: 200px;
+          max-height: 350px;
+          padding: 15px; } }
       .content .flex_container .card:hover {
         transition: all .5s;
         justify-content: space-around;
@@ -215,6 +218,9 @@ header {
         font-size: 7rem;
         margin: auto;
         color: #102833; }
+        @media (max-width: 600px) {
+          .content .flex_container .icon_container .card_icon {
+            font-size: 4rem; } }
     .content .flex_container h2 {
       font-size: 2.3rem;
       text-align: center;
@@ -223,6 +229,10 @@ header {
       align-items: center;
       min-height: 100px;
       color: #102833; }
+      @media (max-width: 600px) {
+        .content .flex_container h2 {
+          min-height: unset;
+          margin: 10px; } }
     .content .flex_container p {
       position: relative;
       top: 0px;
@@ -234,7 +244,10 @@ header {
       font-family: "Montserrat", "Sans Serif", "Comic Sans"; }
       @media (max-width: 600px) {
         .content .flex_container p {
-          display: block; } }
+          display: block;
+          font-size: 1.5rem;
+          text-align: center;
+          width: 100%; } }
 
 .content_subtitle {
   scroll-snap-align: start;
@@ -312,7 +325,8 @@ header {
       flex-direction: column;
       top: 0px;
       padding: 20px;
-      padding-bottom: 50px; } }
+      padding-bottom: 50px;
+      padding-top: 50px; } }
   .container_branches .title {
     width: 100%;
     display: flex;
@@ -440,7 +454,7 @@ header {
         @media (max-width: 600px) {
           .container .list_wrapper .container_map iframe {
             width: 100%;
-            height: 250px; } }
+            height: 300px; } }
 
 .section {
   scroll-snap-align: start;
@@ -538,13 +552,14 @@ header {
       filter: contrast(100%) brightness(60%) blur(1px); }
       @media (max-width: 600px) {
         .section .sustentab_content .video_container {
-          position: relative; } }
+          position: relative;
+          filter: contrast(100%) brightness(90%) blur(0px); } }
       .section .sustentab_content .video_container video {
         width: 100%;
         border-radius: 42% 58% 44% 56%/49% 30% 70% 51%; }
         @media (max-width: 600px) {
           .section .sustentab_content .video_container video {
-            border-radius: 1rem; } }
+            border-radius: 0; } }
     .section .sustentab_content .sustent_title {
       color: #bce027;
       font-size: 3.5rem;
@@ -572,8 +587,9 @@ header {
           margin: auto;
           position: relative;
           padding-left: initial;
-          width: 100%;
-          margin-top: 80px; } }
+          width: 90%;
+          margin-top: 80px;
+          font-size: 1.7rem; } }
       @media (min-width: 600px) and (max-width: 900px) {
         .section .sustentab_content .sustent_text {
           position: relative;
@@ -582,6 +598,9 @@ header {
           font-size: 1.7rem; } }
       .section .sustentab_content .sustent_text strong {
         font-size: 1.8rem; }
+        @media (max-width: 600px) {
+          .section .sustentab_content .sustent_text strong {
+            font-size: 1.7rem; } }
 
 footer {
   width: 100%;
@@ -683,7 +702,7 @@ footer {
             margin: auto;
             position: relative;
             left: initial;
-            width: 200px; } }
+            width: 100px; } }
         @media (min-width: 900px) and (max-width: 1200px) {
           footer .footer_content .logo_container img {
             width: 20%;

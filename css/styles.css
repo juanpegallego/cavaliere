@@ -168,7 +168,7 @@ body {
             letter-spacing: -.5px; }
             @media (max-width: 600px) {
               .container_1 .slider .slides .slide .slide_text p {
-                width: 80%;
+                width: 90%;
                 top: 0px;
                 font-size: 1.8rem;
                 color: #352f2f;
@@ -194,7 +194,7 @@ body {
             @media (max-width: 600px) {
               .container_1 .slider .slides .slide .slide_text a {
                 font-size: 1.7rem;
-                width: 200px; } }
+                max-width: 150px; } }
             .container_1 .slider .slides .slide .slide_text a:hover {
               background-color: #102833;
               color: white;
@@ -267,6 +267,7 @@ body {
           min-height: initial;
           padding: none;
           margin: auto;
+          padding-top: 50px;
           left: 0px; } }
       .container_2 .grid_section .left_container h1 {
         text-align: center;
@@ -311,7 +312,8 @@ body {
       @media screen and (max-width: 600px) {
         .container_2 .grid_section .right_container {
           padding: initial;
-          padding-top: 20px; } }
+          padding-top: 20px;
+          padding-bottom: 20px; } }
       .container_2 .grid_section .right_container img {
         color: white;
         width: 80px; }
@@ -393,6 +395,7 @@ body {
         justify-content: center;
         align-items: center;
         min-height: 80vh;
+        padding-bottom: 50px;
         height: inherit; } }
     .banner_container .grid_banner .grid_message {
       display: flex;
@@ -486,7 +489,7 @@ body {
   @media (max-width: 600px) {
     .fruit_out_container {
       display: block;
-      width: 100%;
+      padding: 20px;
       min-height: 100vh; } }
   .fruit_out_container .fruits_container {
     width: 100%;
@@ -500,7 +503,9 @@ body {
     @media (max-width: 600px) {
       .fruit_out_container .fruits_container {
         flex-direction: column;
-        width: 100%; } }
+        width: 100%;
+        padding-top: 0px;
+        padding-bottom: 0px; } }
     .fruit_out_container .fruits_container .fruit_img_box {
       display: flex;
       justify-content: center;
@@ -539,11 +544,14 @@ body {
         min-width: 200px;
         left: 200px;
         position: absolute;
-        background-color: #a4c425; }
+        color: #102833;
+        background-color: #a4c425;
+        cursor: pointer; }
         @media (max-width: 600px) {
           .fruit_out_container .fruits_container .fruit_title a {
             position: relative;
-            left: initial;
+            top: -300px;
+            left: 50px;
             margin: 50px auto;
             min-width: 150px;
             font-size: 2.5rem; } }
@@ -570,9 +578,10 @@ body {
       @media (max-width: 600px) {
         .fruit_out_container .fruits_container .widget_container {
           display: block;
-          max-height: 50vh;
+          max-height: 60vh;
           width: 100%;
           min-height: 0vh;
+          top: -100px;
           margin: initial;
           background-color: #bce027; } }
       .fruit_out_container .fruits_container .widget_container .widget_title {
@@ -897,18 +906,18 @@ footer {
         right: 100px;
         display: flex;
         align-items: center;
-        justify-content: space-evenly;
+        justify-content: center;
         height: 50px;
         flex-direction: row;
         margin: auto;
         text-decoration: none; }
         @media (max-width: 600px) {
           footer .footer_content .redes_container .work {
-            right: initial; } }
+            right: unset; } }
         footer .footer_content .redes_container .work ion-icon {
           font-size: 2rem;
           color: white;
-          margin-right: 10px; }
+          margin-right: 5px; }
         footer .footer_content .redes_container .work span {
           color: white;
           font-size: 1.5rem;

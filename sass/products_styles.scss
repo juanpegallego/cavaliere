@@ -482,17 +482,17 @@ footer
                 flex-direction: column;
               }
             img{
-                width: 90px;
+                width: 70px;
                 position: absolute;
                 top: 30px;
                 left: 0px;
                 @media (max-width: $small) {
                     margin: auto;
-                    width: 200px;
+                    width: 100px;
                     position: relative;
                 }
                 @media screen and (min-width: $medium) and (max-width: $big) {
-                    width: 300px;
+                    width: 100px;
                     position: relative;
                     margin: auto;
                     top: 150px;
