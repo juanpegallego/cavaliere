@@ -850,8 +850,9 @@ body
     }
     @media screen  and (min-width: $desktop) {
        min-height: 70vh;
-       padding-bottom: 50px;
+       padding-bottom: 150px;
        top: -100px;
+       margin-bottom: -150px;
     }
   
     
@@ -1087,8 +1088,7 @@ footer
     
     @media screen  and (min-width: $desktop) {
         height: 150px;
-        top: -150px;
-        margin-top: unset;
+        top: 0px;
     }
  
    
@@ -1116,27 +1116,22 @@ footer
             height: 100%;
             margin-left: 10px;
             margin: auto;
-            left: 0px;
+            left: 20px;
             position: absolute;
             background-color: transparent;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             @media (max-width: $small) {
                 width: 100vw;
                 height: 50vh;
                 top: 0px;
                 position: relative;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-direction: column;
             }
-            @media (min-width: $medium) {
-                position: absolute;
-                width: 100px;
-           }
+            
             img{
                 width: 90px;
                 position: absolute;
-                left: 20px;
                 @media (max-width: $small) {
                     margin: auto;
                     position: relative;
@@ -1145,7 +1140,7 @@ footer
                 }
                 @media (min-width: $medium)   {
                     width: 100%;
-                    position: absolute;
+                    position: relative;
                     margin: auto;
                }
             }
