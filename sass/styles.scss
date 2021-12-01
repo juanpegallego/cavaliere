@@ -1130,9 +1130,8 @@ footer
                 align-items: center;
                 flex-direction: column;
             }
-            @media (min-width: $medium) and (max-width: $big)  {
+            @media (min-width: $medium) {
                 position: absolute;
-                display: block;
                 left: 0px;
                 width: 100px;
            }
@@ -1146,9 +1145,9 @@ footer
                     left: initial;
                     width: 200px;
                 }
-                @media (min-width: $medium) and (max-width: $big)  {
+                @media (min-width: $medium)   {
                     width: 100%;
-                    position: relative;
+                    position: absolute;
                }
             }
         }
