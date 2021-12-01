@@ -301,7 +301,7 @@ body
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            &:hover .fruit_info_container h3{
+            /* &:hover .fruit_info_container h3{
                 transition: all 1s;
                 width: 50%;
                 display: flex;
@@ -310,12 +310,11 @@ body
                 justify-content: center;
                 flex-direction: column;
                 color: $colorSecundario;
-                transform: translateY(20px);
                 position: absolute;
                 font-weight: bolder;
                 opacity: 1;
                 
-            } 
+            }  */
             .img_container
             {               
                 overflow: hidden;

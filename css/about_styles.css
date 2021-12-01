@@ -64,6 +64,10 @@ header {
     @media (max-width: 600px) {
       header .header_title {
         font-size: 5rem; } }
+    @media (min-width: 1824px) {
+      header .header_title {
+        font-size: 9em;
+        top: 150px; } }
   header .shape_img {
     position: absolute;
     top: 35vh; }
@@ -114,8 +118,16 @@ header {
       @media (max-width: 600px) {
         header .header_text p {
           width: 100%; } }
+      @media (min-width: 1824px) {
+        header .header_text p {
+          font-size: 2.8rem;
+          width: 60%; } }
       header .header_text p strong {
         font-size: 1.8rem; }
+        @media (min-width: 1824px) {
+          header .header_text p strong {
+            font-size: 2.8rem;
+            width: 70%; } }
 
 .content {
   scroll-snap-align: start;
@@ -136,8 +148,6 @@ header {
     height: 100%;
     left: 0;
     position: absolute;
-    background: url(../images/png/fruits/banana.png) repeat-x center center;
-    background-size: 350px;
     transform: rotateX(-20deg); }
     @media (max-width: 600px) {
       .content::before {
@@ -334,6 +344,10 @@ header {
       padding: 20px;
       padding-bottom: 50px;
       padding-top: 50px; } }
+  @media (min-width: 1824px) {
+    .container_branches {
+      min-height: 80vh;
+      padding-bottom: 0px; } }
   .container_branches .title {
     width: 100%;
     display: flex;
@@ -364,7 +378,7 @@ header {
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   color: white;
@@ -375,7 +389,11 @@ header {
   @media (max-width: 600px) {
     .container {
       flex-direction: column;
-      padding-bottom: 50px; } }
+      padding-bottom: 50px;
+      justify-content: center; } }
+  @media (min-width: 1824px) {
+    .container {
+      width: 70%; } }
   .container .list_wrapper {
     display: flex;
     flex-direction: column;
@@ -484,8 +502,11 @@ header {
       min-height: 150vh;
       padding-bottom: 150px;
       margin-bottom: -50px;
-      background-color: red;
       padding-top: 50px; } }
+  @media (min-width: 1824px) {
+    .section {
+      min-height: 80vh;
+      padding-bottom: 200px; } }
   .section::after {
     position: absolute;
     top: 0px;
@@ -510,6 +531,7 @@ header {
     align-items: center;
     flex-direction: column;
     opacity: 0;
+    z-index: 2;
     transform: translateX(200vw); }
     @media (max-width: 600px) {
       .section .title_container {
@@ -531,6 +553,9 @@ header {
         .section .title_container h3 {
           width: 90%;
           text-align: center; } }
+      @media (min-width: 1824px) {
+        .section .title_container h3 {
+          font-size: 3rem; } }
       .section .title_container h3 span {
         font-size: 3rem;
         text-decoration: underline 3px #1b465a;
