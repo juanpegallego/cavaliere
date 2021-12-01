@@ -643,7 +643,8 @@ body {
       padding-top: 50px; } }
   @media screen and (min-width: 1200px) {
     .container_3 {
-      min-height: 70vh; } }
+      min-height: 70vh;
+      top: -100px; } }
   .container_3 .contact_title {
     display: flex;
     align-items: center;
