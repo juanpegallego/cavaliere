@@ -1122,7 +1122,6 @@ footer
             @media (max-width: $small) {
                 width: 100vw;
                 height: 50vh;
-                left: 0px;
                 top: 0px;
                 position: relative;
                 display: flex;
@@ -1132,7 +1131,6 @@ footer
             }
             @media (min-width: $medium) {
                 position: absolute;
-                left: 0px;
                 width: 100px;
            }
             img{
@@ -1148,6 +1146,7 @@ footer
                 @media (min-width: $medium)   {
                     width: 100%;
                     position: absolute;
+                    margin: auto;
                }
             }
         }
@@ -1213,9 +1212,11 @@ footer
                 flex-direction: row;
                 margin: auto;
                 text-decoration: none;
+
                 @media (max-width: $small) {
                     right: unset;                    
                 }
+
                 ion-icon{
                     font-size: 2rem;
                     color: white;
@@ -1228,21 +1229,20 @@ footer
                         padding: 5px;
                         justify-content: space-between;
                         align-items: center;
-                        text-decoration: underline;   
+                        text-decoration: underline;  
+
                         ion-icon{
                             margin-left: 5px;
                         }
 
                         &:hover{
-                            background-color: $colorSecundarioClaro;
-                            
+                            background-color: $colorSecundarioClaro;                            
                         }
-                    }
-                
+                    } 
+
             }
         }
-    }
-    
+    }    
 }
 
 

@@ -851,7 +851,6 @@ footer {
         footer .footer_content .logo_container {
           width: 100vw;
           height: 50vh;
-          left: 0px;
           top: 0px;
           position: relative;
           display: flex;
@@ -861,7 +860,6 @@ footer {
       @media (min-width: 900px) {
         footer .footer_content .logo_container {
           position: absolute;
-          left: 0px;
           width: 100px; } }
       footer .footer_content .logo_container img {
         width: 90px;
@@ -876,7 +874,8 @@ footer {
         @media (min-width: 900px) {
           footer .footer_content .logo_container img {
             width: 100%;
-            position: absolute; } }
+            position: absolute;
+            margin: auto; } }
     footer .footer_content .redes_container {
       width: 20%;
       height: 100%;
