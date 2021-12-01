@@ -600,9 +600,7 @@ body
                 top: 0px;
                 height: 50%;             
             }
-            @media screen and (min-width: $desktop)  {
-                height: 90%;
-             }
+            
             img{
                 max-width: 100px;
                 @media (max-width: $small) {
@@ -620,17 +618,11 @@ body
                 @media (max-width: $small) {
                     width: 100%;
                  }
-                @media (min-width: $big) {
-                    margin-top: 50px;
-                }
+                
                 strong{
                     font-size: 1.8rem;
                 }
-                @media (max-width: $small),
-                        (max-width: $big)
-                             {
-                                     font-size: 2rem;
-                                }
+               
             }
             a{
                 font-size: 1.5rem;
@@ -646,6 +638,9 @@ body
                 @media (max-width: $small) {
                     margin-bottom: 50px;
                  }
+                @media (min-width: $big) {
+                    margin-top: 50px;
+                }
                 &:hover{
                     background-color: $colorSecundario;
                     color: white;
@@ -851,12 +846,12 @@ body
     
     @media screen  and (min-width: $small) {
         margin-top: 0px;
-        padding-bottom: 50px;
-        padding-top: 50px;
-        min-height: 80vh;
+        padding-bottom: 100px;
+        padding-top: 150px;
     }
     @media screen  and (min-width: $desktop) {
        min-height: 70vh;
+       padding-bottom: 50px;
        top: -100px;
     }
   
@@ -899,14 +894,8 @@ body
                 width: 100%;
                 position: relative;
                 margin: auto;
-            }
-            
-           
-        }
-
-       
-
-        
+            }          
+        }    
     }
 
     .form_container
@@ -952,6 +941,8 @@ body
                 height: 50%;
                 position: relative;
             }
+
+            
             input
             {
                 margin: 10px auto;
@@ -1085,7 +1076,6 @@ footer
     background: radial-gradient(circle, rgba(16,40,51,1) 26%, rgba(27,70,90,1) 98%);
     @media screen and (max-width: $small)  {
         min-height: 120vh;
-        bottom: 0px;
         margin-bottom: 0px;
         position: relative;
         background: rgb(16,40,51);
@@ -1095,11 +1085,12 @@ footer
     
     @media screen  and (min-width: $small) {
         margin-top: -100px;
-        bottom: 0px;
-        top: initial;
     }
     
-    
+    @media screen  and (min-width: $desktop) {
+        height: 150px;
+        top: -50px;
+    }
  
    
    
