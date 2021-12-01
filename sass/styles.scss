@@ -540,6 +540,7 @@ body
     @media screen and (min-width: $desktop)  {
         min-height: 50vh;
         height: unset;
+        top: -50px;
      } 
     
     
@@ -619,6 +620,9 @@ body
                 @media (max-width: $small) {
                     width: 100%;
                  }
+                @media (min-width: $big) {
+                    margin-top: 50px;
+                }
                 strong{
                     font-size: 1.8rem;
                 }
@@ -957,6 +961,11 @@ body
                 font-family: poppins, 'sans serif';
                 padding-left: 15px;
                 background-color: rgba(182, 179, 179, 0.727);
+
+
+                @media (min-width: $big) {
+                    width: 80%;
+                }
                 @media 
                 (max-width: $small),
                 (min-width: $desktop)  {
