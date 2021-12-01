@@ -215,8 +215,6 @@ body {
       .products_container .products .grid_fruit_display .fruit_card {
         width: 100%;
         min-height: 50vh;
-        display: grid;
-        grid-template-columns: 50% 50%;
         overflow: hidden;
         transition: all 2s;
         display: flex;
@@ -225,14 +223,11 @@ body {
         flex-direction: column; }
         .products_container .products .grid_fruit_display .fruit_card:hover .fruit_info_container h3 {
           transition: all 1s;
-          width: 50%;
-          display: flex;
-          padding: 10px;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
+          width: 100%;
+          display: block;
+          padding-bottom: 30px;
           color: #102833;
-          position: absolute;
+          position: relative;
           font-weight: bolder;
           opacity: 1; }
         .products_container .products .grid_fruit_display .fruit_card .img_container {

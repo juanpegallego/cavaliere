@@ -20,15 +20,18 @@ function hideNavBar (){
               hamburguer.style.transform == 'none' ? 
               hamburguer.style.transform = 'none' : rotateHamburguer(hamburguer);
 
-
-
-
               nav.style.transform == 'translateY(0px)' ? 
               nav.style.transform = 'translateY(-500px)' : nav.style.transform = 'translateY(0px)'; 
 
-              
+              autoHideNavBar(nav);
               
             })
+        }
+
+        function autoHideNavBar(nav){
+          setTimeout(() => {
+            nav.style.transform = 'translateY(-500px)'
+          }, 7000);
         }
 
         function rotateHamburguer(x){
