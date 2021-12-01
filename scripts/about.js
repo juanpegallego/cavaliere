@@ -33,11 +33,28 @@ gsap.to('.content_title', {
     
 })
 
-
-gsap.to('.card', {
-    scrollTrigger: '.flex_container',
-    duration: .1,
+gsap.to('.card:first-child', {
+    scrollTrigger: '.content',
+    duration: 1,
     y:0,
+    delay:.5,
+    opacity:1,
+    ease:"elastic"
+})
+gsap.to('.card:nth-child(2)', {
+    scrollTrigger: '.content',
+    duration: 1,
+    y:0,
+    delay:1,
+    opacity:1,
+    ease:"elastic"
+})
+
+gsap.to('.card:nth-child(3)', {
+    scrollTrigger: '.content',
+    duration: 1,
+    y:0,
+    delay:1.5,
     opacity:1,
     ease:"elastic"
 })
@@ -88,4 +105,7 @@ gsap.to('.sustent_text', {
 })
 
 
-/*---------- MAP HOVER SELECTION ------------------*/
+/*---------- video bgc HEADER ------------------*/
+
+
+document.querySelector('video').playbackRate = .85;
