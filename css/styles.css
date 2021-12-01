@@ -234,6 +234,9 @@ body {
     .container_2 {
       min-height: 50vh;
       padding-bottom: 50px; } }
+  @media screen and (min-width: 1824px) {
+    .container_2 {
+      min-height: 30vh; } }
   .container_2 .grid_section {
     min-width: 100vw;
     position: relative;
@@ -314,6 +317,10 @@ body {
           padding: initial;
           padding-top: 20px;
           padding-bottom: 20px; } }
+      @media screen and (min-width: 1824px) {
+        .container_2 .grid_section .right_container {
+          padding-top: unset;
+          padding-bottom: unset; } }
       .container_2 .grid_section .right_container img {
         color: white;
         width: 80px; }
@@ -625,8 +632,8 @@ body {
   @media screen and (min-width: 600px) {
     .container_3 {
       margin-top: 0px;
-      padding-bottom: 150px;
-      padding-top: 150px; } }
+      padding-bottom: 50px;
+      padding-top: 50px; } }
   .container_3 .contact_title {
     display: flex;
     align-items: center;

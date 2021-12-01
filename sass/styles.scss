@@ -352,6 +352,9 @@ body
         padding-bottom: 50px;
        }
        
+    @media screen and (min-width: $desktop)  {
+       min-height: 30vh;
+    }   
 .grid_section
 {
     min-width: 100vw;
@@ -450,6 +453,10 @@ body
             padding-top: 20px;
             padding-bottom: 20px;
         }
+        @media screen and (min-width: $desktop)  {
+            padding-top: unset;
+            padding-bottom: unset;
+         }  
         
         img{
             color: white;
@@ -835,8 +842,8 @@ body
     
     @media screen  and (min-width: $small) {
         margin-top: 0px;
-        padding-bottom: 150px;
-        padding-top: 150px;
+        padding-bottom: 50px;
+        padding-top: 50px;
         
     }
     
@@ -1069,7 +1076,7 @@ footer
     @media screen  and (min-width: $small) {
         margin-top: -100px;
         bottom: 0px;
-        top: initial    ;
+        top: initial;
     }
     
     
