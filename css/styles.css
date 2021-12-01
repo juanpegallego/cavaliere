@@ -640,8 +640,9 @@ body {
     .container_3 {
       margin-top: 0px;
       padding-bottom: 50px;
-      padding-top: 50px; } }
-  @media screen and (min-width: 1200px) {
+      padding-top: 50px;
+      min-height: 80vh; } }
+  @media screen and (min-width: 1824px) {
     .container_3 {
       min-height: 70vh;
       top: -100px; } }

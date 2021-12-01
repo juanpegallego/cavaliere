@@ -853,9 +853,9 @@ body
         margin-top: 0px;
         padding-bottom: 50px;
         padding-top: 50px;
-        
+        min-height: 80vh;
     }
-    @media screen  and (min-width: $big) {
+    @media screen  and (min-width: $desktop) {
        min-height: 70vh;
        top: -100px;
     }
