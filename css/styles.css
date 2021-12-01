@@ -229,14 +229,11 @@ body {
   align-items: center;
   width: 100vw;
   min-height: 50vh;
-  top: 0px; }
+  top: 50px; }
   @media screen and (max-width: 600px) {
     .container_2 {
       min-height: 50vh;
       padding-bottom: 50px; } }
-  @media screen and (min-width: 1824px) {
-    .container_2 {
-      min-height: 30vh; } }
   .container_2 .grid_section {
     min-width: 100vw;
     position: relative;
@@ -317,10 +314,6 @@ body {
           padding: initial;
           padding-top: 20px;
           padding-bottom: 20px; } }
-      @media screen and (min-width: 1824px) {
-        .container_2 .grid_section .right_container {
-          padding-top: unset;
-          padding-bottom: unset; } }
       .container_2 .grid_section .right_container img {
         color: white;
         width: 80px; }
@@ -387,6 +380,10 @@ body {
       margin-top: -50px;
       padding-top: 0px;
       min-height: 80vh; } }
+  @media screen and (min-width: 1824px) {
+    .banner_container {
+      min-height: 50vh;
+      height: unset; } }
   .banner_container .grid_banner {
     width: 80%;
     display: grid;
@@ -434,6 +431,9 @@ body {
         .banner_container .grid_banner .grid_img {
           top: 0px;
           height: 50%; } }
+      @media screen and (min-width: 1824px) {
+        .banner_container .grid_banner .grid_img {
+          height: 60%; } }
       .banner_container .grid_banner .grid_img img {
         max-width: 100px; }
         @media (max-width: 600px) {
