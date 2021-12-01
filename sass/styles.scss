@@ -1089,7 +1089,8 @@ footer
     
     @media screen  and (min-width: $desktop) {
         height: 150px;
-        top: -50px;
+        top: -150px;
+
     }
  
    
@@ -1142,7 +1143,6 @@ footer
             img{
                 width: 90px;
                 position: absolute;
-                top: 30px;
                 left: 20px;
                 @media (max-width: $small) {
                     margin: auto;
@@ -1153,7 +1153,6 @@ footer
                 @media (min-width: $medium) and (max-width: $big)  {
                     width: 100%;
                     position: relative;
-                    transform: translateY(10px) translateX(20px);
                }
             }
         }
@@ -1220,8 +1219,7 @@ footer
                 margin: auto;
                 text-decoration: none;
                 @media (max-width: $small) {
-                    right: unset;
-                    
+                    right: unset;                    
                 }
                 ion-icon{
                     font-size: 2rem;
