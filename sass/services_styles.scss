@@ -71,43 +71,38 @@ header{
     padding-bottom: 50px;
     overflow: hidden;    
     background-color: rgba(16, 40, 51, 0.766);
+    
     @media screen and (max-width :$small){
         min-height: 50vh;
         padding-bottom: 10px;
     }
     .header_bgc{
-        width: 100%;
+        width: 100vw;
         position: absolute;
         margin: auto;
         height: 100%;
         z-index: -1;
+        background-color: red;
+        overflow: hidden;
         .header_video{
             left: 0;
             top: 0;
             bottom: 0;
             right: 0;
-            width: 100%;
+            width: 100vw;
             margin: auto;
             min-height: 120vh;
             transform: scale(1.3);
             z-index: -2;
-            @media screen and (max-width :$small){
-                transform: scale(4.5);
-
-            }
+            /* @media screen and (max-width :$small){                
+                min-height: 60vh;
+            } */
         }
     }
     
     
    
-    @media screen and (max-width: $smallest) {
-        top: 0px;
-        min-height: 100vh;
-    }
-    @media screen and (min-width: $smallest) and (max-width :$small){
-        min-height: 120vh;
-        top: 0px;
-    } 
+     
     .header_text{
         display: flex;
         justify-content:center;

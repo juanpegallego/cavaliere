@@ -218,7 +218,7 @@ body
                 @media (max-width: $small) {
                     width: 90%;
                 }
-                @media (min-width: $big) {
+                @media (min-width: $desktop) {
                     min-height: 350px;
                 }
 
@@ -258,7 +258,7 @@ body
                         color: rgb(53, 47, 47);
                         text-align: center;
                     }
-                    @media (min-width: $big) {
+                    @media (min-width: $desktop) {
                         font-size: 2.8rem;
                     }
                 }
@@ -286,7 +286,7 @@ body
                         font-size: 1.7rem;
                         max-width: 150px;
                     }
-                    @media (min-width: $big) {
+                    @media (min-width: $desktop) {
                         font-size: 2.8rem;
                         padding: 10px 20px;
                         min-height: 60px;
@@ -465,8 +465,13 @@ body
          
         
         img{
-            color: white;
+            position: relative;
             width: 80px;
+            top: 0px;
+            @media screen and (max-width: $small)  {               
+                bottom:-20px;
+                top: unset;
+            }
         }
         p{
             width: 80%;
@@ -606,6 +611,7 @@ body
             height: 90%;
             flex-direction: column;
             position: relative; 
+            padding-top: 20px;
             @media (max-width: $small) {
                 top: 0px;
                 height: 50%;             

@@ -143,7 +143,7 @@ body {
           @media (max-width: 600px) {
             .container_1 .slider .slides .slide .slide_text {
               width: 90%; } }
-          @media (min-width: 1200px) {
+          @media (min-width: 1824px) {
             .container_1 .slider .slides .slide .slide_text {
               min-height: 350px; } }
           .container_1 .slider .slides .slide .slide_text h1 {
@@ -176,7 +176,7 @@ body {
                 font-size: 1.8rem;
                 color: #352f2f;
                 text-align: center; } }
-            @media (min-width: 1200px) {
+            @media (min-width: 1824px) {
               .container_1 .slider .slides .slide .slide_text p {
                 font-size: 2.8rem; } }
           .container_1 .slider .slides .slide .slide_text a {
@@ -201,7 +201,7 @@ body {
               .container_1 .slider .slides .slide .slide_text a {
                 font-size: 1.7rem;
                 max-width: 150px; } }
-            @media (min-width: 1200px) {
+            @media (min-width: 1824px) {
               .container_1 .slider .slides .slide .slide_text a {
                 font-size: 2.8rem;
                 padding: 10px 20px;
@@ -326,8 +326,13 @@ body {
           padding-top: 20px;
           padding-bottom: 20px; } }
       .container_2 .grid_section .right_container img {
-        color: white;
-        width: 80px; }
+        position: relative;
+        width: 80px;
+        top: 0px; }
+        @media screen and (max-width: 600px) {
+          .container_2 .grid_section .right_container img {
+            bottom: -20px;
+            top: unset; } }
       .container_2 .grid_section .right_container p {
         width: 80%;
         line-height: 25px;
@@ -437,7 +442,8 @@ body {
       align-items: center;
       height: 90%;
       flex-direction: column;
-      position: relative; }
+      position: relative;
+      padding-top: 20px; }
       @media (max-width: 600px) {
         .banner_container .grid_banner .grid_img {
           top: 0px;
