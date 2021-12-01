@@ -222,21 +222,19 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
-        /* &:hover .fruit_info_container h3{
-            transition: all 1s;
-            width: 50%;
-            display: flex;
-            padding: 10px;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            color: $colorSecundario;
-            position: absolute;
-            font-weight: bolder;
-            opacity: 1;
-            
-        }  */ }
+        flex-direction: column; }
+        .products_container .products .grid_fruit_display .fruit_card:hover .fruit_info_container h3 {
+          transition: all 1s;
+          width: 50%;
+          display: flex;
+          padding: 10px;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          color: #102833;
+          position: absolute;
+          font-weight: bolder;
+          opacity: 1; }
         .products_container .products .grid_fruit_display .fruit_card .img_container {
           overflow: hidden;
           width: 100%;
