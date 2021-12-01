@@ -412,7 +412,6 @@ body {
           min-height: 30vh; } }
       .banner_container .grid_banner .grid_message h1 {
         font-size: 6rem;
-        letter-spacing: -2px;
         color: #1b465a; }
         @media (max-width: 600px) {
           .banner_container .grid_banner .grid_message h1 {
@@ -433,7 +432,7 @@ body {
           height: 50%; } }
       @media screen and (min-width: 1824px) {
         .banner_container .grid_banner .grid_img {
-          height: 60%; } }
+          height: 90%; } }
       .banner_container .grid_banner .grid_img img {
         max-width: 100px; }
         @media (max-width: 600px) {
@@ -634,6 +633,9 @@ body {
       margin-top: 0px;
       padding-bottom: 50px;
       padding-top: 50px; } }
+  @media screen and (min-width: 1200px) {
+    .container_3 {
+      min-height: 70vh; } }
   .container_3 .contact_title {
     display: flex;
     align-items: center;

@@ -577,7 +577,6 @@ body
             }
             h1{
                 font-size: 6rem;
-                letter-spacing: -2px;
                 color: $colorSecundarioClaro;
                 @media (max-width: $small) {
                     font-size: 4rem;
@@ -601,7 +600,7 @@ body
                 height: 50%;             
             }
             @media screen and (min-width: $desktop)  {
-                height: 60%;
+                height: 90%;
              }
             img{
                 max-width: 100px;
@@ -848,7 +847,9 @@ body
         padding-top: 50px;
         
     }
-    
+    @media screen  and (min-width: $big) {
+       min-height: 70vh;
+    }
   
     
     
