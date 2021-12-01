@@ -691,6 +691,10 @@ body
         padding: 20px;
         min-height: 100vh;     
      }
+    @media (min-width: $desktop) { 
+          position: relative;
+          top: -50px;
+    }
     .fruits_container{
         width: 100%;
         height: 100%;
@@ -1006,6 +1010,9 @@ body
                 resize: none;
                 font-family: poppins, 'sans serif';
                 background-color: rgba(182, 179, 179, 0.727);
+                @media (min-width: $big) {
+                    width: 80%;
+                }
                 &:focus
                 {
                     background-color: rgba(255, 255, 255, 0.689);
