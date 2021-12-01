@@ -197,7 +197,6 @@ body
             align-items: center;
             overflow: hidden;
             flex-direction: column;
-           
             .slide_text
             {
                 display: flex;
@@ -210,15 +209,18 @@ body
                 width:50%;
                 min-height: 250px;
                 border-radius: 1rem;                    
-                box-shadow: inset 0px 0px 40px 3px rgba(255, 255, 255, 0.747);
+                box-shadow: inset 0px 0px 40px 3px rgba(255, 255, 255, 0.247);
                 background-color: rgba(255, 255, 255, 0.589);
+                
                 overflow: hidden;
                 top: 0px;  
                 
                 @media (max-width: $small) {
                     width: 90%;
                 }
-            
+                @media (min-width: $big) {
+                    min-height: 350px;
+                }
 
                     h1
                 {
@@ -256,6 +258,9 @@ body
                         color: rgb(53, 47, 47);
                         text-align: center;
                     }
+                    @media (min-width: $big) {
+                        font-size: 2.8rem;
+                    }
                 }
 
                 a
@@ -280,6 +285,11 @@ body
                     @media (max-width: $small) {
                         font-size: 1.7rem;
                         max-width: 150px;
+                    }
+                    @media (min-width: $big) {
+                        font-size: 2.8rem;
+                        padding: 10px 20px;
+                        min-height: 60px;
                     }
                     &:hover
                     {
@@ -839,14 +849,14 @@ body
         margin-top: 0px;
         top: 0px;
         min-height: 60vh;
-        padding-bottom: 100px;
-    }
+        padding-bottom: 100px;    }
    
     
     @media screen  and (min-width: $small) {
         margin-top: 0px;
         padding-bottom: 100px;
         padding-top: 150px;
+        min-height: 80vh;
     }
     @media screen  and (min-width: $desktop) {
        min-height: 70vh;
