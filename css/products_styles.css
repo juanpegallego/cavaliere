@@ -259,12 +259,13 @@ body {
           .products_container .products .grid_fruit_display .fruit_card .fruit_info_container h3 {
             font-size: 3rem;
             display: none;
-            color: #102833; }
+            color: #102833;
+            position: relative;
+            top: 20px; }
             @media screen and (max-width: 600px) {
               .products_container .products .grid_fruit_display .fruit_card .fruit_info_container h3 {
                 display: flex;
                 font-size: 2rem;
-                position: relative;
                 top: -20px; } }
 
 .products_link {

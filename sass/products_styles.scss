@@ -346,10 +346,11 @@ body
                     font-size: 3rem;
                     display: none; 
                     color: $colorSecundario;
+                    position: relative;
+                    top: 20px;
                     @media screen and (max-width: $small) {   
                         display: flex;  
                         font-size: 2rem; 
-                        position: relative;
                         top: -20px;
                       }
                 }                
