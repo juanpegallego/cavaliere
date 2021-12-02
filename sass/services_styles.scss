@@ -74,6 +74,7 @@ header{
     
     @media screen and (max-width :$small){
         min-height: 50vh;
+        max-height: 100vh;
         padding-bottom: 10px;
     }
     .header_bgc{
@@ -459,6 +460,7 @@ header{
 
     @media screen and (max-width: $small) {
         padding-bottom: 100px;
+        background-attachment: initial;  
     }
     .invitacion_text{
         display: grid;
@@ -532,6 +534,7 @@ header{
                 letter-spacing: 1px;
                 @media screen and (max-width: $small) {
                     text-align: center;
+                    margin: 15px;
                 }
             }
         }
