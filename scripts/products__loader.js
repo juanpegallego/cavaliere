@@ -8,13 +8,10 @@ const loader = (x, img) => {
         document.getElementById('loading-indicator').style.display = 'none';
     }
 
-    img.addEventListener('loadend', (event) => {  
+  
+    window.addEventListener('DOMContentLoaded', (event) => {  
         localStorage.setItem('products', true);        
-    });
-
-    /* window.addEventListener('DOMContentLoaded', (event) => {  
-        localStorage.setItem('products', true);        
-    }); */
+    }); 
     
     if (!localStorage.getItem('products')) {
         document.getElementById('loading-indicator').style.display = 'flex';
