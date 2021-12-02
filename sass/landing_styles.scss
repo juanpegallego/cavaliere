@@ -47,7 +47,6 @@ body
     flex-direction: column;
     font-family: $principal;
     overflow: hidden;
-   
 }
 
 .video_loading{
@@ -56,6 +55,7 @@ body
     width:100%;
     min-height: 100vh;    
     position: absolute;
+    
     }
 .site{
     display: flex;
@@ -63,12 +63,17 @@ body
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: red;
     video{
         width: 100vw;
         z-index: -1;
         position: absolute;
         @media screen and (max-width: $big) {           
             transform: scale(350%);
+            max-width: 100%;
          } 
     }
 

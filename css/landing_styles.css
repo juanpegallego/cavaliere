@@ -31,14 +31,19 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%; }
+  width: 100%;
+  height: 100%;
+  max-width: 100vw;
+  overflow: hidden;
+  background-color: red; }
   .site video {
     width: 100vw;
     z-index: -1;
     position: absolute; }
     @media screen and (max-width: 1200px) {
       .site video {
-        transform: scale(350%); } }
+        transform: scale(350%);
+        max-width: 100%; } }
   .site .flags_container {
     position: absolute;
     right: 30px;
