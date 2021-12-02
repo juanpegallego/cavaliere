@@ -365,8 +365,8 @@ header {
   overflow: hidden; }
   @media screen and (max-width: 600px) {
     .container_invitacion {
-      padding-bottom: 100px;
-      background-attachment: initial; } }
+      background: none;
+      background-color: #1b465a; } }
   .container_invitacion .invitacion_text {
     display: grid;
     grid-template-columns: 60% 40%;

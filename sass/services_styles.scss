@@ -459,8 +459,8 @@ header{
     overflow: hidden;
 
     @media screen and (max-width: $small) {
-        padding-bottom: 100px;
-        background-attachment: initial;  
+        background: none; 
+        background-color: $colorSecundarioClaro;
     }
     .invitacion_text{
         display: grid;
