@@ -7,9 +7,10 @@
   box-sizing: border-box;
   font-size: 10px; }
 
-html {
-  overflow: hidden; }
-
+/* 
+html{
+    overflow: hidden;
+} */
 /*----------------- FONTS -------------------------*/
 body {
   height: 100vh;
