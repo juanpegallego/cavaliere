@@ -1,4 +1,4 @@
-const loader = (x) => {
+const loader = (x, img) => {
     
     const target = document.querySelector(`${x}`);
 
@@ -8,9 +8,13 @@ const loader = (x) => {
         document.getElementById('loading-indicator').style.display = 'none';
     }
 
-    window.addEventListener('DOMContentLoaded', (event) => {  
+    img.addEventListener('loadend', (event) => {  
         localStorage.setItem('products', true);        
     });
+
+    /* window.addEventListener('DOMContentLoaded', (event) => {  
+        localStorage.setItem('products', true);        
+    }); */
     
     if (!localStorage.getItem('products')) {
         document.getElementById('loading-indicator').style.display = 'flex';
