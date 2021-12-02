@@ -69,7 +69,7 @@ body
     flex-direction: column;
     z-index: 1;
     @media screen and (max-width: $small) {        
-        height: 80vh;
+        height: 100vh;
         min-height: initial;
         background-size: cover;
     }
@@ -84,24 +84,24 @@ body
         background: url(../images/Home/logotipo.png) no-repeat center 250px;
         background-size: 18%;
         @media screen and (max-width: $small) {        
-            background-size: 38%;
+            background-size: 50%;
+            margin: auto;
           }
     }
 
     h1
     {
         transform: translateY(0px); 
-        font-size: 7rem;
+        font-size: 6rem;
         color: white;
         position: relative;
         top: 100px;
         font-family: $secundaria;
-        letter-spacing: -2px;
-        text-align: center;
         padding: 5px 10px;
         @media screen and (max-width: $small) {        
             position: relative;
             font-size: 4rem;
+            top: 0px;
         }
         
     }
@@ -116,7 +116,7 @@ body
 .finca_container{
     
     scroll-snap-align: start;
-    min-height:50vh;    
+    min-height:60vh;    
     width: 100%;
     display: grid;
     grid-template-rows: 50% 50%;    
@@ -142,24 +142,34 @@ body
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
-    min-height: 50vh;    
-    background-color: white;
     z-index: 1;
-    @media screen and (max-width: $small) {    
+    background-color: $colorPrincipalOscuro;
+    &::after{
+        position: absolute;        
+        margin: auto;       
+        z-index: -1;
+        width: 95%;
+        height: 60%;
+        content: '';
+        background: url(../images/Products/frutas/pexels-lumn-1028599.jpg) no-repeat center center;
+        background-size: cover;
+        
+    }
+    @media (max-width: $small) {    
         max-height: initial;
+        min-height: 10vh;
       }
     
     
     
-        h1{
-            font-size: 4rem;
+        .white_space_title{
+            font-size: 5rem;
             text-align: center;
             position: relative;
-            height: 300px;
             display: flex;
             justify-content: center;
             align-items: center;
-            color: $colorSecundarioOscuro;
+            color: $colorPrincipalOscuro;
             @media screen and (max-width: $small) {   
                 font-size: 2rem;
                 height: initial;
@@ -172,9 +182,8 @@ body
             display: flex;
             justify-content: center;
             align-items: center;
-            flex-direction: column;
-            background: url(../images/Products/frutas/pexels-lumn-1028599.jpg) no-repeat center center;
-            background-size: 100%;
+            flex-direction: column;            
+            min-height: 100%;
             @media screen and (max-width: $small) {    
                top: 0px;
                background-size: cover;
@@ -190,13 +199,13 @@ body
                 max-width: 70%;
                 min-height:30vh;
                 font-weight: bold;
-                background-color: rgba(255, 255, 255, 0.741);
                 background-color: rgba(27, 70, 90, 0.566);
                 color: white;       
                 left: -150px;      
                 padding: 20px;
                 opacity: 0;
                 transform: translateX(-100vw);
+                border-radius: 1rem;
                 @media screen and (max-width: $small) {   
                     font-size: 1.5rem;
                     max-width: 90%;    
@@ -300,7 +309,7 @@ body
             align-items: center;
             flex-direction: column;
              &:hover .fruit_info_container h3{
-                transition: all 1s;
+                
                 width: 100%;
                 display: block;
                 padding-bottom: 30px;
@@ -335,6 +344,7 @@ body
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
+                transition: all 1s;
                 h3
                 {
                     font-size: 3rem;
@@ -342,6 +352,7 @@ body
                     color: $colorSecundario;
                     position: relative;
                     top: 20px;
+                    
                     @media screen and (max-width: $small) {   
                         display: flex;  
                         font-size: 2rem; 

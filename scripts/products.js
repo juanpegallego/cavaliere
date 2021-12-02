@@ -1,18 +1,15 @@
 gsap.registerPlugin(ScrollTrigger)
 
-
-gsap.to('.nav',{
+gsap.to('.white_space_title',{
     scrollTrigger: {
-        scrub: 1,
-        trigger:".nav",
-        start: "bottom top",
+        trigger:".white_space",
+        start: "top bottom",
 		end: "top top",
-    },   
-    y:5,
+        scrub:true
+    },  
     duration:1,
-    ease:"elastic",
-    opacity:.75,
-    y:10
+    delay:0,
+    y:-350
 });
 
 
@@ -20,7 +17,7 @@ gsap.to('.text',{
     scrollTrigger: {
         trigger:".white_space",
         start: "top bottom",
-		end: "top top"
+		end: "top top",
     },  
     duration:1,
     delay:.5,
@@ -50,7 +47,7 @@ gsap.to('.products_title',{
 gsap.to('.products', {
     scrollTrigger: {
         trigger: '.products_title',
-        start: 'top bottom+=300'
+        start: 'top bottom+=200'
         
     },
     duration:1,

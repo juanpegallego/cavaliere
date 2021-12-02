@@ -43,12 +43,11 @@ header {
       min-height: 50vh;
       padding-bottom: 10px; } }
   header .header_bgc {
-    width: 100vw;
+    width: 100;
     position: absolute;
     margin: auto;
     height: 100%;
     z-index: -1;
-    background-color: red;
     overflow: hidden; }
     header .header_bgc .header_video {
       left: 0;
@@ -59,10 +58,20 @@ header {
       margin: auto;
       min-height: 120vh;
       transform: scale(1.3);
-      z-index: -2;
-      /* @media screen and (max-width :$small){                
-          min-height: 60vh;
-      } */ }
+      z-index: -2; }
+      @media screen and (max-width: 600px) {
+        header .header_bgc .header_video {
+          min-height: 50vh;
+          height: 100%;
+          transform: scale(4); } }
+  @media screen and (max-width: 375px) {
+    header {
+      top: 0px;
+      min-height: 100vh; } }
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    header {
+      min-height: 120vh;
+      top: 0px; } }
   header .header_text {
     display: flex;
     justify-content: center;
@@ -75,7 +84,6 @@ header {
       header .header_text {
         top: 180px;
         padding: 20px;
-        justify-content: space-evenly;
         width: 100%; } }
     header .header_text h1 {
       font-size: 5rem;
@@ -99,7 +107,7 @@ header {
           margin-left: 0px;
           position: relative;
           text-align: center;
-          top: 100px;
+          top: 50px;
           width: 100%; } }
     header .header_text p {
       font-size: 2rem;
@@ -111,7 +119,7 @@ header {
       @media screen and (max-width: 600px) {
         header .header_text p {
           font-size: 1.7rem;
-          top: 250px;
+          top: 150px;
           position: relative;
           margin-left: 0px;
           width: 100%;

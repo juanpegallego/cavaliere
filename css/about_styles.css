@@ -11,6 +11,9 @@
   font-size: 10px; }
 
 /*----------------- FONTS -------------------------*/
+html {
+  overflow-x: hidden; }
+
 body {
   min-height: 100vh;
   width: 100vw;
@@ -19,7 +22,8 @@ body {
   overflow-x: hidden;
   scroll-snap-type: y proximity;
   scroll-behavior: smooth;
-  /* background-color: $colorSecundario;  */ }
+  /* background-color: $colorSecundario;  */
+  background-color: greenyellow; }
   @media (max-width: 1200px) {
     body {
       display: flex;
@@ -35,22 +39,24 @@ header {
   min-height: 100vh;
   z-index: -2;
   background-color: rgba(16, 40, 51, 0.879);
+  background-color: red;
   display: flex;
   flex-direction: column;
-  align-items: center; }
+  align-items: center;
+  overflow-x: hidden; }
   @media (max-width: 600px) {
     header {
-      min-height: 120vh;
+      min-height: 100vh;
       padding-bottom: 50px; } }
   header video {
-    position: fixed;
-    width: 100%;
-    filter: blur(0px) brightness(50%);
+    position: absolute;
+    width: 100vw;
+    filter: brightness(50%);
     left: 0px;
     top: 0px; }
     @media (max-width: 600px) {
       header video {
-        transform: scale(1.7); } }
+        transform: scale(6.6); } }
   header .header_title {
     color: white;
     font-size: 7rem;
@@ -63,7 +69,8 @@ header {
     transform: translateX(200vw); }
     @media (max-width: 600px) {
       header .header_title {
-        font-size: 5rem; } }
+        font-size: 4.5rem;
+        top: 50px; } }
     @media (min-width: 1824px) {
       header .header_title {
         font-size: 9em;
@@ -136,7 +143,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   padding: 10px;
-  padding-bottom: 20px;
+  padding-bottom: 50px;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -162,7 +169,7 @@ header {
       position: relative; } }
   @media (min-width: 375px) and (max-width: 600px) {
     .content {
-      min-height: 200vh;
+      min-height: 100vh;
       top: 0px;
       position: relative;
       z-index: -1;
@@ -178,7 +185,6 @@ header {
     .content .content_title h1 {
       font-size: 4rem;
       color: #102833;
-      transform: translateY(50px);
       text-align: center; }
   .content .flex_container {
     display: flex;
@@ -187,8 +193,7 @@ header {
     flex-direction: row;
     flex-wrap: wrap;
     width: 90%;
-    margin: auto;
-    margin-top: 50px; }
+    margin: auto; }
     .content .flex_container .card {
       position: relative;
       display: flex;
@@ -216,10 +221,7 @@ header {
       .content .flex_container .card:hover {
         transition: all .5s;
         justify-content: space-around;
-        box-shadow: 0px 0px 30px 5px black; }
-        @media (max-width: 600px) {
-          .content .flex_container .card:hover {
-            transform: translateY(0px); } }
+        box-shadow: 0px 0px 30px 5px #102833; }
       .content .flex_container .card:hover p {
         display: block;
         transition: all 1s; }
